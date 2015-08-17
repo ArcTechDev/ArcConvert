@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <objc/message.h>
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *displayField;
 
 @end
 
