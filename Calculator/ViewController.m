@@ -332,4 +332,24 @@
     }
 }
 
+- (IBAction)equalSign:(id)sender{
+    
+    [self doEquals];
+}
+
+- (IBAction)clear:(id)sender{
+    
+    accumulator = 0.0;
+    userInput = @"";
+    [numberStack removeAllObjects];
+    [operationStack removeAllObjects];
+    
+    [self updateDisplay];
+}
+
+- (IBAction)AddSign:(id)sender{
+    
+    [self doMath:@"+"];
+}
+
 @end
