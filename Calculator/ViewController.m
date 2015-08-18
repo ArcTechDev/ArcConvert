@@ -159,7 +159,23 @@
 #pragma mark - Calculator brain
 - (void)handleDigitInpute:(NSString *)digit{
     
-    userInput = [userInput stringByAppendingString:digit];
+    //check if digit value is negative sign
+    if([digit isEqualToString:@"-"]){
+        
+        //if input value was negative turn it into positive
+        if([userInput hasPrefix:@"-"]){
+            
+            userInput = [userInput stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:@""];
+        }
+        else{
+            
+            userInput = [@"-" stringByAppendingString:userInput];
+        }
+    }
+    else{
+        
+        userInput = [userInput stringByAppendingString:digit];
+    }
     
     accumulator = [userInput doubleValue];
     
@@ -381,6 +397,15 @@
 - (IBAction)divideSign:(id)sender{
     
     [self doMath:@"/"];
+}
+
+- (IBAction)positiveAndNegativeSign:(id)sender{
+    
+    //since userinput might get clear after doMath or doEquals so we need to
+    //put last calculate result back to userInput so it can properly display on screen and
+    //will not cause value become 0
+    userInput = [NSString stringWithFormat:@"%@", [NSNumber numberWithDouble:accumulator]];
+    [self handleDigitInpute:@"-"];
 }
 
 @end
