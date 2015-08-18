@@ -148,6 +148,14 @@
         return YES;
 }
 
+- (void)clearCalculator{
+    
+    accumulator = 0.0;
+    userInput = @"";
+    [numberStack removeAllObjects];
+    [operationStack removeAllObjects];
+}
+
 #pragma mark - Calculator brain
 - (void)handleDigitInpute:(NSString *)digit{
     
@@ -167,10 +175,13 @@
         [self doEquals];
     }
     
+    if(accumulator == INFINITY)
+        return;
+    
     [numberStack addObject:[NSNumber numberWithDouble:accumulator]];
     [operationStack addObject:operationSymbol];
     userInput = @"";
-    [self updateDisplay];
+   // [self updateDisplay];
     
 }
 
@@ -217,12 +228,21 @@
         }
         
         userInput =@"";
+        
         [self updateDisplay];
         
+        if(accumulator == INFINITY)
+            [self clearCalculator];
     }
 }
 
 - (void)updateDisplay{
+    
+    if(accumulator == INFINITY){
+        
+        self.displayField.text = @"Error";
+        return;
+    }
     
     //convert to integer
     int intAcc = (int)accumulator;
@@ -339,11 +359,7 @@
 
 - (IBAction)clear:(id)sender{
     
-    accumulator = 0.0;
-    userInput = @"";
-    [numberStack removeAllObjects];
-    [operationStack removeAllObjects];
-    
+    [self clearCalculator];
     [self updateDisplay];
 }
 
