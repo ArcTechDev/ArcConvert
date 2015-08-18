@@ -357,4 +357,9 @@
     [self doMath:@"-"];
 }
 
+- (IBAction)mutiplySign:(id)sender{
+    
+    [self doMath:@"*"];
+}
+
 @end

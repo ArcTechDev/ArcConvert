@@ -156,6 +156,9 @@
                                 <state key="normal" title="X">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="mutiplySign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="riJ-CU-bVR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHU-cz-rP2">
                                 <rect key="frame" x="220" y="273" width="60" height="60"/>
