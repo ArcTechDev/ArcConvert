@@ -164,6 +164,9 @@
                                 <state key="normal" title="-">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="subSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EM6-eU-07B"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hey-9S-hnA">
                                 <rect key="frame" x="220" y="341" width="60" height="60"/>
@@ -181,7 +184,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="AddSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iSO-6M-7Vg"/>
+                                    <action selector="addSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5wv-Fc-MvV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7n-N9-emA">

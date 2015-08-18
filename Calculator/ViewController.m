@@ -347,9 +347,14 @@
     [self updateDisplay];
 }
 
-- (IBAction)AddSign:(id)sender{
+- (IBAction)addSign:(id)sender{
     
     [self doMath:@"+"];
+}
+
+- (IBAction)subSign:(id)sender{
+    
+    [self doMath:@"-"];
 }
 
 @end
