@@ -55,6 +55,8 @@
     NSString *userInput;
     
     OperateArg *oArg;
+    
+    BOOL drawDecimal;
 
 }
 
@@ -85,6 +87,7 @@
     operationStack = [[NSMutableArray alloc] init];
     accumulator = 0.0;
     userInput = @"";
+    drawDecimal = NO;
     
    return [super initWithCoder:aDecoder];
 }
@@ -96,8 +99,6 @@
     //test
     SEL sel = [[opDic objectForKey:@"+"] pointerValue];
     if(sel != nil){
-       
-
         NSLog(@"result:%f", [[self performSelector:sel withObject:[self getOperateArg:1.5 WithArgB:1]] doubleValue]);
     }
    
@@ -108,7 +109,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Internal
+#pragma mark - Utility
 
 - (OperateArg *)getOperateArg:(double)valA WithArgB:(double)valB{
     
@@ -128,15 +129,48 @@
     
     return oArg;
 }
+
+/**
+ * Find character in specific string
+ *
+ * @Param stringToFind the string that will be searched
+ * @Param character the string character to be matched in search string
+ * Return true if character found otherwise false
+ */
+- (BOOL)findCharacterInStringWithString:(NSString *)stringToFind WithCharacter:(NSString *)character{
+    
+    if([stringToFind isEqualToString:@""] || [character isEqualToString:@""])
+        return NO;
+    
+    if([stringToFind rangeOfString:character options:NSLiteralSearch].location == NSNotFound)
+        return NO;
+    else
+        return YES;
+}
+
+#pragma mark - Calculator brain
 - (void)handleDigitInpute:(NSString *)digit{
     
     userInput = [userInput stringByAppendingString:digit];
     
     accumulator = [userInput doubleValue];
+    
+    NSLog(@"User input:%@, accumulator:%lf",userInput, accumulator);
+    
     [self updateDisplay];
 }
 
 - (void)doMath:(NSString *)operationSymbol{
+    
+    if(numberStack.count > 0 && operationStack.count > 0){
+        
+        [self doEquals];
+    }
+    
+    [numberStack addObject:[NSNumber numberWithDouble:accumulator]];
+    [operationStack addObject:operationSymbol];
+    userInput = @"";
+    [self updateDisplay];
     
 }
 
@@ -163,7 +197,7 @@
             //get last number val from number stack
             double valA = [[numberStack lastObject] doubleValue];
             
-            //do calculation base on method we get
+            //do calculation base on method we get and store result into accumulator
             accumulator = [[self performSelector:sel withObject:[self getOperateArg:valA WithArgB:accumulator]] doubleValue];
             
             //remove last item from number stack
@@ -182,8 +216,9 @@
             return;
         }
         
-        [self updateDisplay];
         userInput =@"";
+        [self updateDisplay];
+        
     }
 }
 
@@ -201,6 +236,18 @@
         
         self .displayField.text = [NSString stringWithFormat:@"%@", [NSNumber numberWithDouble:accumulator]];
     }
+    
+    if(drawDecimal == YES){
+        
+        //if no decimal found in displayField then draw it
+        if([self findCharacterInStringWithString:self.displayField.text WithCharacter:@"."] == NO){
+            
+            self.displayField.text = [self.displayField.text stringByAppendingString:@"."];
+        }
+        
+        drawDecimal = NO;
+    }
+    
 }
 
 #pragma mark - Basic math
@@ -273,6 +320,16 @@
 - (IBAction)digitPress0:(id)sender{
     
     [self handleDigitInpute:@"0"];
+}
+
+- (IBAction)decimalSign:(id)sender{
+    
+    if([self findCharacterInStringWithString:userInput WithCharacter:@"."] == NO){
+        
+        drawDecimal = YES;
+        [self handleDigitInpute:@"."];
+        
+    }
 }
 
 @end
