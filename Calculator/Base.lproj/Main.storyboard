@@ -178,6 +178,9 @@
                                 <state key="normal" title="/">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="divideSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bcI-r5-UmR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89t-4X-ZtE">
                                 <rect key="frame" x="220" y="409" width="60" height="60"/>

@@ -362,4 +362,9 @@
     [self doMath:@"*"];
 }
 
+- (IBAction)divideSign:(id)sender{
+    
+    [self doMath:@"/"];
+}
+
 @end
