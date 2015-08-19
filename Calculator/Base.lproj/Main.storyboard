@@ -357,17 +357,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wnE-FP-mpv">
-                                                    <rect key="frame" x="8" y="8" width="284" height="46.5"/>
+                                                    <rect key="frame" x="98.5" y="5.5" width="103" height="51.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="43"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="wnE-FP-mpv" firstAttribute="top" secondItem="G9i-mu-hdR" secondAttribute="topMargin" id="2jv-kh-tk0"/>
-                                                <constraint firstItem="wnE-FP-mpv" firstAttribute="leading" secondItem="G9i-mu-hdR" secondAttribute="leadingMargin" id="LaK-vA-aOx"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="wnE-FP-mpv" secondAttribute="trailing" id="O7z-5G-cc7"/>
-                                                <constraint firstItem="wnE-FP-mpv" firstAttribute="bottom" secondItem="G9i-mu-hdR" secondAttribute="bottomMargin" id="gFr-t1-UHJ"/>
+                                                <constraint firstAttribute="centerY" secondItem="wnE-FP-mpv" secondAttribute="centerY" id="Neh-4A-ixa"/>
                                                 <constraint firstAttribute="centerX" secondItem="wnE-FP-mpv" secondAttribute="centerX" id="hYG-Ed-LV5"/>
                                             </constraints>
                                         </tableViewCellContentView>

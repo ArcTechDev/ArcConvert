@@ -127,6 +127,55 @@
     cell.titleLabel.text = item.itemTitle;
 }
 
+#pragma mark - rotation change
+/**
+ * Handle device rotation and layout view again
+ */
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
+    
+    maxCenterX = size.width * _maxViewToShowMultiplier - size.width / 2;
+    minCenterX = -size.width / 2;
+    
+    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+        
+        if(currentDirection == None){
+            
+            if(isSlideIn){
+                
+                [self slideInWithDuration:0 OnComplete:nil];
+            }
+            else{
+                
+                [self slideOutWithDuration:0 OnComplete:nil];
+            }
+        }
+        
+    } completion:nil];
+
+}
+
+/**
+ * Handle device rotation and layout view again for older ios
+ */
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation{
+    
+    maxCenterX = self.view.frame.size.width * _maxViewToShowMultiplier - self.view.frame.size.width / 2;
+    minCenterX = -self.view.frame.size.width/2;
+    
+    if(currentDirection == None){
+        
+        if(isSlideIn){
+            
+            [self slideInWithDuration:0 OnComplete:nil];
+        }
+        else{
+            
+            [self slideOutWithDuration:0 OnComplete:nil];
+        }
+    }
+}
+
+
 #pragma mark - public  interface
 - (id)addToParentViewController:(UIViewController *)parent{
     
@@ -194,7 +243,7 @@
     //perform slide out animation
     [UIView animateWithDuration:duration animations:^{
     
-        currentDirection = Right;
+        currentDirection = Left;
         
         //view should move to min center
         self.view.center = CGPointMake(minCenterX, self.view.center.y);
@@ -206,7 +255,8 @@
             isSlideIn = NO;
             
             //notify when animation finished
-            complete();
+            if(complete != nil)
+                complete();
             
             currentDirection = None;
         }
@@ -218,7 +268,7 @@
     //perform slide in animation
     [UIView animateWithDuration:duration animations:^{
         
-        currentDirection = Left;
+        currentDirection = Right;
         
         //view should move to max center
         self.view.center = CGPointMake(maxCenterX, self.view.center.y);
@@ -230,7 +280,8 @@
             isSlideIn = YES;
             
             //notify when animation finished
-            complete();
+            if(complete != nil)
+                complete();
             
             currentDirection = None;
         }
