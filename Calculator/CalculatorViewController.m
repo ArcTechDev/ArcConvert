@@ -178,14 +178,14 @@
             //otherwise left perform slide out animation
             if(leftMenuViewController.getDirection == Right){
                 
-                [leftMenuViewController slideInWithDuration:0.5 OnComplete:^{
+                [leftMenuViewController slideInWithDuration:kAnimationDuration OnComplete:^{
                     
                     [self.maskView setHidden:NO];
                 }];
             }
             else if(leftMenuViewController.getDirection == Left){
                 
-                [leftMenuViewController slideOutWithDuration:0.5 OnComplete:^{
+                [leftMenuViewController slideOutWithDuration:kAnimationDuration OnComplete:^{
                     
                     [self.maskView setHidden:YES];
                 }];
@@ -215,7 +215,7 @@
             //if left menu view was moving left perform slide out animation
             if(leftMenuViewController.getDirection == Left){
                 
-                [leftMenuViewController slideOutWithDuration:0.5 OnComplete:^{
+                [leftMenuViewController slideOutWithDuration:kAnimationDuration OnComplete:^{
                     
                     //hide mask view when animation finished
                     [self.maskView setHidden:YES];
@@ -232,7 +232,7 @@
 - (void)handleTapToDismissLeftMenu:(UITapGestureRecognizer *)gesture{
     
     //start LeftMenuViewController slide out animation and hide mask view on complete
-    [leftMenuViewController slideOutWithDuration:0.5 OnComplete:^{
+    [leftMenuViewController slideOutWithDuration:kAnimationDuration OnComplete:^{
     
         //hide mask view
         [self.maskView setHidden:YES];
@@ -453,7 +453,7 @@
     
     NSLog(@"Select item:%@", item.itemTitle);
     
-    [leftMenuViewController slideOutWithDuration:0.5 OnComplete:^{
+    [leftMenuViewController slideOutWithDuration:kAnimationDuration OnComplete:^{
     
         [self.maskView setHidden:YES];
     }];

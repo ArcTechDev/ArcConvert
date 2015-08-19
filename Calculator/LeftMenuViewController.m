@@ -30,6 +30,7 @@
 
 @implementation LeftMenuViewController{
     
+    //store menu item data
     NSMutableArray *menuItems;
     
     //current menu moving direction
@@ -43,6 +44,9 @@
     
     //menu's min center on x axis
     float minCenterX;
+    
+    //determine if menu view is slide in or not
+    BOOL isSlideIn;
 }
 
 @synthesize maxViewToShowMultiplier = _maxViewToShowMultiplier;
@@ -90,6 +94,9 @@
     
     //calcluate min menu center x to reach
     minCenterX = -self.view.frame.size.width/2;
+    
+    //set slide in NO
+    isSlideIn = NO;
     
     [self setupMenuItems];
 }
@@ -151,18 +158,30 @@
     if(currentDirection == Right){
         
         //if view center not greater than max center move view
-        if(self.view.center.x < maxCenterX)
+        if(self.view.center.x < maxCenterX){
             self.view.center = CGPointMake(self.view.center.x+(translation.x - lastTranslation.x) * self.acceleration, self.view.center.y);
-        else//otherwise set view's center to max center and a bit more right
+        }
+        else{
+            
+            isSlideIn = YES;
+            
+            //otherwise set view's center to max center and a bit more right
             self.view.center = CGPointMake(maxCenterX+2, self.view.center.y);
+        }
     }
     else if(currentDirection == Left){// if user touch move to left
         
         //if view center is greater than min center move view
-        if(self.view.center.x > minCenterX)
+        if(self.view.center.x > minCenterX){
             self.view.center = CGPointMake(self.view.center.x+(translation.x - lastTranslation.x) * self.acceleration, self.view.center.y);
-        else//otherwise set view to min center
+        }
+        else{
+            
+            isSlideIn = NO;
+            
+            //otherwise set view to min center
             self.view.center = CGPointMake(minCenterX, self.view.center.y);
+        }
 
     }
     
@@ -183,6 +202,8 @@
     } completion:^(BOOL finished){
     
         if(finished){
+            
+            isSlideIn = NO;
             
             //notify when animation finished
             complete();
@@ -205,6 +226,8 @@
     } completion:^(BOOL finished){
         
         if(finished){
+            
+            isSlideIn = YES;
             
             //notify when animation finished
             complete();

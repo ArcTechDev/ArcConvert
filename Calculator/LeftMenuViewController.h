@@ -10,9 +10,9 @@
 
 enum MenuDirectoin{
     
-    None,
-    Left,
-    Right
+    None,//menu view is still
+    Left,//menu moving to left
+    Right//menu moving to right
 };
 
 //

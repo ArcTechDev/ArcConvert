@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "LeftMenuViewController.h"
 
+#define kAnimationDuration 0.2
+
 @interface CalculatorViewController : UIViewController<LeftMenuViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *displayField;
