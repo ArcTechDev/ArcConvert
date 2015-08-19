@@ -6,7 +6,8 @@
 //  Copyright (c) 2015 ArcTech. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "CalculatorViewController.h"
+#import "LeftMenuViewController.h"
 
 @interface OperateArg : NSObject
 
@@ -33,11 +34,11 @@
 
 @end
 
-@interface ViewController ()
+@interface CalculatorViewController ()
 
 @end
 
-@implementation ViewController{
+@implementation CalculatorViewController{
     
     //Dicctionary contain operation symbols as key and math methods as value
     NSMutableDictionary *opDic;
@@ -57,10 +58,13 @@
     OperateArg *oArg;
     
     BOOL drawDecimal;
+    
+    LeftMenuViewController *leftMenuViewController;
 
 }
 
 @synthesize displayField = _displayField;
+@synthesize maskView = _maskView;
 
 
 - (id)initWithCoder:(NSCoder *)aDecoder{
@@ -96,12 +100,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    //test
-    SEL sel = [[opDic objectForKey:@"+"] pointerValue];
-    if(sel != nil){
-        NSLog(@"result:%f", [[self performSelector:sel withObject:[self getOperateArg:1.5 WithArgB:1]] doubleValue]);
-    }
+    //register left edge pan
+    UIScreenEdgePanGestureRecognizer *leftEdgeGesture = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleLeftEdgePanGesture:)];
+    leftEdgeGesture.edges = UIRectEdgeLeft;
+    [self.view addGestureRecognizer:leftEdgeGesture];
    
+    [self setupMaskView];
+    
+    //init left menu view
+    [self initLeftMenuView];
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    
+    [super viewDidAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -109,8 +121,128 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - LeftMenuView
+- (void)initLeftMenuView{
+    
+    leftMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LeftMenuView"];
+    [leftMenuViewController addToParentViewController:self];
+    
+    leftMenuViewController.delegate = self;
+}
+
+#pragma mark - MaskView
+- (void)setupMaskView{
+    
+    //hide mask view
+    [self.maskView setHidden:YES];
+    
+    //register tap gesture to mask view
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapToDismissLeftMenu:)];
+    [tapGesture setNumberOfTapsRequired:1];
+    [self.maskView addGestureRecognizer:tapGesture];
+    
+    //register pan gesture to mask view
+    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleLeftEdgePanGesture:)];
+    [self.maskView addGestureRecognizer:panGesture];
+}
+
+#pragma mark - Gestures
+/**
+ * handle gesture when user pan from edge screen or pan left on mask view
+ */
+- (void)handleLeftEdgePanGesture:(UIScreenEdgePanGestureRecognizer *)gesture{
+    
+    //if gesture is UIScreenEdgePanGestureRecognizer
+    if([gesture isKindOfClass:[UIScreenEdgePanGestureRecognizer class]]){
+        
+        //turn on mask view
+        [self.maskView setHidden:NO];
+        
+        //get touch translation
+        CGPoint translation = [gesture translationInView:gesture.view];
+        
+        //if gesture state is began set last translation as current touch translation
+        if(gesture.state == UIGestureRecognizerStateBegan){
+            
+            leftMenuViewController.lastTouchTranslation = translation;
+        }
+        
+        //if gesture state is changed move and update left menu view
+        if(gesture.state == UIGestureRecognizerStateChanged){
+            
+            [leftMenuViewController moveMenuViewWithTranslation:translation];
+        }
+        else{// gesture fail or other thing happen e.g user finger left
+            
+            //if left menu view was moving right perform slide in animation
+            //otherwise left perform slide out animation
+            if(leftMenuViewController.getDirection == Right){
+                
+                [leftMenuViewController slideInWithDuration:0.5 OnComplete:^{
+                    
+                    [self.maskView setHidden:NO];
+                }];
+            }
+            else if(leftMenuViewController.getDirection == Left){
+                
+                [leftMenuViewController slideOutWithDuration:0.5 OnComplete:^{
+                    
+                    [self.maskView setHidden:YES];
+                }];
+            }
+        }
+    }
+    //if gesture is UIPanGestureRecognizer
+    //user pan left on mask view
+    else if([gesture isKindOfClass:[UIPanGestureRecognizer class]]){
+        
+        //get touch translation
+        CGPoint translation = [gesture translationInView:gesture.view];
+        
+        //if gesture state is began set last translation as current touch translation
+        if(gesture.state == UIGestureRecognizerStateBegan){
+            
+            leftMenuViewController.lastTouchTranslation = translation;
+        }
+        
+        //if gesture state is changed move and update left menu view
+        if(gesture.state == UIGestureRecognizerStateChanged){
+            
+            [leftMenuViewController moveMenuViewWithTranslation:translation];
+        }
+        else{// gesture fail or other thing happen e.g user finger left
+            
+            //if left menu view was moving left perform slide out animation
+            if(leftMenuViewController.getDirection == Left){
+                
+                [leftMenuViewController slideOutWithDuration:0.5 OnComplete:^{
+                    
+                    //hide mask view when animation finished
+                    [self.maskView setHidden:YES];
+                }];
+            }
+        }
+    }
+    
+}
+
+/**
+ * handle gesture when user tap on mask view to let left menu slide out
+ */
+- (void)handleTapToDismissLeftMenu:(UITapGestureRecognizer *)gesture{
+    
+    //start LeftMenuViewController slide out animation and hide mask view on complete
+    [leftMenuViewController slideOutWithDuration:0.5 OnComplete:^{
+    
+        //hide mask view
+        [self.maskView setHidden:YES];
+        
+    }];
+}
+
 #pragma mark - Utility
 
+//get data that will be used by mathatical method
 - (OperateArg *)getOperateArg:(double)valA WithArgB:(double)valB{
     
     if(oArg != nil){
@@ -157,6 +289,9 @@
 }
 
 #pragma mark - Calculator brain
+/**
+ * Handle calcualtor digital input
+ */
 - (void)handleDigitInpute:(NSString *)digit{
     
     //check if digit value is negative sign
@@ -184,6 +319,9 @@
     [self updateDisplay];
 }
 
+/**
+ * handle when user press any of math calculation operator
+ */
 - (void)doMath:(NSString *)operationSymbol{
     
     if(numberStack.count > 0 && operationStack.count > 0){
@@ -201,6 +339,9 @@
     
 }
 
+/**
+ * handle user press equal operatoer on calculator
+ */
 - (void)doEquals{
     
     if([userInput isEqualToString:@""])
@@ -305,6 +446,17 @@
 - (id)dividValueAB:(OperateArg *)arg{
     
      return [NSNumber numberWithDouble:(arg.argA / arg.argB)];
+}
+
+#pragma mark - LeftMenuViewController delegate
+- (void)onMenuItemSelected:(MenuItem *)item{
+    
+    NSLog(@"Select item:%@", item.itemTitle);
+    
+    [leftMenuViewController slideOutWithDuration:0.5 OnComplete:^{
+    
+        [self.maskView setHidden:YES];
+    }];
 }
 
 #pragma mark - Button action

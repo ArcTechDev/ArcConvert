@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE43B4221B8462F80010B514 /* LeftMenuItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE43B4211B8462F80010B514 /* LeftMenuItemCell.m */; };
+		CE5EBD011B831898001B5FD4 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5EBD001B831898001B5FD4 /* LeftMenuViewController.m */; };
 		CECB4B571B81BDC900F4EBCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB4B561B81BDC900F4EBCD /* main.m */; };
 		CECB4B5A1B81BDC900F4EBCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB4B591B81BDC900F4EBCD /* AppDelegate.m */; };
-		CECB4B5D1B81BDC900F4EBCD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB4B5C1B81BDC900F4EBCD /* ViewController.m */; };
+		CECB4B5D1B81BDC900F4EBCD /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB4B5C1B81BDC900F4EBCD /* CalculatorViewController.m */; };
 		CECB4B601B81BDC900F4EBCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECB4B5E1B81BDC900F4EBCD /* Main.storyboard */; };
 		CECB4B621B81BDC900F4EBCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECB4B611B81BDC900F4EBCD /* Images.xcassets */; };
 		CECB4B651B81BDC900F4EBCD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECB4B631B81BDC900F4EBCD /* LaunchScreen.xib */; };
@@ -27,13 +29,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE43B4201B8462F80010B514 /* LeftMenuItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuItemCell.h; sourceTree = "<group>"; };
+		CE43B4211B8462F80010B514 /* LeftMenuItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuItemCell.m; sourceTree = "<group>"; };
+		CE5EBCFF1B831898001B5FD4 /* LeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuViewController.h; sourceTree = "<group>"; };
+		CE5EBD001B831898001B5FD4 /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuViewController.m; sourceTree = "<group>"; };
 		CECB4B511B81BDC900F4EBCD /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECB4B551B81BDC900F4EBCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CECB4B561B81BDC900F4EBCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CECB4B581B81BDC900F4EBCD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CECB4B591B81BDC900F4EBCD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CECB4B5B1B81BDC900F4EBCD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CECB4B5C1B81BDC900F4EBCD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CECB4B5B1B81BDC900F4EBCD /* CalculatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
+		CECB4B5C1B81BDC900F4EBCD /* CalculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
 		CECB4B5F1B81BDC900F4EBCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CECB4B611B81BDC900F4EBCD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CECB4B641B81BDC900F4EBCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -83,8 +89,12 @@
 			children = (
 				CECB4B581B81BDC900F4EBCD /* AppDelegate.h */,
 				CECB4B591B81BDC900F4EBCD /* AppDelegate.m */,
-				CECB4B5B1B81BDC900F4EBCD /* ViewController.h */,
-				CECB4B5C1B81BDC900F4EBCD /* ViewController.m */,
+				CECB4B5B1B81BDC900F4EBCD /* CalculatorViewController.h */,
+				CECB4B5C1B81BDC900F4EBCD /* CalculatorViewController.m */,
+				CE5EBCFF1B831898001B5FD4 /* LeftMenuViewController.h */,
+				CE5EBD001B831898001B5FD4 /* LeftMenuViewController.m */,
+				CE43B4201B8462F80010B514 /* LeftMenuItemCell.h */,
+				CE43B4211B8462F80010B514 /* LeftMenuItemCell.m */,
 				CECB4B5E1B81BDC900F4EBCD /* Main.storyboard */,
 				CECB4B611B81BDC900F4EBCD /* Images.xcassets */,
 				CECB4B631B81BDC900F4EBCD /* LaunchScreen.xib */,
@@ -168,6 +178,7 @@
 				TargetAttributes = {
 					CECB4B501B81BDC900F4EBCD = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = D7S3BX6UT5;
 					};
 					CECB4B691B81BDC900F4EBCD = {
 						CreatedOnToolsVersion = 6.4;
@@ -219,7 +230,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CECB4B5D1B81BDC900F4EBCD /* ViewController.m in Sources */,
+				CE5EBD011B831898001B5FD4 /* LeftMenuViewController.m in Sources */,
+				CECB4B5D1B81BDC900F4EBCD /* CalculatorViewController.m in Sources */,
+				CE43B4221B8462F80010B514 /* LeftMenuItemCell.m in Sources */,
 				CECB4B5A1B81BDC900F4EBCD /* AppDelegate.m in Sources */,
 				CECB4B571B81BDC900F4EBCD /* main.m in Sources */,
 			);
@@ -349,9 +362,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -359,9 +375,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -418,6 +437,7 @@
 				CECB4B761B81BDC900F4EBCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CECB4B771B81BDC900F4EBCD /* Build configuration list for PBXNativeTarget "CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +446,7 @@
 				CECB4B791B81BDC900F4EBCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

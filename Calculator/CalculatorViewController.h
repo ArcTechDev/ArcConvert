@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <objc/message.h>
+#import "LeftMenuViewController.h"
 
-@interface ViewController : UIViewController
+@interface CalculatorViewController : UIViewController<LeftMenuViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *displayField;
+@property (weak, nonatomic) IBOutlet UIView *maskView;
 
 @end
 
