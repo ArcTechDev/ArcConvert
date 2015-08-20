@@ -55,10 +55,13 @@
     //User entered digits
     NSString *userInput;
     
+    //store data that will be used by mathatical calculation
     OperateArg *oArg;
     
+    //determine it should draw decimal or not
     BOOL drawDecimal;
     
+    //left side menu
     LeftMenuViewController *leftMenuViewController;
 
 }
