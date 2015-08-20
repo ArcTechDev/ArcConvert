@@ -63,6 +63,8 @@
     
     //left side menu
     LeftMenuViewController *leftMenuViewController;
+    
+    enum InputType lastInputType;
 
 }
 
@@ -95,6 +97,7 @@
     accumulator = 0.0;
     userInput = @"";
     drawDecimal = NO;
+    lastInputType = Unknow;
     
    return [super initWithCoder:aDecoder];
 }
@@ -287,6 +290,7 @@
     
     accumulator = 0.0;
     userInput = @"";
+    lastInputType = Unknow;
     [numberStack removeAllObjects];
     [operationStack removeAllObjects];
 }
@@ -315,6 +319,7 @@
         userInput = [userInput stringByAppendingString:digit];
     }
     
+    lastInputType = Digital;
     accumulator = [userInput doubleValue];
     
     NSLog(@"User input:%@, accumulator:%lf",userInput, accumulator);
@@ -327,6 +332,14 @@
  */
 - (void)doMath:(NSString *)operationSymbol{
     
+    //Change operator if last input is operator and dont calculate
+    if(lastInputType != Unknow && lastInputType == Operator && operationStack.count > 0){
+        
+        operationStack[operationStack.count-1] = operationSymbol;
+        
+        return;
+    }
+    
     if(numberStack.count > 0 && operationStack.count > 0){
         
         [self doEquals];
@@ -338,6 +351,7 @@
     [numberStack addObject:[NSNumber numberWithDouble:accumulator]];
     [operationStack addObject:operationSymbol];
     userInput = @"";
+    lastInputType = Operator;
    // [self updateDisplay];
     
 }

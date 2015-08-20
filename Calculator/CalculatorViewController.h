@@ -11,6 +11,13 @@
 
 #define kAnimationDuration 0.2
 
+enum InputType{
+    
+    Unknow,
+    Digital,
+    Operator
+};
+
 @interface CalculatorViewController : UIViewController<LeftMenuViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *displayField;
