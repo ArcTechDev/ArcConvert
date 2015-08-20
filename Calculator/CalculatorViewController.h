@@ -8,20 +8,23 @@
 
 #import <UIKit/UIKit.h>
 #import "LeftMenuViewController.h"
+#import "RecordManager.h"
 
 #define kAnimationDuration 0.2
 
 enum InputType{
     
     Unknow,
+    Equal,
     Digital,
     Operator
 };
 
-@interface CalculatorViewController : UIViewController<LeftMenuViewDelegate>
+@interface CalculatorViewController : UIViewController<LeftMenuViewDelegate, RecordManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *displayField;
 @property (weak, nonatomic) IBOutlet UIView *maskView;
+@property (weak, nonatomic) IBOutlet UILabel *dispalyCalculation;
 
 @end
 

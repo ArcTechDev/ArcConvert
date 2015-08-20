@@ -9,6 +9,7 @@
 #import "CalculatorViewController.h"
 #import "LeftMenuViewController.h"
 
+
 @interface OperateArg : NSObject
 
 @property (assign, nonatomic) double argA;
@@ -50,6 +51,7 @@
     NSMutableArray *operationStack;
     
     //Store calculate result
+    //Value can be accumulated
     double accumulator;
     
     //User entered digits
@@ -59,18 +61,32 @@
     OperateArg *oArg;
     
     //determine it should draw decimal or not
+    //when decimal sign press this need to be YES
+    //so display can display decimal properly
     BOOL drawDecimal;
     
     //left side menu
     LeftMenuViewController *leftMenuViewController;
     
     //user last input type that could be digital or operator
+    //this is used to determine if user press an operator follow by
+    //an operator and need to replace last operator
     enum InputType lastInputType;
-
+    
+    /**this last input number keep track user input number
+     * so it can be store into record, the purpose of this variable
+     * is to associate with RecordManager
+     *
+     * This need to be set to result of calculation after user
+     * press equal sign so user can use this value for next
+     * calculation
+     */
+    NSNumber *lastInputNumber;
 }
 
 @synthesize displayField = _displayField;
 @synthesize maskView = _maskView;
+@synthesize dispalyCalculation = _dispalyCalculation;
 
 
 - (id)initWithCoder:(NSCoder *)aDecoder{
@@ -99,6 +115,9 @@
     userInput = @"";
     drawDecimal = NO;
     lastInputType = Unknow;
+    lastInputNumber = nil;
+    
+    [RecordManager sharedRecordManager].delegate = self;
     
    return [super initWithCoder:aDecoder];
 }
@@ -292,8 +311,11 @@
     accumulator = 0.0;
     userInput = @"";
     lastInputType = Unknow;
+    lastInputNumber = nil;
+    self.dispalyCalculation.text = @"";
     [numberStack removeAllObjects];
     [operationStack removeAllObjects];
+    [[RecordManager sharedRecordManager] createNewRecordSaveLast:NO];
 }
 
 #pragma mark - Calculator brain
@@ -321,7 +343,11 @@
     }
     
     lastInputType = Digital;
+    
     accumulator = [userInput doubleValue];
+    
+    //store last input number
+    lastInputNumber = [NSNumber numberWithDouble:accumulator];
     
     NSLog(@"User input:%@, accumulator:%lf",userInput, accumulator);
     
@@ -338,6 +364,9 @@
         
         operationStack[operationStack.count-1] = operationSymbol;
         
+        //replace operator in record
+        [[RecordManager sharedRecordManager] replaceLastOperatorWithOperator:operationSymbol];
+        
         return;
     }
     
@@ -349,9 +378,17 @@
     if(accumulator == INFINITY)
         return;
     
+    //if last input number is nil store last input number into record
+    if(lastInputNumber != nil)
+       [[RecordManager sharedRecordManager] addDigital:lastInputNumber];
+    
+    //store operator in to record
+    [[RecordManager sharedRecordManager] addOperator:operationSymbol];
+    
     [numberStack addObject:[NSNumber numberWithDouble:accumulator]];
     [operationStack addObject:operationSymbol];
     userInput = @"";
+    lastInputNumber = nil;
     lastInputType = Operator;
    // [self updateDisplay];
     
@@ -362,8 +399,10 @@
  */
 - (void)doEquals{
     
+    /*
     if([userInput isEqualToString:@""])
         return;
+     */
     
     //if number stack has item
     if(numberStack.count > 0){
@@ -443,6 +482,14 @@
         drawDecimal = NO;
     }
     
+    
+    
+}
+
+#pragma mark - RecordManagerDelegate
+- (void)onRecordUpdate:(CalculationRecord *)record{
+    
+    _dispalyCalculation.text = [[RecordManager sharedRecordManager] currentRecord].calculateRepresentation;
 }
 
 #pragma mark - Basic math
@@ -540,7 +587,23 @@
 
 - (IBAction)equalSign:(id)sender{
     
+    //if last input number is not nil then store last input number to record
+    if(lastInputNumber != nil){
+        [[RecordManager sharedRecordManager] addDigital:lastInputNumber];
+    }
+    else{
+        [[RecordManager sharedRecordManager] addDigital:[NSNumber numberWithDouble:accumulator]];
+    }
+    
     [self doEquals];
+    
+    //set accumulator as last input number so that
+    //user can use this accumulator as value to keep calculating
+    lastInputNumber = [NSNumber numberWithDouble:accumulator];
+    
+    //create new record and save last record
+    [[RecordManager sharedRecordManager] createNewRecordSaveLast:YES];
+    
 }
 
 - (IBAction)clear:(id)sender{

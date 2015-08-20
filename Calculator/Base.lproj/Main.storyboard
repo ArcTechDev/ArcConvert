@@ -19,9 +19,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="31J-fX-mgF">
+                                <rect key="frame" x="0.0" y="20" width="600" height="45.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.82782907196969691" blue="0.75316069500329663" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45.5" id="tWx-gf-0oX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Wlo-hk-eMJ">
-                                <rect key="frame" x="0.0" y="20" width="600" height="109"/>
-                                <color key="backgroundColor" red="0.71294981060606055" green="0.71294981060606055" blue="0.71294981060606055" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="65" width="600" height="109"/>
+                                <color key="backgroundColor" red="0.82782907196969691" green="0.80761089436930578" blue="0.82371726323240446" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="109" id="bRN-Wn-vuQ"/>
                                 </constraints>
@@ -30,7 +40,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXT-mk-qcq">
-                                <rect key="frame" x="16" y="137" width="60" height="60"/>
+                                <rect key="frame" x="16" y="182" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.72604955808080807" green="0.72604955808080807" blue="0.72604955808080807" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Pzu-3M-MxJ"/>
@@ -45,7 +55,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOS-b3-1cu">
-                                <rect key="frame" x="84" y="137" width="60" height="60"/>
+                                <rect key="frame" x="84" y="182" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.72604955810000005" green="0.72604955810000005" blue="0.72604955810000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="8">
@@ -56,7 +66,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZc-Sw-Mkn">
-                                <rect key="frame" x="152" y="137" width="60" height="60"/>
+                                <rect key="frame" x="152" y="182" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.72604955810000005" green="0.72604955810000005" blue="0.72604955810000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="9">
@@ -67,7 +77,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJe-og-6xq">
-                                <rect key="frame" x="16" y="205" width="60" height="60"/>
+                                <rect key="frame" x="16" y="250" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.72604955810000005" green="0.72604955810000005" blue="0.72604955810000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="74f-z8-GnT"/>
@@ -82,7 +92,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaJ-Ob-rjL">
-                                <rect key="frame" x="84" y="205" width="60" height="60"/>
+                                <rect key="frame" x="84" y="250" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.72604955810000005" green="0.72604955810000005" blue="0.72604955810000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="5">
@@ -93,7 +103,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NH2-gS-byH">
-                                <rect key="frame" x="152" y="205" width="60" height="60"/>
+                                <rect key="frame" x="152" y="250" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.72604955810000005" green="0.72604955810000005" blue="0.72604955810000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="6">
@@ -104,7 +114,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkp-GX-T0r">
-                                <rect key="frame" x="16" y="273" width="60" height="60"/>
+                                <rect key="frame" x="16" y="318" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.72604955810000005" green="0.72604955810000005" blue="0.72604955810000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="1">
@@ -115,7 +125,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqO-DM-iTj">
-                                <rect key="frame" x="84" y="273" width="60" height="60"/>
+                                <rect key="frame" x="84" y="318" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.72604955810000005" green="0.72604955810000005" blue="0.72604955810000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="2">
@@ -126,7 +136,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wl7-sW-uzD">
-                                <rect key="frame" x="152" y="273" width="60" height="60"/>
+                                <rect key="frame" x="152" y="318" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.72604955810000005" green="0.72604955810000005" blue="0.72604955810000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="3">
@@ -137,7 +147,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQB-uF-IdK">
-                                <rect key="frame" x="16" y="341" width="196" height="60"/>
+                                <rect key="frame" x="16" y="386" width="196" height="60"/>
                                 <color key="backgroundColor" red="0.72604955810000005" green="0.72604955810000005" blue="0.72604955810000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Hjk-JD-7oG"/>
@@ -152,7 +162,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGO-75-T4G">
-                                <rect key="frame" x="220" y="205" width="60" height="60"/>
+                                <rect key="frame" x="220" y="250" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.72604955810000005" green="0.72604955810000005" blue="0.72604955810000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="51"/>
                                 <state key="normal" title="X">
@@ -163,7 +173,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHU-cz-rP2">
-                                <rect key="frame" x="220" y="273" width="60" height="60"/>
+                                <rect key="frame" x="220" y="318" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.72604955810000005" green="0.72604955810000005" blue="0.72604955810000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="51"/>
                                 <state key="normal" title="-">
@@ -174,7 +184,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hey-9S-hnA">
-                                <rect key="frame" x="220" y="341" width="60" height="60"/>
+                                <rect key="frame" x="220" y="386" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.72604955810000005" green="0.72604955810000005" blue="0.72604955810000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="51"/>
                                 <state key="normal" title="/">
@@ -185,7 +195,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89t-4X-ZtE">
-                                <rect key="frame" x="220" y="409" width="60" height="60"/>
+                                <rect key="frame" x="220" y="454" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.72604955810000005" green="0.72604955810000005" blue="0.72604955810000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="51"/>
                                 <state key="normal" title="+">
@@ -196,7 +206,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7n-N9-emA">
-                                <rect key="frame" x="16" y="409" width="196" height="60"/>
+                                <rect key="frame" x="16" y="454" width="196" height="60"/>
                                 <color key="backgroundColor" red="0.72604955810000005" green="0.72604955810000005" blue="0.72604955810000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="51"/>
                                 <state key="normal" title="=">
@@ -207,7 +217,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNj-W6-tDD">
-                                <rect key="frame" x="16" y="477" width="196" height="60"/>
+                                <rect key="frame" x="16" y="522" width="196" height="60"/>
                                 <color key="backgroundColor" red="0.72604955810000005" green="0.72604955810000005" blue="0.72604955810000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="51"/>
                                 <state key="normal" title="C">
@@ -218,7 +228,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1U-ZH-XKH">
-                                <rect key="frame" x="220" y="137" width="60" height="60"/>
+                                <rect key="frame" x="220" y="182" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.72604955810000005" green="0.72604955810000005" blue="0.72604955810000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="DaH-92-aIs"/>
@@ -233,14 +243,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkX-EK-9GX">
-                                <rect key="frame" x="220" y="477" width="60" height="60"/>
+                                <rect key="frame" x="220" y="522" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.72604955810000005" green="0.72604955810000005" blue="0.72604955810000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="+/-">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="addSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Io8-Lo-aix"/>
                                     <action selector="positiveAndNegativeSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bf7-94-TNG"/>
                                 </connections>
                             </button>
@@ -262,12 +271,14 @@
                             <constraint firstItem="Hey-9S-hnA" firstAttribute="leading" secondItem="89t-4X-ZtE" secondAttribute="leading" id="5ob-on-txo"/>
                             <constraint firstItem="wXT-mk-qcq" firstAttribute="leading" secondItem="pQB-uF-IdK" secondAttribute="leading" id="6Vf-Rb-qIY"/>
                             <constraint firstItem="NH2-gS-byH" firstAttribute="leading" secondItem="qaJ-Ob-rjL" secondAttribute="trailing" constant="8" id="7Pw-S4-Xmt"/>
+                            <constraint firstAttribute="centerX" secondItem="31J-fX-mgF" secondAttribute="centerX" id="7z6-cA-HoF"/>
                             <constraint firstItem="Hey-9S-hnA" firstAttribute="top" secondItem="LHU-cz-rP2" secondAttribute="bottom" constant="8" id="8Li-sB-gk0"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dV3-cw-Qsg" secondAttribute="bottom" id="9Jw-3y-3Bz"/>
                             <constraint firstItem="Z1U-ZH-XKH" firstAttribute="width" secondItem="uGO-75-T4G" secondAttribute="width" id="AiX-A9-ckS"/>
                             <constraint firstItem="LHU-cz-rP2" firstAttribute="width" secondItem="uGO-75-T4G" secondAttribute="width" id="Aot-ta-2NE"/>
                             <constraint firstItem="zqO-DM-iTj" firstAttribute="top" secondItem="Bkp-GX-T0r" secondAttribute="top" id="AwS-2G-hKS"/>
                             <constraint firstItem="nJe-og-6xq" firstAttribute="width" secondItem="NH2-gS-byH" secondAttribute="width" id="BIU-Kl-uxa"/>
+                            <constraint firstItem="Wlo-hk-eMJ" firstAttribute="top" secondItem="31J-fX-mgF" secondAttribute="bottom" id="Bkv-Ks-tLv"/>
                             <constraint firstItem="zqO-DM-iTj" firstAttribute="height" secondItem="Bkp-GX-T0r" secondAttribute="height" id="CDn-gv-kek"/>
                             <constraint firstItem="wXT-mk-qcq" firstAttribute="width" secondItem="nJe-og-6xq" secondAttribute="width" id="DUL-6A-nha"/>
                             <constraint firstItem="J7n-N9-emA" firstAttribute="top" secondItem="89t-4X-ZtE" secondAttribute="top" id="DVo-df-HKx"/>
@@ -295,7 +306,6 @@
                             <constraint firstItem="UZc-Sw-Mkn" firstAttribute="width" secondItem="wXT-mk-qcq" secondAttribute="width" id="Yth-dr-jLe"/>
                             <constraint firstAttribute="centerX" secondItem="dV3-cw-Qsg" secondAttribute="centerX" id="aI8-1l-KIk"/>
                             <constraint firstItem="zqO-DM-iTj" firstAttribute="width" secondItem="Bkp-GX-T0r" secondAttribute="width" id="aej-TE-uuk"/>
-                            <constraint firstItem="Wlo-hk-eMJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="azo-FR-rft"/>
                             <constraint firstItem="qaJ-Ob-rjL" firstAttribute="leading" secondItem="nJe-og-6xq" secondAttribute="trailing" constant="8" id="cwr-mc-0oX"/>
                             <constraint firstAttribute="centerX" secondItem="Wlo-hk-eMJ" secondAttribute="centerX" id="dIP-8j-8z0"/>
                             <constraint firstItem="oOS-b3-1cu" firstAttribute="height" secondItem="wXT-mk-qcq" secondAttribute="height" id="fDD-KZ-IKi"/>
@@ -306,6 +316,7 @@
                             <constraint firstItem="wXT-mk-qcq" firstAttribute="height" secondItem="nJe-og-6xq" secondAttribute="height" id="hRV-0z-vae"/>
                             <constraint firstItem="89t-4X-ZtE" firstAttribute="leading" secondItem="PkX-EK-9GX" secondAttribute="leading" id="iih-wf-Sb7"/>
                             <constraint firstItem="wXT-mk-qcq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jT9-Kv-hKT"/>
+                            <constraint firstItem="31J-fX-mgF" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="k6R-AG-pdQ"/>
                             <constraint firstItem="LHU-cz-rP2" firstAttribute="leading" secondItem="uGO-75-T4G" secondAttribute="leading" id="lkF-un-PrT"/>
                             <constraint firstItem="J7n-N9-emA" firstAttribute="leading" secondItem="dNj-W6-tDD" secondAttribute="leading" id="oMX-3R-K8E"/>
                             <constraint firstItem="Z1U-ZH-XKH" firstAttribute="leading" secondItem="uGO-75-T4G" secondAttribute="leading" id="oqR-41-bSo"/>
@@ -321,6 +332,7 @@
                             <constraint firstItem="J7n-N9-emA" firstAttribute="leading" secondItem="pQB-uF-IdK" secondAttribute="leading" id="tDe-M5-JSv"/>
                             <constraint firstItem="Hey-9S-hnA" firstAttribute="width" secondItem="89t-4X-ZtE" secondAttribute="width" id="tlc-80-cZH"/>
                             <constraint firstItem="Wlo-hk-eMJ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="uin-BX-NWe"/>
+                            <constraint firstItem="31J-fX-mgF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="vTq-IH-ryU"/>
                             <constraint firstItem="LHU-cz-rP2" firstAttribute="top" secondItem="uGO-75-T4G" secondAttribute="bottom" constant="8" id="w2g-11-tHm"/>
                             <constraint firstItem="wXT-mk-qcq" firstAttribute="leading" secondItem="nJe-og-6xq" secondAttribute="leading" id="yMh-HX-fpK"/>
                             <constraint firstItem="89t-4X-ZtE" firstAttribute="height" secondItem="PkX-EK-9GX" secondAttribute="height" id="zJS-he-2Rp"/>
@@ -328,6 +340,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dispalyCalculation" destination="31J-fX-mgF" id="ZCF-m1-mp2"/>
                         <outlet property="displayField" destination="Wlo-hk-eMJ" id="aV3-9U-dBS"/>
                         <outlet property="maskView" destination="dV3-cw-Qsg" id="UDT-iC-ont"/>
                     </connections>
@@ -360,7 +373,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wnE-FP-mpv">
                                                     <rect key="frame" x="98.5" y="5.5" width="103" height="51.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="43"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -391,7 +404,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="42y-UX-AQO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1105" y="414"/>
+            <point key="canvasLocation" x="1387" y="516"/>
         </scene>
     </scenes>
 </document>

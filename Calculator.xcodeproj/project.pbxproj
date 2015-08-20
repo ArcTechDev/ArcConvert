@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		CE43B4221B8462F80010B514 /* LeftMenuItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE43B4211B8462F80010B514 /* LeftMenuItemCell.m */; };
 		CE5EBD011B831898001B5FD4 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5EBD001B831898001B5FD4 /* LeftMenuViewController.m */; };
+		CEB79A361B857082001C7806 /* RecordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB79A351B857082001C7806 /* RecordManager.m */; };
+		CEB79A3C1B858399001C7806 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB79A3B1B858399001C7806 /* Helper.m */; };
 		CECB4B571B81BDC900F4EBCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB4B561B81BDC900F4EBCD /* main.m */; };
 		CECB4B5A1B81BDC900F4EBCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB4B591B81BDC900F4EBCD /* AppDelegate.m */; };
 		CECB4B5D1B81BDC900F4EBCD /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB4B5C1B81BDC900F4EBCD /* CalculatorViewController.m */; };
@@ -33,6 +35,10 @@
 		CE43B4211B8462F80010B514 /* LeftMenuItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuItemCell.m; sourceTree = "<group>"; };
 		CE5EBCFF1B831898001B5FD4 /* LeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuViewController.h; sourceTree = "<group>"; };
 		CE5EBD001B831898001B5FD4 /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuViewController.m; sourceTree = "<group>"; };
+		CEB79A341B857082001C7806 /* RecordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordManager.h; sourceTree = "<group>"; };
+		CEB79A351B857082001C7806 /* RecordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordManager.m; sourceTree = "<group>"; };
+		CEB79A3A1B858399001C7806 /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		CEB79A3B1B858399001C7806 /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
 		CECB4B511B81BDC900F4EBCD /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECB4B551B81BDC900F4EBCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CECB4B561B81BDC900F4EBCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -86,6 +92,24 @@
 			name = Calculator;
 			sourceTree = "<group>";
 		};
+		CEB79A331B857063001C7806 /* RecordManager */ = {
+			isa = PBXGroup;
+			children = (
+				CEB79A341B857082001C7806 /* RecordManager.h */,
+				CEB79A351B857082001C7806 /* RecordManager.m */,
+			);
+			name = RecordManager;
+			sourceTree = "<group>";
+		};
+		CEB79A391B858381001C7806 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				CEB79A3A1B858399001C7806 /* Helper.h */,
+				CEB79A3B1B858399001C7806 /* Helper.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
 		CECB4B481B81BDC900F4EBCD = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +131,8 @@
 		CECB4B531B81BDC900F4EBCD /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				CEB79A391B858381001C7806 /* Helper */,
+				CEB79A331B857063001C7806 /* RecordManager */,
 				CEB79A2F1B856F91001C7806 /* Calculator */,
 				CEB79A2D1B856F5E001C7806 /* LeftMenu */,
 				CECB4B581B81BDC900F4EBCD /* AppDelegate.h */,
@@ -250,6 +276,8 @@
 				CECB4B5D1B81BDC900F4EBCD /* CalculatorViewController.m in Sources */,
 				CE43B4221B8462F80010B514 /* LeftMenuItemCell.m in Sources */,
 				CECB4B5A1B81BDC900F4EBCD /* AppDelegate.m in Sources */,
+				CEB79A3C1B858399001C7806 /* Helper.m in Sources */,
+				CEB79A361B857082001C7806 /* RecordManager.m in Sources */,
 				CECB4B571B81BDC900F4EBCD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
