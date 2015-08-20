@@ -64,6 +64,7 @@
     //left side menu
     LeftMenuViewController *leftMenuViewController;
     
+    //user last input type that could be digital or operator
     enum InputType lastInputType;
 
 }
