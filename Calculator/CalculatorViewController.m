@@ -75,7 +75,7 @@
 - (id)initWithCoder:(NSCoder *)aDecoder{
     
     
-    //register operation methods
+    //register operation methods, any support math operator should add here
     opDic = [[NSMutableDictionary alloc] initWithObjects:[NSArray arrayWithObjects:
                                                             
                                                             [NSValue valueWithPointer:@selector(addValueAB:)],
