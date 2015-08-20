@@ -66,6 +66,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CEB79A2D1B856F5E001C7806 /* LeftMenu */ = {
+			isa = PBXGroup;
+			children = (
+				CE5EBCFF1B831898001B5FD4 /* LeftMenuViewController.h */,
+				CE5EBD001B831898001B5FD4 /* LeftMenuViewController.m */,
+				CE43B4201B8462F80010B514 /* LeftMenuItemCell.h */,
+				CE43B4211B8462F80010B514 /* LeftMenuItemCell.m */,
+			);
+			name = LeftMenu;
+			sourceTree = "<group>";
+		};
+		CEB79A2F1B856F91001C7806 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				CECB4B5B1B81BDC900F4EBCD /* CalculatorViewController.h */,
+				CECB4B5C1B81BDC900F4EBCD /* CalculatorViewController.m */,
+			);
+			name = Calculator;
+			sourceTree = "<group>";
+		};
 		CECB4B481B81BDC900F4EBCD = {
 			isa = PBXGroup;
 			children = (
@@ -87,14 +107,10 @@
 		CECB4B531B81BDC900F4EBCD /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				CEB79A2F1B856F91001C7806 /* Calculator */,
+				CEB79A2D1B856F5E001C7806 /* LeftMenu */,
 				CECB4B581B81BDC900F4EBCD /* AppDelegate.h */,
 				CECB4B591B81BDC900F4EBCD /* AppDelegate.m */,
-				CECB4B5B1B81BDC900F4EBCD /* CalculatorViewController.h */,
-				CECB4B5C1B81BDC900F4EBCD /* CalculatorViewController.m */,
-				CE5EBCFF1B831898001B5FD4 /* LeftMenuViewController.h */,
-				CE5EBD001B831898001B5FD4 /* LeftMenuViewController.m */,
-				CE43B4201B8462F80010B514 /* LeftMenuItemCell.h */,
-				CE43B4211B8462F80010B514 /* LeftMenuItemCell.m */,
 				CECB4B5E1B81BDC900F4EBCD /* Main.storyboard */,
 				CECB4B611B81BDC900F4EBCD /* Images.xcassets */,
 				CECB4B631B81BDC900F4EBCD /* LaunchScreen.xib */,
