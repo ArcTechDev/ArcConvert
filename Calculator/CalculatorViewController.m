@@ -8,6 +8,7 @@
 
 #import "CalculatorViewController.h"
 #import "LeftMenuViewController.h"
+#import "DelegateViewController.h"
 
 
 @interface OperateArg : NSObject
@@ -521,7 +522,40 @@
     [leftMenuViewController slideOutWithDuration:kAnimationDuration OnComplete:^{
     
         [self.maskView setHidden:YES];
+        
+        [self performSegueWithIdentifier:item.itemTitle sender:nil];
     }];
+}
+
+#pragma mark - RecordMenuViewController delegate
+- (void)onRecordSelectedWithIndex:(NSUInteger)index{
+    
+    CalculationRecord *selectedRecord = [[RecordManager sharedRecordManager] getRecordByIndex:index];
+    
+    if(selectedRecord != nil){
+        
+        [self clearCalculator];
+        
+        self.dispalyCalculation.text = selectedRecord.getRepresentation;
+        self.displayField.text = [NSString stringWithFormat:@"%@", selectedRecord.getSum];
+        
+        accumulator = [selectedRecord.getSum doubleValue];
+        
+        //set accumulator as last input number so that
+        //user can use this accumulator as value to keep calculating
+        lastInputNumber = [NSNumber numberWithDouble:accumulator];
+        
+        //create new record and save last record
+        [[RecordManager sharedRecordManager] createNewRecordSaveLast:YES];
+    }
+}
+
+#pragma mark - Segue
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    DelegateViewController *viewController = [segue destinationViewController];
+    
+    viewController.delegate = self;
 }
 
 #pragma mark - Button action
@@ -596,6 +630,8 @@
     }
     
     [self doEquals];
+    
+    [[RecordManager sharedRecordManager] setSum:[NSNumber numberWithDouble:accumulator]];
     
     //set accumulator as last input number so that
     //user can use this accumulator as value to keep calculating

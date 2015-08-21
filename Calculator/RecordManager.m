@@ -19,11 +19,15 @@
     
     //operator set
     NSMutableArray *operators;
+    
+    //sum
+    NSNumber *sum;
 }
 
 @synthesize calculateRepresentation = _calculateRepresentation;
 @synthesize digitalSet = _digitalSet;
 @synthesize operatorSet = _operatorSet;
+@synthesize calculateSum = _calculateSum;
 
 #pragma  mark - Getter
 - (NSString *)getRepresentation{
@@ -39,6 +43,11 @@
 - (NSArray *)getOperators{
     
     return [NSArray arrayWithArray:operators];
+}
+
+- (NSNumber *)getSum{
+    
+    return sum;
 }
 
 #pragma mark - public interface
@@ -86,9 +95,14 @@
     }
 }
 
+- (void)setSum:(NSNumber *)sumValue{
+    
+    sum = sumValue;
+}
+
 - (BOOL)canSaveRecord{
     
-    if([representation isEqualToString:@""])
+    if([representation isEqualToString:@""] && sum == nil)
         return NO;
     
     return YES;
@@ -138,8 +152,18 @@
 }
 
 @synthesize delegate = _delegate;
+@synthesize recordCount = _recordCount;
 
 static RecordManager *instance;
+
+#pragma mark - Getter
+- (NSUInteger)getRecordCount{
+    
+    if(records != nil && records.count > 0)
+        return records.count;
+    
+    return 0;
+}
 
 #pragma mark - public interface
 + (RecordManager *)sharedRecordManager{
@@ -187,6 +211,11 @@ static RecordManager *instance;
     }
 }
 
+- (void)setSum:(NSNumber *)sumValue{
+    
+    [currentRecord setSum:sumValue];
+}
+
 - (void)replaceLastOperatorWithOperator:(NSString *)op{
     
     [currentRecord replaceLastOperatorWithOperator:op];
@@ -195,6 +224,16 @@ static RecordManager *instance;
         
         [_delegate onRecordUpdate:currentRecord];
     }
+}
+
+- (CalculationRecord *)getRecordByIndex:(NSUInteger)index{
+    
+    if(records != nil && records.count > 0){
+        
+        return [records objectAtIndex:index];
+    }
+    
+    return nil;
 }
 
 #pragma mark - override
@@ -247,6 +286,8 @@ static RecordManager *instance;
             [record addDigital:[numbers objectAtIndex:n]];
         }
         
+        [record setSum:[dic objectForKey:@"Sum"]];
+        
         [records addObject:record];
     }
 }
@@ -275,6 +316,7 @@ static RecordManager *instance;
         [dic setValue:record.calculateRepresentation forKey:@"Representation"];
         [dic setValue:record.digitalSet forKey:@"Number"];
         [dic setValue:record.operatorSet forKey:@"Operator"];
+        [dic setValue:record.getSum forKey:@"Sum"];
         
         [dataArray addObject:dic];
     }
