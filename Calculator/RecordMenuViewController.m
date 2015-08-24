@@ -66,7 +66,7 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 /*

@@ -9,6 +9,7 @@
 #import "CalculatorViewController.h"
 #import "LeftMenuViewController.h"
 #import "DelegateViewController.h"
+#import  <iAd/iAd.h>
 
 
 @interface OperateArg : NSObject
@@ -141,11 +142,20 @@
 - (void)viewDidAppear:(BOOL)animated{
     
     [super viewDidAppear:animated];
+    
+    ADBannerView *adView = [[ADBannerView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height -50, 320, 50)];
+    [self.view addSubview:adView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Navigation button
+- (void)setupNavigation{
+    
+    //[self.navigationController.navigationBar ]
 }
 
 #pragma mark - LeftMenuView
