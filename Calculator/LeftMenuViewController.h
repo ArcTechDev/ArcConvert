@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DelegateViewController.h"
 
 enum MenuDirectoin{
     
@@ -36,7 +37,7 @@ enum MenuDirectoin{
 
 //
 //LeftMenuViewController
-@interface LeftMenuViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@interface LeftMenuViewController : DelegateViewController<UITableViewDataSource, UITableViewDelegate>
 
 /**
  * Define portion of menu view to show, in other word
@@ -68,7 +69,7 @@ enum MenuDirectoin{
 /**
  * Delegate that implement LeftMenuViewDelegate
  */
-@property(weak, nonatomic)id<LeftMenuViewDelegate> delegate;
+//@property(weak, nonatomic)id<LeftMenuViewDelegate> delegate;
 
 
 /**
@@ -76,8 +77,9 @@ enum MenuDirectoin{
  *
  * @Param parent the parent ViewController
  * Return this ViewController
- */
+
 - (id)addToParentViewController:(UIViewController *)parent;
+ */
 
 /**
  * Move menu view by given translation

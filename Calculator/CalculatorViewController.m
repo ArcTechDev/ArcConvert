@@ -8,6 +8,7 @@
 
 #import "CalculatorViewController.h"
 #import "LeftMenuViewController.h"
+#import "MainMenuViewController.h"
 #import "DelegateViewController.h"
 #import  <iAd/iAd.h>
 
@@ -39,6 +40,7 @@
 
 @interface CalculatorViewController ()
 
+
 @end
 
 @implementation CalculatorViewController{
@@ -68,7 +70,19 @@
     BOOL drawDecimal;
     
     //left side menu
-    LeftMenuViewController *leftMenuViewController;
+    //LeftMenuViewController *leftMenuViewController;
+    
+    //Main menu
+    //MainMenuViewController *mainMenuViewController;
+    
+    //to store the view controller that will be panned
+    UIViewController *pendingViewController;
+    
+    //to store last translation on this view when panning
+    CGPoint lastTranslation;
+    
+    //determine was panning left or right
+    BOOL panLeft;
     
     //user last input type that could be digital or operator
     //this is used to determine if user press an operator follow by
@@ -84,10 +98,12 @@
      * calculation
      */
     NSNumber *lastInputNumber;
+    
+    ADBannerView *adBannerView;
 }
 
 @synthesize displayField = _displayField;
-@synthesize maskView = _maskView;
+//@synthesize maskView = _maskView;
 @synthesize dispalyCalculation = _dispalyCalculation;
 
 
@@ -129,22 +145,40 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     //register left edge pan
+    /*
     UIScreenEdgePanGestureRecognizer *leftEdgeGesture = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleLeftEdgePanGesture:)];
     leftEdgeGesture.edges = UIRectEdgeLeft;
     [self.view addGestureRecognizer:leftEdgeGesture];
+     */
+    
+    //register right edge pan
+    UIScreenEdgePanGestureRecognizer *rightEdgeGesture = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleRightEdgePanGesture:)];
+    rightEdgeGesture.edges = UIRectEdgeRight;
+    [self.view addGestureRecognizer:rightEdgeGesture];
    
-    [self setupMaskView];
+    //setup mask view
+    //[self setupMaskView];
     
     //init left menu view
-    [self initLeftMenuView];
+    //[self initLeftMenuView];
+    
+    //init main menu view
+    //[self initMainMenuView];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     
     [super viewDidAppear:animated];
     
-    ADBannerView *adView = [[ADBannerView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height -50, 320, 50)];
-    [self.view addSubview:adView];
+    
+    if(adBannerView == nil){
+        
+        adBannerView = [[ADBannerView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height -50, 320, 50)];
+        [self.view addSubview:adBannerView];
+    }
+    
+    [self setupNavigationBar];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -153,11 +187,17 @@
 }
 
 #pragma mark - Navigation button
-- (void)setupNavigation{
+- (void)setupNavigationBar{
     
-    //[self.navigationController.navigationBar ]
+    self.navigationController.navigationBarHidden = NO;
+    
+    UIImage *image = [[UIImage imageNamed:@"SubMenu.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    NSArray *items = [NSArray arrayWithObjects:[[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStyleBordered target:nil action:nil], nil];
+    
+    self.navigationItem.rightBarButtonItems = items;
 }
 
+/*
 #pragma mark - LeftMenuView
 - (void)initLeftMenuView{
     
@@ -167,6 +207,16 @@
     leftMenuViewController.delegate = self;
 }
 
+#pragma mark - MainMenuView
+- (void)initMainMenuView{
+    
+    mainMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainMenuView"];
+    [mainMenuViewController addToParentViewController:self];
+    
+}
+ */
+
+/*
 #pragma mark - MaskView
 - (void)setupMaskView{
     
@@ -182,12 +232,15 @@
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleLeftEdgePanGesture:)];
     [self.maskView addGestureRecognizer:panGesture];
 }
+ */
 
 #pragma mark - Gestures
 /**
  * handle gesture when user pan from edge screen or pan left on mask view
  */
+/*
 - (void)handleLeftEdgePanGesture:(UIScreenEdgePanGestureRecognizer *)gesture{
+   
     
     //if gesture is UIScreenEdgePanGestureRecognizer
     if([gesture isKindOfClass:[UIScreenEdgePanGestureRecognizer class]]){
@@ -262,10 +315,96 @@
     }
     
 }
+ */
+
+- (void)handleRightEdgePanGesture:(UIScreenEdgePanGestureRecognizer *)gesture{
+    
+    //if pendingViewController no exist create one which if MainMenuViewController
+    if(pendingViewController == nil){
+        
+        pendingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainMenuView"];
+    }
+    
+    //we add pendingViewController's view as subview for view transition purpose
+    [self.view addSubview:pendingViewController.view];
+    
+    //get current translation on this view
+    CGPoint translation = [gesture translationInView:self.view];
+    
+    //if last time was not panning left and translation is greater than 0 set pendingViewController's view to most right
+    //since pan from right edge is started from negative value and value become positive when pan over start point so
+    //it can be determine which pendingViewController's view reach most right or not
+    if(!panLeft && translation.x >= 0.0){
+     
+        pendingViewController.view.center = CGPointMake(self.view.frame.size.width + pendingViewController.view.frame.size.width/2, pendingViewController.view.center.y);
+        return;
+    }
+    
+    //check if pan left or right
+    if(panLeft && translation.x > lastTranslation.x)
+        panLeft = NO;
+    else if(!panLeft && translation.x < lastTranslation.x)
+        panLeft = YES;
+    
+    //when start pan gesture
+    if(gesture.state == UIGestureRecognizerStateBegan){
+        
+        //set pendingViewController's view to most right
+        pendingViewController.view.center = CGPointMake(self.view.frame.size.width + pendingViewController.view.frame.size.width/2, pendingViewController.view.center.y);
+        
+        //store last translation
+        lastTranslation = translation;
+    }
+    else if(gesture.state == UIGestureRecognizerStateChanged){//when pan gesture changed
+        
+        //calculate translation percent value  on view
+        float percent = translation.x * 100.0 / self.view.frame.size.width / 100.0;
+        
+        //set pendingViewController's view to new position
+        pendingViewController.view.frame = CGRectMake(self.view.frame.size.width - pendingViewController.view.frame.size.width * fabs(percent), pendingViewController.view.frame.origin.y, pendingViewController.view.frame.size.width, pendingViewController.view.frame.size.height);
+        
+        //store translation
+        lastTranslation = translation;
+    }
+    else{//somehow user's pan gesture end
+        
+        //start animation
+        [UIView animateWithDuration:0.2 animations:^{
+        
+            //if was pan left animate view to left
+            if(panLeft){
+                pendingViewController.view.frame = CGRectMake(0.0, pendingViewController.view.frame.origin.y, pendingViewController.view.frame.size.width, pendingViewController.view.frame.size.height);
+            }
+            else{//otherwise animate view to right
+                
+                pendingViewController.view.center = CGPointMake(self.view.frame.size.width + pendingViewController.view.frame.size.width/2, pendingViewController.view.center.y);
+            }
+        } completion:^(BOOL finished){
+        
+            if(finished){
+                
+                //remove pendingViewController's view from super view
+                [pendingViewController.view removeFromSuperview];
+                
+                //if was pan left push controller to navigation controller
+                if(panLeft){
+                    [self.navigationController pushViewController:pendingViewController animated:NO];
+                    
+                    [(DelegateViewController *)pendingViewController onPushIntoNavigationController];
+                }
+                
+                //clear pendingViewController
+                pendingViewController = nil;
+            }
+        }];
+    }
+    
+}
 
 /**
  * handle gesture when user tap on mask view to let left menu slide out
  */
+/*
 - (void)handleTapToDismissLeftMenu:(UITapGestureRecognizer *)gesture{
     
     //start LeftMenuViewController slide out animation and hide mask view on complete
@@ -276,6 +415,7 @@
         
     }];
 }
+ */
 
 #pragma mark - Utility
 
@@ -528,13 +668,15 @@
 - (void)onMenuItemSelected:(MenuItem *)item{
     
     NSLog(@"Select item:%@", item.itemTitle);
+   
+    /*
+   [leftMenuViewController slideOutWithDuration:kAnimationDuration OnComplete:^{
     
-    [leftMenuViewController slideOutWithDuration:kAnimationDuration OnComplete:^{
-    
-        [self.maskView setHidden:YES];
+        //[self.maskView setHidden:YES];
         
         [self performSegueWithIdentifier:item.itemTitle sender:nil];
     }];
+     */
 }
 
 #pragma mark - RecordMenuViewController delegate

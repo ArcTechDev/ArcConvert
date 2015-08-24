@@ -12,4 +12,14 @@
 
 @property(weak, nonatomic) id delegate;
 
+/**
+ * Add this ViewController to given parent ViewController
+ *
+ * @Param parent the parent ViewController
+ * Return this ViewController
+ */
+- (void)addToParentViewController:(UIViewController *)parent;
+
+- (void)onPushIntoNavigationController;
+
 @end

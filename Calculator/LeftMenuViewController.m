@@ -53,7 +53,7 @@
 @synthesize acceleration = _acceleration;
 @synthesize direction = _direction;
 @synthesize lastTouchTranslation = _lastTouchTranslation;
-@synthesize delegate = _delegate;
+//@synthesize delegate = _delegate;
 
 #pragma mark- Getter
 /**
@@ -176,21 +176,17 @@
 }
 
 
-#pragma mark - public  interface
-- (id)addToParentViewController:(UIViewController *)parent{
+#pragma mark - override
+- (void)addToParentViewController:(UIViewController *)parent{
     
-    [parent addChildViewController:self];
-    
-    [parent.view addSubview:self.view];
+    [super addToParentViewController:parent];
     
     //set initial view center
     self.view.center = CGPointMake(minCenterX, self.view.center.y);
     
-    [self didMoveToParentViewController:parent];
-    
-    return self;
 }
 
+#pragma mark - public  interface
 - (void)moveMenuViewWithTranslation:(CGPoint)translation{
     
     //determine user touch move to right or left base on current touch translation and last touch translation
@@ -313,9 +309,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    if([_delegate respondsToSelector:@selector(onMenuItemSelected:)]){
+    if([self.delegate respondsToSelector:@selector(onMenuItemSelected:)]){
         
-        [_delegate onMenuItemSelected:[menuItems objectAtIndex:indexPath.row]];
+        [self.delegate onMenuItemSelected:[menuItems objectAtIndex:indexPath.row]];
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

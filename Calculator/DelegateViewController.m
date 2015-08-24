@@ -27,6 +27,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - public  interface
+- (void)addToParentViewController:(UIViewController *)parent{
+    
+    [parent addChildViewController:self];
+    
+    [parent.view addSubview:self.view];
+    
+    [self didMoveToParentViewController:parent];
+}
+
+- (void)onPushIntoNavigationController{
+    
+}
+
 /*
 #pragma mark - Navigation
 
