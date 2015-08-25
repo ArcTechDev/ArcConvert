@@ -10,7 +10,7 @@
 #import "LeftMenuViewController.h"
 #import "MainMenuViewController.h"
 #import "DelegateViewController.h"
-#import  <iAd/iAd.h>
+
 
 
 @interface OperateArg : NSObject
@@ -99,12 +99,12 @@
      */
     NSNumber *lastInputNumber;
     
-    ADBannerView *adBannerView;
 }
 
 @synthesize displayField = _displayField;
 //@synthesize maskView = _maskView;
 @synthesize dispalyCalculation = _dispalyCalculation;
+@synthesize adbannerView = _adbannerView;
 
 
 - (id)initWithCoder:(NSCoder *)aDecoder{
@@ -170,13 +170,6 @@
 - (void)viewDidAppear:(BOOL)animated{
     
     [super viewDidAppear:animated];
-    
-    
-    if(adBannerView == nil){
-        
-        adBannerView = [[ADBannerView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height -50, 320, 50)];
-        [self.view addSubview:adBannerView];
-    }
     
     [self setupNavigationBar];
 }
@@ -416,6 +409,12 @@
     }];
 }
  */
+
+#pragma mark - AdBannerViewDelegate
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
+    
+    NSLog(@"%@", error);
+}
 
 #pragma mark - Utility
 

@@ -10,6 +10,7 @@
 #import "LeftMenuViewController.h"
 #import "RecordManager.h"
 #import "RecordMenuViewController.h"
+#import  <iAd/iAd.h>
 
 #define kAnimationDuration 0.2
 
@@ -21,11 +22,13 @@ enum InputType{
     Operator
 };
 
-@interface CalculatorViewController : UIViewController<LeftMenuViewDelegate, RecordManagerDelegate, RecordMenuViewDelegate>
+@interface CalculatorViewController : UIViewController<LeftMenuViewDelegate, RecordManagerDelegate, RecordMenuViewDelegate, ADBannerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *displayField;
 //@property (weak, nonatomic) IBOutlet UIView *maskView;
 @property (weak, nonatomic) IBOutlet UILabel *dispalyCalculation;
+@property (weak, nonatomic) IBOutlet ADBannerView *adbannerView;
+
 
 @end
 
