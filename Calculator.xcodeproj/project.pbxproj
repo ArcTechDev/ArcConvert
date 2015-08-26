@@ -24,6 +24,7 @@
 		CECB4B621B81BDC900F4EBCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECB4B611B81BDC900F4EBCD /* Images.xcassets */; };
 		CECB4B651B81BDC900F4EBCD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECB4B631B81BDC900F4EBCD /* LaunchScreen.xib */; };
 		CECB4B711B81BDC900F4EBCD /* CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB4B701B81BDC900F4EBCD /* CalculatorTests.m */; };
+		CECF87AA1B8DADBF00733B8B /* CategoryEx.m in Sources */ = {isa = PBXBuildFile; fileRef = CECF87A91B8DADBF00733B8B /* CategoryEx.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		CECB4B6A1B81BDC900F4EBCD /* CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECB4B6F1B81BDC900F4EBCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CECB4B701B81BDC900F4EBCD /* CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorTests.m; sourceTree = "<group>"; };
+		CECF87A81B8DADBF00733B8B /* CategoryEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryEx.h; sourceTree = "<group>"; };
+		CECF87A91B8DADBF00733B8B /* CategoryEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryEx.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +219,7 @@
 		CECB4B531B81BDC900F4EBCD /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				CECF87A71B8DAC7C00733B8B /* Category */,
 				CE84A8221B8C3CE7001AD1AC /* CustomizeButton */,
 				CE6907241B8AB11D00B8852B /* Common */,
 				CE6907251B8AB15300B8852B /* MainMenuModule */,
@@ -254,6 +258,15 @@
 				CECB4B6F1B81BDC900F4EBCD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CECF87A71B8DAC7C00733B8B /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				CECF87A81B8DADBF00733B8B /* CategoryEx.h */,
+				CECF87A91B8DADBF00733B8B /* CategoryEx.m */,
+			);
+			name = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,6 +382,7 @@
 				CE84A8251B8C3D57001AD1AC /* GridButton.m in Sources */,
 				CEB79A361B857082001C7806 /* RecordManager.m in Sources */,
 				CECB4B571B81BDC900F4EBCD /* main.m in Sources */,
+				CECF87AA1B8DADBF00733B8B /* CategoryEx.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

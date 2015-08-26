@@ -11,6 +11,7 @@
 #import "RecordManager.h"
 #import "RecordMenuViewController.h"
 #import  <iAd/iAd.h>
+#import "CategoryEx.h"
 
 #define kAnimationDuration 0.2
 

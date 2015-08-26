@@ -625,7 +625,7 @@
     }
     else{
         
-        self .displayField.text = [NSString stringWithFormat:@"%@", [NSNumber numberWithDouble:accumulator]];
+        self .displayField.text = [NSString stringWithFormat:@"%@", [NSNumber decimalStringFromNumber:accumulator withMaxDecimal:15]];
     }
     
     if(drawDecimal == YES){
