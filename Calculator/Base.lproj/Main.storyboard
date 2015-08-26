@@ -86,6 +86,9 @@
                                         <state key="normal" image="Backward">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="backwardDelete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i9A-Lc-7v5"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NYA-c5-o61" customClass="GridButton">
                                         <rect key="frame" x="0.0" y="72" width="150" height="72"/>

@@ -804,6 +804,37 @@
     [self updateDisplay];
 }
 
+- (IBAction)backwardDelete:(id)sender{
+    
+    if(lastInputType == Digital){
+        
+        if([userInput length] > 0){
+            
+            NSLog(@"Remove digital");
+            NSLog(@"Before remove user input:%@, accumulator:%@",userInput,[NSNumber numberWithDouble:accumulator]);
+            
+            
+            NSRange lastCharacterRange= NSMakeRange([userInput length] - 1, 1);
+            userInput = [userInput stringByReplacingCharactersInRange:lastCharacterRange withString:@""];
+            
+            if([userInput length] == 0){
+                
+                accumulator = 0;
+            }
+            else{
+                
+                accumulator = [userInput doubleValue];
+            }
+            
+            lastInputNumber = [NSNumber numberWithDouble:accumulator];
+            
+            NSLog(@"After remove user input:%@, accumulator:%@",userInput,[NSNumber numberWithDouble:accumulator]);
+        }
+        
+        [self updateDisplay];
+    }
+}
+
 - (IBAction)addSign:(id)sender{
     
     [self doMath:@"+"];
