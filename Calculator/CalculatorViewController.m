@@ -877,31 +877,44 @@
     NSLog(@"userinput:%@", userInput);
     NSLog(@"accumulator:%lf", accumulator);
     
+    //if last input was digital
     if(lastInputType == Digital){
         
+        //temporary store accumulator
         double tempAccumulator = accumulator;
         
+        //do equal
         [self doEquals];
         
-        //get method for operation symbol
+        //get method for percent operation
         SEL sel = [[opDic objectForKey:@"%"] pointerValue];
         
         if(sel == nil)
             return;
         
+        //do percent math
         accumulator = [[self performSelector:sel withObject:[self getOperateArg:accumulator WithArgB:0]] doubleValue];
        
+        //store temporary accumulator to number stack
         [numberStack addObject:[NSNumber numberWithDouble:tempAccumulator]];
+        
+        //store in record
         [[RecordManager sharedRecordManager] addDigital:[NSNumber numberWithDouble:tempAccumulator]];
+        
+        //store percent operation
         [operationStack addObject:@"%"];
+        
+        //store in record
         [[RecordManager sharedRecordManager] addOperator:@"%"];
         
     }
-    else{
+    else{//last input was operator or other than digital
         
         //Remove last operator if last input is operator
         if(lastInputType != Unknow && lastInputType == Operator && operationStack.count > 0){
             
+            //since accumulator store the correct calculation result we dont
+            //need and number or operator in stack
             [numberStack removeAllObjects];
             [operationStack removeAllObjects];
             
@@ -909,15 +922,19 @@
             [[RecordManager sharedRecordManager] removeLastOperator];
         }
         
-        //get method for operation symbol
+        //get method for percent operation symbol
         SEL sel = [[opDic objectForKey:@"%"] pointerValue];
         
         if(sel == nil)
             return;
         
+        //do percent math
         accumulator = [[self performSelector:sel withObject:[self getOperateArg:accumulator WithArgB:0]] doubleValue];
         
+        //store percent operation
         [operationStack addObject:@"%"];
+        
+        //store in record
         [[RecordManager sharedRecordManager] addOperator:@"%"];
     }
     
