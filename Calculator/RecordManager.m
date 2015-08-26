@@ -138,6 +138,8 @@
     }
     
     NSLog(@"representation:%@", representation);
+    NSLog(@"Raw data numbers:%@", digitals);
+    NSLog(@"Raw data operators:%@", operators);
 }
 
 #pragma mark - override
