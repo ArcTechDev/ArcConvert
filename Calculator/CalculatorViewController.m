@@ -806,26 +806,33 @@
 
 - (IBAction)backwardDelete:(id)sender{
     
+    //if last input was digital so we can delete
     if(lastInputType == Digital){
         
+        //check if input length greater than 0
         if([userInput length] > 0){
             
             NSLog(@"Remove digital");
             NSLog(@"Before remove user input:%@, accumulator:%@",userInput,[NSNumber numberWithDouble:accumulator]);
             
-            
+            //find last character range
             NSRange lastCharacterRange= NSMakeRange([userInput length] - 1, 1);
+            //replace last character with none
             userInput = [userInput stringByReplacingCharactersInRange:lastCharacterRange withString:@""];
             
+            //if new input hs no character left
             if([userInput length] == 0){
                 
+                //set accumulator to 0
                 accumulator = 0;
             }
             else{
                 
+                //update accumulator
                 accumulator = [userInput doubleValue];
             }
             
+            //set to last input number
             lastInputNumber = [NSNumber numberWithDouble:accumulator];
             
             NSLog(@"After remove user input:%@, accumulator:%@",userInput,[NSNumber numberWithDouble:accumulator]);
