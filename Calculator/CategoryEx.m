@@ -23,6 +23,8 @@
     [decimalNumberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
     [decimalNumberFormatter setMaximumFractionDigits:count];
     
+    NSLog(@"fix:%@", [decimalNumberFormatter numberFromString:string]);
+    
     return [decimalNumberFormatter numberFromString:string];
 }
 

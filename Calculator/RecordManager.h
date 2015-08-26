@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CategoryEx.h"
 
 @interface CalculationRecord : NSObject
 

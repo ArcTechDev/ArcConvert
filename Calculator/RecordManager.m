@@ -95,6 +95,16 @@
     }
 }
 
+- (void)removeLastOperator{
+    
+    if(operators.count > 0){
+        
+        [operators removeLastObject];
+        
+        [self updateRepresentation];
+    }
+}
+
 - (void)setSum:(NSNumber *)sumValue{
     
     sum = sumValue;
@@ -117,7 +127,7 @@
         
         NSNumber *num = [digitals objectAtIndex:i];
         
-        representation = [representation stringByAppendingString:[NSString stringWithFormat:@"%@", num]];
+        representation = [representation stringByAppendingString:[NSString stringWithFormat:@"%@", [NSNumber decimalStringFromNumber:[num doubleValue] withMaxDecimal:15]]];
         
         if(i<operators.count){
             

@@ -475,6 +475,13 @@
     [[RecordManager sharedRecordManager] createNewRecordSaveLast:NO];
 }
 
+- (NSNumber *)preciseDoubleNumberWithDouble:(double)value{
+    
+    NSString *str = [NSString stringWithFormat:@"%lf", value];
+    
+    return [NSNumber decimalNumberFromString:str withMaxDecimal:10];
+}
+
 #pragma mark - Calculator brain
 /**
  * Handle calcualtor digital input
@@ -504,7 +511,7 @@
     accumulator = [userInput doubleValue];
     
     //store last input number
-    lastInputNumber = [NSNumber numberWithDouble:accumulator];
+    lastInputNumber = [self preciseDoubleNumberWithDouble:accumulator];
     
     NSLog(@"User input:%@, accumulator:%lf",userInput, accumulator);
     
@@ -542,7 +549,7 @@
     //store operator in to record
     [[RecordManager sharedRecordManager] addOperator:operationSymbol];
     
-    [numberStack addObject:[NSNumber numberWithDouble:accumulator]];
+    [numberStack addObject:[self preciseDoubleNumberWithDouble:accumulator]];
     [operationStack addObject:operationSymbol];
     userInput = @"";
     lastInputNumber = nil;
@@ -652,27 +659,27 @@
 #pragma mark - Basic math
 - (id)addValueAB:(OperateArg *)arg{
     
-    return [NSNumber numberWithDouble:(arg.argA + arg.argB)];
+    return [self preciseDoubleNumberWithDouble:(arg.argA + arg.argB)];
 }
 
 - (id)subValueAB:(OperateArg *)arg{
     
-    return [NSNumber numberWithDouble:(arg.argA - arg.argB)];
+    return [self preciseDoubleNumberWithDouble:(arg.argA - arg.argB)];
 }
 
 - (id)multiplyValueAB:(OperateArg *)arg{
     
-    return [NSNumber numberWithDouble:(arg.argA * arg.argB)];
+    return [self preciseDoubleNumberWithDouble:(arg.argA * arg.argB)];
 }
 
 - (id)dividValueAB:(OperateArg *)arg{
     
-     return [NSNumber numberWithDouble:(arg.argA / arg.argB)];
+     return [self preciseDoubleNumberWithDouble:(arg.argA / arg.argB)];
 }
 
 - (id)percentValueA:(OperateArg *)arg{
     
-    return [NSNumber numberWithDouble:(arg.argA * 0.01)];
+    return [self preciseDoubleNumberWithDouble:(arg.argA * 0.01)];
 }
 
 #pragma mark - LeftMenuViewController delegate
@@ -706,7 +713,7 @@
         
         //set accumulator as last input number so that
         //user can use this accumulator as value to keep calculating
-        lastInputNumber = [NSNumber numberWithDouble:accumulator];
+        lastInputNumber = [self preciseDoubleNumberWithDouble:accumulator];
         
         //create new record and save last record
         [[RecordManager sharedRecordManager] createNewRecordSaveLast:YES];
@@ -789,16 +796,16 @@
         [[RecordManager sharedRecordManager] addDigital:lastInputNumber];
     }
     else{
-        [[RecordManager sharedRecordManager] addDigital:[NSNumber numberWithDouble:accumulator]];
+        [[RecordManager sharedRecordManager] addDigital:[self preciseDoubleNumberWithDouble:accumulator]];
     }
     
     [self doEquals];
     
-    [[RecordManager sharedRecordManager] setSum:[NSNumber numberWithDouble:accumulator]];
+    [[RecordManager sharedRecordManager] setSum:[self preciseDoubleNumberWithDouble:accumulator]];
     
     //set accumulator as last input number so that
     //user can use this accumulator as value to keep calculating
-    lastInputNumber = [NSNumber numberWithDouble:accumulator];
+    lastInputNumber = [self preciseDoubleNumberWithDouble:accumulator];
     
     //create new record and save last record
     [[RecordManager sharedRecordManager] createNewRecordSaveLast:YES];
@@ -820,7 +827,7 @@
         if([userInput length] > 0){
             
             NSLog(@"Remove digital");
-            NSLog(@"Before remove user input:%@, accumulator:%@",userInput,[NSNumber numberWithDouble:accumulator]);
+            NSLog(@"Before remove user input:%@, accumulator:%@",userInput,[self preciseDoubleNumberWithDouble:accumulator]);
             
             //find last character range
             NSRange lastCharacterRange= NSMakeRange([userInput length] - 1, 1);
@@ -840,9 +847,9 @@
             }
             
             //set to last input number
-            lastInputNumber = [NSNumber numberWithDouble:accumulator];
+            lastInputNumber = [self preciseDoubleNumberWithDouble:accumulator];
             
-            NSLog(@"After remove user input:%@, accumulator:%@",userInput,[NSNumber numberWithDouble:accumulator]);
+            NSLog(@"After remove user input:%@, accumulator:%@",userInput,[self preciseDoubleNumberWithDouble:accumulator]);
         }
         
         [self updateDisplay];
@@ -896,10 +903,10 @@
         accumulator = [[self performSelector:sel withObject:[self getOperateArg:accumulator WithArgB:0]] doubleValue];
        
         //store temporary accumulator to number stack
-        [numberStack addObject:[NSNumber numberWithDouble:tempAccumulator]];
+        [numberStack addObject:[self preciseDoubleNumberWithDouble:tempAccumulator]];
         
         //store in record
-        [[RecordManager sharedRecordManager] addDigital:[NSNumber numberWithDouble:tempAccumulator]];
+        [[RecordManager sharedRecordManager] addDigital:[self preciseDoubleNumberWithDouble:tempAccumulator]];
         
         //store percent operation
         [operationStack addObject:@"%"];
@@ -946,11 +953,11 @@
     
     [self updateDisplay];
     
-    [[RecordManager sharedRecordManager] setSum:[NSNumber numberWithDouble:accumulator]];
+    [[RecordManager sharedRecordManager] setSum:[self preciseDoubleNumberWithDouble:accumulator]];
     
     //set accumulator as last input number so that
     //user can use this accumulator as value to keep calculating
-    lastInputNumber = [NSNumber numberWithDouble:accumulator];
+    lastInputNumber = [self preciseDoubleNumberWithDouble:accumulator];
     
     //create new record and save last record
     [[RecordManager sharedRecordManager] createNewRecordSaveLast:YES];
@@ -962,7 +969,7 @@
     //since userinput might get clear after doMath or doEquals so we need to
     //put last calculate result back to userInput so it can properly display on screen and
     //will not cause value become 0
-    userInput = [NSString stringWithFormat:@"%@", [NSNumber numberWithDouble:accumulator]];
+    userInput = [NSString stringWithFormat:@"%@", [self preciseDoubleNumberWithDouble:accumulator]];
     [self handleDigitInpute:@"-"];
 }
 
