@@ -555,14 +555,14 @@
     </scenes>
     <resources>
         <image name="AllClear" width="36" height="36"/>
-        <image name="Backward" width="24" height="24"/>
+        <image name="Backward" width="36" height="36"/>
         <image name="Divided" width="24" height="24"/>
-        <image name="Dot" width="72" height="72"/>
+        <image name="Dot" width="12" height="12"/>
         <image name="Equal" width="24" height="24"/>
         <image name="Minus" width="24" height="24"/>
-        <image name="Percent" width="24" height="24"/>
+        <image name="Percent" width="36" height="36"/>
         <image name="Plus" width="24" height="24"/>
-        <image name="PlusMinus" width="24" height="24"/>
+        <image name="PlusMinus" width="36" height="36"/>
         <image name="Times" width="24" height="24"/>
     </resources>
 </document>
