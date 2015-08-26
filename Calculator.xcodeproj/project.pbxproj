@@ -14,6 +14,7 @@
 		CE43B4221B8462F80010B514 /* LeftMenuItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE43B4211B8462F80010B514 /* LeftMenuItemCell.m */; };
 		CE5EBD011B831898001B5FD4 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5EBD001B831898001B5FD4 /* LeftMenuViewController.m */; };
 		CE6907291B8AB18400B8852B /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6907281B8AB18400B8852B /* MainMenuViewController.m */; };
+		CE84A8251B8C3D57001AD1AC /* GridButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE84A8241B8C3D57001AD1AC /* GridButton.m */; };
 		CEB79A361B857082001C7806 /* RecordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB79A351B857082001C7806 /* RecordManager.m */; };
 		CEB79A3C1B858399001C7806 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB79A3B1B858399001C7806 /* Helper.m */; };
 		CECB4B571B81BDC900F4EBCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB4B561B81BDC900F4EBCD /* main.m */; };
@@ -49,6 +50,8 @@
 		CE5EBD001B831898001B5FD4 /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuViewController.m; sourceTree = "<group>"; };
 		CE6907271B8AB18400B8852B /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
 		CE6907281B8AB18400B8852B /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+		CE84A8231B8C3D57001AD1AC /* GridButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridButton.h; sourceTree = "<group>"; };
+		CE84A8241B8C3D57001AD1AC /* GridButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridButton.m; sourceTree = "<group>"; };
 		CEB79A341B857082001C7806 /* RecordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordManager.h; sourceTree = "<group>"; };
 		CEB79A351B857082001C7806 /* RecordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordManager.m; sourceTree = "<group>"; };
 		CEB79A3A1B858399001C7806 /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
@@ -144,6 +147,15 @@
 			name = MainMenu;
 			sourceTree = "<group>";
 		};
+		CE84A8221B8C3CE7001AD1AC /* CustomizeButton */ = {
+			isa = PBXGroup;
+			children = (
+				CE84A8231B8C3D57001AD1AC /* GridButton.h */,
+				CE84A8241B8C3D57001AD1AC /* GridButton.m */,
+			);
+			name = CustomizeButton;
+			sourceTree = "<group>";
+		};
 		CEB79A2D1B856F5E001C7806 /* LeftMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +216,7 @@
 		CECB4B531B81BDC900F4EBCD /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				CE84A8221B8C3CE7001AD1AC /* CustomizeButton */,
 				CE6907241B8AB11D00B8852B /* Common */,
 				CE6907251B8AB15300B8852B /* MainMenuModule */,
 				CE6907231B8AB05500B8852B /* CalculatorModule */,
@@ -353,6 +366,7 @@
 				CE6907291B8AB18400B8852B /* MainMenuViewController.m in Sources */,
 				CEB79A3C1B858399001C7806 /* Helper.m in Sources */,
 				CE13B9AF1B86C0C8007C58BF /* DelegateViewController.m in Sources */,
+				CE84A8251B8C3D57001AD1AC /* GridButton.m in Sources */,
 				CEB79A361B857082001C7806 /* RecordManager.m in Sources */,
 				CECB4B571B81BDC900F4EBCD /* main.m in Sources */,
 			);

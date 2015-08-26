@@ -40,6 +40,7 @@
 
 @interface CalculatorViewController ()
 
+@property(weak, nonatomic) IBOutlet UIButton *btn;
 
 @end
 
@@ -105,6 +106,7 @@
 //@synthesize maskView = _maskView;
 @synthesize dispalyCalculation = _dispalyCalculation;
 @synthesize adbannerView = _adbannerView;
+@synthesize btn = _btn;
 
 
 - (id)initWithCoder:(NSCoder *)aDecoder{
@@ -172,6 +174,9 @@
     [super viewDidAppear:animated];
     
     [self setupNavigationBar];
+    
+    _btn.layer.borderWidth = 1;
+    _btn.layer.borderColor = [UIColor grayColor].CGColor;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -817,6 +822,10 @@
 - (IBAction)divideSign:(id)sender{
     
     [self doMath:@"/"];
+}
+
+- (IBAction)percentSign:(id)sender{
+    
 }
 
 - (IBAction)positiveAndNegativeSign:(id)sender{
