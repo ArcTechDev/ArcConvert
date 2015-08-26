@@ -95,16 +95,6 @@
     }
 }
 
-- (void)removeLastOperator{
-    
-    if(operators.count > 0){
-        
-        [operators removeLastObject];
-        
-        [self updateRepresentation];
-    }
-}
-
 - (void)setSum:(NSNumber *)sumValue{
     
     sum = sumValue;
@@ -138,6 +128,8 @@
     }
     
     NSLog(@"representation:%@", representation);
+    NSLog(@"Raw data numbers:%@", digitals);
+    NSLog(@"Raw data operators:%@", operators);
 }
 
 #pragma mark - override
