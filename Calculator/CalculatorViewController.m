@@ -864,6 +864,12 @@
 
 - (IBAction)percentSign:(id)sender{
     
+    NSLog(@"Percent press");
+    NSLog(@"Number set:%@", numberStack);
+    NSLog(@"Operator set:%@", operationStack);
+    NSLog(@"userinput:%@", userInput);
+    NSLog(@"accumulator:%lf", accumulator);
+    
 }
 
 - (IBAction)positiveAndNegativeSign:(id)sender{
