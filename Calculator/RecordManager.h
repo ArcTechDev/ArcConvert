@@ -23,6 +23,7 @@
 - (void)addDigital:(NSNumber *)digital;
 - (void)addOperator:(NSString *)op;
 - (void)replaceLastOperatorWithOperator:(NSString *)op;
+- (void)removeLastOperator;
 - (void)setSum:(NSNumber *)sumValue;
 - (BOOL)canSaveRecord;
 
@@ -80,6 +81,11 @@ static NSString *recordFileName = @"Record.plist";
  * Replace last operator with new one
  */
 - (void)replaceLastOperatorWithOperator:(NSString *)op;
+
+/**
+ * Remove last operator
+ */
+- (void)removeLastOperator;
 
 /**
  * Get record by index

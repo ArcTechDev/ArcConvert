@@ -95,6 +95,16 @@
     }
 }
 
+- (void)removeLastOperator{
+    
+    if(operators.count > 0){
+        
+        [operators removeLastObject];
+        
+        [self updateRepresentation];
+    }
+}
+
 - (void)setSum:(NSNumber *)sumValue{
     
     sum = sumValue;
@@ -219,6 +229,16 @@ static RecordManager *instance;
 - (void)replaceLastOperatorWithOperator:(NSString *)op{
     
     [currentRecord replaceLastOperatorWithOperator:op];
+    
+    if([_delegate respondsToSelector:@selector(onRecordUpdate:)]){
+        
+        [_delegate onRecordUpdate:currentRecord];
+    }
+}
+
+- (void)removeLastOperator{
+    
+    [currentRecord removeLastOperator];
     
     if([_delegate respondsToSelector:@selector(onRecordUpdate:)]){
         

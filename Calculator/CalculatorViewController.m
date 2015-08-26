@@ -119,6 +119,7 @@
                                                             [NSValue valueWithPointer:@selector(subValueAB:)],
                                                             [NSValue valueWithPointer:@selector(multiplyValueAB:)],
                                                             [NSValue valueWithPointer:@selector(dividValueAB:)],
+                                                            [NSValue valueWithPointer:@selector(percentValueA:)],
                                                             nil]
                
                                                    forKeys:[NSArray arrayWithObjects:
@@ -127,6 +128,7 @@
                                                             @"-",
                                                             @"*",
                                                             @"/",
+                                                            @"%",
                                                             nil]];
     
     numberStack = [[NSMutableArray alloc] init];
@@ -668,6 +670,11 @@
      return [NSNumber numberWithDouble:(arg.argA / arg.argB)];
 }
 
+- (id)percentValueA:(OperateArg *)arg{
+    
+    return [NSNumber numberWithDouble:(arg.argA * 0.01)];
+}
+
 #pragma mark - LeftMenuViewController delegate
 - (void)onMenuItemSelected:(MenuItem *)item{
     
@@ -869,6 +876,67 @@
     NSLog(@"Operator set:%@", operationStack);
     NSLog(@"userinput:%@", userInput);
     NSLog(@"accumulator:%lf", accumulator);
+    
+    if(lastInputType == Digital){
+        
+        double tempAccumulator = accumulator;
+        
+        [self doEquals];
+        
+        //get method for operation symbol
+        SEL sel = [[opDic objectForKey:@"%"] pointerValue];
+        
+        if(sel == nil)
+            return;
+        
+        accumulator = [[self performSelector:sel withObject:[self getOperateArg:accumulator WithArgB:0]] doubleValue];
+       
+        [numberStack addObject:[NSNumber numberWithDouble:tempAccumulator]];
+        [[RecordManager sharedRecordManager] addDigital:[NSNumber numberWithDouble:tempAccumulator]];
+        [operationStack addObject:@"%"];
+        [[RecordManager sharedRecordManager] addOperator:@"%"];
+        
+    }
+    else{
+        
+        //Remove last operator if last input is operator
+        if(lastInputType != Unknow && lastInputType == Operator && operationStack.count > 0){
+            
+            [numberStack removeAllObjects];
+            [operationStack removeAllObjects];
+            
+            //replace operator in record
+            [[RecordManager sharedRecordManager] removeLastOperator];
+        }
+        
+        //get method for operation symbol
+        SEL sel = [[opDic objectForKey:@"%"] pointerValue];
+        
+        if(sel == nil)
+            return;
+        
+        accumulator = [[self performSelector:sel withObject:[self getOperateArg:accumulator WithArgB:0]] doubleValue];
+        
+        [operationStack addObject:@"%"];
+        [[RecordManager sharedRecordManager] addOperator:@"%"];
+    }
+    
+    NSLog(@"accumulator:%lf",accumulator);
+    
+    userInput = @"";
+    [numberStack removeAllObjects];
+    [operationStack removeAllObjects];
+    
+    [self updateDisplay];
+    
+    [[RecordManager sharedRecordManager] setSum:[NSNumber numberWithDouble:accumulator]];
+    
+    //set accumulator as last input number so that
+    //user can use this accumulator as value to keep calculating
+    lastInputNumber = [NSNumber numberWithDouble:accumulator];
+    
+    //create new record and save last record
+    [[RecordManager sharedRecordManager] createNewRecordSaveLast:YES];
     
 }
 
