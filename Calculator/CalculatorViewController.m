@@ -477,7 +477,7 @@
 
 - (NSNumber *)preciseDoubleNumberWithDouble:(double)value{
     
-    NSString *str = [NSString stringWithFormat:@"%lf", value];
+    NSString *str = [NSString stringWithFormat:@"%.15f", value];
     
     return [NSNumber decimalNumberFromString:str withMaxDecimal:10];
 }
