@@ -95,16 +95,6 @@
     }
 }
 
-- (void)removeLastOperator{
-    
-    if(operators.count > 0){
-        
-        [operators removeLastObject];
-        
-        [self updateRepresentation];
-    }
-}
-
 - (void)setSum:(NSNumber *)sumValue{
     
     sum = sumValue;
