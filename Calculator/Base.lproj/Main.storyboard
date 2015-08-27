@@ -36,21 +36,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="" textAlignment="right" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="31J-fX-mgF" userLabel="Process-Label">
-                                <rect key="frame" x="0.0" y="64" width="600" height="34"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="29"/>
                                 <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="38"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Wlo-hk-eMJ" userLabel="Input-Label">
-                                <rect key="frame" x="0.0" y="98" width="600" height="96"/>
+                                <rect key="frame" x="0.0" y="93" width="600" height="96"/>
                                 <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="80"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rV3-3y-oaA" userLabel="Keyboard-View">
-                                <rect key="frame" x="0.0" y="194" width="600" height="361"/>
+                                <rect key="frame" x="0.0" y="189" width="600" height="361"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHe-O9-awJ" userLabel="AC-Button">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="71.5"/>
@@ -356,7 +356,7 @@
                                     <constraint firstItem="yCB-ZP-STN" firstAttribute="leading" secondItem="FeV-10-awx" secondAttribute="trailing" id="zzY-D7-KkP"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q2B-ya-9V2">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q2B-ya-9V2" userLabel="Banner-View">
                                 <rect key="frame" x="0.0" y="550" width="600" height="50"/>
                                 <subviews>
                                     <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="be7-gS-N1B">
@@ -375,7 +375,7 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Wlo-hk-eMJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0v5-Vo-KJD"/>
-                            <constraint firstItem="q2B-ya-9V2" firstAttribute="top" secondItem="rV3-3y-oaA" secondAttribute="bottom" constant="-5.5" id="3PS-Ta-s4E"/>
+                            <constraint firstItem="q2B-ya-9V2" firstAttribute="top" secondItem="rV3-3y-oaA" secondAttribute="bottom" id="3PS-Ta-s4E"/>
                             <constraint firstItem="rV3-3y-oaA" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.6" constant="1" id="4tu-4K-s8e"/>
                             <constraint firstItem="Wlo-hk-eMJ" firstAttribute="top" secondItem="31J-fX-mgF" secondAttribute="bottom" id="8Xh-aC-umR"/>
                             <constraint firstAttribute="bottom" secondItem="q2B-ya-9V2" secondAttribute="bottom" id="E1g-gr-zEh"/>
