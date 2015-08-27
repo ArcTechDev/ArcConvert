@@ -192,7 +192,7 @@
     self.navigationController.navigationBarHidden = NO;
     
     UIImage *image = [[UIImage imageNamed:@"SubMenu.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    NSArray *items = [NSArray arrayWithObjects:[[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStyleBordered target:nil action:nil], nil];
+    NSArray *items = [NSArray arrayWithObjects:[[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStyleBordered target:self action:@selector(showHistory)], nil];
     
     self.navigationItem.rightBarButtonItems = items;
 }
@@ -718,6 +718,16 @@
         //create new record and save last record
         [[RecordManager sharedRecordManager] createNewRecordSaveLast:YES];
     }
+}
+
+#pragma mark - internal
+- (void)showHistory{
+    
+    DelegateViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CalculatorHitstoryMenu"];
+    
+    viewController.delegate = self;
+    
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 #pragma mark - Segue

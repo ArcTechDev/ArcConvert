@@ -379,7 +379,6 @@
                         <outlet property="adbannerView" destination="Pi8-rv-je8" id="09J-qL-tbi"/>
                         <outlet property="dispalyCalculation" destination="31J-fX-mgF" id="ZCF-m1-mp2"/>
                         <outlet property="displayField" destination="Wlo-hk-eMJ" id="aV3-9U-dBS"/>
-                        <segue destination="bkk-Sn-7wL" kind="show" identifier="History" id="osy-Np-ztI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -419,7 +418,7 @@
         <!--Record Menu View Controller-->
         <scene sceneID="rZd-VE-4zz">
             <objects>
-                <viewController id="bkk-Sn-7wL" customClass="RecordMenuViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalculatorHitstoryMenu" id="bkk-Sn-7wL" customClass="RecordMenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9PP-HV-xMN"/>
                         <viewControllerLayoutGuide type="bottom" id="gQ6-gH-Ysq"/>
@@ -428,7 +427,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="93" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="aGZ-c7-eWT">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="93" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="aGZ-c7-eWT">
                                 <rect key="frame" x="0.0" y="72" width="600" height="528"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
