@@ -15,6 +15,10 @@
 		CE5EBD011B831898001B5FD4 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5EBD001B831898001B5FD4 /* LeftMenuViewController.m */; };
 		CE6907291B8AB18400B8852B /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6907281B8AB18400B8852B /* MainMenuViewController.m */; };
 		CE84A8251B8C3D57001AD1AC /* GridButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE84A8241B8C3D57001AD1AC /* GridButton.m */; };
+		CE87C85B1B8F04CB00EA3305 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE87C8571B8F033C00EA3305 /* Lato-Light.ttf */; };
+		CE87C85C1B8F04CB00EA3305 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE87C8581B8F033C00EA3305 /* Lato-Medium.ttf */; };
+		CE87C85E1B8F06EB00EA3305 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE87C85D1B8F06C600EA3305 /* Lato-Regular.ttf */; };
+		CE87C87F1B8F145800EA3305 /* Neon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE87C87E1B8F140400EA3305 /* Neon.ttf */; };
 		CEB79A361B857082001C7806 /* RecordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB79A351B857082001C7806 /* RecordManager.m */; };
 		CEB79A3C1B858399001C7806 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB79A3B1B858399001C7806 /* Helper.m */; };
 		CECB4B571B81BDC900F4EBCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB4B561B81BDC900F4EBCD /* main.m */; };
@@ -53,6 +57,10 @@
 		CE6907281B8AB18400B8852B /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 		CE84A8231B8C3D57001AD1AC /* GridButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridButton.h; sourceTree = "<group>"; };
 		CE84A8241B8C3D57001AD1AC /* GridButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridButton.m; sourceTree = "<group>"; };
+		CE87C8571B8F033C00EA3305 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		CE87C8581B8F033C00EA3305 /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Medium.ttf"; sourceTree = "<group>"; };
+		CE87C85D1B8F06C600EA3305 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		CE87C87E1B8F140400EA3305 /* Neon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Neon.ttf; sourceTree = "<group>"; };
 		CEB79A341B857082001C7806 /* RecordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordManager.h; sourceTree = "<group>"; };
 		CEB79A351B857082001C7806 /* RecordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordManager.m; sourceTree = "<group>"; };
 		CEB79A3A1B858399001C7806 /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
@@ -159,6 +167,17 @@
 			name = CustomizeButton;
 			sourceTree = "<group>";
 		};
+		CE87C8541B8F014E00EA3305 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE87C87E1B8F140400EA3305 /* Neon.ttf */,
+				CE87C85D1B8F06C600EA3305 /* Lato-Regular.ttf */,
+				CE87C8571B8F033C00EA3305 /* Lato-Light.ttf */,
+				CE87C8581B8F033C00EA3305 /* Lato-Medium.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		CEB79A2D1B856F5E001C7806 /* LeftMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +238,7 @@
 		CECB4B531B81BDC900F4EBCD /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				CE87C8541B8F014E00EA3305 /* Resources */,
 				CECF87A71B8DAC7C00733B8B /* Category */,
 				CE84A8221B8C3CE7001AD1AC /* CustomizeButton */,
 				CE6907241B8AB11D00B8852B /* Common */,
@@ -350,6 +370,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE87C87F1B8F145800EA3305 /* Neon.ttf in Resources */,
+				CE87C85E1B8F06EB00EA3305 /* Lato-Regular.ttf in Resources */,
+				CE87C85B1B8F04CB00EA3305 /* Lato-Light.ttf in Resources */,
+				CE87C85C1B8F04CB00EA3305 /* Lato-Medium.ttf in Resources */,
 				CECB4B601B81BDC900F4EBCD /* Main.storyboard in Resources */,
 				CECB4B651B81BDC900F4EBCD /* LaunchScreen.xib in Resources */,
 				CECB4B621B81BDC900F4EBCD /* Images.xcassets in Resources */,
@@ -513,7 +537,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Calculator/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -527,7 +551,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Calculator/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

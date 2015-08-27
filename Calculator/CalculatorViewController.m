@@ -197,6 +197,15 @@
     [self.navigationController.navigationBar setTranslucent:NO];
     
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:64.0/255.0 green:204.0/255.0 blue:177.0/255.0 alpha:0]];
+    
+    NSMutableDictionary *titleBarAttributes = [NSMutableDictionary dictionaryWithDictionary: [[UINavigationBar appearance] titleTextAttributes]];
+    
+    [titleBarAttributes setValue:[UIFont fontWithName:@"Lato-Medium" size:21.0f] forKey:UITextAttributeFont];
+    
+    [self.navigationController.navigationBar setTitleTextAttributes:titleBarAttributes];
+    
+    self.title = @"aaa123";
+    
 }
 
 /*
