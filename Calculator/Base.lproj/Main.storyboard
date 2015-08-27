@@ -21,7 +21,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAZ-tC-9ov" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="197" y="493"/>
+            <point key="canvasLocation" x="212" y="492"/>
         </scene>
         <!--Calculator View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -35,15 +35,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="31J-fX-mgF" userLabel="Process-Label">
-                                <rect key="frame" x="0.0" y="64" width="600" height="40.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="" textAlignment="right" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="31J-fX-mgF" userLabel="Process-Label">
+                                <rect key="frame" x="0.0" y="64" width="600" height="34"/>
                                 <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="38"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Wlo-hk-eMJ" userLabel="Input-Label">
-                                <rect key="frame" x="0.0" y="104" width="600" height="90"/>
+                                <rect key="frame" x="0.0" y="98" width="600" height="96"/>
                                 <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="80"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -53,7 +53,7 @@
                                 <rect key="frame" x="0.0" y="194" width="600" height="361"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHe-O9-awJ" userLabel="AC-Button">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="72"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="71.5"/>
                                         <color key="tintColor" red="0.25098039220000001" green="0.80000000000000004" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="AllClear" backgroundImage="BtnBg">
                                             <color key="titleColor" red="0.27450980392156865" green="0.36862745098039218" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -64,7 +64,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNI-rH-HS4" userLabel="PlusMinus-Button">
-                                        <rect key="frame" x="150" y="0.0" width="150" height="72"/>
+                                        <rect key="frame" x="150" y="0.0" width="150" height="71.5"/>
                                         <color key="tintColor" red="0.25098039220000001" green="0.80000000000000004" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="PlusMinus" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -74,7 +74,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vu-d4-4Qt" userLabel="Percent-Button">
-                                        <rect key="frame" x="300" y="0.0" width="150" height="72"/>
+                                        <rect key="frame" x="300" y="0.0" width="150" height="71.5"/>
                                         <color key="tintColor" red="0.25098039220000001" green="0.80000000000000004" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="Percent" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -84,7 +84,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0B-rF-PEO" userLabel="Backward-Button">
-                                        <rect key="frame" x="450" y="0.0" width="150" height="72"/>
+                                        <rect key="frame" x="450" y="0.0" width="150" height="71.5"/>
                                         <color key="tintColor" red="0.25098039220000001" green="0.80000000000000004" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="Backward" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -94,7 +94,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NYA-c5-o61">
-                                        <rect key="frame" x="0.0" y="72" width="150" height="72"/>
+                                        <rect key="frame" x="0.0" y="71" width="150" height="71.5"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="7" backgroundImage="BtnBg">
@@ -106,7 +106,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fd-ef-CHg">
-                                        <rect key="frame" x="150" y="72" width="150" height="72"/>
+                                        <rect key="frame" x="150" y="71" width="150" height="71.5"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="8" backgroundImage="BtnBg">
@@ -118,7 +118,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l09-Hl-Sy0">
-                                        <rect key="frame" x="300" y="72" width="150" height="72"/>
+                                        <rect key="frame" x="300" y="71" width="150" height="71.5"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="9" backgroundImage="BtnBg">
@@ -130,15 +130,15 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUe-Da-lRE" userLabel="Plus-Button">
-                                        <rect key="frame" x="450" y="72" width="150" height="72"/>
+                                        <rect key="frame" x="450" y="71" width="150" height="71.5"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="Plus" backgroundImage="BtnBg"/>
+                                        <state key="normal" image="Divided" backgroundImage="BtnBg"/>
                                         <connections>
-                                            <action selector="addSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fid-fE-EYq"/>
+                                            <action selector="divideSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tci-lJ-N14"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdf-Z7-7da">
-                                        <rect key="frame" x="0.0" y="144" width="150" height="72"/>
+                                        <rect key="frame" x="0.0" y="142" width="150" height="71.5"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="4" backgroundImage="BtnBg">
@@ -150,7 +150,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nsy-Qq-G0R">
-                                        <rect key="frame" x="150" y="144" width="150" height="72"/>
+                                        <rect key="frame" x="150" y="142" width="150" height="71.5"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="5" backgroundImage="BtnBg">
@@ -162,7 +162,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frH-dF-dLO">
-                                        <rect key="frame" x="300" y="144" width="150" height="72"/>
+                                        <rect key="frame" x="300" y="142" width="150" height="71.5"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="6" backgroundImage="BtnBg">
@@ -174,17 +174,17 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFb-9F-VIA" userLabel="Minus-Button">
-                                        <rect key="frame" x="450" y="144" width="150" height="72"/>
+                                        <rect key="frame" x="450" y="142" width="150" height="71.5"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" image="Minus" backgroundImage="BtnBg">
+                                        <state key="normal" image="Times" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="subSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZLj-y2-I5x"/>
+                                            <action selector="mutiplySign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OTV-nE-KTV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYe-MW-AU7">
-                                        <rect key="frame" x="0.0" y="216" width="150" height="72"/>
+                                        <rect key="frame" x="0.0" y="214" width="150" height="71.5"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="1" backgroundImage="BtnBg">
@@ -196,7 +196,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FeV-10-awx">
-                                        <rect key="frame" x="150" y="216" width="150" height="72"/>
+                                        <rect key="frame" x="150" y="214" width="150" height="71.5"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="2" backgroundImage="BtnBg">
@@ -208,7 +208,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCB-ZP-STN">
-                                        <rect key="frame" x="300" y="216" width="150" height="72"/>
+                                        <rect key="frame" x="300" y="214" width="150" height="71.5"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="3" backgroundImage="BtnBg">
@@ -220,17 +220,17 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0RD-Mz-x0a" userLabel="Times-Button">
-                                        <rect key="frame" x="450" y="216" width="150" height="72"/>
+                                        <rect key="frame" x="450" y="214" width="150" height="71.5"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" image="Times" backgroundImage="BtnBg">
+                                        <state key="normal" image="Minus" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="mutiplySign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9GP-8F-g2f"/>
+                                            <action selector="subSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tZg-cw-1eQ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmB-qL-1Zm">
-                                        <rect key="frame" x="0.0" y="288" width="150" height="72"/>
+                                        <rect key="frame" x="0.0" y="285" width="150" height="71.5"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="0" backgroundImage="BtnBg">
@@ -242,7 +242,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1n-4s-ypB" userLabel="Dot-Button">
-                                        <rect key="frame" x="150" y="288" width="150" height="72"/>
+                                        <rect key="frame" x="150" y="285" width="150" height="71.5"/>
                                         <color key="tintColor" red="0.25098039220000001" green="0.80000000000000004" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="Dot" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -252,7 +252,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUM-iF-1j0" userLabel="Equal-Button">
-                                        <rect key="frame" x="300" y="288" width="150" height="72"/>
+                                        <rect key="frame" x="300" y="285" width="150" height="71.5"/>
                                         <color key="tintColor" red="0.25098039220000001" green="0.80000000000000004" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="Equal" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -262,13 +262,13 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dg-NW-448" userLabel="Divided-Button">
-                                        <rect key="frame" x="450" y="288" width="150" height="72"/>
+                                        <rect key="frame" x="450" y="285" width="150" height="71.5"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" image="Divided" backgroundImage="BtnBg">
+                                        <state key="normal" image="Plus" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="divideSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g0R-WT-AQs"/>
+                                            <action selector="addSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sOI-VZ-oym"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -356,35 +356,47 @@
                                     <constraint firstItem="yCB-ZP-STN" firstAttribute="leading" secondItem="FeV-10-awx" secondAttribute="trailing" id="zzY-D7-KkP"/>
                                 </constraints>
                             </view>
-                            <adBannerView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Pi8-rv-je8">
-                                <rect key="frame" x="140" y="550" width="320" height="50"/>
-                            </adBannerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q2B-ya-9V2">
+                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                <subviews>
+                                    <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="be7-gS-N1B">
+                                        <rect key="frame" x="140" y="0.0" width="320" height="50"/>
+                                    </adBannerView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="I7x-3B-vPc"/>
+                                    <constraint firstItem="be7-gS-N1B" firstAttribute="top" secondItem="q2B-ya-9V2" secondAttribute="top" id="L0p-wF-DKY"/>
+                                    <constraint firstAttribute="centerX" secondItem="be7-gS-N1B" secondAttribute="centerX" id="PEg-0J-uAG"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Wlo-hk-eMJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0v5-Vo-KJD"/>
+                            <constraint firstItem="q2B-ya-9V2" firstAttribute="top" secondItem="rV3-3y-oaA" secondAttribute="bottom" constant="-5.5" id="3PS-Ta-s4E"/>
                             <constraint firstItem="rV3-3y-oaA" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.6" constant="1" id="4tu-4K-s8e"/>
+                            <constraint firstItem="Wlo-hk-eMJ" firstAttribute="top" secondItem="31J-fX-mgF" secondAttribute="bottom" id="8Xh-aC-umR"/>
+                            <constraint firstAttribute="bottom" secondItem="q2B-ya-9V2" secondAttribute="bottom" id="E1g-gr-zEh"/>
+                            <constraint firstAttribute="centerX" secondItem="q2B-ya-9V2" secondAttribute="centerX" id="EZb-N1-6El"/>
                             <constraint firstAttribute="centerX" secondItem="31J-fX-mgF" secondAttribute="centerX" id="GbC-Fn-0K1"/>
-                            <constraint firstAttribute="centerX" secondItem="Pi8-rv-je8" secondAttribute="centerX" id="KGM-IO-ycD"/>
-                            <constraint firstItem="31J-fX-mgF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="LyL-dG-uJX"/>
-                            <constraint firstItem="rV3-3y-oaA" firstAttribute="top" secondItem="Wlo-hk-eMJ" secondAttribute="bottom" id="RUS-cn-X9b"/>
+                            <constraint firstItem="rV3-3y-oaA" firstAttribute="top" secondItem="Wlo-hk-eMJ" secondAttribute="bottom" id="QlL-bV-PiT"/>
+                            <constraint firstAttribute="trailing" secondItem="q2B-ya-9V2" secondAttribute="trailing" id="R4d-ze-fKJ"/>
                             <constraint firstAttribute="centerX" secondItem="rV3-3y-oaA" secondAttribute="centerX" id="UtZ-sI-G2f"/>
+                            <constraint firstItem="31J-fX-mgF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="VDJ-bR-JmH"/>
                             <constraint firstItem="31J-fX-mgF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WHo-le-w2m"/>
-                            <constraint firstItem="Wlo-hk-eMJ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.15" id="hXZ-H4-9Xt"/>
+                            <constraint firstItem="q2B-ya-9V2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hDc-Yd-K6F"/>
                             <constraint firstAttribute="centerX" secondItem="Wlo-hk-eMJ" secondAttribute="centerX" id="n14-De-7sa"/>
-                            <constraint firstItem="Wlo-hk-eMJ" firstAttribute="top" secondItem="31J-fX-mgF" secondAttribute="bottom" id="qgn-nG-Tt3"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Pi8-rv-je8" secondAttribute="bottom" id="rKw-bI-yVv"/>
                             <constraint firstItem="rV3-3y-oaA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sqQ-kM-Fts"/>
                             <constraint firstAttribute="trailing" secondItem="Wlo-hk-eMJ" secondAttribute="trailing" id="tVF-zo-TaY"/>
                             <constraint firstAttribute="trailing" secondItem="31J-fX-mgF" secondAttribute="trailing" id="v7N-Q3-L4n"/>
-                            <constraint firstItem="31J-fX-mgF" firstAttribute="height" secondItem="Wlo-hk-eMJ" secondAttribute="height" multiplier="0.45" id="xKw-kO-wRb"/>
                             <constraint firstAttribute="trailing" secondItem="rV3-3y-oaA" secondAttribute="trailing" id="y7p-RG-lxZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tky-8Q-bcu"/>
                     <connections>
-                        <outlet property="adbannerView" destination="Pi8-rv-je8" id="09J-qL-tbi"/>
+                        <outlet property="adbannerView" destination="be7-gS-N1B" id="Ddi-IM-CLF"/>
                         <outlet property="dispalyCalculation" destination="31J-fX-mgF" id="ZCF-m1-mp2"/>
                         <outlet property="displayField" destination="Wlo-hk-eMJ" id="aV3-9U-dBS"/>
                     </connections>

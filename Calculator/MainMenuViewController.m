@@ -30,10 +30,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
     //register left edge pan
     UIScreenEdgePanGestureRecognizer *leftEdgeGesture = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleLeftEdgePanGesture:)];
     leftEdgeGesture.edges = UIRectEdgeLeft;
     [self.view addGestureRecognizer:leftEdgeGesture];
+     
     
 }
 

@@ -40,8 +40,6 @@
 
 @interface CalculatorViewController ()
 
-@property(weak, nonatomic) IBOutlet UIButton *btn;
-
 @end
 
 @implementation CalculatorViewController{
@@ -100,13 +98,14 @@
      */
     NSNumber *lastInputNumber;
     
+    ADBannerView *adView;
+    
 }
 
 @synthesize displayField = _displayField;
 //@synthesize maskView = _maskView;
 @synthesize dispalyCalculation = _dispalyCalculation;
 @synthesize adbannerView = _adbannerView;
-@synthesize btn = _btn;
 
 
 - (id)initWithCoder:(NSCoder *)aDecoder{
@@ -169,6 +168,7 @@
     //init main menu view
     //[self initMainMenuView];
     
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -177,8 +177,6 @@
     
     [self setupNavigationBar];
     
-    _btn.layer.borderWidth = 1;
-    _btn.layer.borderColor = [UIColor grayColor].CGColor;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -191,10 +189,14 @@
     
     self.navigationController.navigationBarHidden = NO;
     
-    UIImage *image = [[UIImage imageNamed:@"SubMenu.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *image = [[UIImage imageNamed:@"History.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     NSArray *items = [NSArray arrayWithObjects:[[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStyleBordered target:self action:@selector(showHistory)], nil];
     
     self.navigationItem.rightBarButtonItems = items;
+    
+    [self.navigationController.navigationBar setTranslucent:NO];
+    
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:64.0/255.0 green:204.0/255.0 blue:177.0/255.0 alpha:0]];
 }
 
 /*
