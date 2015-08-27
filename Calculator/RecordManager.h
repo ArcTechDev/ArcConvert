@@ -93,4 +93,9 @@ static NSString *recordFileName = @"Record.plist";
  */
 - (CalculationRecord *)getRecordByIndex:(NSUInteger)index;
 
+/**
+ * Clear all records
+ */
+- (void)clearAllRecords;
+
 @end

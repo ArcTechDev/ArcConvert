@@ -728,6 +728,8 @@
     viewController.delegate = self;
     
     [self.navigationController pushViewController:viewController animated:YES];
+    
+    [viewController onPushIntoNavigationController];
 }
 
 #pragma mark - Segue

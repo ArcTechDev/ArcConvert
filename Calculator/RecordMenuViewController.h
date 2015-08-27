@@ -16,6 +16,6 @@
 
 @end
 
-@interface RecordMenuViewController : DelegateViewController<UITableViewDataSource, UITableViewDelegate>
+@interface RecordMenuViewController : DelegateViewController<UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
 
 @end

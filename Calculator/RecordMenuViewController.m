@@ -12,9 +12,13 @@
 
 @interface RecordMenuViewController ()
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @end
 
 @implementation RecordMenuViewController
+
+@synthesize tableView = _tableView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,6 +37,22 @@
     
     cell.processLabel.text = record.calculateRepresentation;
     cell.sumLabel.text = [NSString stringWithFormat:@"%@", record.getSum];
+}
+
+- (void)doClearHistory{
+    
+    [[RecordManager sharedRecordManager] clearAllRecords];
+    
+    [_tableView reloadData];
+}
+
+#pragma mark - UIAlertViewDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    if(buttonIndex == 1){
+        
+        [self doClearHistory];
+    }
 }
 
 #pragma mark - UITableViewDelegate
@@ -67,6 +87,19 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark - override
+- (void)onPushIntoNavigationController{
+    
+}
+
+#pragma mark - IBAction
+- (IBAction)clear:(id)sender{
+    
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Clear all history?" message:@"Do you want to clear all history?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Clear", nil];
+    
+    [alertView show];
 }
 
 /*

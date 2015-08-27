@@ -13,9 +13,10 @@
 - (void)layoutSubviews{
     
     [super layoutSubviews];
-    
+    /*
     self.layer.borderColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.2].CGColor;
     self.layer.borderWidth = 0.5;
+     */
 }
 /*
 // Only override drawRect: if you perform custom drawing.

@@ -258,6 +258,19 @@ static RecordManager *instance;
     return nil;
 }
 
+- (void)clearAllRecords{
+    
+    if(records != nil){
+        
+        [records removeAllObjects];
+        
+        NSString *path = [Helper getDocumentDirectoryPath];
+        path = [path stringByAppendingPathComponent:recordFileName];
+        
+        [records writeToFile:path atomically:NO];
+    }
+}
+
 #pragma mark - override
 - (id)init{
     
@@ -323,6 +336,11 @@ static RecordManager *instance;
         
         [records addObject:currentRecord];
     }
+    
+    [self saveRecords];
+}
+
+- (void)saveRecords{
     
     NSString *path = [Helper getDocumentDirectoryPath];
     path = [path stringByAppendingPathComponent:recordFileName];
