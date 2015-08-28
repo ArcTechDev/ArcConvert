@@ -201,7 +201,7 @@
     
     NSMutableDictionary *titleBarAttributes = [NSMutableDictionary dictionaryWithDictionary: [[UINavigationBar appearance] titleTextAttributes]];
     
-    [titleBarAttributes setValue:[UIFont fontWithName:@"Lato Medium" size:21.0f] forKey:NSFontAttributeName];
+    [titleBarAttributes setValue:[UIFont fontWithName:@"Lato-Medium" size:25.0f] forKey:NSFontAttributeName];
     
     [self.navigationController.navigationBar setTitleTextAttributes:titleBarAttributes];
     

@@ -72,6 +72,10 @@
         cell = [[RecordMenuCell alloc] init];
     }
     
+    UIView *bView = [[UIView alloc] init];
+    bView.backgroundColor = [UIColor colorWithRed:64.0/255.0 green:204.0/255.0 blue:177.0/255.0 alpha:1.0];
+    [cell setSelectedBackgroundView:bView];
+    
     [self configureCell:cell AtIndexPath:indexPath];
     
     return cell;
@@ -88,6 +92,13 @@
     
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+/*
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [cell.contentView setBackgroundColor:[UIColor blackColor]];
+}
+ */
 
 #pragma mark - override
 - (void)onPushIntoNavigationController{
