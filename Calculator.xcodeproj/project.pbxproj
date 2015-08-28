@@ -12,6 +12,36 @@
 		CE13B9AF1B86C0C8007C58BF /* DelegateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE13B9AE1B86C0C8007C58BF /* DelegateViewController.m */; };
 		CE13B9B11B8732BD007C58BF /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE13B9B01B8732BD007C58BF /* iAd.framework */; };
 		CE2E28071B8FF9610079012D /* NavController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28061B8FF9610079012D /* NavController.m */; };
+		CE2E28111B9032850079012D /* FPPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E280C1B9032850079012D /* FPPopoverController.m */; };
+		CE2E28121B9032850079012D /* FPPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E280E1B9032850079012D /* FPPopoverView.m */; };
+		CE2E28131B9032850079012D /* FPTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28101B9032850079012D /* FPTouchView.m */; };
+		CE2E28181B9033DE0079012D /* LengthConverterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28171B9033DE0079012D /* LengthConverterViewController.m */; };
+		CE2E281C1B9034790079012D /* UnitPickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E281B1B9034790079012D /* UnitPickViewController.m */; };
+		CE2E28201B9035FE0079012D /* ConverterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E281F1B9035FE0079012D /* ConverterViewController.m */; };
+		CE2E28231B903D160079012D /* UnitPickCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28221B903D160079012D /* UnitPickCell.m */; };
+		CE2E28561B9048020079012D /* DDAccelerationUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28281B9048020079012D /* DDAccelerationUnitConverter.m */; };
+		CE2E28571B9048020079012D /* DDAngleUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E282A1B9048020079012D /* DDAngleUnitConverter.m */; };
+		CE2E28581B9048020079012D /* DDAreaUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E282C1B9048020079012D /* DDAreaUnitConverter.m */; };
+		CE2E28591B9048020079012D /* DDByteUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E282E1B9048020079012D /* DDByteUnitConverter.m */; };
+		CE2E285A1B9048020079012D /* DDCurrencyUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28301B9048020079012D /* DDCurrencyUnitConverter.m */; };
+		CE2E285B1B9048020079012D /* DDCurrentUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28321B9048020079012D /* DDCurrentUnitConverter.m */; };
+		CE2E285C1B9048020079012D /* DDEnergyUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28341B9048020079012D /* DDEnergyUnitConverter.m */; };
+		CE2E285D1B9048020079012D /* DDForceUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28361B9048020079012D /* DDForceUnitConverter.m */; };
+		CE2E285E1B9048020079012D /* DDIlluminationUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28381B9048020079012D /* DDIlluminationUnitConverter.m */; };
+		CE2E285F1B9048020079012D /* DDInductanceUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E283A1B9048020079012D /* DDInductanceUnitConverter.m */; };
+		CE2E28601B9048020079012D /* DDLengthUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E283C1B9048020079012D /* DDLengthUnitConverter.m */; };
+		CE2E28611B9048020079012D /* DDMagnitudeUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E283E1B9048020079012D /* DDMagnitudeUnitConverter.m */; };
+		CE2E28621B9048020079012D /* DDMassUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28401B9048020079012D /* DDMassUnitConverter.m */; };
+		CE2E28631B9048020079012D /* DDPowerUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28421B9048020079012D /* DDPowerUnitConverter.m */; };
+		CE2E28641B9048020079012D /* DDPressureUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28441B9048020079012D /* DDPressureUnitConverter.m */; };
+		CE2E28651B9048020079012D /* DDRadiationUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28461B9048020079012D /* DDRadiationUnitConverter.m */; };
+		CE2E28661B9048020079012D /* DDTemperatureUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28481B9048020079012D /* DDTemperatureUnitConverter.m */; };
+		CE2E28671B9048020079012D /* DDTimeUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E284A1B9048020079012D /* DDTimeUnitConverter.m */; };
+		CE2E28681B9048020079012D /* DDTorqueUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E284C1B9048020079012D /* DDTorqueUnitConverter.m */; };
+		CE2E28691B9048020079012D /* DDUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E284F1B9048020079012D /* DDUnitConverter.m */; };
+		CE2E286A1B9048020079012D /* DDVelocityUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28511B9048020079012D /* DDVelocityUnitConverter.m */; };
+		CE2E286B1B9048020079012D /* DDVolumeUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28531B9048020079012D /* DDVolumeUnitConverter.m */; };
+		CE2E286C1B9048020079012D /* NSDecimalNumber+DDConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28551B9048020079012D /* NSDecimalNumber+DDConstants.m */; };
 		CE43B4221B8462F80010B514 /* LeftMenuItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE43B4211B8462F80010B514 /* LeftMenuItemCell.m */; };
 		CE5EBD011B831898001B5FD4 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5EBD001B831898001B5FD4 /* LeftMenuViewController.m */; };
 		CE6907291B8AB18400B8852B /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6907281B8AB18400B8852B /* MainMenuViewController.m */; };
@@ -52,6 +82,69 @@
 		CE13B9B01B8732BD007C58BF /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		CE2E28051B8FF9610079012D /* NavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavController.h; sourceTree = "<group>"; };
 		CE2E28061B8FF9610079012D /* NavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavController.m; sourceTree = "<group>"; };
+		CE2E280A1B9032850079012D /* ARCMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCMacros.h; sourceTree = "<group>"; };
+		CE2E280B1B9032850079012D /* FPPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPPopoverController.h; sourceTree = "<group>"; };
+		CE2E280C1B9032850079012D /* FPPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPPopoverController.m; sourceTree = "<group>"; };
+		CE2E280D1B9032850079012D /* FPPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPPopoverView.h; sourceTree = "<group>"; };
+		CE2E280E1B9032850079012D /* FPPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPPopoverView.m; sourceTree = "<group>"; };
+		CE2E280F1B9032850079012D /* FPTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTouchView.h; sourceTree = "<group>"; };
+		CE2E28101B9032850079012D /* FPTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTouchView.m; sourceTree = "<group>"; };
+		CE2E28161B9033DE0079012D /* LengthConverterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LengthConverterViewController.h; sourceTree = "<group>"; };
+		CE2E28171B9033DE0079012D /* LengthConverterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LengthConverterViewController.m; sourceTree = "<group>"; };
+		CE2E281A1B9034790079012D /* UnitPickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitPickViewController.h; sourceTree = "<group>"; };
+		CE2E281B1B9034790079012D /* UnitPickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitPickViewController.m; sourceTree = "<group>"; };
+		CE2E281E1B9035FE0079012D /* ConverterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConverterViewController.h; sourceTree = "<group>"; };
+		CE2E281F1B9035FE0079012D /* ConverterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConverterViewController.m; sourceTree = "<group>"; };
+		CE2E28211B903D160079012D /* UnitPickCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitPickCell.h; sourceTree = "<group>"; };
+		CE2E28221B903D160079012D /* UnitPickCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitPickCell.m; sourceTree = "<group>"; };
+		CE2E28241B9047C80079012D /* DDUnitConverter_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDUnitConverter_Prefix.pch; sourceTree = "<group>"; };
+		CE2E28271B9048020079012D /* DDAccelerationUnitConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAccelerationUnitConverter.h; sourceTree = "<group>"; };
+		CE2E28281B9048020079012D /* DDAccelerationUnitConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAccelerationUnitConverter.m; sourceTree = "<group>"; };
+		CE2E28291B9048020079012D /* DDAngleUnitConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAngleUnitConverter.h; sourceTree = "<group>"; };
+		CE2E282A1B9048020079012D /* DDAngleUnitConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAngleUnitConverter.m; sourceTree = "<group>"; };
+		CE2E282B1B9048020079012D /* DDAreaUnitConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAreaUnitConverter.h; sourceTree = "<group>"; };
+		CE2E282C1B9048020079012D /* DDAreaUnitConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAreaUnitConverter.m; sourceTree = "<group>"; };
+		CE2E282D1B9048020079012D /* DDByteUnitConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDByteUnitConverter.h; sourceTree = "<group>"; };
+		CE2E282E1B9048020079012D /* DDByteUnitConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDByteUnitConverter.m; sourceTree = "<group>"; };
+		CE2E282F1B9048020079012D /* DDCurrencyUnitConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCurrencyUnitConverter.h; sourceTree = "<group>"; };
+		CE2E28301B9048020079012D /* DDCurrencyUnitConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCurrencyUnitConverter.m; sourceTree = "<group>"; };
+		CE2E28311B9048020079012D /* DDCurrentUnitConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCurrentUnitConverter.h; sourceTree = "<group>"; };
+		CE2E28321B9048020079012D /* DDCurrentUnitConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCurrentUnitConverter.m; sourceTree = "<group>"; };
+		CE2E28331B9048020079012D /* DDEnergyUnitConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDEnergyUnitConverter.h; sourceTree = "<group>"; };
+		CE2E28341B9048020079012D /* DDEnergyUnitConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDEnergyUnitConverter.m; sourceTree = "<group>"; };
+		CE2E28351B9048020079012D /* DDForceUnitConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDForceUnitConverter.h; sourceTree = "<group>"; };
+		CE2E28361B9048020079012D /* DDForceUnitConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDForceUnitConverter.m; sourceTree = "<group>"; };
+		CE2E28371B9048020079012D /* DDIlluminationUnitConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDIlluminationUnitConverter.h; sourceTree = "<group>"; };
+		CE2E28381B9048020079012D /* DDIlluminationUnitConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDIlluminationUnitConverter.m; sourceTree = "<group>"; };
+		CE2E28391B9048020079012D /* DDInductanceUnitConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDInductanceUnitConverter.h; sourceTree = "<group>"; };
+		CE2E283A1B9048020079012D /* DDInductanceUnitConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDInductanceUnitConverter.m; sourceTree = "<group>"; };
+		CE2E283B1B9048020079012D /* DDLengthUnitConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLengthUnitConverter.h; sourceTree = "<group>"; };
+		CE2E283C1B9048020079012D /* DDLengthUnitConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLengthUnitConverter.m; sourceTree = "<group>"; };
+		CE2E283D1B9048020079012D /* DDMagnitudeUnitConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMagnitudeUnitConverter.h; sourceTree = "<group>"; };
+		CE2E283E1B9048020079012D /* DDMagnitudeUnitConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMagnitudeUnitConverter.m; sourceTree = "<group>"; };
+		CE2E283F1B9048020079012D /* DDMassUnitConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMassUnitConverter.h; sourceTree = "<group>"; };
+		CE2E28401B9048020079012D /* DDMassUnitConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMassUnitConverter.m; sourceTree = "<group>"; };
+		CE2E28411B9048020079012D /* DDPowerUnitConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDPowerUnitConverter.h; sourceTree = "<group>"; };
+		CE2E28421B9048020079012D /* DDPowerUnitConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDPowerUnitConverter.m; sourceTree = "<group>"; };
+		CE2E28431B9048020079012D /* DDPressureUnitConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDPressureUnitConverter.h; sourceTree = "<group>"; };
+		CE2E28441B9048020079012D /* DDPressureUnitConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDPressureUnitConverter.m; sourceTree = "<group>"; };
+		CE2E28451B9048020079012D /* DDRadiationUnitConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDRadiationUnitConverter.h; sourceTree = "<group>"; };
+		CE2E28461B9048020079012D /* DDRadiationUnitConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDRadiationUnitConverter.m; sourceTree = "<group>"; };
+		CE2E28471B9048020079012D /* DDTemperatureUnitConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTemperatureUnitConverter.h; sourceTree = "<group>"; };
+		CE2E28481B9048020079012D /* DDTemperatureUnitConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTemperatureUnitConverter.m; sourceTree = "<group>"; };
+		CE2E28491B9048020079012D /* DDTimeUnitConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTimeUnitConverter.h; sourceTree = "<group>"; };
+		CE2E284A1B9048020079012D /* DDTimeUnitConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTimeUnitConverter.m; sourceTree = "<group>"; };
+		CE2E284B1B9048020079012D /* DDTorqueUnitConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTorqueUnitConverter.h; sourceTree = "<group>"; };
+		CE2E284C1B9048020079012D /* DDTorqueUnitConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTorqueUnitConverter.m; sourceTree = "<group>"; };
+		CE2E284D1B9048020079012D /* DDUnitConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDUnitConversion.h; sourceTree = "<group>"; };
+		CE2E284E1B9048020079012D /* DDUnitConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDUnitConverter.h; sourceTree = "<group>"; };
+		CE2E284F1B9048020079012D /* DDUnitConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDUnitConverter.m; sourceTree = "<group>"; };
+		CE2E28501B9048020079012D /* DDVelocityUnitConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDVelocityUnitConverter.h; sourceTree = "<group>"; };
+		CE2E28511B9048020079012D /* DDVelocityUnitConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDVelocityUnitConverter.m; sourceTree = "<group>"; };
+		CE2E28521B9048020079012D /* DDVolumeUnitConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDVolumeUnitConverter.h; sourceTree = "<group>"; };
+		CE2E28531B9048020079012D /* DDVolumeUnitConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDVolumeUnitConverter.m; sourceTree = "<group>"; };
+		CE2E28541B9048020079012D /* NSDecimalNumber+DDConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDecimalNumber+DDConstants.h"; sourceTree = "<group>"; };
+		CE2E28551B9048020079012D /* NSDecimalNumber+DDConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+DDConstants.m"; sourceTree = "<group>"; };
 		CE43B4201B8462F80010B514 /* LeftMenuItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuItemCell.h; sourceTree = "<group>"; };
 		CE43B4211B8462F80010B514 /* LeftMenuItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuItemCell.m; sourceTree = "<group>"; };
 		CE5EBCFF1B831898001B5FD4 /* LeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuViewController.h; sourceTree = "<group>"; };
@@ -131,6 +224,122 @@
 				CE2E28061B8FF9610079012D /* NavController.m */,
 			);
 			name = NavController;
+			sourceTree = "<group>";
+		};
+		CE2E28091B9032510079012D /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				CE2E28261B9047EB0079012D /* DDUnitConverter */,
+				CE2E28251B9047D70079012D /* FPPopoverController */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+		CE2E28141B9033AE0079012D /* ConverterModule */ = {
+			isa = PBXGroup;
+			children = (
+				CE2E281D1B9035EC0079012D /* Converter */,
+				CE2E28191B9034640079012D /* UnitPick */,
+				CE2E28151B9033BD0079012D /* LengthConverter */,
+			);
+			name = ConverterModule;
+			sourceTree = "<group>";
+		};
+		CE2E28151B9033BD0079012D /* LengthConverter */ = {
+			isa = PBXGroup;
+			children = (
+				CE2E28161B9033DE0079012D /* LengthConverterViewController.h */,
+				CE2E28171B9033DE0079012D /* LengthConverterViewController.m */,
+			);
+			name = LengthConverter;
+			sourceTree = "<group>";
+		};
+		CE2E28191B9034640079012D /* UnitPick */ = {
+			isa = PBXGroup;
+			children = (
+				CE2E281A1B9034790079012D /* UnitPickViewController.h */,
+				CE2E281B1B9034790079012D /* UnitPickViewController.m */,
+				CE2E28211B903D160079012D /* UnitPickCell.h */,
+				CE2E28221B903D160079012D /* UnitPickCell.m */,
+			);
+			name = UnitPick;
+			sourceTree = "<group>";
+		};
+		CE2E281D1B9035EC0079012D /* Converter */ = {
+			isa = PBXGroup;
+			children = (
+				CE2E281E1B9035FE0079012D /* ConverterViewController.h */,
+				CE2E281F1B9035FE0079012D /* ConverterViewController.m */,
+			);
+			name = Converter;
+			sourceTree = "<group>";
+		};
+		CE2E28251B9047D70079012D /* FPPopoverController */ = {
+			isa = PBXGroup;
+			children = (
+				CE2E280A1B9032850079012D /* ARCMacros.h */,
+				CE2E280B1B9032850079012D /* FPPopoverController.h */,
+				CE2E280C1B9032850079012D /* FPPopoverController.m */,
+				CE2E280D1B9032850079012D /* FPPopoverView.h */,
+				CE2E280E1B9032850079012D /* FPPopoverView.m */,
+				CE2E280F1B9032850079012D /* FPTouchView.h */,
+				CE2E28101B9032850079012D /* FPTouchView.m */,
+			);
+			name = FPPopoverController;
+			sourceTree = "<group>";
+		};
+		CE2E28261B9047EB0079012D /* DDUnitConverter */ = {
+			isa = PBXGroup;
+			children = (
+				CE2E28271B9048020079012D /* DDAccelerationUnitConverter.h */,
+				CE2E28281B9048020079012D /* DDAccelerationUnitConverter.m */,
+				CE2E28291B9048020079012D /* DDAngleUnitConverter.h */,
+				CE2E282A1B9048020079012D /* DDAngleUnitConverter.m */,
+				CE2E282B1B9048020079012D /* DDAreaUnitConverter.h */,
+				CE2E282C1B9048020079012D /* DDAreaUnitConverter.m */,
+				CE2E282D1B9048020079012D /* DDByteUnitConverter.h */,
+				CE2E282E1B9048020079012D /* DDByteUnitConverter.m */,
+				CE2E282F1B9048020079012D /* DDCurrencyUnitConverter.h */,
+				CE2E28301B9048020079012D /* DDCurrencyUnitConverter.m */,
+				CE2E28311B9048020079012D /* DDCurrentUnitConverter.h */,
+				CE2E28321B9048020079012D /* DDCurrentUnitConverter.m */,
+				CE2E28331B9048020079012D /* DDEnergyUnitConverter.h */,
+				CE2E28341B9048020079012D /* DDEnergyUnitConverter.m */,
+				CE2E28351B9048020079012D /* DDForceUnitConverter.h */,
+				CE2E28361B9048020079012D /* DDForceUnitConverter.m */,
+				CE2E28371B9048020079012D /* DDIlluminationUnitConverter.h */,
+				CE2E28381B9048020079012D /* DDIlluminationUnitConverter.m */,
+				CE2E28391B9048020079012D /* DDInductanceUnitConverter.h */,
+				CE2E283A1B9048020079012D /* DDInductanceUnitConverter.m */,
+				CE2E283B1B9048020079012D /* DDLengthUnitConverter.h */,
+				CE2E283C1B9048020079012D /* DDLengthUnitConverter.m */,
+				CE2E283D1B9048020079012D /* DDMagnitudeUnitConverter.h */,
+				CE2E283E1B9048020079012D /* DDMagnitudeUnitConverter.m */,
+				CE2E283F1B9048020079012D /* DDMassUnitConverter.h */,
+				CE2E28401B9048020079012D /* DDMassUnitConverter.m */,
+				CE2E28411B9048020079012D /* DDPowerUnitConverter.h */,
+				CE2E28421B9048020079012D /* DDPowerUnitConverter.m */,
+				CE2E28431B9048020079012D /* DDPressureUnitConverter.h */,
+				CE2E28441B9048020079012D /* DDPressureUnitConverter.m */,
+				CE2E28451B9048020079012D /* DDRadiationUnitConverter.h */,
+				CE2E28461B9048020079012D /* DDRadiationUnitConverter.m */,
+				CE2E28471B9048020079012D /* DDTemperatureUnitConverter.h */,
+				CE2E28481B9048020079012D /* DDTemperatureUnitConverter.m */,
+				CE2E28491B9048020079012D /* DDTimeUnitConverter.h */,
+				CE2E284A1B9048020079012D /* DDTimeUnitConverter.m */,
+				CE2E284B1B9048020079012D /* DDTorqueUnitConverter.h */,
+				CE2E284C1B9048020079012D /* DDTorqueUnitConverter.m */,
+				CE2E284D1B9048020079012D /* DDUnitConversion.h */,
+				CE2E284E1B9048020079012D /* DDUnitConverter.h */,
+				CE2E284F1B9048020079012D /* DDUnitConverter.m */,
+				CE2E28501B9048020079012D /* DDVelocityUnitConverter.h */,
+				CE2E28511B9048020079012D /* DDVelocityUnitConverter.m */,
+				CE2E28521B9048020079012D /* DDVolumeUnitConverter.h */,
+				CE2E28531B9048020079012D /* DDVolumeUnitConverter.m */,
+				CE2E28541B9048020079012D /* NSDecimalNumber+DDConstants.h */,
+				CE2E28551B9048020079012D /* NSDecimalNumber+DDConstants.m */,
+			);
+			name = DDUnitConverter;
 			sourceTree = "<group>";
 		};
 		CE6907231B8AB05500B8852B /* CalculatorModule */ = {
@@ -250,6 +459,7 @@
 		CECB4B531B81BDC900F4EBCD /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				CE2E28091B9032510079012D /* ThirdParty */,
 				CE2E28081B8FFEA30079012D /* NavController */,
 				CE87C8541B8F014E00EA3305 /* Resources */,
 				CECF87A71B8DAC7C00733B8B /* Category */,
@@ -257,6 +467,7 @@
 				CE6907241B8AB11D00B8852B /* Common */,
 				CE6907251B8AB15300B8852B /* MainMenuModule */,
 				CE6907231B8AB05500B8852B /* CalculatorModule */,
+				CE2E28141B9033AE0079012D /* ConverterModule */,
 				CECB4B581B81BDC900F4EBCD /* AppDelegate.h */,
 				CECB4B591B81BDC900F4EBCD /* AppDelegate.m */,
 				CECB4B5E1B81BDC900F4EBCD /* Main.storyboard */,
@@ -270,6 +481,7 @@
 		CECB4B541B81BDC900F4EBCD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CE2E28241B9047C80079012D /* DDUnitConverter_Prefix.pch */,
 				CECB4B551B81BDC900F4EBCD /* Info.plist */,
 				CECB4B561B81BDC900F4EBCD /* main.m */,
 			);
@@ -407,20 +619,50 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2E285C1B9048020079012D /* DDEnergyUnitConverter.m in Sources */,
+				CE2E28571B9048020079012D /* DDAngleUnitConverter.m in Sources */,
+				CE2E28621B9048020079012D /* DDMassUnitConverter.m in Sources */,
+				CE2E285A1B9048020079012D /* DDCurrencyUnitConverter.m in Sources */,
 				CE13B9A81B86B8D8007C58BF /* RecordMenuViewController.m in Sources */,
 				CE13B9AB1B86B8F1007C58BF /* RecordMenuCell.m in Sources */,
+				CE2E281C1B9034790079012D /* UnitPickViewController.m in Sources */,
 				CE5EBD011B831898001B5FD4 /* LeftMenuViewController.m in Sources */,
+				CE2E286B1B9048020079012D /* DDVolumeUnitConverter.m in Sources */,
 				CE2E28071B8FF9610079012D /* NavController.m in Sources */,
+				CE2E28691B9048020079012D /* DDUnitConverter.m in Sources */,
+				CE2E28131B9032850079012D /* FPTouchView.m in Sources */,
 				CECB4B5D1B81BDC900F4EBCD /* CalculatorViewController.m in Sources */,
 				CE43B4221B8462F80010B514 /* LeftMenuItemCell.m in Sources */,
+				CE2E285E1B9048020079012D /* DDIlluminationUnitConverter.m in Sources */,
+				CE2E28231B903D160079012D /* UnitPickCell.m in Sources */,
+				CE2E28611B9048020079012D /* DDMagnitudeUnitConverter.m in Sources */,
+				CE2E28121B9032850079012D /* FPPopoverView.m in Sources */,
+				CE2E285D1B9048020079012D /* DDForceUnitConverter.m in Sources */,
 				CECB4B5A1B81BDC900F4EBCD /* AppDelegate.m in Sources */,
+				CE2E28681B9048020079012D /* DDTorqueUnitConverter.m in Sources */,
+				CE2E28181B9033DE0079012D /* LengthConverterViewController.m in Sources */,
+				CE2E28201B9035FE0079012D /* ConverterViewController.m in Sources */,
 				CE6907291B8AB18400B8852B /* MainMenuViewController.m in Sources */,
+				CE2E28661B9048020079012D /* DDTemperatureUnitConverter.m in Sources */,
 				CEB79A3C1B858399001C7806 /* Helper.m in Sources */,
+				CE2E28601B9048020079012D /* DDLengthUnitConverter.m in Sources */,
+				CE2E28651B9048020079012D /* DDRadiationUnitConverter.m in Sources */,
 				CE13B9AF1B86C0C8007C58BF /* DelegateViewController.m in Sources */,
+				CE2E285B1B9048020079012D /* DDCurrentUnitConverter.m in Sources */,
+				CE2E28581B9048020079012D /* DDAreaUnitConverter.m in Sources */,
 				CE84A8251B8C3D57001AD1AC /* GridButton.m in Sources */,
 				CEB79A361B857082001C7806 /* RecordManager.m in Sources */,
+				CE2E28631B9048020079012D /* DDPowerUnitConverter.m in Sources */,
+				CE2E286A1B9048020079012D /* DDVelocityUnitConverter.m in Sources */,
+				CE2E28671B9048020079012D /* DDTimeUnitConverter.m in Sources */,
+				CE2E28561B9048020079012D /* DDAccelerationUnitConverter.m in Sources */,
+				CE2E286C1B9048020079012D /* NSDecimalNumber+DDConstants.m in Sources */,
+				CE2E28111B9032850079012D /* FPPopoverController.m in Sources */,
 				CECB4B571B81BDC900F4EBCD /* main.m in Sources */,
 				CECF87AA1B8DADBF00733B8B /* CategoryEx.m in Sources */,
+				CE2E28641B9048020079012D /* DDPressureUnitConverter.m in Sources */,
+				CE2E285F1B9048020079012D /* DDInductanceUnitConverter.m in Sources */,
+				CE2E28591B9048020079012D /* DDByteUnitConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
