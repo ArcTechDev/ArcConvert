@@ -92,6 +92,7 @@
 #pragma mark - override
 - (void)onPushIntoNavigationController{
     
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 }
 
 #pragma mark - IBAction

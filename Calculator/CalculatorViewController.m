@@ -98,14 +98,11 @@
      */
     NSNumber *lastInputNumber;
     
-    ADBannerView *adView;
-    
 }
 
 @synthesize displayField = _displayField;
 //@synthesize maskView = _maskView;
 @synthesize dispalyCalculation = _dispalyCalculation;
-@synthesize adbannerView = _adbannerView;
 
 
 - (id)initWithCoder:(NSCoder *)aDecoder{
@@ -177,6 +174,10 @@
     
     [self setupNavigationBar];
     
+    
+    //show ad
+    [(NavController *)self.navigationController showAdWithFrame:CGRectMake(0, self.navigationController.view.frame.size.height-50, self.view.frame.size.width, 50)];
+
 }
 
 - (void)didReceiveMemoryWarning {

@@ -18,16 +18,19 @@
             <string>Lato-Light</string>
             <string>Lato-Light</string>
         </mutableArray>
+        <mutableArray key="Lato-Medium.ttf">
+            <string>Lato-Medium</string>
+        </mutableArray>
         <mutableArray key="Lato-Regular.ttf">
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Nav Controller-->
         <scene sceneID="vja-f7-n4W">
             <objects>
-                <navigationController id="6mU-VW-cW3" sceneMemberID="viewController">
+                <navigationController id="6mU-VW-cW3" customClass="NavController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qu8-90-Wq9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -375,16 +378,9 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q2B-ya-9V2" userLabel="Banner-View">
                                 <rect key="frame" x="0.0" y="550" width="600" height="50"/>
-                                <subviews>
-                                    <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="be7-gS-N1B">
-                                        <rect key="frame" x="140" y="0.0" width="320" height="50"/>
-                                    </adBannerView>
-                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="I7x-3B-vPc"/>
-                                    <constraint firstItem="be7-gS-N1B" firstAttribute="top" secondItem="q2B-ya-9V2" secondAttribute="top" id="L0p-wF-DKY"/>
-                                    <constraint firstAttribute="centerX" secondItem="be7-gS-N1B" secondAttribute="centerX" id="PEg-0J-uAG"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -413,7 +409,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="tky-8Q-bcu"/>
                     <connections>
-                        <outlet property="adbannerView" destination="be7-gS-N1B" id="Ddi-IM-CLF"/>
                         <outlet property="dispalyCalculation" destination="31J-fX-mgF" id="ZCF-m1-mp2"/>
                         <outlet property="displayField" destination="Wlo-hk-eMJ" id="aV3-9U-dBS"/>
                     </connections>
@@ -513,7 +508,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ElW-yu-MRn">
                                 <rect key="frame" x="0.0" y="470" width="600" height="48"/>
                                 <color key="backgroundColor" red="0.25098039220000001" green="0.80000000000000004" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="25"/>
                                 <state key="normal" title="Clear">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>

@@ -12,6 +12,7 @@
 #import "RecordMenuViewController.h"
 #import  <iAd/iAd.h>
 #import "CategoryEx.h"
+#import "NavController.h"
 
 #define kAnimationDuration 0.2
 
@@ -28,7 +29,6 @@ enum InputType{
 @property (weak, nonatomic) IBOutlet UILabel *displayField;
 //@property (weak, nonatomic) IBOutlet UIView *maskView;
 @property (weak, nonatomic) IBOutlet UILabel *dispalyCalculation;
-@property (weak, nonatomic) IBOutlet ADBannerView *adbannerView;
 
 
 @end
