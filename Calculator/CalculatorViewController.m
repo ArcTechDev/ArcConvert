@@ -190,7 +190,7 @@
     self.navigationController.navigationBarHidden = NO;
     
     UIImage *image = [[UIImage imageNamed:@"History.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    NSArray *items = [NSArray arrayWithObjects:[[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStyleBordered target:self action:@selector(showHistory)], nil];
+    NSArray *items = [NSArray arrayWithObjects:[[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(showHistory)], nil];
     
     self.navigationItem.rightBarButtonItems = items;
     
@@ -200,7 +200,7 @@
     
     NSMutableDictionary *titleBarAttributes = [NSMutableDictionary dictionaryWithDictionary: [[UINavigationBar appearance] titleTextAttributes]];
     
-    [titleBarAttributes setValue:[UIFont fontWithName:@"Lato-Medium" size:21.0f] forKey:NSFontAttributeName];
+    [titleBarAttributes setValue:[UIFont fontWithName:@"Lato Medium" size:21.0f] forKey:NSFontAttributeName];
     
     [self.navigationController.navigationBar setTitleTextAttributes:titleBarAttributes];
     
