@@ -200,11 +200,11 @@
     
     NSMutableDictionary *titleBarAttributes = [NSMutableDictionary dictionaryWithDictionary: [[UINavigationBar appearance] titleTextAttributes]];
     
-    [titleBarAttributes setValue:[UIFont fontWithName:@"Lato-Medium" size:21.0f] forKey:UITextAttributeFont];
+    [titleBarAttributes setValue:[UIFont fontWithName:@"Lato-Medium" size:21.0f] forKey:NSFontAttributeName];
     
     [self.navigationController.navigationBar setTitleTextAttributes:titleBarAttributes];
     
-    self.title = @"aaa123";
+    self.title = @"CALCULATOR";
     
 }
 
