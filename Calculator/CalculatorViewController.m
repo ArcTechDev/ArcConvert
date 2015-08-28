@@ -202,8 +202,11 @@
     NSMutableDictionary *titleBarAttributes = [NSMutableDictionary dictionaryWithDictionary: [[UINavigationBar appearance] titleTextAttributes]];
     
     [titleBarAttributes setValue:[UIFont fontWithName:@"Lato-Medium" size:25.0f] forKey:NSFontAttributeName];
+    [titleBarAttributes setValue:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
     
+
     [self.navigationController.navigationBar setTitleTextAttributes:titleBarAttributes];
+    
     
     self.title = @"CALCULATOR";
     
