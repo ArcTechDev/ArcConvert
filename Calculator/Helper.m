@@ -17,4 +17,21 @@
     return  [paths objectAtIndex:0];
 }
 
+
++ (NSString *)getUnicodeStringFromString:(NSString *)string{
+    
+    return [NSString stringWithCString:[string cStringUsingEncoding:NSUTF8StringEncoding] encoding:NSNonLossyASCIIStringEncoding];
+}
+
++ (BOOL)findCharacterInStringWithString:(NSString *)stringToFind WithCharacter:(NSString *)character{
+    
+    if([stringToFind isEqualToString:@""] || [character isEqualToString:@""])
+        return NO;
+    
+    if([stringToFind rangeOfString:character options:NSLiteralSearch].location == NSNotFound)
+        return NO;
+    else
+        return YES;
+}
+
 @end

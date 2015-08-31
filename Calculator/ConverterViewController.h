@@ -10,12 +10,23 @@
 #import "FPPopoverController.h"
 #import "UnitPickViewController.h"
 #import "DDUnitConversion.h"
+#import "ConverterManager.h"
+
+enum WorkingUnit{
+    
+    TopUnit,
+    DownUnit
+};
+
+enum SelectUnit{
+    
+    SelectUnknowUnit,
+    SelectTopUnit,
+    SelectDownUnit
+};
 
 @interface ConverterViewController : UIViewController<UnitPickViewDelegate, FPPopoverControllerDelegate>
 
-/**
- * show popover view with unit string array
- */
-- (void)showUnitPickerFromView:(id)view withUnitStrings:(NSArray *)unitStrings;
+- (void)setConversionType:(NSUInteger)cType;
 
 @end

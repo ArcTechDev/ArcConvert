@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RecordManager.h"
+#import "ConverterManager.h"
 
 @interface AppDelegate ()
 
@@ -20,6 +21,7 @@
     // Override point for customization after application launch.
     
     [RecordManager sharedRecordManager];
+    [ConverterManager sharedConverterManager];
     
     return YES;
 }

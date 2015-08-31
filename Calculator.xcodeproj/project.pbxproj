@@ -15,7 +15,6 @@
 		CE2E28111B9032850079012D /* FPPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E280C1B9032850079012D /* FPPopoverController.m */; };
 		CE2E28121B9032850079012D /* FPPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E280E1B9032850079012D /* FPPopoverView.m */; };
 		CE2E28131B9032850079012D /* FPTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28101B9032850079012D /* FPTouchView.m */; };
-		CE2E28181B9033DE0079012D /* LengthConverterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28171B9033DE0079012D /* LengthConverterViewController.m */; };
 		CE2E281C1B9034790079012D /* UnitPickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E281B1B9034790079012D /* UnitPickViewController.m */; };
 		CE2E28201B9035FE0079012D /* ConverterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E281F1B9035FE0079012D /* ConverterViewController.m */; };
 		CE2E28231B903D160079012D /* UnitPickCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28221B903D160079012D /* UnitPickCell.m */; };
@@ -45,6 +44,8 @@
 		CE43B4221B8462F80010B514 /* LeftMenuItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE43B4211B8462F80010B514 /* LeftMenuItemCell.m */; };
 		CE5EBD011B831898001B5FD4 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5EBD001B831898001B5FD4 /* LeftMenuViewController.m */; };
 		CE6907291B8AB18400B8852B /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6907281B8AB18400B8852B /* MainMenuViewController.m */; };
+		CE6A74EB1B93E9870080666B /* ConverterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6A74EA1B93E9870080666B /* ConverterManager.m */; };
+		CE6A74ED1B9409A60080666B /* UnitConversionSetting.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE6A74EC1B9409A60080666B /* UnitConversionSetting.plist */; };
 		CE84A8251B8C3D57001AD1AC /* GridButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE84A8241B8C3D57001AD1AC /* GridButton.m */; };
 		CE87C85B1B8F04CB00EA3305 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE87C8571B8F033C00EA3305 /* Lato-Light.ttf */; };
 		CE87C85C1B8F04CB00EA3305 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE87C8581B8F033C00EA3305 /* Lato-Medium.ttf */; };
@@ -89,8 +90,6 @@
 		CE2E280E1B9032850079012D /* FPPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPPopoverView.m; sourceTree = "<group>"; };
 		CE2E280F1B9032850079012D /* FPTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTouchView.h; sourceTree = "<group>"; };
 		CE2E28101B9032850079012D /* FPTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTouchView.m; sourceTree = "<group>"; };
-		CE2E28161B9033DE0079012D /* LengthConverterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LengthConverterViewController.h; sourceTree = "<group>"; };
-		CE2E28171B9033DE0079012D /* LengthConverterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LengthConverterViewController.m; sourceTree = "<group>"; };
 		CE2E281A1B9034790079012D /* UnitPickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitPickViewController.h; sourceTree = "<group>"; };
 		CE2E281B1B9034790079012D /* UnitPickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitPickViewController.m; sourceTree = "<group>"; };
 		CE2E281E1B9035FE0079012D /* ConverterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConverterViewController.h; sourceTree = "<group>"; };
@@ -151,6 +150,9 @@
 		CE5EBD001B831898001B5FD4 /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuViewController.m; sourceTree = "<group>"; };
 		CE6907271B8AB18400B8852B /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
 		CE6907281B8AB18400B8852B /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+		CE6A74E91B93E9870080666B /* ConverterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConverterManager.h; sourceTree = "<group>"; };
+		CE6A74EA1B93E9870080666B /* ConverterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConverterManager.m; sourceTree = "<group>"; };
+		CE6A74EC1B9409A60080666B /* UnitConversionSetting.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UnitConversionSetting.plist; sourceTree = "<group>"; };
 		CE84A8231B8C3D57001AD1AC /* GridButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridButton.h; sourceTree = "<group>"; };
 		CE84A8241B8C3D57001AD1AC /* GridButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridButton.m; sourceTree = "<group>"; };
 		CE87C8571B8F033C00EA3305 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
@@ -238,20 +240,11 @@
 		CE2E28141B9033AE0079012D /* ConverterModule */ = {
 			isa = PBXGroup;
 			children = (
+				CE6A74E81B93E86E0080666B /* ConverterManager */,
 				CE2E281D1B9035EC0079012D /* Converter */,
 				CE2E28191B9034640079012D /* UnitPick */,
-				CE2E28151B9033BD0079012D /* LengthConverter */,
 			);
 			name = ConverterModule;
-			sourceTree = "<group>";
-		};
-		CE2E28151B9033BD0079012D /* LengthConverter */ = {
-			isa = PBXGroup;
-			children = (
-				CE2E28161B9033DE0079012D /* LengthConverterViewController.h */,
-				CE2E28171B9033DE0079012D /* LengthConverterViewController.m */,
-			);
-			name = LengthConverter;
 			sourceTree = "<group>";
 		};
 		CE2E28191B9034640079012D /* UnitPick */ = {
@@ -379,6 +372,15 @@
 			name = MainMenu;
 			sourceTree = "<group>";
 		};
+		CE6A74E81B93E86E0080666B /* ConverterManager */ = {
+			isa = PBXGroup;
+			children = (
+				CE6A74E91B93E9870080666B /* ConverterManager.h */,
+				CE6A74EA1B93E9870080666B /* ConverterManager.m */,
+			);
+			name = ConverterManager;
+			sourceTree = "<group>";
+		};
 		CE84A8221B8C3CE7001AD1AC /* CustomizeButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -484,6 +486,7 @@
 				CE2E28241B9047C80079012D /* DDUnitConverter_Prefix.pch */,
 				CECB4B551B81BDC900F4EBCD /* Info.plist */,
 				CECB4B561B81BDC900F4EBCD /* main.m */,
+				CE6A74EC1B9409A60080666B /* UnitConversionSetting.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -596,6 +599,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE87C87F1B8F145800EA3305 /* Neon.ttf in Resources */,
+				CE6A74ED1B9409A60080666B /* UnitConversionSetting.plist in Resources */,
 				CE87C85E1B8F06EB00EA3305 /* Lato-Regular.ttf in Resources */,
 				CE87C85B1B8F04CB00EA3305 /* Lato-Light.ttf in Resources */,
 				CE87C85C1B8F04CB00EA3305 /* Lato-Medium.ttf in Resources */,
@@ -640,10 +644,10 @@
 				CE2E285D1B9048020079012D /* DDForceUnitConverter.m in Sources */,
 				CECB4B5A1B81BDC900F4EBCD /* AppDelegate.m in Sources */,
 				CE2E28681B9048020079012D /* DDTorqueUnitConverter.m in Sources */,
-				CE2E28181B9033DE0079012D /* LengthConverterViewController.m in Sources */,
 				CE2E28201B9035FE0079012D /* ConverterViewController.m in Sources */,
 				CE6907291B8AB18400B8852B /* MainMenuViewController.m in Sources */,
 				CE2E28661B9048020079012D /* DDTemperatureUnitConverter.m in Sources */,
+				CE6A74EB1B93E9870080666B /* ConverterManager.m in Sources */,
 				CEB79A3C1B858399001C7806 /* Helper.m in Sources */,
 				CE2E28601B9048020079012D /* DDLengthUnitConverter.m in Sources */,
 				CE2E28651B9048020079012D /* DDRadiationUnitConverter.m in Sources */,

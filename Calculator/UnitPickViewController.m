@@ -8,6 +8,7 @@
 
 #import "UnitPickViewController.h"
 #import "UnitPickCell.h"
+#import "Helper.h"
 
 @interface UnitPickViewController ()
 
@@ -43,7 +44,9 @@
 
 - (void)configureCell:(UnitPickCell *)cell atIndexPath:(NSIndexPath *)indexPath{
     
-    cell.titleLabel.text = [units objectAtIndex:indexPath.row];
+    //when display we need to convert string from plist that might contain unicode to new string
+    //so special unicode character can display properly
+    cell.titleLabel.text = [Helper getUnicodeStringFromString:[units objectAtIndex:indexPath.row]];
 }
 
 #pragma mark - UITableViewDelegate

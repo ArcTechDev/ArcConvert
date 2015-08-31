@@ -12,4 +12,12 @@
 
 + (NSString *)getDocumentDirectoryPath;
 
+/**
+ * if string contain unicode and aspecially that string is from plist
+ * use this method to get correct string
+ */
++ (NSString *)getUnicodeStringFromString:(NSString *)string;
+
++ (BOOL)findCharacterInStringWithString:(NSString *)stringToFind WithCharacter:(NSString *)character;
+
 @end

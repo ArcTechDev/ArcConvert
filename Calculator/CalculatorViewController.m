@@ -10,6 +10,7 @@
 #import "LeftMenuViewController.h"
 #import "MainMenuViewController.h"
 #import "DelegateViewController.h"
+#import "Helper.h"
 
 
 
@@ -460,24 +461,6 @@
     return oArg;
 }
 
-/**
- * Find character in specific string
- *
- * @Param stringToFind the string that will be searched
- * @Param character the string character to be matched in search string
- * Return true if character found otherwise false
- */
-- (BOOL)findCharacterInStringWithString:(NSString *)stringToFind WithCharacter:(NSString *)character{
-    
-    if([stringToFind isEqualToString:@""] || [character isEqualToString:@""])
-        return NO;
-    
-    if([stringToFind rangeOfString:character options:NSLiteralSearch].location == NSNotFound)
-        return NO;
-    else
-        return YES;
-}
-
 - (void)clearCalculator{
     
     accumulator = 0.0;
@@ -653,7 +636,7 @@
     if(drawDecimal == YES){
         
         //if no decimal found in displayField then draw it
-        if([self findCharacterInStringWithString:self.displayField.text WithCharacter:@"."] == NO){
+        if([Helper findCharacterInStringWithString:self.displayField.text WithCharacter:@"."] == NO){
             
             self.displayField.text = [self.displayField.text stringByAppendingString:@"."];
         }
@@ -808,7 +791,7 @@
 
 - (IBAction)decimalSign:(id)sender{
     
-    if([self findCharacterInStringWithString:userInput WithCharacter:@"."] == NO){
+    if([Helper findCharacterInStringWithString:userInput WithCharacter:@"."] == NO){
         
         drawDecimal = YES;
         [self handleDigitInpute:@"."];
