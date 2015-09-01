@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "Block1.png"
+      "filename" : "BlackBLOCK.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "Block@2x.png"
+      "filename" : "BlackBLOCK-1.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "Block@3x.png"
+      "filename" : "BlackBLOCK-2.png"
     }
   ],
   "info" : {

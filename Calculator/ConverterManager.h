@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "DDUnitConversion.h"
+#import "YFCurrencyConversion.h"
 
 enum ConverterType{
     
@@ -22,11 +23,15 @@ enum ConverterType{
     CCurrency = 8
 };
 
+typedef void (^currencyConvertComplete)(BOOL, NSDecimalNumber*);
+
 @interface ConverterManager : NSObject
 
 + (ConverterManager *)sharedConverterManager;
 - (NSNumber *)convertWithValue:(NSDecimalNumber *)value WithType:(NSUInteger)type FromUnit:(DDUnit)from ToUnit:(DDUnit)to;
 - (NSArray *)getAllConvertableUnitsWithConvertType:(NSUInteger)type;
 - (NSUInteger)findUnitTypeByUnit:(NSString *)unitName WithConvertType:(NSUInteger)type;
+- (NSString *)findCurrencyByCurrency:(NSString *)currencyName;
+- (void)convertCurrencyWithValue:(NSDecimalNumber *)value WithCurrencyName:(NSString *)fromCurrency ToCurrencyName:(NSString *)toCurrency OnComplete:(currencyConvertComplete)complete;
 
 @end

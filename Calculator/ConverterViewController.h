@@ -12,6 +12,9 @@
 #import "DDUnitConversion.h"
 #import "ConverterManager.h"
 
+//the max of digital include decimal user can input 
+#define conversionMaxDigitalInput 12
+
 enum WorkingUnit{
     
     TopUnit,

@@ -20,4 +20,9 @@
 
 + (BOOL)findCharacterInStringWithString:(NSString *)stringToFind WithCharacter:(NSString *)character;
 
+/**
+ * Trime string after certain count of character
+ */
++(NSString *)trimeStringWithString:(NSString *)string preserveCharacterCount:(NSUInteger)preserveCount;
+
 @end

@@ -55,6 +55,8 @@
     
     //store result after conversion
     NSNumber *result;
+    
+    BOOL drawDecimal;
 }
 
 @synthesize popController = _popController;
@@ -72,7 +74,7 @@
     [self setup];
     
     //test
-    [self setConversionType:CArea];
+    [self setConversionType:CCurrency];
     
 }
 
@@ -121,9 +123,10 @@
     [downInputLabelTap setNumberOfTouchesRequired:1];
     [_downInputLabel addGestureRecognizer:downInputLabelTap];
     
-    topUserInput = @"12.2";
-    downUserInput = @"5";
+    topUserInput = @"0";
+    downUserInput = @"0";
     
+    drawDecimal = NO;
     popControllerHidden = YES;
     
 }
@@ -175,12 +178,21 @@
     
     if(currentWorkingUnit == TopUnit){
         
+        if([self isMaxDigitalInputWithString:topUserInput]){
+            return;
+        }
+        
         topUserInput = [topUserInput stringByAppendingString:digit];
     }
     else{
         
-        downUserInput = [downUserInput stringByAppendingString:digit];
+        if([self isMaxDigitalInputWithString:downUserInput]){
+            return;
+        }
+        
+       downUserInput = [downUserInput stringByAppendingString:digit];
     }
+    
     
     [self doUnitConversion];
 }
@@ -188,23 +200,64 @@
 - (void)doUnitConversion{
     
     
-    DDUnit topUnit = [[ConverterManager sharedConverterManager] findUnitTypeByUnit:topSelectedUnitName WithConvertType:convertType];
-    DDUnit downUnit = [[ConverterManager sharedConverterManager] findUnitTypeByUnit:downSelectedUnitName WithConvertType:convertType];
+    if(convertType == CCurrency){
+        
+        [self doCurrencyConversion];
+    }
+    else{
+        
+        DDUnit topUnit = [[ConverterManager sharedConverterManager] findUnitTypeByUnit:topSelectedUnitName WithConvertType:convertType];
+        DDUnit downUnit = [[ConverterManager sharedConverterManager] findUnitTypeByUnit:downSelectedUnitName WithConvertType:convertType];
+        
+        if(currentWorkingUnit == TopUnit){
+            
+            NSDecimalNumber *value = [NSDecimalNumber decimalNumberWithString:topUserInput];
+            result = [[ConverterManager sharedConverterManager] convertWithValue:value WithType:convertType FromUnit:topUnit ToUnit:downUnit];
+            
+        }
+        else{
+            
+            NSDecimalNumber *value = [NSDecimalNumber decimalNumberWithString:downUserInput];
+            result = [[ConverterManager sharedConverterManager] convertWithValue:value WithType:convertType FromUnit:downUnit ToUnit:topUnit];
+            
+        }
+        
+        [self updateDisplay];
+    }
+    
+}
+
+- (void)doCurrencyConversion{
+    
+    NSString *topCurrency = [[ConverterManager sharedConverterManager] findCurrencyByCurrency:topSelectedUnitName];
+    NSString *downCurrency =[[ConverterManager sharedConverterManager] findCurrencyByCurrency:downSelectedUnitName];
     
     if(currentWorkingUnit == TopUnit){
         
         NSDecimalNumber *value = [NSDecimalNumber decimalNumberWithString:topUserInput];
-        result = [[ConverterManager sharedConverterManager] convertWithValue:value WithType:convertType FromUnit:topUnit ToUnit:downUnit];
+        
+        [[ConverterManager sharedConverterManager] convertCurrencyWithValue:value WithCurrencyName:topCurrency ToCurrencyName:downCurrency OnComplete:^(BOOL success, NSDecimalNumber *convertResult){
+        
+            result = convertResult;
+            
+            [self updateDisplay];
+            
+        }];
+        
         
     }
     else{
         
         NSDecimalNumber *value = [NSDecimalNumber decimalNumberWithString:downUserInput];
-        result = [[ConverterManager sharedConverterManager] convertWithValue:value WithType:convertType FromUnit:downUnit ToUnit:topUnit];
+        
+        [[ConverterManager sharedConverterManager] convertCurrencyWithValue:value WithCurrencyName:downCurrency ToCurrencyName:topCurrency OnComplete:^(BOOL success, NSDecimalNumber *convertResult){
+            
+            result = convertResult;
+            
+            [self updateDisplay];
+        }];
         
     }
-    
-    [self updateDisplay];
 }
 
 - (void)updateDisplay{
@@ -214,14 +267,69 @@
     
     if(currentWorkingUnit == TopUnit){
         
-        _topInputLabel.text = topUserInput;
-        _downInputLabel.text = [NSString stringWithFormat:@"%@", result];
+        NSString *str = [NSString stringWithFormat:@"%@",[NSDecimalNumber decimalNumberWithString:topUserInput]];
+        
+        if(drawDecimal && ![Helper findCharacterInStringWithString:str WithCharacter:@"."]){
+            
+            str = [str stringByAppendingString:@"."];
+            
+            drawDecimal = NO;
+        }
+        
+        _topInputLabel.text = str;
+        
+        
+        NSString *resultStr = [Helper trimeStringWithString:[NSString stringWithFormat:@"%@", result] preserveCharacterCount:conversionMaxDigitalInput];
+        
+        _downInputLabel.text = resultStr;
+        
+        downUserInput = resultStr;
     }
     else{
         
-        _downInputLabel.text = downUserInput;
-        _topInputLabel.text = [NSString stringWithFormat:@"%@", result];
+        NSString *str = [NSString stringWithFormat:@"%@",[NSDecimalNumber decimalNumberWithString:downUserInput]];
+        
+        if(drawDecimal && ![Helper findCharacterInStringWithString:str WithCharacter:@"."]){
+            
+            str = [str stringByAppendingString:@"."];
+            
+            drawDecimal = NO;
+        }
+        
+        _downInputLabel.text = str;
+        
+        NSString *resultStr = [Helper trimeStringWithString:[NSString stringWithFormat:@"%@", result] preserveCharacterCount:conversionMaxDigitalInput];
+        
+        _topInputLabel.text = resultStr;
+        
+        topUserInput = resultStr;
     }
+}
+
+#pragma mark - utility
+- (BOOL)isMaxDigitalInputWithString:(NSString *)string{
+    
+    NSDecimalNumber *num = [NSDecimalNumber decimalNumberWithString:string];
+    NSString *str = [num stringValue];
+    
+    NSUInteger characterCounts = str.length;
+    
+    if([Helper findCharacterInStringWithString:str WithCharacter:@"."]){
+        
+        characterCounts = characterCounts;
+    }
+    else if([Helper findCharacterInStringWithString:string WithCharacter:@"."]){
+        
+        characterCounts++;
+    }
+    
+    if(characterCounts >= conversionMaxDigitalInput){
+        
+        return YES;
+    }
+    
+    return NO;
+    
 }
 
 #pragma mark - Gestures
@@ -357,14 +465,77 @@
 
 - (IBAction)decimalSign:(id)sender{
     
-    [self handleDigitInpute:@"."];
+    BOOL canHandleDecimal = YES;
+    
+    if(currentWorkingUnit == TopUnit){
+        
+        canHandleDecimal = ![Helper findCharacterInStringWithString:topUserInput WithCharacter:@"."];
+    }
+    else{
+        
+        canHandleDecimal = ![Helper findCharacterInStringWithString:downUserInput WithCharacter:@"."];
+    }
+    
+    if(canHandleDecimal){
+        
+        drawDecimal = YES;
+        [self handleDigitInpute:@"."];
+    }
+    
 }
 
 - (IBAction)clear:(id)sender{
     
+    if(currentWorkingUnit == TopUnit){
+        
+        topUserInput = @"0";
+    }
+    else{
+        
+        downUserInput = @"0";
+    }
+    
+    [self doUnitConversion];
 }
 
 - (IBAction)backwardDelete:(id)sender{
+    
+    if(currentWorkingUnit == TopUnit){
+        
+        if(topUserInput.length > 0){
+            
+            topUserInput = [topUserInput stringByReplacingCharactersInRange:NSMakeRange(topUserInput.length-1, 1) withString:@""];
+            
+        }
+        
+        if(topUserInput.length <=0){
+            
+            topUserInput = @"0";
+        }
+        else if([[topUserInput substringWithRange:NSMakeRange(topUserInput.length-1, 1)] isEqualToString:@"."]){
+            
+            drawDecimal = YES;
+        }
+    }
+    else{
+        
+        if(downUserInput.length > 0){
+            
+            downUserInput = [downUserInput stringByReplacingCharactersInRange:NSMakeRange(downUserInput.length-1, 1) withString:@""];
+            
+        }
+        
+        if(downUserInput.length <=0){
+            
+            downUserInput = @"0";
+        }
+        else if([[downUserInput substringWithRange:NSMakeRange(downUserInput.length-1, 1)] isEqualToString:@"."]){
+            
+            drawDecimal = YES;
+        }
+    }
+    
+    [self doUnitConversion];
     
 }
 

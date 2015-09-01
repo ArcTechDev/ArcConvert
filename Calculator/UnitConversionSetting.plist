@@ -118,5 +118,12 @@
 		<key>tb</key>
 		<integer>9</integer>
 	</dict>
+	<key>8</key>
+	<dict>
+		<key>USD</key>
+		<string>USD</string>
+		<key>TWD</key>
+		<string>TWD</string>
+	</dict>
 </dict>
 </plist>

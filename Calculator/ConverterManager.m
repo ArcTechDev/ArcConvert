@@ -29,6 +29,11 @@
     NSMutableDictionary *conversionTools;
     ConversionData *reuseableData;
     NSDictionary *converterSettings;
+    NSDecimalNumber *currencyValue;
+    YFCurrencyConverter *currencyConverter;
+    currencyConvertComplete currencyCallBack;
+    NSString *tFromCurrency;
+    NSString *tToCurrency;
 }
 
 static ConverterManager *instance;
@@ -85,6 +90,75 @@ static ConverterManager *instance;
     return [[unitsDic objectForKey:unitName] unsignedIntegerValue];
 }
 
+- (NSString *)findCurrencyByCurrency:(NSString *)currencyName{
+    
+    NSDictionary *unitsDic = [converterSettings objectForKey:[NSString stringWithFormat:@"%d", CCurrency]];
+    
+    return [unitsDic objectForKey:currencyName];
+}
+
+- (void)convertCurrencyWithValue:(NSDecimalNumber *)value WithCurrencyName:(NSString *)fromCurrency ToCurrencyName:(NSString *)toCurrency OnComplete:(currencyConvertComplete)complete{
+    
+    currencyValue = value;
+    currencyCallBack = complete;
+    tFromCurrency = fromCurrency;
+    tToCurrency = toCurrency;
+    
+    if(currencyConverter == nil){
+        
+        currencyConverter = [YFCurrencyConverter currencyConverterWithDelegate:self];
+        currencyConverter.didFinishSelector = @selector(onCurrencyConvertSuccess:);
+        currencyConverter.didFailSelector = @selector(onCurrencyConvertFail:);
+    }
+    
+    [currencyConverter convertFromCurrency:fromCurrency toCurrency:toCurrency asynchronous:YES];
+}
+
+#pragma mark - YFCurrencyConversion delegate
+- (void)onCurrencyConvertSuccess:(id)object{
+    
+    YFCurrencyConverter *result = object;
+    
+    NSLog(@"Currency convert from:%@ to:%@ conversion rate:%f",tFromCurrency, tToCurrency, result.conversionRate);
+    
+    if(result.error != nil){
+        
+        NSLog(@"Currency conversion error:%@", result.error);
+        
+        if(currencyCallBack != nil){
+            
+            currencyCallBack(NO, nil);
+        }
+        
+        return;
+    }
+    
+    NSDecimalNumber *convertResult = [currencyValue decimalNumberByMultiplyingBy:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%f", result.conversionRate]]];
+    
+    if(currencyCallBack != nil){
+        
+        currencyCallBack(YES, convertResult);
+    }
+    
+}
+
+- (void)onCurrencyConvertFail:(id)object{
+    
+    YFCurrencyConverter *result = object;
+    
+    if(result.error != nil){
+        
+        NSLog(@"Currency conversion error:%@", result.error);
+        
+        if(currencyCallBack != nil){
+            
+            currencyCallBack(NO, nil);
+        }
+        
+        return;
+    }
+}
+
 #pragma mark - internal
 - (id)init{
     
@@ -107,12 +181,13 @@ static ConverterManager *instance;
                            [NSValue valueWithPointer:@selector(convertTimeWithData:)],
                            [NSNumber numberWithUnsignedInteger:CTime],
                            [NSValue valueWithPointer:@selector(convertDataWithData:)],
-                           [NSNumber numberWithUnsignedInteger:CData],
-                           [NSValue valueWithPointer:@selector(convertCurrencyWithData:)],
-                           [NSNumber numberWithUnsignedInteger:CCurrency]
+                           [NSNumber numberWithUnsignedInteger:CData]
+                           //[NSValue valueWithPointer:@selector(convertCurrencyWithData:)],
+                           //[NSNumber numberWithUnsignedInteger:CCurrency]
                            , nil];
         
         [self loadSettingFile];
+        
     }
     
     return self;
@@ -176,6 +251,9 @@ static ConverterManager *instance;
 }
 
 #pragma mark - Currency converter
+/**
+ * replaced by YFCurrencyConversion
+ */
 - (NSNumber *)convertCurrencyWithData:(ConversionData *)data{
     
     return [[DDUnitConverter currencyUnitConverter] convertNumber:data.value fromUnit:data.fromUnit toUnit:data.toUnit];

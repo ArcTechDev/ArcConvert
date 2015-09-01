@@ -34,4 +34,12 @@
         return YES;
 }
 
++(NSString *)trimeStringWithString:(NSString *)string preserveCharacterCount:(NSUInteger)preserveCount{
+    
+    if(string.length <= 0 || string.length<=preserveCount)
+        return string;
+    
+    return [string substringWithRange:NSMakeRange(0, preserveCount)];
+}
+
 @end
