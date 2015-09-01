@@ -8,6 +8,7 @@
 
 #import "ConverterViewController.h"
 #import "Helper.h"
+#import "Reachability.h"
 
 @interface ConverterViewController ()
 
@@ -78,6 +79,14 @@
     
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    
+    [super viewDidAppear:animated];
+    
+    [self showCurrencyNote];
+    
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -129,6 +138,17 @@
     drawDecimal = NO;
     popControllerHidden = YES;
     
+}
+
+- (void)showCurrencyNote{
+    
+    if(convertType == CCurrency){
+        
+        //currency converter notic
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Note" message:@"To insure currency converter working properly, please turn on internet connection" delegate:nil cancelButtonTitle:@"Close" otherButtonTitles: nil];
+        
+        [alertView show];
+    }
 }
 
 - (void)switchWorkingUnit:(NSUInteger)workingUnit{
@@ -238,9 +258,22 @@
         
         [[ConverterManager sharedConverterManager] convertCurrencyWithValue:value WithCurrencyName:topCurrency ToCurrencyName:downCurrency OnComplete:^(BOOL success, NSDecimalNumber *convertResult){
         
-            result = convertResult;
+            if(success){
+                
+                result = convertResult;
+                
+                [self updateDisplay];
+            }
+            else{
+                
+                Reachability *reachability = [Reachability reachabilityForInternetConnection];
+                NetworkStatus internetStatus = [reachability currentReachabilityStatus];
+                if (internetStatus == NotReachable) {
+                    
+                    [self showCurrencyNote];
+                }
+            }
             
-            [self updateDisplay];
             
         }];
         
@@ -252,9 +285,21 @@
         
         [[ConverterManager sharedConverterManager] convertCurrencyWithValue:value WithCurrencyName:downCurrency ToCurrencyName:topCurrency OnComplete:^(BOOL success, NSDecimalNumber *convertResult){
             
-            result = convertResult;
+            if(success){
+                result = convertResult;
             
-            [self updateDisplay];
+                [self updateDisplay];
+            }
+            else{
+                
+                Reachability *reachability = [Reachability reachabilityForInternetConnection];
+                NetworkStatus internetStatus = [reachability currentReachabilityStatus];
+                if (internetStatus == NotReachable) {
+                 
+                    [self showCurrencyNote];
+                }
+            }
+            
         }];
         
     }
