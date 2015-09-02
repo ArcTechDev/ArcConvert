@@ -575,8 +575,8 @@
                                             <action selector="backwardDelete:" destination="d0a-7M-0vG" eventType="touchUpInside" id="TzF-q5-ZsC"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwo-8V-VSc">
-                                        <rect key="frame" x="0.0" y="234" width="398" height="42"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwo-8V-VSc">
+                                        <rect key="frame" x="0.0" y="254.5" width="398" height="45.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="0" backgroundImage="BtnBg">
@@ -619,8 +619,8 @@
                                             <action selector="digitPress5:" destination="d0a-7M-0vG" eventType="touchUpInside" id="PAU-EL-hXp"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQ1-jl-r4o">
-                                        <rect key="frame" x="200" y="172" width="198" height="60"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQ1-jl-r4o">
+                                        <rect key="frame" x="200" y="186.5" width="198" height="66"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="2" backgroundImage="BtnBg">
@@ -630,8 +630,8 @@
                                             <action selector="digitPress2:" destination="d0a-7M-0vG" eventType="touchUpInside" id="ADo-sS-Sx4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlK-tO-s5V">
-                                        <rect key="frame" x="400" y="172" width="198" height="60"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlK-tO-s5V">
+                                        <rect key="frame" x="400" y="186.5" width="198" height="66"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="3" backgroundImage="BtnBg">
@@ -652,8 +652,8 @@
                                             <action selector="digitPress6:" destination="d0a-7M-0vG" eventType="touchUpInside" id="Nr1-Hh-MgS"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQi-Qy-W1K">
-                                        <rect key="frame" x="0.0" y="172" width="198" height="60"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQi-Qy-W1K">
+                                        <rect key="frame" x="0.0" y="186.5" width="198" height="66"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="1" backgroundImage="BtnBg">
@@ -685,8 +685,8 @@
                                             <action selector="digitPress9:" destination="d0a-7M-0vG" eventType="touchUpInside" id="883-h2-1xt"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pfn-G4-vv9" userLabel="Backward-Button">
-                                        <rect key="frame" x="400" y="234" width="200" height="42"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pfn-G4-vv9" userLabel="Backward-Button">
+                                        <rect key="frame" x="400" y="254.5" width="200" height="45.5"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="Dot" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
