@@ -7,6 +7,7 @@
 //
 
 #import "NavController.h"
+#import "DelegateViewController.h"
 #import  <iAd/iAd.h>
 
 @interface NavController ()
@@ -22,6 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,6 +39,13 @@
         
         [self.view addSubview: adView];
     }
+}
+
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    
+    DelegateViewController *delegateViewController = (DelegateViewController *)viewController;
+    
+    navigationController.navigationBarHidden = !delegateViewController.showNavigationBar;
 }
 
 /*

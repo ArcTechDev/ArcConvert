@@ -7,6 +7,7 @@
 //
 
 #import "MainMenuViewController.h"
+#import "ConverterViewController.h"
 
 @interface MainMenuViewController ()
 
@@ -30,6 +31,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.showNavigationBar = NO;
     
     //register left edge pan
     UIScreenEdgePanGestureRecognizer *leftEdgeGesture = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleLeftEdgePanGesture:)];
@@ -43,6 +45,8 @@
     
     [super viewDidAppear:animated];
     
+    [self setupNavigationBar];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,6 +58,13 @@
 - (void)addToParentViewController:(UIViewController *)parent{
     
     [super addToParentViewController:parent];
+}
+
+#pragma mark - internal
+- (void)setupNavigationBar{
+    
+    //hide navigation bar
+    self.navigationController.navigationBarHidden = YES;
 }
 
 #pragma mark - Gesture
@@ -159,12 +170,108 @@
     
 }
 
+#pragma mark - override
 - (void)onPushIntoNavigationController{
 
-    //hide navigation bar
-    self.navigationController.navigationBarHidden = YES;
+
 }
 
+#pragma mark - IBActions
+- (IBAction)goToLengthConverter:(id)sender{
+    
+    ConverterViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ConverterViewController"];
+    
+    [controller setConversionType:CLength];
+    
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (IBAction)goToTemperatureConverter:(id)sender{
+    
+    ConverterViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ConverterViewController"];
+    
+    [controller setConversionType:CTemperature];
+    
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (IBAction)goToSpeedConverter:(id)sender{
+    
+    ConverterViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ConverterViewController"];
+    
+    [controller setConversionType:CSpeed];
+    
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (IBAction)goToAreaConverter:(id)sender{
+    
+    ConverterViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ConverterViewController"];
+    
+    [controller setConversionType:CArea];
+    
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (IBAction)goToVolumeConverter:(id)sender{
+    
+    ConverterViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ConverterViewController"];
+    
+    [controller setConversionType:CVolume];
+    
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (IBAction)goToWeightConverter:(id)sender{
+    
+    ConverterViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ConverterViewController"];
+    
+    [controller setConversionType:CWeight];
+    
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (IBAction)goToTimeConverter:(id)sender{
+    
+    ConverterViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ConverterViewController"];
+    
+    [controller setConversionType:CTime];
+    
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (IBAction)goToDataConverter:(id)sender{
+    
+    ConverterViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ConverterViewController"];
+    
+    [controller setConversionType:CData];
+    
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (IBAction)goToCurrencyConverter:(id)sender{
+    
+    ConverterViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ConverterViewController"];
+    
+    [controller setConversionType:CCurrency];
+    
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (IBAction)goToThemes:(id)sender{
+    
+    
+}
+
+- (IBAction)goToCalculator:(id)sender{
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)goToInformation:(id)sender{
+    
+    
+}
 
 /*
 #pragma mark - Navigation

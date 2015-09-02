@@ -11,6 +11,7 @@
 #import "UnitPickViewController.h"
 #import "DDUnitConversion.h"
 #import "ConverterManager.h"
+#import "DelegateViewController.h"
 
 //the max of digital include decimal user can input 
 #define conversionMaxDigitalInput 12
@@ -28,7 +29,7 @@ enum SelectUnit{
     SelectDownUnit
 };
 
-@interface ConverterViewController : UIViewController<UnitPickViewDelegate, FPPopoverControllerDelegate>
+@interface ConverterViewController : DelegateViewController<UnitPickViewDelegate, FPPopoverControllerDelegate>
 
 - (void)setConversionType:(NSUInteger)cType;
 

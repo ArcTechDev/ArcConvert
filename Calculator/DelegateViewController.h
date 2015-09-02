@@ -11,6 +11,7 @@
 @interface DelegateViewController : UIViewController
 
 @property(weak, nonatomic) id delegate;
+@property(assign, nonatomic) BOOL showNavigationBar;
 
 /**
  * Add this ViewController to given parent ViewController

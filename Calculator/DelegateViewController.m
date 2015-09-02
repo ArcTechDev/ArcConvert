@@ -15,6 +15,7 @@
 @implementation DelegateViewController
 
 @synthesize delegate = _delegate;
+@synthesize showNavigationBar = _showNavigationBar;
 
 
 - (void)viewDidLoad {
