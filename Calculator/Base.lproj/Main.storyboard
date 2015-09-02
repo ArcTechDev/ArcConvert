@@ -1178,7 +1178,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Separator" translatesAutoresizingMaskIntoConstraints="NO" id="VcY-81-jAb">
-                                <rect key="frame" x="0.0" y="154" width="600" height="6"/>
+                                <rect key="frame" x="0.0" y="110" width="600" height="6"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fA1-t0-nUw" userLabel="Banner-View">
@@ -1270,7 +1270,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwo-8V-VSc">
-                                        <rect key="frame" x="0.0" y="254.5" width="398" height="45.5"/>
+                                        <rect key="frame" x="0.0" y="290" width="398" height="54"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="0" backgroundImage="BtnBg">
@@ -1292,7 +1292,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2Q-na-HY8">
-                                        <rect key="frame" x="0.0" y="118" width="198" height="66.5"/>
+                                        <rect key="frame" x="0.0" y="134.5" width="198" height="76"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="4" backgroundImage="BtnBg">
@@ -1303,7 +1303,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z55-N3-wYB">
-                                        <rect key="frame" x="200" y="118" width="198" height="66.5"/>
+                                        <rect key="frame" x="200" y="134.5" width="198" height="76"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="5" backgroundImage="BtnBg">
@@ -1314,7 +1314,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQ1-jl-r4o">
-                                        <rect key="frame" x="200" y="186.5" width="198" height="66"/>
+                                        <rect key="frame" x="200" y="212.5" width="198" height="75.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="2" backgroundImage="BtnBg">
@@ -1325,7 +1325,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlK-tO-s5V">
-                                        <rect key="frame" x="400" y="186.5" width="198" height="66"/>
+                                        <rect key="frame" x="400" y="212.5" width="198" height="75.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="3" backgroundImage="BtnBg">
@@ -1336,7 +1336,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AH-Zx-VMr">
-                                        <rect key="frame" x="400" y="118" width="198" height="66.5"/>
+                                        <rect key="frame" x="400" y="134.5" width="198" height="76"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="6" backgroundImage="BtnBg">
@@ -1347,7 +1347,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQi-Qy-W1K">
-                                        <rect key="frame" x="0.0" y="186.5" width="198" height="66"/>
+                                        <rect key="frame" x="0.0" y="212.5" width="198" height="75.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="1" backgroundImage="BtnBg">
@@ -1380,7 +1380,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pfn-G4-vv9" userLabel="Backward-Button">
-                                        <rect key="frame" x="400" y="254.5" width="200" height="45.5"/>
+                                        <rect key="frame" x="400" y="290" width="200" height="54"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="Dot" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>

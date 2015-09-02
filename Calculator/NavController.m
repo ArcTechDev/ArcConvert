@@ -9,6 +9,7 @@
 #import "NavController.h"
 #import "DelegateViewController.h"
 #import  <iAd/iAd.h>
+#import "MainMenuViewController.h"
 
 @interface NavController ()
 
@@ -42,6 +43,11 @@
 }
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    
+    
+}
+
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
     
     DelegateViewController *delegateViewController = (DelegateViewController *)viewController;
     

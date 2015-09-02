@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DelegateViewController : UIViewController
+@interface DelegateViewController : UIViewController<UIGestureRecognizerDelegate>
 
 @property(weak, nonatomic) id delegate;
 @property(assign, nonatomic) BOOL showNavigationBar;
