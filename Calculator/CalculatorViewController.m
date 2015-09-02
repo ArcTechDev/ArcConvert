@@ -166,6 +166,7 @@
     //init main menu view
     //[self initMainMenuView];
     
+    self.showNavigationBar = YES;
     
 }
 
@@ -189,7 +190,6 @@
 #pragma mark - Navigation button
 - (void)setupNavigationBar{
     
-    self.navigationController.navigationBarHidden = NO;
     
     UIImage *image = [[UIImage imageNamed:@"History.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     NSArray *items = [NSArray arrayWithObjects:[[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(showHistory)], nil];

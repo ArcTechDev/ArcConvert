@@ -74,9 +74,9 @@
     
     [self setup];
     
-    //test
-    [self setConversionType:CCurrency];
+    self.showNavigationBar = YES;
     
+    [self setupNavigationBar];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -85,6 +85,21 @@
     
     [self showCurrencyNote];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+    
+    NSArray *allUnits = [[ConverterManager sharedConverterManager] getAllConvertableUnitsWithConvertType:convertType];
+    
+    _topUnitDisplayLabel.text = [allUnits objectAtIndex:0];
+    _downUnitDisplayLabel.text = [allUnits objectAtIndex:0];
+    
+    topSelectedUnitName = [allUnits objectAtIndex:0];
+    downSelectedUnitName = [allUnits objectAtIndex:0];
+    
+    currentConvertableUnits = [allUnits copy];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -96,16 +111,6 @@
 - (void)setConversionType:(NSUInteger)cType{
     
     convertType = cType;
-    
-    NSArray *allUnits = [[ConverterManager sharedConverterManager] getAllConvertableUnitsWithConvertType:cType];
-    
-    _topUnitDisplayLabel.text = [allUnits objectAtIndex:0];
-    _downUnitDisplayLabel.text = [allUnits objectAtIndex:0];
-    
-    topSelectedUnitName = [allUnits objectAtIndex:0];
-    downSelectedUnitName = [allUnits objectAtIndex:0];
-    
-    currentConvertableUnits = [allUnits copy];
 }
 
 #pragma mark - internal
@@ -138,6 +143,11 @@
     drawDecimal = NO;
     popControllerHidden = YES;
     
+}
+
+- (void)setupNavigationBar{
+    
+    self.navigationController.navigationBarHidden = NO;
 }
 
 - (void)showCurrencyNote{

@@ -13,6 +13,7 @@
 #import  <iAd/iAd.h>
 #import "CategoryEx.h"
 #import "NavController.h"
+#import "DelegateViewController.h"
 
 #define kAnimationDuration 0.2
 
@@ -24,7 +25,7 @@ enum InputType{
     Operator
 };
 
-@interface CalculatorViewController : UIViewController<LeftMenuViewDelegate, RecordManagerDelegate, RecordMenuViewDelegate, ADBannerViewDelegate>
+@interface CalculatorViewController : DelegateViewController<LeftMenuViewDelegate, RecordManagerDelegate, RecordMenuViewDelegate, ADBannerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *displayField;
 //@property (weak, nonatomic) IBOutlet UIView *maskView;

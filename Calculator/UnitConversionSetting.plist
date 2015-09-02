@@ -23,9 +23,9 @@
 	</dict>
 	<key>1</key>
 	<dict>
-		<key>c</key>
+		<key>\u00b0c</key>
 		<integer>0</integer>
-		<key>f</key>
+		<key>\u00b0f</key>
 		<integer>1</integer>
 		<key>k</key>
 		<integer>2</integer>
@@ -110,13 +110,13 @@
 		<key>byte</key>
 		<integer>3</integer>
 		<key>kb</key>
-		<integer>6</integer>
+		<integer>16</integer>
 		<key>mb</key>
-		<integer>7</integer>
+		<integer>17</integer>
 		<key>gb</key>
-		<integer>8</integer>
+		<integer>18</integer>
 		<key>tb</key>
-		<integer>9</integer>
+		<integer>19</integer>
 	</dict>
 	<key>8</key>
 	<dict>
