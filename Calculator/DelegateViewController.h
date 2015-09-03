@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ThemeManager.h"
 
 @interface DelegateViewController : UIViewController<UIGestureRecognizerDelegate>
 
@@ -22,5 +23,9 @@
 - (void)addToParentViewController:(UIViewController *)parent;
 
 - (void)onPushIntoNavigationController;
+
+- (void)customizeView;
+
+- (id)requestUIData:(NSString *)pathString;
 
 @end

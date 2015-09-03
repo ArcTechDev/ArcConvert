@@ -84,6 +84,8 @@
 		CECB4B651B81BDC900F4EBCD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECB4B631B81BDC900F4EBCD /* LaunchScreen.xib */; };
 		CECB4B711B81BDC900F4EBCD /* CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB4B701B81BDC900F4EBCD /* CalculatorTests.m */; };
 		CECF87AA1B8DADBF00733B8B /* CategoryEx.m in Sources */ = {isa = PBXBuildFile; fileRef = CECF87A91B8DADBF00733B8B /* CategoryEx.m */; };
+		CEEF77B91B97E795005D890A /* ThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF77B81B97E795005D890A /* ThemeManager.m */; };
+		CEEF77BB1B97EB87005D890A /* ThemeConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEEF77BA1B97EB87005D890A /* ThemeConfig.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -247,6 +249,9 @@
 		CECB4B701B81BDC900F4EBCD /* CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorTests.m; sourceTree = "<group>"; };
 		CECF87A81B8DADBF00733B8B /* CategoryEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryEx.h; sourceTree = "<group>"; };
 		CECF87A91B8DADBF00733B8B /* CategoryEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryEx.m; sourceTree = "<group>"; };
+		CEEF77B71B97E795005D890A /* ThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeManager.h; sourceTree = "<group>"; };
+		CEEF77B81B97E795005D890A /* ThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeManager.m; sourceTree = "<group>"; };
+		CEEF77BA1B97EB87005D890A /* ThemeConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ThemeConfig.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -627,6 +632,7 @@
 				CECF87A71B8DAC7C00733B8B /* Category */,
 				CE84A8221B8C3CE7001AD1AC /* CustomizeButton */,
 				CE6907241B8AB11D00B8852B /* Common */,
+				CEEF77B61B97E76D005D890A /* ThemeModule */,
 				CE6907251B8AB15300B8852B /* MainMenuModule */,
 				CE6907231B8AB05500B8852B /* CalculatorModule */,
 				CE2E28141B9033AE0079012D /* ConverterModule */,
@@ -647,6 +653,7 @@
 				CECB4B551B81BDC900F4EBCD /* Info.plist */,
 				CECB4B561B81BDC900F4EBCD /* main.m */,
 				CE6A74EC1B9409A60080666B /* UnitConversionSetting.plist */,
+				CEEF77BA1B97EB87005D890A /* ThemeConfig.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -675,6 +682,15 @@
 				CECF87A91B8DADBF00733B8B /* CategoryEx.m */,
 			);
 			name = Category;
+			sourceTree = "<group>";
+		};
+		CEEF77B61B97E76D005D890A /* ThemeModule */ = {
+			isa = PBXGroup;
+			children = (
+				CEEF77B71B97E795005D890A /* ThemeManager.h */,
+				CEEF77B81B97E795005D890A /* ThemeManager.m */,
+			);
+			name = ThemeModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -764,6 +780,7 @@
 				CE87C85B1B8F04CB00EA3305 /* Lato-Light.ttf in Resources */,
 				CE87C85C1B8F04CB00EA3305 /* Lato-Medium.ttf in Resources */,
 				CECB4B601B81BDC900F4EBCD /* Main.storyboard in Resources */,
+				CEEF77BB1B97EB87005D890A /* ThemeConfig.plist in Resources */,
 				CECB4B651B81BDC900F4EBCD /* LaunchScreen.xib in Resources */,
 				CECB4B621B81BDC900F4EBCD /* Images.xcassets in Resources */,
 			);
@@ -812,6 +829,7 @@
 				CE6907291B8AB18400B8852B /* MainMenuViewController.m in Sources */,
 				CE2E28661B9048020079012D /* DDTemperatureUnitConverter.m in Sources */,
 				CE6A74EB1B93E9870080666B /* ConverterManager.m in Sources */,
+				CEEF77B91B97E795005D890A /* ThemeManager.m in Sources */,
 				CE6CFE331B958264006682C7 /* ASIFormDataRequest.m in Sources */,
 				CEB79A3C1B858399001C7806 /* Helper.m in Sources */,
 				CE2E28601B9048020079012D /* DDLengthUnitConverter.m in Sources */,

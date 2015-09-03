@@ -41,6 +41,9 @@
 
 @interface CalculatorViewController ()
 
+//background image view
+@property (weak, nonatomic) IBOutlet UIImageView *bg;
+
 @end
 
 @implementation CalculatorViewController{
@@ -104,6 +107,7 @@
 @synthesize displayField = _displayField;
 //@synthesize maskView = _maskView;
 @synthesize dispalyCalculation = _dispalyCalculation;
+@synthesize bg = _bg;
 
 
 - (id)initWithCoder:(NSCoder *)aDecoder{
@@ -174,7 +178,7 @@
     
     [super viewDidAppear:animated];
     
-    [self setupNavigationBar];
+    
     
     
     //show ad
@@ -211,6 +215,66 @@
     
     self.title = @"CALCULATOR";
     
+}
+
+#pragma mark - override
+- (void)customizeView{
+    
+    //Nav bar tint color
+    [self.navigationController.navigationBar setBarTintColor:[self requestUIData:@"Calculator/NavBar/BarColor"]];
+    
+    //Nav bar title font, size and color
+    NSMutableDictionary *titleBarAttributes = [NSMutableDictionary dictionaryWithDictionary: [[UINavigationBar appearance] titleTextAttributes]];
+    
+    [titleBarAttributes setValue:[UIFont fontWithName:[self requestUIData:@"Calculator/NavBar/TitleFont"] size:[[self requestUIData:@"Calculator/NavBar/TitleSize"] floatValue]] forKey:NSFontAttributeName];
+    [titleBarAttributes setValue:[self requestUIData:@"Calculator/NavBar/TitleFontColor"]forKey:NSForegroundColorAttributeName];
+    
+    [self.navigationController.navigationBar setTitleTextAttributes:titleBarAttributes];
+    
+    //Nav bar Translucent
+    [self.navigationController.navigationBar setTranslucent:[[self requestUIData:@"Calculator/NavBar/Translucent"] boolValue]];
+    
+    //Nav bar background alpha
+    [(UIView*)[self.navigationController.navigationBar.subviews objectAtIndex:0] setAlpha:[[self requestUIData:@"Calculator/NavBar/BarAlpha"] floatValue]];
+    
+    //Nav bar right button
+    UIImage *historyImg = [[UIImage imageNamed:[self requestUIData:@"Calculator/NavBar/History/Img"]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    
+    UIBarButtonItem *historyItem = [[UIBarButtonItem alloc] initWithImage:historyImg style:UIBarButtonItemStylePlain target:self action:@selector(showHistory)];
+    
+    NSArray *items = [NSArray arrayWithObject:historyItem];
+    
+    self.navigationItem.rightBarButtonItems = items;
+    
+    //Nav bar items tint color
+    self.navigationController.navigationBar.tintColor = [self requestUIData:@"Calculator/NavBar/BarItemTintColor"];
+    
+    //Nav bar title
+    self.title = @"Calcualtor";
+    
+    //background image
+    UIImage *bgImage = [UIImage imageNamed:[self requestUIData:@"Calculator/BackgroundImg"]];
+    [_bg setImage:bgImage];
+    
+    //calculator label text color
+    [_dispalyCalculation setTextColor:[self requestUIData:@"Calculator/CalculatorLabel/TextColor"]];
+    
+    //calculator label text font and size
+    [_dispalyCalculation setFont:[UIFont fontWithName:[self requestUIData:@"Calculator/CalculatorLabel/TextFont"] size:[[self requestUIData:@"Calculator/CalculatorLabel/TextSize"] floatValue]]];
+    
+    //calculator label background color
+    [_dispalyCalculation setBackgroundColor:[self requestUIData:@"Calculator/CalculatorLabel/BgColor"]];
+    
+    //input label text color
+    [_displayField setTextColor:[self requestUIData:@"Calculator/InputLabel/TextColor"]];
+    
+    //input label text font and size
+    [_displayField setFont:[UIFont fontWithName:[self requestUIData:@"Calculator/InputLabel/TextFont"] size:[[self requestUIData:@"Calculator/InputLabel/TextSize"] floatValue]]];
+    
+    //input label background color
+    [_displayField setBackgroundColor:[self requestUIData:@"Calculator/InputLabel/BgColor"]];
+    
+ 
 }
 
 /*

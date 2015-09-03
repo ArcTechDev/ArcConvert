@@ -10,9 +10,14 @@
 
 @interface DelegateViewController ()
 
+- (id)requestCustomizedUIDataWithPathString:(NSString *)pathString;
+
 @end
 
-@implementation DelegateViewController
+@implementation DelegateViewController{
+    
+    __weak ThemeManager *themeMgr;
+}
 
 @synthesize delegate = _delegate;
 @synthesize showNavigationBar = _showNavigationBar;
@@ -21,6 +26,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    themeMgr = [ThemeManager sharedThemeManager];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    
+    [self customizeView];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -52,6 +64,16 @@
 
 - (void)onPushIntoNavigationController{
     
+}
+
+- (void)customizeView{
+    
+    
+}
+
+- (id)requestUIData:(NSString *)pathString{
+    
+    return [themeMgr requestCustomizedUIDataWithPathString:pathString];
 }
 
 /*
