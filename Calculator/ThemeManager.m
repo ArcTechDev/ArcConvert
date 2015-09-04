@@ -252,7 +252,7 @@ static ThemeManager *instance;
     }
     
     //test
-    [self switchThemeWithThemeName:@"Z-G"];
+    [self switchThemeWithThemeName:@"S-G"];
     
     return self;
 }

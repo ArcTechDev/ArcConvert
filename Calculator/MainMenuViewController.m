@@ -8,8 +8,24 @@
 
 #import "MainMenuViewController.h"
 #import "ConverterViewController.h"
+#import "MainMenuBtnView.h"
 
 @interface MainMenuViewController ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *bgView;
+@property (weak, nonatomic) IBOutlet UIView *halfTransView;
+@property (weak, nonatomic) IBOutlet MainMenuBtnView *btnLengthView;
+@property (weak, nonatomic) IBOutlet MainMenuBtnView *btnTemperatureView;
+@property (weak, nonatomic) IBOutlet MainMenuBtnView *btnSpeedView;
+@property (weak, nonatomic) IBOutlet MainMenuBtnView *btnAreaView;
+@property (weak, nonatomic) IBOutlet MainMenuBtnView *btnVolumeView;
+@property (weak, nonatomic) IBOutlet MainMenuBtnView *btnWeightView;
+@property (weak, nonatomic) IBOutlet MainMenuBtnView *btnTimeView;
+@property (weak, nonatomic) IBOutlet MainMenuBtnView *btnDataView;
+@property (weak, nonatomic) IBOutlet MainMenuBtnView *btnCurrencyView;
+@property (weak, nonatomic) IBOutlet MainMenuBtnView *btnThemeView;
+@property (weak, nonatomic) IBOutlet MainMenuBtnView *btnCalculatorView;
+@property (weak, nonatomic) IBOutlet MainMenuBtnView *btnInformationView;
 
 @end
 
@@ -27,6 +43,21 @@
     UIView *previousView;
 }
 
+@synthesize bgView = _bgView;
+@synthesize halfTransView = _halfTransView;
+@synthesize btnLengthView = _btnLengthView;
+@synthesize btnTemperatureView = _btnTemperatureView;
+@synthesize btnSpeedView = _btnSpeedView;
+@synthesize btnAreaView = _btnAreaView;
+@synthesize btnVolumeView = _btnVolumeView;
+@synthesize btnWeightView = _btnWeightView;
+@synthesize btnTimeView = _btnTimeView;
+@synthesize btnDataView = _btnDataView;
+@synthesize btnCurrencyView = _btnCurrencyView;
+@synthesize btnThemeView = _btnThemeView;
+@synthesize btnCalculatorView = _btnCalculatorView;
+@synthesize btnInformationView = _btnInformationView;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -34,10 +65,11 @@
     self.showNavigationBar = NO;
     
     //register left edge pan
+    /*
     UIScreenEdgePanGestureRecognizer *leftEdgeGesture = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleLeftEdgePanGesture:)];
     leftEdgeGesture.edges = UIRectEdgeLeft;
     [self.view addGestureRecognizer:leftEdgeGesture];
-     
+     */
     
 }
 
@@ -68,6 +100,7 @@
 }
 
 #pragma mark - Gesture
+/*
 - (void)handleLeftEdgePanGesture:(UIScreenEdgePanGestureRecognizer *)gesture{
     
     //get current translation on this view
@@ -169,11 +202,58 @@
     }
     
 }
+ */
 
 #pragma mark - override
 - (void)onPushIntoNavigationController{
 
 
+}
+
+- (void)customizeView{
+    
+    //Background image
+    [_bgView setImage:[UIImage imageNamed:[self requestUIData:@"MainMenu/BgImg"]]];
+    
+    //HalfTransparent view
+    [_halfTransView setBackgroundColor:[self requestUIData:@"MainMenu/HalfTransColor"]];
+    
+    //Button view
+    [_btnLengthView setButtonViewType:BLength];
+    [_btnLengthView customizeView];
+    
+    [_btnTemperatureView setButtonViewType:BTemperature];
+    [_btnTemperatureView customizeView];
+    
+    [_btnSpeedView setButtonViewType:BSpeed];
+    [_btnSpeedView customizeView];
+    
+    [_btnAreaView setButtonViewType:BArea];
+    [_btnAreaView customizeView];
+    
+    [_btnVolumeView setButtonViewType:BVolume];
+    [_btnVolumeView customizeView];
+    
+    [_btnWeightView setButtonViewType:BWeight];
+    [_btnWeightView customizeView];
+    
+    [_btnTimeView setButtonViewType:BTime];
+    [_btnTimeView customizeView];
+    
+    [_btnDataView setButtonViewType:BData];
+    [_btnDataView customizeView];
+    
+    [_btnCurrencyView setButtonViewType:BCurrency];
+    [_btnCurrencyView customizeView];
+    
+    [_btnThemeView setButtonViewType:BTheme];
+    [_btnThemeView customizeView];
+    
+    [_btnCalculatorView setButtonViewType:BCalculator];
+    [_btnCalculatorView customizeView];
+    
+    [_btnInformationView setButtonViewType:BInformation];
+    [_btnInformationView customizeView];
 }
 
 #pragma mark - IBActions

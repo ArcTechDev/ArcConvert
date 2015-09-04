@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface Helper : NSObject
 
@@ -24,5 +25,7 @@
  * Trime string after certain count of character
  */
 +(NSString *)trimeStringWithString:(NSString *)string preserveCharacterCount:(NSUInteger)preserveCount;
+
++ (UIImage *)imageName:(NSString *)imageName withTintColor:(UIColor *)tintColor;
 
 @end

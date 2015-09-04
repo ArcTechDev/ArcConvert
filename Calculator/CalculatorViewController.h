@@ -28,7 +28,6 @@ enum InputType{
 @interface CalculatorViewController : DelegateViewController<LeftMenuViewDelegate, RecordManagerDelegate, RecordMenuViewDelegate, ADBannerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *displayField;
-//@property (weak, nonatomic) IBOutlet UIView *maskView;
 @property (weak, nonatomic) IBOutlet UILabel *dispalyCalculation;
 
 

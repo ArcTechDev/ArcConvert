@@ -42,4 +42,35 @@
     return [string substringWithRange:NSMakeRange(0, preserveCount)];
 }
 
++ (UIImage *)imageName:(NSString *)imageName withTintColor:(UIColor *)tintColor{
+    
+    UIImage *img = [UIImage imageNamed:imageName];
+    
+    UIGraphicsBeginImageContext(img.size);
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    [tintColor setFill];
+    
+    CGContextTranslateCTM(context, 0, img.size.height);
+    CGContextScaleCTM(context, 1.0, -1.0);
+    
+    // set the blend mode to color burn, and the original image
+    CGContextSetBlendMode(context, kCGBlendModeNormal);
+    CGRect rect = CGRectMake(0, 0, img.size.width, img.size.height);
+    CGContextDrawImage(context, rect, img.CGImage);
+    
+    // set a mask that matches the shape of the image, then draw (color burn) a colored rectangle
+    CGContextClipToMask(context, rect, img.CGImage);
+    CGContextAddRect(context, rect);
+    CGContextDrawPath(context,kCGPathFill);
+    
+    // generate a new UIImage from the graphics context we drew onto
+    UIImage *tintColorImg = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return tintColorImg;
+}
+
 @end

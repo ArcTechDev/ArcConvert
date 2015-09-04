@@ -10,8 +10,6 @@
 
 @interface DelegateViewController ()
 
-- (id)requestCustomizedUIDataWithPathString:(NSString *)pathString;
-
 @end
 
 @implementation DelegateViewController{

@@ -73,15 +73,15 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bg" translatesAutoresizingMaskIntoConstraints="NO" id="rd8-36-fEn">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" misplaced="YES" text="" textAlignment="right" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="31J-fX-mgF" userLabel="Process-Label">
-                                <rect key="frame" x="0.0" y="64" width="600" height="31.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="" textAlignment="right" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="31J-fX-mgF" userLabel="Process-Label">
+                                <rect key="frame" x="0.0" y="64" width="600" height="29"/>
                                 <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="38"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Wlo-hk-eMJ" userLabel="Input-Label">
-                                <rect key="frame" x="0.0" y="95.5" width="600" height="93.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Wlo-hk-eMJ" userLabel="Input-Label">
+                                <rect key="frame" x="0.0" y="93" width="600" height="96"/>
                                 <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="80"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -97,8 +97,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rV3-3y-oaA" userLabel="Keyboard-View">
                                 <rect key="frame" x="0.0" y="189" width="600" height="361"/>
                                 <subviews>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHe-O9-awJ" userLabel="AC-Button">
-                                        <rect key="frame" x="0.0" y="0.0" width="147" height="72"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHe-O9-awJ" userLabel="AC-Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="147" height="70.5"/>
                                         <color key="tintColor" red="0.25098039220000001" green="0.80000000000000004" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="AllClear" backgroundImage="BtnBg">
                                             <color key="titleColor" red="0.27450980392156865" green="0.36862745098039218" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -108,8 +108,8 @@
                                             <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dpb-Y9-zvc"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNI-rH-HS4" userLabel="PlusMinus-Button">
-                                        <rect key="frame" x="149" y="0.0" width="147" height="72"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNI-rH-HS4" userLabel="PlusMinus-Button">
+                                        <rect key="frame" x="149" y="0.0" width="147" height="70.5"/>
                                         <color key="tintColor" red="0.25098039220000001" green="0.80000000000000004" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="PlusMinus" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -118,8 +118,8 @@
                                             <action selector="positiveAndNegativeSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zvf-7q-j5U"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vu-d4-4Qt" userLabel="Percent-Button">
-                                        <rect key="frame" x="298" y="0.0" width="147" height="72"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vu-d4-4Qt" userLabel="Percent-Button">
+                                        <rect key="frame" x="298" y="0.0" width="147" height="70.5"/>
                                         <color key="tintColor" red="0.25098039220000001" green="0.80000000000000004" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="Percent" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -128,8 +128,8 @@
                                             <action selector="percentSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nvi-h5-7TY"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0B-rF-PEO" userLabel="Backward-Button">
-                                        <rect key="frame" x="447" y="0.0" width="147" height="72"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0B-rF-PEO" userLabel="Backward-Button">
+                                        <rect key="frame" x="447" y="0.0" width="147" height="70.5"/>
                                         <color key="tintColor" red="0.25098039220000001" green="0.80000000000000004" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="Backward" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -138,11 +138,11 @@
                                             <action selector="backwardDelete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i9A-Lc-7v5"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NYA-c5-o61">
-                                        <rect key="frame" x="0.0" y="74" width="147" height="72.5"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NYA-c5-o61">
+                                        <rect key="frame" x="0.0" y="72" width="147" height="71"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="7" backgroundImage="S-G-C-BtnBg">
+                                        <state key="normal" title="7" backgroundImage="BtnBg">
                                             <color key="titleColor" red="0.25098039215686274" green="0.80000000000000004" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -150,8 +150,8 @@
                                             <action selector="digitPress7:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JDy-1r-aPC"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fd-ef-CHg">
-                                        <rect key="frame" x="149" y="74" width="147" height="72.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fd-ef-CHg">
+                                        <rect key="frame" x="149" y="72" width="147" height="71"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="8" backgroundImage="BtnBg">
@@ -162,8 +162,8 @@
                                             <action selector="digitPress8:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pl2-0a-vQf"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l09-Hl-Sy0">
-                                        <rect key="frame" x="298" y="74" width="147" height="72.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l09-Hl-Sy0">
+                                        <rect key="frame" x="298" y="72" width="147" height="71"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="9" backgroundImage="BtnBg">
@@ -174,16 +174,16 @@
                                             <action selector="digitPress9:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qe7-98-ufv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUe-Da-lRE" userLabel="Plus-Button">
-                                        <rect key="frame" x="447" y="74" width="147" height="72.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUe-Da-lRE" userLabel="Divide-Button">
+                                        <rect key="frame" x="447" y="72" width="147" height="71"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="Divided" backgroundImage="BtnBg"/>
                                         <connections>
                                             <action selector="divideSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tci-lJ-N14"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdf-Z7-7da">
-                                        <rect key="frame" x="0.0" y="148" width="147" height="72"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdf-Z7-7da">
+                                        <rect key="frame" x="0.0" y="145" width="147" height="70.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="4" backgroundImage="BtnBg">
@@ -194,8 +194,8 @@
                                             <action selector="digitPress4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hMr-qz-o9p"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nsy-Qq-G0R">
-                                        <rect key="frame" x="149" y="148" width="147" height="72"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nsy-Qq-G0R">
+                                        <rect key="frame" x="149" y="145" width="147" height="70.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="5" backgroundImage="BtnBg">
@@ -206,8 +206,8 @@
                                             <action selector="digitPress5:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qCE-vG-Rqk"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frH-dF-dLO">
-                                        <rect key="frame" x="298" y="148" width="147" height="72"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frH-dF-dLO">
+                                        <rect key="frame" x="298" y="145" width="147" height="70.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="6" backgroundImage="BtnBg">
@@ -218,8 +218,8 @@
                                             <action selector="digitPress6:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G1r-d3-smD"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFb-9F-VIA" userLabel="Minus-Button">
-                                        <rect key="frame" x="447" y="148" width="147" height="72"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFb-9F-VIA" userLabel="Time-Button">
+                                        <rect key="frame" x="447" y="145" width="147" height="70.5"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="Times" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -228,8 +228,8 @@
                                             <action selector="mutiplySign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OTV-nE-KTV"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYe-MW-AU7">
-                                        <rect key="frame" x="0.0" y="222" width="147" height="72.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYe-MW-AU7">
+                                        <rect key="frame" x="0.0" y="217" width="147" height="71"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="1" backgroundImage="BtnBg">
@@ -240,8 +240,8 @@
                                             <action selector="digitPress1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BI2-4A-QuO"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FeV-10-awx">
-                                        <rect key="frame" x="149" y="222" width="147" height="72.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FeV-10-awx">
+                                        <rect key="frame" x="149" y="217" width="147" height="71"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="2" backgroundImage="BtnBg">
@@ -252,8 +252,8 @@
                                             <action selector="digitPress2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WeX-r7-a6G"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCB-ZP-STN">
-                                        <rect key="frame" x="298" y="222" width="147" height="72.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCB-ZP-STN">
+                                        <rect key="frame" x="298" y="217" width="147" height="71"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="3" backgroundImage="BtnBg">
@@ -264,8 +264,8 @@
                                             <action selector="digitPress3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nOo-3X-EJe"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0RD-Mz-x0a" userLabel="Times-Button">
-                                        <rect key="frame" x="447" y="222" width="147" height="72.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0RD-Mz-x0a" userLabel="Sub-Button">
+                                        <rect key="frame" x="447" y="217" width="147" height="71"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="Minus" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -274,20 +274,23 @@
                                             <action selector="subSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tZg-cw-1eQ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmB-qL-1Zm">
-                                        <rect key="frame" x="0.0" y="297" width="147" height="72"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmB-qL-1Zm">
+                                        <rect key="frame" x="0.0" y="290" width="147" height="70.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="0" backgroundImage="BtnBg">
-                                            <color key="titleColor" red="0.25098039215686274" green="0.80000000000000004" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.25098039220000001" green="0.80000000000000004" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="S-G-C-BtnDigitalBg">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="digitPress0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9C7-lE-1DU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1n-4s-ypB" userLabel="Dot-Button">
-                                        <rect key="frame" x="149" y="297" width="147" height="72"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1n-4s-ypB" userLabel="Dot-Button">
+                                        <rect key="frame" x="149" y="290" width="147" height="70.5"/>
                                         <color key="tintColor" red="0.25098039220000001" green="0.80000000000000004" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="Dot" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -296,8 +299,8 @@
                                             <action selector="decimalSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xxk-nb-57X"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUM-iF-1j0" userLabel="Equal-Button">
-                                        <rect key="frame" x="298" y="297" width="147" height="72"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUM-iF-1j0" userLabel="Equal-Button">
+                                        <rect key="frame" x="298" y="290" width="147" height="70.5"/>
                                         <color key="tintColor" red="0.25098039220000001" green="0.80000000000000004" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="Equal" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -306,8 +309,8 @@
                                             <action selector="equalSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="00v-ca-PFD"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dg-NW-448" userLabel="Divided-Button">
-                                        <rect key="frame" x="447" y="297" width="147" height="72"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dg-NW-448" userLabel="Add-Button">
+                                        <rect key="frame" x="447" y="290" width="147" height="70.5"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="Plus" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -342,7 +345,7 @@
                                     <constraint firstItem="LHe-O9-awJ" firstAttribute="height" secondItem="4fd-ef-CHg" secondAttribute="height" id="JCU-eF-wLY"/>
                                     <constraint firstItem="wNI-rH-HS4" firstAttribute="leading" secondItem="Nsy-Qq-G0R" secondAttribute="leading" id="JMY-CF-Oxn"/>
                                     <constraint firstItem="yCB-ZP-STN" firstAttribute="top" secondItem="pYe-MW-AU7" secondAttribute="top" id="JZF-WE-n5R"/>
-                                    <constraint firstItem="LHe-O9-awJ" firstAttribute="height" secondItem="rV3-3y-oaA" secondAttribute="height" multiplier="0.2" id="LJp-ZQ-HJf"/>
+                                    <constraint firstItem="LHe-O9-awJ" firstAttribute="height" secondItem="rV3-3y-oaA" secondAttribute="height" multiplier="0.195" id="LJp-ZQ-HJf"/>
                                     <constraint firstItem="zdf-Z7-7da" firstAttribute="top" secondItem="NYA-c5-o61" secondAttribute="bottom" constant="2" id="LWf-BI-3s0"/>
                                     <constraint firstItem="LHe-O9-awJ" firstAttribute="width" secondItem="rV3-3y-oaA" secondAttribute="width" multiplier="0.245" id="Lnk-9r-CBq"/>
                                     <constraint firstItem="LHe-O9-awJ" firstAttribute="height" secondItem="Z1n-4s-ypB" secondAttribute="height" id="Low-Ub-YvX"/>
@@ -431,6 +434,26 @@
                     <navigationItem key="navigationItem" id="tky-8Q-bcu"/>
                     <connections>
                         <outlet property="bg" destination="rd8-36-fEn" id="bmh-jk-wdQ"/>
+                        <outlet property="btn0" destination="fmB-qL-1Zm" id="Sf7-aJ-ysS"/>
+                        <outlet property="btn1" destination="pYe-MW-AU7" id="sbs-9m-LDT"/>
+                        <outlet property="btn2" destination="FeV-10-awx" id="0At-aw-0kr"/>
+                        <outlet property="btn3" destination="yCB-ZP-STN" id="obV-5s-6CI"/>
+                        <outlet property="btn4" destination="zdf-Z7-7da" id="Dwx-Sh-pYs"/>
+                        <outlet property="btn5" destination="Nsy-Qq-G0R" id="vib-WF-QvW"/>
+                        <outlet property="btn6" destination="frH-dF-dLO" id="t5S-Yi-sIq"/>
+                        <outlet property="btn7" destination="NYA-c5-o61" id="6fz-h0-ccT"/>
+                        <outlet property="btn8" destination="4fd-ef-CHg" id="dNZ-pb-Brz"/>
+                        <outlet property="btn9" destination="l09-Hl-Sy0" id="NT9-H1-VJh"/>
+                        <outlet property="btnAdd" destination="5dg-NW-448" id="FHE-Bl-0JE"/>
+                        <outlet property="btnBackward" destination="Z0B-rF-PEO" id="seY-TU-AlG"/>
+                        <outlet property="btnClearAll" destination="LHe-O9-awJ" id="T8N-a2-A77"/>
+                        <outlet property="btnDivide" destination="bUe-Da-lRE" id="Udl-Ax-RPq"/>
+                        <outlet property="btnDot" destination="Z1n-4s-ypB" id="SQX-RJ-zex"/>
+                        <outlet property="btnEqual" destination="LUM-iF-1j0" id="ndc-fk-3Xm"/>
+                        <outlet property="btnPercent" destination="7vu-d4-4Qt" id="1RT-Cg-MfN"/>
+                        <outlet property="btnPlusMinus" destination="wNI-rH-HS4" id="RvN-Yg-v5t"/>
+                        <outlet property="btnSubtract" destination="0RD-Mz-x0a" id="Nam-KN-Mch"/>
+                        <outlet property="btnTime" destination="bFb-9F-VIA" id="JYh-UE-W5U"/>
                         <outlet property="dispalyCalculation" destination="31J-fX-mgF" id="ZCF-m1-mp2"/>
                         <outlet property="displayField" destination="Wlo-hk-eMJ" id="aV3-9U-dBS"/>
                     </connections>
@@ -461,7 +484,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cck-bG-88A" userLabel="BtnGroup-View">
                                 <rect key="frame" x="0.0" y="94" width="600" height="456"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gec-fb-ZdT" userLabel="ThemeBtn-View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gec-fb-ZdT" userLabel="ThemeBtn-View" customClass="MainMenuBtnView">
                                         <rect key="frame" x="0.0" y="342" width="200" height="114"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M-Border" translatesAutoresizingMaskIntoConstraints="NO" id="rp3-UN-hk7" userLabel="BtnBg-Image View">
@@ -511,8 +534,14 @@
                                             <constraint firstItem="rp3-UN-hk7" firstAttribute="width" secondItem="Gec-fb-ZdT" secondAttribute="width" id="yVD-Z0-GOa"/>
                                             <constraint firstItem="omo-9p-GDk" firstAttribute="top" secondItem="Bw3-KE-GDQ" secondAttribute="bottom" id="zFB-z6-x4c"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="bgView" destination="rp3-UN-hk7" id="Df8-L0-TDm"/>
+                                            <outlet property="bottomView" destination="Bw3-KE-GDQ" id="vjr-MS-JHm"/>
+                                            <outlet property="nameLabel" destination="omo-9p-GDk" id="Q2n-Xo-iGK"/>
+                                            <outlet property="topView" destination="bOb-7T-iYc" id="OVw-QC-UfE"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HcW-wm-p3N" userLabel="CalculatorBtn-View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HcW-wm-p3N" userLabel="CalculatorBtn-View" customClass="MainMenuBtnView">
                                         <rect key="frame" x="200" y="342" width="200" height="114"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M-Border" translatesAutoresizingMaskIntoConstraints="NO" id="pbg-GB-yGk" userLabel="BtnBg-Image View">
@@ -562,8 +591,14 @@
                                             <constraint firstItem="Csd-RN-uHt" firstAttribute="height" secondItem="HcW-wm-p3N" secondAttribute="height" id="vaG-6p-Dfr"/>
                                             <constraint firstItem="BNh-Jl-5t3" firstAttribute="width" secondItem="9RH-s7-mDF" secondAttribute="width" id="xLI-uQ-rM9"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="bgView" destination="pbg-GB-yGk" id="SJj-uC-v8k"/>
+                                            <outlet property="bottomView" destination="9RH-s7-mDF" id="SAO-Z6-6qI"/>
+                                            <outlet property="nameLabel" destination="qWJ-JO-a5b" id="14R-cs-CJw"/>
+                                            <outlet property="topView" destination="BNh-Jl-5t3" id="sGK-ne-Ged"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FLL-t3-GVu" userLabel="InformationBtn-View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FLL-t3-GVu" userLabel="InformationBtn-View" customClass="MainMenuBtnView">
                                         <rect key="frame" x="400" y="342" width="200.5" height="114"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M-Border" translatesAutoresizingMaskIntoConstraints="NO" id="cYN-vU-fhg" userLabel="BtnBg-Image View">
@@ -613,8 +648,14 @@
                                             <constraint firstItem="mkm-X7-qix" firstAttribute="leading" secondItem="FLL-t3-GVu" secondAttribute="leading" id="yOW-Kn-vdc"/>
                                             <constraint firstItem="6cW-kM-wpG" firstAttribute="width" secondItem="1dN-Ih-W4G" secondAttribute="width" id="zQT-vz-8HP"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="bgView" destination="cYN-vU-fhg" id="rkF-Oa-cb2"/>
+                                            <outlet property="bottomView" destination="1dN-Ih-W4G" id="Vna-zH-IFb"/>
+                                            <outlet property="nameLabel" destination="mkm-X7-qix" id="HJw-ZQ-sf7"/>
+                                            <outlet property="topView" destination="6cW-kM-wpG" id="4wc-OE-KEX"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z9A-ja-iwH" userLabel="TimeBtn-View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z9A-ja-iwH" userLabel="TimeBtn-View" customClass="MainMenuBtnView">
                                         <rect key="frame" x="0.0" y="228.5" width="200" height="114"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M-Border" translatesAutoresizingMaskIntoConstraints="NO" id="AWP-uR-NDq" userLabel="BtnBg-Image View">
@@ -664,8 +705,14 @@
                                             <constraint firstAttribute="centerX" secondItem="iQm-db-iFa" secondAttribute="centerX" id="sZg-ZJ-KwS"/>
                                             <constraint firstAttribute="bottom" secondItem="XwF-TX-Njf" secondAttribute="bottom" constant="28" id="v32-N1-rDd"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="bgView" destination="AWP-uR-NDq" id="Q0U-JD-nxH"/>
+                                            <outlet property="bottomView" destination="XwF-TX-Njf" id="U0t-cR-M1F"/>
+                                            <outlet property="nameLabel" destination="Xo6-IV-HnI" id="Kvd-OS-AcP"/>
+                                            <outlet property="topView" destination="tAr-64-3BT" id="8Uq-1C-axw"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fKX-dG-m3K" userLabel="DataBtn-View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fKX-dG-m3K" userLabel="DataBtn-View" customClass="MainMenuBtnView">
                                         <rect key="frame" x="200" y="228" width="200" height="114"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M-Border" translatesAutoresizingMaskIntoConstraints="NO" id="SAH-IR-KsE" userLabel="BtnBg-Image View">
@@ -715,8 +762,14 @@
                                             <constraint firstItem="u5r-dX-gfe" firstAttribute="width" secondItem="fKX-dG-m3K" secondAttribute="width" id="ud3-xE-cdV"/>
                                             <constraint firstAttribute="centerY" secondItem="SAH-IR-KsE" secondAttribute="centerY" id="vox-Co-26J"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="bgView" destination="SAH-IR-KsE" id="Jbq-AA-Vf0"/>
+                                            <outlet property="bottomView" destination="CVh-KY-AlK" id="OhW-IS-PZ8"/>
+                                            <outlet property="nameLabel" destination="RC7-ej-0ry" id="SeS-st-gKB"/>
+                                            <outlet property="topView" destination="JEF-M6-QhQ" id="bFE-xB-P0e"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nq0-9d-ck6" userLabel="CurrencyBtn-View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nq0-9d-ck6" userLabel="CurrencyBtn-View" customClass="MainMenuBtnView">
                                         <rect key="frame" x="400" y="228" width="200" height="114"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M-Border" translatesAutoresizingMaskIntoConstraints="NO" id="m2x-QW-UUz" userLabel="BtnBg-Image View">
@@ -766,8 +819,14 @@
                                             <constraint firstAttribute="bottom" secondItem="9lw-5o-yhu" secondAttribute="bottom" constant="28" id="qhs-N5-BPP"/>
                                             <constraint firstItem="9lw-5o-yhu" firstAttribute="top" secondItem="Nq0-9d-ck6" secondAttribute="top" id="sda-Ih-iha"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="bgView" destination="m2x-QW-UUz" id="8Ez-ay-DF5"/>
+                                            <outlet property="bottomView" destination="9lw-5o-yhu" id="jkz-gA-h6e"/>
+                                            <outlet property="nameLabel" destination="mph-1H-v33" id="hIm-wt-12b"/>
+                                            <outlet property="topView" destination="eyg-l1-bum" id="QjS-xg-pyf"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0f-UG-YzL" userLabel="AreaBtn-View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0f-UG-YzL" userLabel="AreaBtn-View" customClass="MainMenuBtnView">
                                         <rect key="frame" x="0.0" y="114.5" width="200" height="114"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M-Border" translatesAutoresizingMaskIntoConstraints="NO" id="kfF-ue-JHO" userLabel="BtnBg-Image View">
@@ -817,8 +876,14 @@
                                             <constraint firstItem="Gof-jV-ZRq" firstAttribute="height" secondItem="g0f-UG-YzL" secondAttribute="height" id="rvs-Bj-e5D"/>
                                             <constraint firstItem="Gof-jV-ZRq" firstAttribute="width" secondItem="g0f-UG-YzL" secondAttribute="width" id="tXS-3P-CFs"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="bgView" destination="kfF-ue-JHO" id="MEb-MM-CkB"/>
+                                            <outlet property="bottomView" destination="opd-Oo-hMa" id="rEt-d7-c3b"/>
+                                            <outlet property="nameLabel" destination="Kav-h4-77e" id="TlW-IH-LGR"/>
+                                            <outlet property="topView" destination="zSm-UV-lMC" id="QRw-dg-hlu"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e6A-wl-QBM" userLabel="VolumeBtn-View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e6A-wl-QBM" userLabel="VolumeBtn-View" customClass="MainMenuBtnView">
                                         <rect key="frame" x="200" y="114" width="200" height="114"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M-Border" translatesAutoresizingMaskIntoConstraints="NO" id="IYf-ho-smU" userLabel="BtnBg-Image View">
@@ -868,8 +933,14 @@
                                             <constraint firstAttribute="bottom" secondItem="oqt-d7-Lp1" secondAttribute="bottom" constant="28" id="p2u-mF-0XY"/>
                                             <constraint firstItem="1YF-zs-1FP" firstAttribute="top" secondItem="oqt-d7-Lp1" secondAttribute="bottom" id="qmb-5Q-7D7"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="bgView" destination="IYf-ho-smU" id="E6U-b9-xvc"/>
+                                            <outlet property="bottomView" destination="oqt-d7-Lp1" id="aMl-P3-Oab"/>
+                                            <outlet property="nameLabel" destination="1YF-zs-1FP" id="Izr-oP-i37"/>
+                                            <outlet property="topView" destination="HtF-wR-QLi" id="EsW-9E-qxN"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qfl-uf-z8f" userLabel="WeightBtn-View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qfl-uf-z8f" userLabel="WeightBtn-View" customClass="MainMenuBtnView">
                                         <rect key="frame" x="400" y="114" width="200" height="114"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M-Border" translatesAutoresizingMaskIntoConstraints="NO" id="9iA-vJ-62m" userLabel="BtnBg-Image View">
@@ -919,17 +990,23 @@
                                             <constraint firstAttribute="centerY" secondItem="agt-08-4P7" secondAttribute="centerY" id="sn5-X0-RWG"/>
                                             <constraint firstItem="agt-08-4P7" firstAttribute="height" secondItem="Qfl-uf-z8f" secondAttribute="height" id="xVK-Kd-6TB"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="bgView" destination="9iA-vJ-62m" id="Aff-Io-l41"/>
+                                            <outlet property="bottomView" destination="tC5-uh-NtV" id="Qhd-Qg-tSc"/>
+                                            <outlet property="nameLabel" destination="47M-Pd-Li3" id="GeV-9l-zXS"/>
+                                            <outlet property="topView" destination="HzT-E4-7fC" id="t4d-Jw-z6h"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FaO-ud-xEu" userLabel="LengthBtn-View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FaO-ud-xEu" userLabel="LengthBtn-View" customClass="MainMenuBtnView">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="114"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M-Border" translatesAutoresizingMaskIntoConstraints="NO" id="IfC-RH-0Ke" userLabel="BtnBg-Image View">
                                                 <rect key="frame" x="0.0" y="0.5" width="200" height="114"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M-Theme-Bottom" translatesAutoresizingMaskIntoConstraints="NO" id="pKF-Rw-BlR" userLabel="Bottom-Image View">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="S-M-TimeBottom" translatesAutoresizingMaskIntoConstraints="NO" id="pKF-Rw-BlR" userLabel="Bottom-Image View">
                                                 <rect key="frame" x="28" y="0.0" width="144" height="85.5"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M-Theme-Top" translatesAutoresizingMaskIntoConstraints="NO" id="up5-Sj-Yy7" userLabel="Top-Image View">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="S-M-TimeTop" translatesAutoresizingMaskIntoConstraints="NO" id="up5-Sj-Yy7" userLabel="Top-Image View">
                                                 <rect key="frame" x="28" y="0.0" width="144" height="85.5"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Length" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PQP-Fy-zv0" userLabel="Name-Label">
@@ -970,8 +1047,14 @@
                                             <constraint firstItem="up5-Sj-Yy7" firstAttribute="height" secondItem="pKF-Rw-BlR" secondAttribute="height" id="qOp-lc-fD3"/>
                                             <constraint firstItem="pKF-Rw-BlR" firstAttribute="leading" secondItem="FaO-ud-xEu" secondAttribute="leading" constant="28" id="wfP-xK-Mcg"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="bgView" destination="IfC-RH-0Ke" id="I2m-mc-Keq"/>
+                                            <outlet property="bottomView" destination="pKF-Rw-BlR" id="2X4-Xk-evy"/>
+                                            <outlet property="nameLabel" destination="PQP-Fy-zv0" id="YLn-xN-y8J"/>
+                                            <outlet property="topView" destination="up5-Sj-Yy7" id="3SO-4s-3u1"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMY-Ba-Bdf" userLabel="TemperatureBtn-View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMY-Ba-Bdf" userLabel="TemperatureBtn-View" customClass="MainMenuBtnView">
                                         <rect key="frame" x="200" y="0.0" width="200" height="114"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M-Border" translatesAutoresizingMaskIntoConstraints="NO" id="K2W-MX-QkQ" userLabel="BtnBg-Image View">
@@ -1021,8 +1104,14 @@
                                             <constraint firstItem="Iji-gX-HLY" firstAttribute="width" secondItem="c0D-vY-MiD" secondAttribute="width" id="sX3-Yh-cVg"/>
                                             <constraint firstItem="m1t-52-Y4N" firstAttribute="top" secondItem="Iji-gX-HLY" secondAttribute="bottom" id="uGX-Iz-3RH"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="bgView" destination="K2W-MX-QkQ" id="Vch-5K-icB"/>
+                                            <outlet property="bottomView" destination="Iji-gX-HLY" id="ov1-Yh-cXl"/>
+                                            <outlet property="nameLabel" destination="m1t-52-Y4N" id="6z6-zE-QXW"/>
+                                            <outlet property="topView" destination="c0D-vY-MiD" id="WKO-tQ-cWR"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UDz-JI-agg" userLabel="SpeedBtn-View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UDz-JI-agg" userLabel="SpeedBtn-View" customClass="MainMenuBtnView">
                                         <rect key="frame" x="400" y="0.0" width="200" height="114"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M-Border" translatesAutoresizingMaskIntoConstraints="NO" id="GwD-4w-eLg" userLabel="BtnBg-Image View">
@@ -1072,6 +1161,12 @@
                                             <constraint firstItem="oVf-eZ-yAn" firstAttribute="width" secondItem="UDz-JI-agg" secondAttribute="width" id="oi2-Ia-bJp"/>
                                             <constraint firstAttribute="centerX" secondItem="GwD-4w-eLg" secondAttribute="centerX" id="pqK-Ha-IHd"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="bgView" destination="GwD-4w-eLg" id="NCj-2C-djM"/>
+                                            <outlet property="bottomView" destination="xS6-Dd-C0z" id="cwd-Rq-x7K"/>
+                                            <outlet property="nameLabel" destination="d4w-yY-n5N" id="iOf-Id-hQq"/>
+                                            <outlet property="topView" destination="L4a-rF-ewd" id="FWY-2G-JaP"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1158,6 +1253,22 @@
                             <constraint firstAttribute="trailing" secondItem="ToW-xV-bSp" secondAttribute="trailing" id="zTW-KO-occ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bgView" destination="E6F-Nf-396" id="xtp-3b-t6R"/>
+                        <outlet property="btnAreaView" destination="g0f-UG-YzL" id="Juc-5y-g6S"/>
+                        <outlet property="btnCalculatorView" destination="HcW-wm-p3N" id="agE-Yg-Sh3"/>
+                        <outlet property="btnCurrencyView" destination="Nq0-9d-ck6" id="mOA-GU-CkR"/>
+                        <outlet property="btnDataView" destination="fKX-dG-m3K" id="dqj-uS-ebq"/>
+                        <outlet property="btnInformationView" destination="FLL-t3-GVu" id="Ppg-59-2mS"/>
+                        <outlet property="btnLengthView" destination="FaO-ud-xEu" id="gd2-5U-fRj"/>
+                        <outlet property="btnSpeedView" destination="UDz-JI-agg" id="zTo-e6-6Lo"/>
+                        <outlet property="btnTemperatureView" destination="rMY-Ba-Bdf" id="DmL-w2-vKZ"/>
+                        <outlet property="btnThemeView" destination="Gec-fb-ZdT" id="CSG-Bk-Gv5"/>
+                        <outlet property="btnTimeView" destination="z9A-ja-iwH" id="mH9-fX-R5g"/>
+                        <outlet property="btnVolumeView" destination="e6A-wl-QBM" id="J8O-Ra-dcy"/>
+                        <outlet property="btnWeightView" destination="Qfl-uf-z8f" id="CxW-ac-Cob"/>
+                        <outlet property="halfTransView" destination="SYN-7h-7Ys" id="rSG-kK-K2s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcA-RL-X8b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1802,7 +1913,9 @@
         <image name="Percent" width="36" height="36"/>
         <image name="Plus" width="24" height="24"/>
         <image name="PlusMinus" width="36" height="36"/>
-        <image name="S-G-C-BtnBg" width="191" height="166"/>
+        <image name="S-G-C-BtnDigitalBg" width="191" height="166"/>
+        <image name="S-M-TimeBottom" width="91" height="89"/>
+        <image name="S-M-TimeTop" width="91" height="89"/>
         <image name="Separator" width="10" height="10"/>
         <image name="Times" width="24" height="24"/>
     </resources>
