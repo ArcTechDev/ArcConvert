@@ -203,6 +203,9 @@ static ThemeManager *instance;
     }
     else if([flag isEqualToString:@"s"]){
         
+        if([value isEqual:@""])
+            return nil;
+        
         return value;
         
     }

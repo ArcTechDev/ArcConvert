@@ -234,6 +234,9 @@
 #pragma mark - override
 - (void)customizeView{
     
+    //Nav bar title
+    self.title = @"Calcualtor";
+    
     //Nav bar tint color
     [self.navigationController.navigationBar setBarTintColor:[self requestUIData:@"Calculator/NavBar/BarColor"]];
     
@@ -262,9 +265,6 @@
     
     //Nav bar items tint color
     self.navigationController.navigationBar.tintColor = [self requestUIData:@"Calculator/NavBar/BarItemTintColor"];
-    
-    //Nav bar title
-    self.title = @"Calcualtor";
     
     //background image
     UIImage *bgImage = [UIImage imageNamed:(NSString *)[self requestUIData:@"Calculator/BackgroundImg"]];

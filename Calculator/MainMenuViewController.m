@@ -77,26 +77,20 @@
     
     [super viewDidAppear:animated];
     
-    [self setupNavigationBar];
     
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
+    NSLog(@"MainMenu Controller memeory warning");
 }
 
 #pragma mark - public  interface
 - (void)addToParentViewController:(UIViewController *)parent{
     
     [super addToParentViewController:parent];
-}
-
-#pragma mark - internal
-- (void)setupNavigationBar{
-    
-    //hide navigation bar
-    self.navigationController.navigationBarHidden = YES;
 }
 
 #pragma mark - Gesture
@@ -211,6 +205,9 @@
 }
 
 - (void)customizeView{
+    
+    //Nav bar title
+    self.title = @"MainMenu";
     
     //Background image
     [_bgView setImage:[UIImage imageNamed:[self requestUIData:@"MainMenu/BgImg"]]];

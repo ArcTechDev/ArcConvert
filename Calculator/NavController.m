@@ -51,7 +51,7 @@
     
     DelegateViewController *delegateViewController = (DelegateViewController *)viewController;
     
-    navigationController.navigationBarHidden = !delegateViewController.showNavigationBar;
+    //navigationController.navigationBarHidden = !delegateViewController.showNavigationBar;
 }
 
 /*

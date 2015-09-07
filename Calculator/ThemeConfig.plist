@@ -405,8 +405,10 @@
 			<string>c#255,255,255,0</string>
 			<key>BtnView</key>
 			<dict>
+				<key>IconBg</key>
+				<string>s#S-M-IconBg</string>
 				<key>BgImg</key>
-				<string>s#S-M-BtnBg</string>
+				<string>s#</string>
 				<key>TextFont</key>
 				<string>s#Lato-Light</string>
 				<key>TextSize</key>
@@ -414,16 +416,137 @@
 				<key>TextColor</key>
 				<string>c#255,255,255,100</string>
 			</dict>
+			<key>BtnIconLength</key>
+			<dict>
+				<key>BottomImg</key>
+				<string>s#S-M-Icon-Length-Bottom</string>
+				<key>BottomTintColor</key>
+				<string>c#0,150,124,100</string>
+				<key>TopImg</key>
+				<string>s#S-M-Icon-Length-Top</string>
+				<key>TopTintColor</key>
+				<string>c#0,0,0,100</string>
+			</dict>
+			<key>BtnIconTemperature</key>
+			<dict>
+				<key>BottomImg</key>
+				<string>s#S-M-Icon-Temperature-Bottom</string>
+				<key>BottomTintColor</key>
+				<string>c#0,150,124,100</string>
+				<key>TopImg</key>
+				<string>s#S-M-Icon-Temperature-Top</string>
+				<key>TopTintColor</key>
+				<string>c#0,0,0,100</string>
+			</dict>
+			<key>BtnIconSpeed</key>
+			<dict>
+				<key>BottomImg</key>
+				<string>s#S-M-Icon-Speed-Bottom</string>
+				<key>BottomTintColor</key>
+				<string>c#0,150,124,100</string>
+				<key>TopImg</key>
+				<string>s#S-M-Icon-Speed-Top</string>
+				<key>TopTintColor</key>
+				<string>c#0,0,0,100</string>
+			</dict>
+			<key>BtnIconArea</key>
+			<dict>
+				<key>BottomImg</key>
+				<string>s#S-M-Icon-Area-Bottom</string>
+				<key>BottomTintColor</key>
+				<string>c#0,150,124,100</string>
+				<key>TopImg</key>
+				<string>s#S-M-Icon-Area-Top</string>
+				<key>TopTintColor</key>
+				<string>c#0,0,0,100</string>
+			</dict>
+			<key>BtnIconVolume</key>
+			<dict>
+				<key>BottomImg</key>
+				<string>s#S-M-Icon-Volume-Bottom</string>
+				<key>BottomTintColor</key>
+				<string>c#0,150,124,100</string>
+				<key>TopImg</key>
+				<string>s#S-M-Icon-Volume-Top</string>
+				<key>TopTintColor</key>
+				<string>c#0,0,0,100</string>
+			</dict>
+			<key>BtnIconWeight</key>
+			<dict>
+				<key>BottomImg</key>
+				<string>s#S-M-Icon-Weight-Bottom</string>
+				<key>BottomTintColor</key>
+				<string>c#0,150,124,100</string>
+				<key>TopImg</key>
+				<string>s#S-M-Icon-Weight-Top</string>
+				<key>TopTintColor</key>
+				<string>c#0,0,0,100</string>
+			</dict>
 			<key>BtnIconTime</key>
 			<dict>
 				<key>BottomImg</key>
-				<string>s#S-M-TimeBottom</string>
+				<string>s#S-M-Icon-Time-Bottom</string>
 				<key>BottomTintColor</key>
-				<string>c#0,0,0,100</string>
-				<key>TopImg</key>
-				<string>s#S-M-TimeTop</string>
-				<key>TopTintColor</key>
 				<string>c#0,150,124,100</string>
+				<key>TopImg</key>
+				<string>s#S-M-Icon-Time-Top</string>
+				<key>TopTintColor</key>
+				<string>c#0,0,0,100</string>
+			</dict>
+			<key>BtnIconData</key>
+			<dict>
+				<key>BottomImg</key>
+				<string>s#S-M-Icon-Data-Bottom</string>
+				<key>BottomTintColor</key>
+				<string>c#0,150,124,100</string>
+				<key>TopImg</key>
+				<string>s#S-M-Icon-Data-Top</string>
+				<key>TopTintColor</key>
+				<string>c#0,0,0,100</string>
+			</dict>
+			<key>BtnIconCurrency</key>
+			<dict>
+				<key>BottomImg</key>
+				<string>s#S-M-Icon-Currency-Bottom</string>
+				<key>BottomTintColor</key>
+				<string>c#0,150,124,100</string>
+				<key>TopImg</key>
+				<string>s#S-M-Icon-Currency-Top</string>
+				<key>TopTintColor</key>
+				<string>c#0,0,0,100</string>
+			</dict>
+			<key>BtnIconThemes</key>
+			<dict>
+				<key>BottomImg</key>
+				<string>s#S-M-Icon-Themes-Bottom</string>
+				<key>BottomTintColor</key>
+				<string>c#0,150,124,100</string>
+				<key>TopImg</key>
+				<string>s#S-M-Icon-Themes-Top</string>
+				<key>TopTintColor</key>
+				<string>c#0,0,0,100</string>
+			</dict>
+			<key>BtnIconCalculator</key>
+			<dict>
+				<key>BottomImg</key>
+				<string>s#S-M-Icon-Calculator-Bottom</string>
+				<key>BottomTintColor</key>
+				<string>c#0,150,124,100</string>
+				<key>TopImg</key>
+				<string>s#S-M-Icon-Calculator-Top</string>
+				<key>TopTintColor</key>
+				<string>c#0,0,0,100</string>
+			</dict>
+			<key>BtnIconInformation</key>
+			<dict>
+				<key>BottomImg</key>
+				<string>s#S-M-Icon-Information-Bottom</string>
+				<key>BottomTintColor</key>
+				<string>c#0,150,124,100</string>
+				<key>TopImg</key>
+				<string>s#S-M-Icon-Information-Top</string>
+				<key>TopTintColor</key>
+				<string>c#0,0,0,100</string>
 			</dict>
 		</dict>
 		<key>Themes</key>
@@ -832,6 +955,8 @@
 			<string>c#234,234,234,50</string>
 			<key>BtnView</key>
 			<dict>
+				<key>IconBg</key>
+				<string>s#</string>
 				<key>BgImg</key>
 				<string>s#Z-M-BtnBg</string>
 				<key>TextFont</key>
@@ -839,6 +964,28 @@
 				<key>TextSize</key>
 				<string>n#17</string>
 				<key>TextColor</key>
+				<string>c#0,0,0,100</string>
+			</dict>
+			<key>BtnIconLength</key>
+			<dict>
+				<key>BottomImg</key>
+				<string>s#Z-M-Icon-Length-Bottom</string>
+				<key>BottomTintColor</key>
+				<string>c#64,204,177,100</string>
+				<key>TopImg</key>
+				<string>s#Z-M-Icon-Length-Top</string>
+				<key>TopTintColor</key>
+				<string>c#0,0,0,100</string>
+			</dict>
+			<key>BtnIconTime</key>
+			<dict>
+				<key>BottomImg</key>
+				<string>s#S-M-TimeBottom</string>
+				<key>BottomTintColor</key>
+				<string>c#0,150,124,100</string>
+				<key>TopImg</key>
+				<string>s#S-M-TimeTop</string>
+				<key>TopTintColor</key>
 				<string>c#0,0,0,100</string>
 			</dict>
 		</dict>

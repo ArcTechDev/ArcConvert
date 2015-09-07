@@ -44,6 +44,11 @@
 
 + (UIImage *)imageName:(NSString *)imageName withTintColor:(UIColor *)tintColor{
     
+    if([imageName isEqual:@""] || imageName == nil){
+        
+        return nil;
+    }
+    
     UIImage *img = [UIImage imageNamed:imageName];
     
     UIGraphicsBeginImageContext(img.size);

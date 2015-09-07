@@ -76,7 +76,6 @@
     
     self.showNavigationBar = YES;
     
-    [self setupNavigationBar];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -143,11 +142,6 @@
     drawDecimal = NO;
     popControllerHidden = YES;
     
-}
-
-- (void)setupNavigationBar{
-    
-    self.navigationController.navigationBarHidden = NO;
 }
 
 - (void)showCurrencyNote{
