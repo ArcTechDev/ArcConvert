@@ -27,6 +27,7 @@
 @implementation ConverterManager{
     
     NSMutableDictionary *conversionTools;
+    NSMutableDictionary *converterTitles;
     ConversionData *reuseableData;
     NSDictionary *converterSettings;
     NSDecimalNumber *currencyValue;
@@ -47,6 +48,16 @@ static ConverterManager *instance;
     }
     
     return instance;
+}
+
+- (NSString *)getTitleForConverterType:(enum ConverterType)type{
+    
+    if(converterTitles != nil){
+        
+        return [converterTitles objectForKey:[NSNumber numberWithUnsignedInteger:type]];
+    }
+    
+    return nil;
 }
 
 - (NSNumber *)convertWithValue:(NSDecimalNumber *)value WithType:(NSUInteger)type FromUnit:(DDUnit)from ToUnit:(DDUnit)to{
@@ -184,6 +195,29 @@ static ConverterManager *instance;
                            [NSNumber numberWithUnsignedInteger:CData]
                            //[NSValue valueWithPointer:@selector(convertCurrencyWithData:)],
                            //[NSNumber numberWithUnsignedInteger:CCurrency]
+                           , nil];
+        
+        converterTitles = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                           
+                           @"Length",
+                           [NSNumber numberWithUnsignedInteger:CLength],
+                           @"Temperature",
+                           [NSNumber numberWithUnsignedInteger:CTemperature],
+                           @"Speed",
+                           [NSNumber numberWithUnsignedInteger:CSpeed],
+                           @"Area",
+                           [NSNumber numberWithUnsignedInteger:CArea],
+                           @"Volume",
+                           [NSNumber numberWithUnsignedInteger:CVolume],
+                           @"Weight",
+                           [NSNumber numberWithUnsignedInteger:CWeight],
+                           @"Time",
+                           [NSNumber numberWithUnsignedInteger:CTime],
+                           @"Data",
+                           [NSNumber numberWithUnsignedInteger:CData],
+                           @"Currency",
+                           [NSNumber numberWithUnsignedInteger:CCurrency]
+                           
                            , nil];
         
         [self loadSettingFile];

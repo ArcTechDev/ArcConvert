@@ -17,22 +17,22 @@
             <string>Lato-Light</string>
             <string>Lato-Light</string>
             <string>Lato-Light</string>
-            <string>Lato-Light</string>
-            <string>Lato-Light</string>
-            <string>Lato-Light</string>
-            <string>Lato-Light</string>
-            <string>Lato-Light</string>
-            <string>Lato-Light</string>
-            <string>Lato-Light</string>
-            <string>Lato-Light</string>
-            <string>Lato-Light</string>
-            <string>Lato-Light</string>
-            <string>Lato-Light</string>
         </mutableArray>
         <mutableArray key="Lato-Medium.ttf">
             <string>Lato-Medium</string>
         </mutableArray>
         <mutableArray key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
@@ -1385,7 +1385,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bg" translatesAutoresizingMaskIntoConstraints="NO" id="Uhs-e2-4mW">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Separator" translatesAutoresizingMaskIntoConstraints="NO" id="VcY-81-jAb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="C-CV-Separator" translatesAutoresizingMaskIntoConstraints="NO" id="VcY-81-jAb">
                                 <rect key="frame" x="0.0" y="110" width="600" height="6"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -1396,7 +1396,7 @@
                                     <constraint firstAttribute="height" constant="50" id="AKQ-Cv-JSa"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jVb-gA-LkR" userLabel="DownUnit-View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jVb-gA-LkR" userLabel="DownUnit-View" customClass="ConverterInputView">
                                 <rect key="frame" x="0.0" y="116" width="600" height="90"/>
                                 <subviews>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VmB-uL-JzV" userLabel="Input-Label">
@@ -1416,11 +1416,8 @@
                                         <color key="tintColor" red="0.1058823529" green="0.76078431369999999" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Converter-DropDownArrow" translatesAutoresizingMaskIntoConstraints="NO" id="9u4-ee-Xpu" userLabel="DropDownArrow-Image View">
-                                        <rect key="frame" x="74" y="62" width="62" height="20"/>
+                                        <rect key="frame" x="74" y="62" width="62" height="28"/>
                                         <color key="tintColor" red="0.1058823529" green="0.76078431369999999" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="dmF-BC-XNO"/>
-                                        </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEC-Uj-Y3b" userLabel="DownUnit-Button">
                                         <rect key="frame" x="42" y="0.0" width="126" height="90"/>
@@ -1443,6 +1440,7 @@
                                     <constraint firstItem="bfB-H1-uWG" firstAttribute="width" secondItem="jVb-gA-LkR" secondAttribute="width" multiplier="0.21" id="N1d-CT-203"/>
                                     <constraint firstItem="VmB-uL-JzV" firstAttribute="width" secondItem="jVb-gA-LkR" secondAttribute="width" multiplier="0.72" id="PHv-KB-VAS"/>
                                     <constraint firstItem="bfB-H1-uWG" firstAttribute="centerX" secondItem="9u4-ee-Xpu" secondAttribute="centerX" id="USX-bg-7nW"/>
+                                    <constraint firstAttribute="bottom" secondItem="9u4-ee-Xpu" secondAttribute="bottom" id="UdF-CE-ank"/>
                                     <constraint firstItem="BEC-Uj-Y3b" firstAttribute="top" secondItem="jVb-gA-LkR" secondAttribute="top" id="fZt-Ar-Tvm"/>
                                     <constraint firstItem="BEC-Uj-Y3b" firstAttribute="trailing" secondItem="VmB-uL-JzV" secondAttribute="leading" id="iez-TL-UK0"/>
                                     <constraint firstItem="VmB-uL-JzV" firstAttribute="top" secondItem="jVb-gA-LkR" secondAttribute="top" id="jm3-ci-eFe"/>
@@ -1452,23 +1450,29 @@
                                     <constraint firstItem="99H-fy-jBT" firstAttribute="top" secondItem="jVb-gA-LkR" secondAttribute="top" id="xP3-1s-cPL"/>
                                     <constraint firstItem="9u4-ee-Xpu" firstAttribute="top" secondItem="bfB-H1-uWG" secondAttribute="bottom" id="y6a-bo-iYH"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dropDownArrowImageView" destination="9u4-ee-Xpu" id="Svn-gX-F7B"/>
+                                    <outlet property="indicatorImageView" destination="99H-fy-jBT" id="buY-yE-LWS"/>
+                                    <outlet property="inputLabel" destination="VmB-uL-JzV" id="lrE-zu-Nmb"/>
+                                    <outlet property="unitLabel" destination="bfB-H1-uWG" id="8WM-Tz-i2I"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ejK-L6-aQc" userLabel="Keyboard-View">
                                 <rect key="frame" x="0.0" y="206" width="600" height="344"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGJ-Vk-sUk">
-                                        <rect key="frame" x="0.0" y="0.0" width="198" height="55"/>
-                                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="28"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGJ-Vk-sUk" userLabel="C-Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="198.5" height="55"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="CE" backgroundImage="BtnBg">
+                                        <state key="normal" image="S-CV-BtnClear" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="clear:" destination="d0a-7M-0vG" eventType="touchUpInside" id="ieW-SF-DTr"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCV-6c-23F" userLabel="Dot-Button">
-                                        <rect key="frame" x="200" y="0.0" width="400" height="55"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCV-6c-23F" userLabel="Backward-Button">
+                                        <rect key="frame" x="200.5" y="0.0" width="399.5" height="55"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="Backward" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1477,9 +1481,9 @@
                                             <action selector="backwardDelete:" destination="d0a-7M-0vG" eventType="touchUpInside" id="TzF-q5-ZsC"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwo-8V-VSc">
-                                        <rect key="frame" x="0.0" y="290" width="398" height="54"/>
-                                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="28"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwo-8V-VSc">
+                                        <rect key="frame" x="0.0" y="290" width="399" height="54"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="0" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1488,9 +1492,9 @@
                                             <action selector="digitPress0:" destination="d0a-7M-0vG" eventType="touchUpInside" id="1ho-ZR-Hi2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLW-P6-ZUr">
-                                        <rect key="frame" x="0.0" y="57" width="198" height="75.5"/>
-                                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="28"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLW-P6-ZUr">
+                                        <rect key="frame" x="0.0" y="57" width="198.5" height="75.5"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="7" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1499,9 +1503,9 @@
                                             <action selector="digitPress7:" destination="d0a-7M-0vG" eventType="touchUpInside" id="oin-hK-lns"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2Q-na-HY8">
-                                        <rect key="frame" x="0.0" y="134.5" width="198" height="76"/>
-                                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="28"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2Q-na-HY8">
+                                        <rect key="frame" x="0.0" y="134" width="198.5" height="76"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="4" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1510,9 +1514,9 @@
                                             <action selector="digitPress4:" destination="d0a-7M-0vG" eventType="touchUpInside" id="UY0-Qt-BfJ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z55-N3-wYB">
-                                        <rect key="frame" x="200" y="134.5" width="198" height="76"/>
-                                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="28"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z55-N3-wYB">
+                                        <rect key="frame" x="200.5" y="134" width="198.5" height="76"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="5" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1521,9 +1525,9 @@
                                             <action selector="digitPress5:" destination="d0a-7M-0vG" eventType="touchUpInside" id="PAU-EL-hXp"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQ1-jl-r4o">
-                                        <rect key="frame" x="200" y="212.5" width="198" height="75.5"/>
-                                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="28"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQ1-jl-r4o">
+                                        <rect key="frame" x="200.5" y="212" width="198.5" height="75.5"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="2" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1532,9 +1536,9 @@
                                             <action selector="digitPress2:" destination="d0a-7M-0vG" eventType="touchUpInside" id="ADo-sS-Sx4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlK-tO-s5V">
-                                        <rect key="frame" x="400" y="212.5" width="198" height="75.5"/>
-                                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="28"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlK-tO-s5V">
+                                        <rect key="frame" x="401" y="212" width="198.5" height="75.5"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="3" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1543,9 +1547,9 @@
                                             <action selector="digitPress3:" destination="d0a-7M-0vG" eventType="touchUpInside" id="VfC-C4-kLr"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AH-Zx-VMr">
-                                        <rect key="frame" x="400" y="134.5" width="198" height="76"/>
-                                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="28"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AH-Zx-VMr">
+                                        <rect key="frame" x="401" y="134" width="198.5" height="76"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="6" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1554,9 +1558,9 @@
                                             <action selector="digitPress6:" destination="d0a-7M-0vG" eventType="touchUpInside" id="Nr1-Hh-MgS"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQi-Qy-W1K">
-                                        <rect key="frame" x="0.0" y="212.5" width="198" height="75.5"/>
-                                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="28"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQi-Qy-W1K">
+                                        <rect key="frame" x="0.0" y="212" width="198.5" height="75.5"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="1" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1565,9 +1569,9 @@
                                             <action selector="digitPress1:" destination="d0a-7M-0vG" eventType="touchUpInside" id="RPy-g5-3Q4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IuK-vu-fa6">
-                                        <rect key="frame" x="200" y="57" width="198.5" height="75.5"/>
-                                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="28"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IuK-vu-fa6">
+                                        <rect key="frame" x="200.5" y="57" width="199" height="75.5"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="8" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1576,9 +1580,9 @@
                                             <action selector="digitPress8:" destination="d0a-7M-0vG" eventType="touchUpInside" id="dDh-RU-uCz"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOM-EB-va3">
-                                        <rect key="frame" x="400" y="57" width="198" height="75.5"/>
-                                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="28"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOM-EB-va3">
+                                        <rect key="frame" x="402" y="57" width="198.5" height="75.5"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="9" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1587,8 +1591,8 @@
                                             <action selector="digitPress9:" destination="d0a-7M-0vG" eventType="touchUpInside" id="883-h2-1xt"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pfn-G4-vv9" userLabel="Backward-Button">
-                                        <rect key="frame" x="400" y="290" width="200" height="54"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pfn-G4-vv9" userLabel="Dot-Button">
+                                        <rect key="frame" x="401" y="290" width="199" height="54"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="Dot" backgroundImage="BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1653,7 +1657,7 @@
                                     <constraint firstAttribute="trailing" secondItem="FCV-6c-23F" secondAttribute="trailing" id="yIM-zP-cOD"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fKZ-Fh-c4w" userLabel="TopUnit-View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fKZ-Fh-c4w" userLabel="TopUnit-View" customClass="ConverterInputView">
                                 <rect key="frame" x="0.0" y="20" width="600" height="90"/>
                                 <subviews>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oDA-hC-jo8" userLabel="Input-Label">
@@ -1673,11 +1677,8 @@
                                         <color key="tintColor" red="0.10588235294117647" green="0.76078431372549016" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Converter-DropDownArrow" translatesAutoresizingMaskIntoConstraints="NO" id="FCG-fw-Ijz" userLabel="DropDownArrow-Image View">
-                                        <rect key="frame" x="506" y="62" width="62" height="20"/>
+                                        <rect key="frame" x="506" y="62" width="62" height="28"/>
                                         <color key="tintColor" red="0.10588235294117647" green="0.76078431372549016" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="8ss-Ha-6Kp"/>
-                                        </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtL-8q-2QM" userLabel="TopUnit-Button">
                                         <rect key="frame" x="474" y="0.0" width="126" height="90"/>
@@ -1692,6 +1693,7 @@
                                 <color key="backgroundColor" red="0.1764705882352941" green="0.1764705882352941" blue="0.1764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="F1Z-7j-p1s" firstAttribute="leading" secondItem="fKZ-Fh-c4w" secondAttribute="leading" id="1MJ-9q-Sen"/>
+                                    <constraint firstAttribute="bottom" secondItem="FCG-fw-Ijz" secondAttribute="bottom" id="3hj-dd-KlJ"/>
                                     <constraint firstItem="FCG-fw-Ijz" firstAttribute="centerX" secondItem="5ej-me-alU" secondAttribute="centerX" id="7LB-sM-2IK"/>
                                     <constraint firstAttribute="trailing" secondItem="5ej-me-alU" secondAttribute="trailing" id="9mV-sr-39G"/>
                                     <constraint firstItem="oDA-hC-jo8" firstAttribute="leading" secondItem="F1Z-7j-p1s" secondAttribute="trailing" id="B0d-HF-TQz"/>
@@ -1709,6 +1711,12 @@
                                     <constraint firstItem="oDA-hC-jo8" firstAttribute="width" secondItem="fKZ-Fh-c4w" secondAttribute="width" multiplier="0.72" id="uLr-QZ-7d6"/>
                                     <constraint firstItem="PtL-8q-2QM" firstAttribute="top" secondItem="fKZ-Fh-c4w" secondAttribute="top" id="y3l-tf-WJ3"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dropDownArrowImageView" destination="FCG-fw-Ijz" id="lkF-GB-5ud"/>
+                                    <outlet property="indicatorImageView" destination="F1Z-7j-p1s" id="Vrq-2l-dpn"/>
+                                    <outlet property="inputLabel" destination="oDA-hC-jo8" id="uiM-NP-wZk"/>
+                                    <outlet property="unitLabel" destination="5ej-me-alU" id="kiH-bT-C3w"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1743,11 +1751,28 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bgImageView" destination="Uhs-e2-4mW" id="60J-Sh-1bM"/>
+                        <outlet property="btn0" destination="Wwo-8V-VSc" id="3a7-Rw-XNg"/>
+                        <outlet property="btn1" destination="UQi-Qy-W1K" id="3RH-QB-l1e"/>
+                        <outlet property="btn2" destination="jQ1-jl-r4o" id="m47-Mo-g2z"/>
+                        <outlet property="btn3" destination="jlK-tO-s5V" id="dQG-ar-cRR"/>
+                        <outlet property="btn4" destination="N2Q-na-HY8" id="4Wn-Q4-LIA"/>
+                        <outlet property="btn5" destination="z55-N3-wYB" id="RUw-pn-FQr"/>
+                        <outlet property="btn6" destination="4AH-Zx-VMr" id="eAB-7J-poQ"/>
+                        <outlet property="btn7" destination="FLW-P6-ZUr" id="HPQ-3y-8of"/>
+                        <outlet property="btn8" destination="IuK-vu-fa6" id="zdV-OG-rgm"/>
+                        <outlet property="btn9" destination="VOM-EB-va3" id="mCT-3F-UWo"/>
+                        <outlet property="btnBackward" destination="FCV-6c-23F" id="i3r-bW-5Db"/>
+                        <outlet property="btnClear" destination="tGJ-Vk-sUk" id="Vbl-Sa-8Gh"/>
+                        <outlet property="btnDot" destination="Pfn-G4-vv9" id="IHF-xx-x2A"/>
                         <outlet property="downIndicatorImageView" destination="99H-fy-jBT" id="Chk-fA-VHw"/>
                         <outlet property="downInputLabel" destination="VmB-uL-JzV" id="49o-n5-Rfg"/>
+                        <outlet property="downInputView" destination="jVb-gA-LkR" id="vNL-hE-zSS"/>
                         <outlet property="downUnitDisplayLabel" destination="bfB-H1-uWG" id="5J5-y0-6Sk"/>
+                        <outlet property="separatorImageView" destination="VcY-81-jAb" id="j3i-2L-xU6"/>
                         <outlet property="topIndicatorImageView" destination="F1Z-7j-p1s" id="fFZ-bi-mXe"/>
                         <outlet property="topInputLabel" destination="oDA-hC-jo8" id="tdn-Z3-G8w"/>
+                        <outlet property="topInputView" destination="fKZ-Fh-c4w" id="lxW-qq-aDd"/>
                         <outlet property="topUnitDisplayLabel" destination="5ej-me-alU" id="wK4-CL-iaU"/>
                     </connections>
                 </viewController>
@@ -1830,6 +1855,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Sh-q6-oDy">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="93" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="aGZ-c7-eWT">
                                 <rect key="frame" x="0.0" y="20" width="600" height="488"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1853,7 +1881,6 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="centerX" secondItem="xzb-h0-4EK" secondAttribute="centerX" id="7VR-gN-fiq"/>
                                                 <constraint firstItem="xzb-h0-4EK" firstAttribute="leading" secondItem="e8S-9q-8S6" secondAttribute="leadingMargin" id="AjL-Zg-scv"/>
@@ -1899,10 +1926,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="6Sh-q6-oDy" firstAttribute="top" secondItem="LXF-R5-BbR" secondAttribute="top" id="6r3-az-xmK"/>
+                            <constraint firstAttribute="trailing" secondItem="6Sh-q6-oDy" secondAttribute="trailing" id="6wI-GA-kD2"/>
                             <constraint firstItem="cB9-oM-AxE" firstAttribute="top" secondItem="ElW-yu-MRn" secondAttribute="bottom" id="7JP-HU-3fS"/>
                             <constraint firstItem="aGZ-c7-eWT" firstAttribute="leading" secondItem="LXF-R5-BbR" secondAttribute="leading" id="CER-h9-0PV"/>
                             <constraint firstAttribute="centerX" secondItem="ElW-yu-MRn" secondAttribute="centerX" id="FAB-pU-W1r"/>
                             <constraint firstAttribute="bottom" secondItem="cB9-oM-AxE" secondAttribute="bottom" id="LAM-tS-cBq"/>
+                            <constraint firstItem="6Sh-q6-oDy" firstAttribute="leading" secondItem="LXF-R5-BbR" secondAttribute="leading" id="QPh-k6-b9Y"/>
                             <constraint firstItem="ElW-yu-MRn" firstAttribute="leading" secondItem="LXF-R5-BbR" secondAttribute="leading" id="RQ7-5g-NFE"/>
                             <constraint firstAttribute="trailing" secondItem="aGZ-c7-eWT" secondAttribute="trailing" id="Ufd-UK-ehc"/>
                             <constraint firstAttribute="trailing" secondItem="ElW-yu-MRn" secondAttribute="trailing" id="W2E-4e-LBg"/>
@@ -1911,15 +1941,93 @@
                             <constraint firstAttribute="trailing" secondItem="cB9-oM-AxE" secondAttribute="trailing" id="hPQ-mt-qLS"/>
                             <constraint firstItem="aGZ-c7-eWT" firstAttribute="top" secondItem="9PP-HV-xMN" secondAttribute="bottom" id="kDb-yy-1Sj"/>
                             <constraint firstItem="cB9-oM-AxE" firstAttribute="leading" secondItem="LXF-R5-BbR" secondAttribute="leading" id="kdU-GG-wcf"/>
+                            <constraint firstItem="gQ6-gH-Ysq" firstAttribute="top" secondItem="6Sh-q6-oDy" secondAttribute="bottom" id="y2n-n0-au9"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bgImageView" destination="6Sh-q6-oDy" id="Gfa-F9-s1i"/>
+                        <outlet property="clearBtn" destination="ElW-yu-MRn" id="PrJ-TK-fm7"/>
                         <outlet property="tableView" destination="aGZ-c7-eWT" id="FCu-1K-RtZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Acs-f7-fV5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1701" y="-471"/>
+        </scene>
+        <!--Theme Picker View Controller-->
+        <scene sceneID="Xx5-Uy-2xE">
+            <objects>
+                <viewController storyboardIdentifier="ThemePickerView" id="asf-km-QzP" customClass="ThemePickerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GZH-aQ-4Tw"/>
+                        <viewControllerLayoutGuide type="bottom" id="omR-VO-3Ng"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="y4Y-2q-KSx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pwE-dC-ipA">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="z53-k2-5ch">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="tBD-5h-eIE">
+                                    <size key="itemSize" width="184" height="336"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionCell" id="r5a-Pn-hSu" customClass="ThemePickerCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="184" height="336"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ccc-Ra-pOb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="184" height="336"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="ccc-Ra-pOb" firstAttribute="leading" secondItem="r5a-Pn-hSu" secondAttribute="leading" id="KJS-1x-EYy"/>
+                                            <constraint firstItem="ccc-Ra-pOb" firstAttribute="top" secondItem="r5a-Pn-hSu" secondAttribute="top" id="Lqe-xt-utn"/>
+                                            <constraint firstAttribute="trailing" secondItem="ccc-Ra-pOb" secondAttribute="trailing" id="dic-cv-MpZ"/>
+                                            <constraint firstAttribute="bottom" secondItem="ccc-Ra-pOb" secondAttribute="bottom" id="itO-9z-uhz"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="ccc-Ra-pOb" id="m5t-sJ-Lkh"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="asf-km-QzP" id="uXY-ms-bMo"/>
+                                    <outlet property="delegate" destination="asf-km-QzP" id="iKE-jO-nM4"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="z53-k2-5ch" firstAttribute="leading" secondItem="y4Y-2q-KSx" secondAttribute="leading" id="ApQ-Hs-CS6"/>
+                            <constraint firstAttribute="trailing" secondItem="pwE-dC-ipA" secondAttribute="trailing" id="Gnn-wM-fjB"/>
+                            <constraint firstItem="omR-VO-3Ng" firstAttribute="top" secondItem="z53-k2-5ch" secondAttribute="bottom" id="K33-J2-MHu"/>
+                            <constraint firstItem="omR-VO-3Ng" firstAttribute="top" secondItem="pwE-dC-ipA" secondAttribute="bottom" id="eRL-wa-esX"/>
+                            <constraint firstItem="pwE-dC-ipA" firstAttribute="leading" secondItem="y4Y-2q-KSx" secondAttribute="leading" id="g9x-Gr-6U7"/>
+                            <constraint firstItem="z53-k2-5ch" firstAttribute="top" secondItem="GZH-aQ-4Tw" secondAttribute="bottom" id="n72-02-Q8g"/>
+                            <constraint firstAttribute="trailing" secondItem="z53-k2-5ch" secondAttribute="trailing" id="udc-oz-Mzb"/>
+                            <constraint firstItem="pwE-dC-ipA" firstAttribute="top" secondItem="y4Y-2q-KSx" secondAttribute="top" id="zLR-8y-uWy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bgImageView" destination="pwE-dC-ipA" id="r9W-Jh-myB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WAL-0z-Ejz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2387" y="-471"/>
         </scene>
         <!--Left Menu View Controller-->
         <scene sceneID="oX9-8b-DZ5">
@@ -1995,6 +2103,7 @@
         <image name="Backward" width="36" height="36"/>
         <image name="Bg" width="375" height="375"/>
         <image name="BtnBg" width="20" height="20"/>
+        <image name="C-CV-Separator" width="10" height="10"/>
         <image name="Converter-Bar" width="10" height="80"/>
         <image name="Converter-DropDownArrow" width="62" height="37"/>
         <image name="Divided" width="24" height="24"/>
@@ -2008,8 +2117,8 @@
         <image name="Percent" width="36" height="36"/>
         <image name="Plus" width="24" height="24"/>
         <image name="PlusMinus" width="36" height="36"/>
+        <image name="S-CV-BtnClear" width="257" height="121"/>
         <image name="S-G-C-BtnDigitalBg" width="191" height="166"/>
-        <image name="Separator" width="10" height="10"/>
         <image name="Times" width="24" height="24"/>
     </resources>
 </document>

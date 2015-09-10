@@ -31,6 +31,6 @@ enum SelectUnit{
 
 @interface ConverterViewController : DelegateViewController<UnitPickViewDelegate, FPPopoverControllerDelegate>
 
-- (void)setConversionType:(NSUInteger)cType;
+- (void)setConversionType:(enum ConverterType)cType;
 
 @end

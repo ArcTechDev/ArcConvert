@@ -12,6 +12,7 @@
     
     NSString *currentThemeName;
     NSDictionary *themeData;
+    NSArray *themePriority;
 }
 
 #pragma mark - public interface
@@ -29,9 +30,9 @@ static ThemeManager *instance;
 
 - (NSArray *)getAllThemes{
     
-    if(themeData != nil){
+    if(themePriority != nil){
         
-        return [themeData allKeys];
+        return themePriority;
     }
     
     return nil;
@@ -49,11 +50,14 @@ static ThemeManager *instance;
         
         if([themeData objectForKey:themeName] != nil){
             
+            //set new theme name as current
+            currentThemeName = themeName;
+            
             //save current theme name
             if([self saveCurrentThemeName]){
                 
-                //set new theme name as current
-                currentThemeName = themeName;
+                //todo:post notification
+                [[NSNotificationCenter defaultCenter] postNotificationName:ThemChangeNotify object:nil];
             }
             else{
                 
@@ -61,9 +65,6 @@ static ThemeManager *instance;
                 
                 return;
             }
-            
-            //todo:post notification
-            [[NSNotificationCenter defaultCenter] postNotificationName:ThemChangeNotify object:nil];
             
             return;
         }
@@ -87,6 +88,12 @@ static ThemeManager *instance;
     for(int i=0; i<splitString.count; i++){
         
         id location = [currentLocation objectForKey:splitString[i]];
+        
+        if(location == nil){
+            
+            NSLog(@"request path:%@ can not be found", pathString);
+            return nil;
+        }
         
         //if this is end of path
         if(i == (splitString.count -1)){
@@ -128,12 +135,16 @@ static ThemeManager *instance;
     
     NSString *path = [[NSBundle mainBundle] pathForResource:themeDataFileName ofType:@"plist"];
     
-    themeData = [NSDictionary dictionaryWithContentsOfFile:path];
+    NSDictionary *tempData = [NSDictionary dictionaryWithContentsOfFile:path];
+    
+    themeData = [tempData objectForKey:@"ThemeData"];
     
     if(themeData == nil){
         
         NSLog(@"Unable to load theme data");
     }
+    
+    themePriority = [tempData objectForKey:@"ThemePriority"];
 }
 
 - (BOOL)saveCurrentThemeName{
@@ -255,7 +266,7 @@ static ThemeManager *instance;
     }
     
     //test
-    [self switchThemeWithThemeName:@"S-G"];
+    //[self switchThemeWithThemeName:@"Z-G"];
     
     return self;
 }

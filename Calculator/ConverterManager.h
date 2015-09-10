@@ -28,6 +28,7 @@ typedef void (^currencyConvertComplete)(BOOL, NSDecimalNumber*);
 @interface ConverterManager : NSObject
 
 + (ConverterManager *)sharedConverterManager;
+- (NSString *)getTitleForConverterType:(enum ConverterType)type;
 - (NSNumber *)convertWithValue:(NSDecimalNumber *)value WithType:(NSUInteger)type FromUnit:(DDUnit)from ToUnit:(DDUnit)to;
 - (NSArray *)getAllConvertableUnitsWithConvertType:(NSUInteger)type;
 - (NSUInteger)findUnitTypeByUnit:(NSString *)unitName WithConvertType:(NSUInteger)type;

@@ -15,6 +15,7 @@
 @implementation DelegateViewController{
     
     __weak ThemeManager *themeMgr;
+    BOOL isCustomize;
 }
 
 @synthesize delegate = _delegate;
@@ -26,6 +27,9 @@
     // Do any additional setup after loading the view.
     
     themeMgr = [ThemeManager sharedThemeManager];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onThemeSwitch:) name:ThemChangeNotify object:nil];
+    isCustomize = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -34,7 +38,10 @@
     
     self.navigationController.navigationBarHidden = !_showNavigationBar;
     
-    [self customizeView];
+    if(!isCustomize){
+        
+        [self customizeView];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -75,12 +82,21 @@
 
 - (void)customizeView{
     
-    
+    isCustomize = YES;
 }
 
 - (id)requestUIData:(NSString *)pathString{
     
     return [themeMgr requestCustomizedUIDataWithPathString:pathString];
+}
+
+#pragma mark - ThemeManager notify
+- (void)onThemeSwitch:(NSNotification *)notification{
+    
+    isCustomize = NO;
+    
+    if(self.navigationController.topViewController == self)
+        [self customizeView];
 }
 
 /*

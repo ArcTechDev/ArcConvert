@@ -41,7 +41,10 @@
 		CE2E286A1B9048020079012D /* DDVelocityUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28511B9048020079012D /* DDVelocityUnitConverter.m */; };
 		CE2E286B1B9048020079012D /* DDVolumeUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28531B9048020079012D /* DDVolumeUnitConverter.m */; };
 		CE2E286C1B9048020079012D /* NSDecimalNumber+DDConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28551B9048020079012D /* NSDecimalNumber+DDConstants.m */; };
+		CE39EF071B9FE11D0075D532 /* ConverterInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE39EF061B9FE11D0075D532 /* ConverterInputView.m */; };
 		CE43B4221B8462F80010B514 /* LeftMenuItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE43B4211B8462F80010B514 /* LeftMenuItemCell.m */; };
+		CE51EE951BA1366F0027D3FA /* ThemePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE51EE941BA1366F0027D3FA /* ThemePickerViewController.m */; };
+		CE51EE981BA151020027D3FA /* ThemePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE51EE971BA151020027D3FA /* ThemePickerCell.m */; };
 		CE5EBD011B831898001B5FD4 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5EBD001B831898001B5FD4 /* LeftMenuViewController.m */; };
 		CE6907291B8AB18400B8852B /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6907281B8AB18400B8852B /* MainMenuViewController.m */; };
 		CE6A74EB1B93E9870080666B /* ConverterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6A74EA1B93E9870080666B /* ConverterManager.m */; };
@@ -171,8 +174,14 @@
 		CE2E28531B9048020079012D /* DDVolumeUnitConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDVolumeUnitConverter.m; sourceTree = "<group>"; };
 		CE2E28541B9048020079012D /* NSDecimalNumber+DDConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDecimalNumber+DDConstants.h"; sourceTree = "<group>"; };
 		CE2E28551B9048020079012D /* NSDecimalNumber+DDConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+DDConstants.m"; sourceTree = "<group>"; };
+		CE39EF051B9FE11D0075D532 /* ConverterInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConverterInputView.h; sourceTree = "<group>"; };
+		CE39EF061B9FE11D0075D532 /* ConverterInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConverterInputView.m; sourceTree = "<group>"; };
 		CE43B4201B8462F80010B514 /* LeftMenuItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuItemCell.h; sourceTree = "<group>"; };
 		CE43B4211B8462F80010B514 /* LeftMenuItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuItemCell.m; sourceTree = "<group>"; };
+		CE51EE931BA1366F0027D3FA /* ThemePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemePickerViewController.h; sourceTree = "<group>"; };
+		CE51EE941BA1366F0027D3FA /* ThemePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemePickerViewController.m; sourceTree = "<group>"; };
+		CE51EE961BA151020027D3FA /* ThemePickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemePickerCell.h; sourceTree = "<group>"; };
+		CE51EE971BA151020027D3FA /* ThemePickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemePickerCell.m; sourceTree = "<group>"; };
 		CE5EBCFF1B831898001B5FD4 /* LeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuViewController.h; sourceTree = "<group>"; };
 		CE5EBD001B831898001B5FD4 /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuViewController.m; sourceTree = "<group>"; };
 		CE6907271B8AB18400B8852B /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
@@ -354,6 +363,8 @@
 			children = (
 				CE2E281E1B9035FE0079012D /* ConverterViewController.h */,
 				CE2E281F1B9035FE0079012D /* ConverterViewController.m */,
+				CE39EF051B9FE11D0075D532 /* ConverterInputView.h */,
+				CE39EF061B9FE11D0075D532 /* ConverterInputView.m */,
 			);
 			name = Converter;
 			sourceTree = "<group>";
@@ -424,6 +435,26 @@
 				CE2E28551B9048020079012D /* NSDecimalNumber+DDConstants.m */,
 			);
 			name = DDUnitConverter;
+			sourceTree = "<group>";
+		};
+		CE51EE911BA136380027D3FA /* ThemeManager */ = {
+			isa = PBXGroup;
+			children = (
+				CEEF77B71B97E795005D890A /* ThemeManager.h */,
+				CEEF77B81B97E795005D890A /* ThemeManager.m */,
+			);
+			name = ThemeManager;
+			sourceTree = "<group>";
+		};
+		CE51EE921BA136460027D3FA /* ThemePicker */ = {
+			isa = PBXGroup;
+			children = (
+				CE51EE931BA1366F0027D3FA /* ThemePickerViewController.h */,
+				CE51EE941BA1366F0027D3FA /* ThemePickerViewController.m */,
+				CE51EE961BA151020027D3FA /* ThemePickerCell.h */,
+				CE51EE971BA151020027D3FA /* ThemePickerCell.m */,
+			);
+			name = ThemePicker;
 			sourceTree = "<group>";
 		};
 		CE6907231B8AB05500B8852B /* CalculatorModule */ = {
@@ -697,8 +728,8 @@
 		CEEF77B61B97E76D005D890A /* ThemeModule */ = {
 			isa = PBXGroup;
 			children = (
-				CEEF77B71B97E795005D890A /* ThemeManager.h */,
-				CEEF77B81B97E795005D890A /* ThemeManager.m */,
+				CE51EE921BA136460027D3FA /* ThemePicker */,
+				CE51EE911BA136380027D3FA /* ThemeManager */,
 			);
 			name = ThemeModule;
 			sourceTree = "<group>";
@@ -822,6 +853,7 @@
 				CE5EBD011B831898001B5FD4 /* LeftMenuViewController.m in Sources */,
 				CE2E286B1B9048020079012D /* DDVolumeUnitConverter.m in Sources */,
 				CE6CFE511B9583F6006682C7 /* YFCurrencyConversion.m in Sources */,
+				CE39EF071B9FE11D0075D532 /* ConverterInputView.m in Sources */,
 				CE2E28071B8FF9610079012D /* NavController.m in Sources */,
 				CE2E28691B9048020079012D /* DDUnitConverter.m in Sources */,
 				CE2E28131B9032850079012D /* FPTouchView.m in Sources */,
@@ -841,6 +873,7 @@
 				CE2E28661B9048020079012D /* DDTemperatureUnitConverter.m in Sources */,
 				CE6A74EB1B93E9870080666B /* ConverterManager.m in Sources */,
 				CEEF77B91B97E795005D890A /* ThemeManager.m in Sources */,
+				CE51EE951BA1366F0027D3FA /* ThemePickerViewController.m in Sources */,
 				CE6CFE331B958264006682C7 /* ASIFormDataRequest.m in Sources */,
 				CEB79A3C1B858399001C7806 /* Helper.m in Sources */,
 				CE2E28601B9048020079012D /* DDLengthUnitConverter.m in Sources */,
@@ -861,6 +894,7 @@
 				CE6CFE491B9583A3006682C7 /* SBJson4StreamParserState.m in Sources */,
 				CE6CFE351B958264006682C7 /* ASIInputStream.m in Sources */,
 				CE2E28561B9048020079012D /* DDAccelerationUnitConverter.m in Sources */,
+				CE51EE981BA151020027D3FA /* ThemePickerCell.m in Sources */,
 				CEC991471B998E9F0071442A /* DelegateView.m in Sources */,
 				CE6CFE341B958264006682C7 /* ASIHTTPRequest.m in Sources */,
 				CE2E286C1B9048020079012D /* NSDecimalNumber+DDConstants.m in Sources */,

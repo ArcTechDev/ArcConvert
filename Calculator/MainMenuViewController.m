@@ -337,7 +337,9 @@
 
 - (IBAction)goToThemes:(id)sender{
     
+    UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ThemePickerView"];
     
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (IBAction)goToCalculator:(id)sender{

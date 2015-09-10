@@ -9,16 +9,21 @@
 #import "RecordMenuViewController.h"
 #import "RecordMenuCell.h"
 #import "RecordManager.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface RecordMenuViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIImageView *bgImageView;
+@property (weak, nonatomic) IBOutlet UIButton *clearBtn;
 
 @end
 
 @implementation RecordMenuViewController
 
 @synthesize tableView = _tableView;
+@synthesize bgImageView = _bgImageView;
+@synthesize clearBtn = _clearBtn;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -48,6 +53,40 @@
     [_tableView reloadData];
 }
 
+#pragma mark - override
+- (void)customizeView{
+    
+    //Nav bar title
+    self.title = @"History";
+    
+    //Nav bar tint color
+    [self.navigationController.navigationBar setBarTintColor:[self requestUIData:@"History/NavBar/BarColor"]];
+    
+    //Nav bar title font, size and color
+    NSMutableDictionary *titleBarAttributes = [NSMutableDictionary dictionaryWithDictionary: [[UINavigationBar appearance] titleTextAttributes]];
+    
+    [titleBarAttributes setValue:[UIFont fontWithName:[self requestUIData:@"History/NavBar/TitleFont"] size:[[self requestUIData:@"History/NavBar/TitleSize"] floatValue]] forKey:NSFontAttributeName];
+    [titleBarAttributes setValue:[self requestUIData:@"History/NavBar/TitleFontColor"]forKey:NSForegroundColorAttributeName];
+    
+    [self.navigationController.navigationBar setTitleTextAttributes:titleBarAttributes];
+    
+    //Nav bar Translucent
+    [self.navigationController.navigationBar setTranslucent:[[self requestUIData:@"History/NavBar/Translucent"] boolValue]];
+    
+    //Nav bar background alpha
+    [(UIView*)[self.navigationController.navigationBar.subviews objectAtIndex:0] setAlpha:[[self requestUIData:@"History/NavBar/BarAlpha"] floatValue]];
+    
+    //background image
+    [_bgImageView setImage:[UIImage imageNamed:[self requestUIData:@"History/BgImg"]]];
+    
+    //clear button
+    [_clearBtn setTitleColor:[self requestUIData:@"History/BtnClear/TextColor"] forState:UIControlStateNormal];
+    [_clearBtn setTitleColor:[self requestUIData:@"History/BtnClear/HighlightTextColor"] forState:UIControlStateHighlighted];
+    [_clearBtn.titleLabel setFont:[UIFont fontWithName:[self requestUIData:@"History/BtnClear/TextFont"] size:[[self requestUIData:@"History/BtnClear/TextSize"] floatValue]]];
+    [_clearBtn setBackgroundColor:[self requestUIData:@"History/BtnClear/BgColor"]];
+    
+}
+
 #pragma mark - UIAlertViewDelegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     
@@ -74,9 +113,6 @@
         cell = [[RecordMenuCell alloc] init];
     }
     
-    UIView *bView = [[UIView alloc] init];
-    bView.backgroundColor = [UIColor colorWithRed:64.0/255.0 green:204.0/255.0 blue:177.0/255.0 alpha:1.0];
-    [cell setSelectedBackgroundView:bView];
     
     [self configureCell:cell AtIndexPath:indexPath];
     
@@ -95,6 +131,11 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [cell setBackgroundColor:[UIColor clearColor]];
+}
+
 /*
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -105,7 +146,7 @@
 #pragma mark - override
 - (void)onPushIntoNavigationController{
     
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    
 }
 
 #pragma mark - IBAction

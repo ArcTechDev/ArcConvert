@@ -235,7 +235,7 @@
 - (void)customizeView{
     
     //Nav bar title
-    self.title = @"Calcualtor";
+    self.title = @"Calculator";
     
     //Nav bar tint color
     [self.navigationController.navigationBar setBarTintColor:[self requestUIData:@"Calculator/NavBar/BarColor"]];
@@ -290,7 +290,7 @@
     
     
     //Button ClearAll
-    [_btnClearAll setImage:[UIImage imageNamed:[self requestUIData:@"Calculator/BtnClearAll/FrontImg"]] forState:UIControlStateNormal];
+    [_btnClearAll setImage:[Helper imageName:[self requestUIData:@"Calculator/BtnClearAll/FrontImg"] withTintColor:[self requestUIData:@"Calculator/BtnClearAll/TintColor"]] forState:UIControlStateNormal];
     [_btnClearAll setImage:[Helper imageName:[self requestUIData:@"Calculator/BtnClearAll/FrontImg"] withTintColor:[self requestUIData:@"Calculator/BtnClearAll/HighlightTintColor"]] forState:UIControlStateHighlighted];
     
     [_btnClearAll setBackgroundImage:[UIImage imageNamed:(NSString *)[self requestUIData:@"Calculator/BtnClearAll/BgImg"]] forState:UIControlStateNormal];
@@ -300,7 +300,7 @@
     [_btnClearAll.titleLabel setFont:[UIFont fontWithName:[self requestUIData:@"Calculator/BtnClearAll/TextFont"] size:[[self requestUIData:@"Calculator/BtnClearAll/TextSize"] floatValue]]];
     
     //Button PlusMinus
-    [_btnPlusMinus setImage:[UIImage imageNamed:(NSString *)[self requestUIData:@"Calculator/BtnPlusMinus/FrontImg"]] forState:UIControlStateNormal];
+    [_btnPlusMinus setImage:[Helper imageName:[self requestUIData:@"Calculator/BtnPlusMinus/FrontImg"] withTintColor:[self requestUIData:@"Calculator/BtnPlusMinus/TintColor"]] forState:UIControlStateNormal];
     [_btnPlusMinus setImage:[Helper imageName:[self requestUIData:@"Calculator/BtnPlusMinus/FrontImg"] withTintColor:[self requestUIData:@"Calculator/BtnPlusMinus/HighlightTintColor"]] forState:UIControlStateHighlighted];
     
     [_btnPlusMinus setBackgroundImage:[UIImage imageNamed:(NSString *)[self requestUIData:@"Calculator/BtnPlusMinus/BgImg"]] forState:UIControlStateNormal];
@@ -310,7 +310,7 @@
     [_btnPlusMinus.titleLabel setFont:[UIFont fontWithName:[self requestUIData:@"Calculator/BtnPlusMinus/TextFont"] size:[[self requestUIData:@"Calculator/BtnPlusMinus/TextSize"] floatValue]]];
     
     //Button Percent
-    [_btnPercent setImage:[UIImage imageNamed:(NSString *)[self requestUIData:@"Calculator/BtnPercent/FrontImg"]] forState:UIControlStateNormal];
+    [_btnPercent setImage:[Helper imageName:[self requestUIData:@"Calculator/BtnPercent/FrontImg"] withTintColor:[self requestUIData:@"Calculator/BtnPercent/TintColor"]] forState:UIControlStateNormal];
     [_btnPercent setImage:[Helper imageName:[self requestUIData:@"Calculator/BtnPercent/FrontImg"] withTintColor:[self requestUIData:@"Calculator/BtnPlusMinus/HighlightTintColor"]] forState:UIControlStateHighlighted];
     
     [_btnPercent setBackgroundImage:[UIImage imageNamed:(NSString *)[self requestUIData:@"Calculator/BtnPercent/BgImg"]] forState:UIControlStateNormal];
@@ -320,7 +320,7 @@
     [_btnPercent.titleLabel setFont:[UIFont fontWithName:[self requestUIData:@"Calculator/BtnPercent/TextFont"] size:[[self requestUIData:@"Calculator/BtnPercent/TextSize"] floatValue]]];
     
     //Button Backward
-    [_btnBackward setImage:[UIImage imageNamed:(NSString *)[self requestUIData:@"Calculator/BtnBackward/FrontImg"]] forState:UIControlStateNormal];
+    [_btnBackward setImage:[Helper imageName:[self requestUIData:@"Calculator/BtnBackward/FrontImg"] withTintColor:[self requestUIData:@"Calculator/BtnBackward/TintColor"]] forState:UIControlStateNormal];
     [_btnBackward setImage:[Helper imageName:[self requestUIData:@"Calculator/BtnBackward/FrontImg"] withTintColor:[self requestUIData:@"Calculator/BtnBackward/HighlightTintColor"]] forState:UIControlStateHighlighted];
     
     [_btnBackward setBackgroundImage:[UIImage imageNamed:(NSString *)[self requestUIData:@"Calculator/BtnBackward/BgImg"]] forState:UIControlStateNormal];
@@ -370,7 +370,7 @@
     [_btnSubtract.titleLabel setFont:[UIFont fontWithName:[self requestUIData:@"Calculator/BtnSubtract/TextFont"] size:[[self requestUIData:@"Calculator/BtnSubtract/TextSize"] floatValue]]];
     
     //Button Equal
-    [_btnEqual setImage:[UIImage imageNamed:(NSString *)[self requestUIData:@"Calculator/BtnEqual/FrontImg"]] forState:UIControlStateNormal];
+    [_btnEqual setImage:[Helper imageName:[self requestUIData:@"Calculator/BtnEqual/FrontImg"] withTintColor:[self requestUIData:@"Calculator/BtnEqual/TintColor"]] forState:UIControlStateNormal];
     [_btnEqual setImage:[Helper imageName:[self requestUIData:@"Calculator/BtnEqual/FrontImg"] withTintColor:[self requestUIData:@"Calculator/BtnEqual/HighlightTintColor"]] forState:UIControlStateHighlighted];
     
     [_btnEqual setBackgroundImage:[UIImage imageNamed:(NSString *)[self requestUIData:@"Calculator/BtnEqual/BgImg"]] forState:UIControlStateNormal];
@@ -380,7 +380,7 @@
     [_btnEqual.titleLabel setFont:[UIFont fontWithName:[self requestUIData:@"Calculator/BtnEqual/TextFont"] size:[[self requestUIData:@"Calculator/BtnEqual/TextSize"] floatValue]]];
     
     //Button Dot
-    [_btnDot setImage:[UIImage imageNamed:(NSString *)[self requestUIData:@"Calculator/BtnDot/FrontImg"]] forState:UIControlStateNormal];
+    [_btnDot setImage:[Helper imageName:[self requestUIData:@"Calculator/BtnDot/FrontImg"] withTintColor:[self requestUIData:@"Calculator/BtnDot/TintColor"]] forState:UIControlStateNormal];
     [_btnDot setImage:[Helper imageName:[self requestUIData:@"Calculator/BtnDot/FrontImg"] withTintColor:[self requestUIData:@"Calculator/BtnDot/HighlightTintColor"]] forState:UIControlStateHighlighted];
     
     [_btnDot setBackgroundImage:[UIImage imageNamed:(NSString *)[self requestUIData:@"Calculator/BtnDot/BgImg"]] forState:UIControlStateNormal];
