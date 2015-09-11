@@ -194,6 +194,7 @@
     [_btnClear setTitleColor:[self requestUIData:@"Converter/BtnClear/TextColor"] forState:UIControlStateNormal];
     [_btnClear setTitleColor:[self requestUIData:@"Converter/BtnClear/HighlightTextColor"] forState:UIControlStateHighlighted];
     [_btnClear setBackgroundColor:[self requestUIData:@"Converter/BtnClear/BgColor"]];
+     
     
     //Backward button
     [_btnBackward setImage:[Helper imageName:[self requestUIData:@"Converter/BtnBackward/FrontImg"] withTintColor:[self requestUIData:@"Converter/BtnBackward/TintColor"]] forState:UIControlStateNormal];
@@ -281,6 +282,7 @@
     [_btn7 setTitleColor:[self requestUIData:@"Converter/Btn7/TextColor"] forState:UIControlStateNormal];
     [_btn7 setTitleColor:[self requestUIData:@"Converter/Btn7/HighlightTextColor"] forState:UIControlStateHighlighted];
     [_btn7 setBackgroundColor:[self requestUIData:@"Converter/Btn7/BgColor"]];
+
     
     //Button 8
     [_btn8 setImage:[Helper imageName:[self requestUIData:@"Converter/Btn8/FrontImg"] withTintColor:[self requestUIData:@"Converter/Btn8/TintColor"]] forState:UIControlStateNormal];

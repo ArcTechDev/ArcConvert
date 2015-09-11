@@ -73,7 +73,11 @@
     // generate a new UIImage from the graphics context we drew onto
     UIImage *tintColorImg = UIGraphicsGetImageFromCurrentImageContext();
     
+    CGContextRelease(context);
+    
     UIGraphicsEndImageContext();
+    
+    img = nil;
     
     return tintColorImg;
 }

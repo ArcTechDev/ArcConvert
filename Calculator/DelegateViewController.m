@@ -44,6 +44,7 @@
     }
 }
 
+
 - (void)viewWillDisappear:(BOOL)animated{
     
     [super viewWillDisappear:animated];
@@ -54,6 +55,7 @@
     [super viewDidAppear:animated];
     
     self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
+    
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{

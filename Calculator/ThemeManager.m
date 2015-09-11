@@ -214,8 +214,9 @@ static ThemeManager *instance;
     }
     else if([flag isEqualToString:@"s"]){
         
-        if([value isEqual:@""])
+        if([value isEqualToString:@""])
             return nil;
+        
         
         return value;
         

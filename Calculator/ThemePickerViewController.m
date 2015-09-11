@@ -41,6 +41,9 @@
     //Nav bar title
     self.title = @"Themes";
     
+    //display back  instead of last view controller title
+    self.navigationController.navigationBar.backItem.title = @"Back";
+    
     //Nav bar tint color
     [self.navigationController.navigationBar setBarTintColor:[self requestUIData:@"Themes/NavBar/BarColor"]];
     
