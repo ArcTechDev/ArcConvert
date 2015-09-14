@@ -73,6 +73,7 @@
 		CE6CFE511B9583F6006682C7 /* YFCurrencyConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6CFE501B9583F6006682C7 /* YFCurrencyConversion.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CE6CFE541B95841F006682C7 /* YFTwoValueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6CFE531B95841F006682C7 /* YFTwoValueObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CE8351B11BA697D300C6BAA3 /* ExtendNSLog.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8351B01BA697D300C6BAA3 /* ExtendNSLog.m */; };
+		CE8351B51BA69E9000C6BAA3 /* CacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8351B41BA69E9000C6BAA3 /* CacheManager.m */; };
 		CE84A8251B8C3D57001AD1AC /* GridButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE84A8241B8C3D57001AD1AC /* GridButton.m */; };
 		CE87C85B1B8F04CB00EA3305 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE87C8571B8F033C00EA3305 /* Lato-Light.ttf */; };
 		CE87C85C1B8F04CB00EA3305 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE87C8581B8F033C00EA3305 /* Lato-Medium.ttf */; };
@@ -239,6 +240,8 @@
 		CE8351AE1BA6960900C6BAA3 /* ExtendNSLog_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtendNSLog_Prefix.pch; sourceTree = "<group>"; };
 		CE8351AF1BA697D300C6BAA3 /* ExtendNSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtendNSLog.h; sourceTree = "<group>"; };
 		CE8351B01BA697D300C6BAA3 /* ExtendNSLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtendNSLog.m; sourceTree = "<group>"; };
+		CE8351B31BA69E9000C6BAA3 /* CacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheManager.h; sourceTree = "<group>"; };
+		CE8351B41BA69E9000C6BAA3 /* CacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheManager.m; sourceTree = "<group>"; };
 		CE84A8231B8C3D57001AD1AC /* GridButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridButton.h; sourceTree = "<group>"; };
 		CE84A8241B8C3D57001AD1AC /* GridButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridButton.m; sourceTree = "<group>"; };
 		CE87C8571B8F033C00EA3305 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
@@ -475,6 +478,7 @@
 		CE6907241B8AB11D00B8852B /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CE8351B21BA69D8500C6BAA3 /* CacheManager */,
 				CEB79A391B858381001C7806 /* Helper */,
 				CE13B9AC1B86C09F007C58BF /* DelegateViewController */,
 			);
@@ -589,6 +593,15 @@
 				CE6CFE501B9583F6006682C7 /* YFCurrencyConversion.m */,
 			);
 			name = YFCurrencyConversion;
+			sourceTree = "<group>";
+		};
+		CE8351B21BA69D8500C6BAA3 /* CacheManager */ = {
+			isa = PBXGroup;
+			children = (
+				CE8351B31BA69E9000C6BAA3 /* CacheManager.h */,
+				CE8351B41BA69E9000C6BAA3 /* CacheManager.m */,
+			);
+			name = CacheManager;
 			sourceTree = "<group>";
 		};
 		CE84A8221B8C3CE7001AD1AC /* CustomizeButton */ = {
@@ -864,6 +877,7 @@
 				CE2E28071B8FF9610079012D /* NavController.m in Sources */,
 				CE2E28691B9048020079012D /* DDUnitConverter.m in Sources */,
 				CE2E28131B9032850079012D /* FPTouchView.m in Sources */,
+				CE8351B51BA69E9000C6BAA3 /* CacheManager.m in Sources */,
 				CECB4B5D1B81BDC900F4EBCD /* CalculatorViewController.m in Sources */,
 				CE6CFE4B1B9583A3006682C7 /* SBJson4StreamWriter.m in Sources */,
 				CE43B4221B8462F80010B514 /* LeftMenuItemCell.m in Sources */,

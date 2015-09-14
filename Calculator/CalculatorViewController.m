@@ -11,6 +11,7 @@
 #import "MainMenuViewController.h"
 #import "DelegateViewController.h"
 #import "Helper.h"
+#import "CacheManager.h"
 
 
 
@@ -214,7 +215,8 @@
     //init main menu view
     //[self initMainMenuView];
     
-    
+    //let main menu cached
+    [self getMainMenuViewController];
     
 }
 
@@ -609,7 +611,8 @@
     //if pendingViewController no exist create one which if MainMenuViewController
     if(pendingViewController == nil){
         
-        pendingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainMenuView"];
+        //get main menu view controller
+        pendingViewController = [self getMainMenuViewController];
     }
     
     //we add pendingViewController's view as subview for view transition purpose
@@ -1079,6 +1082,25 @@
     
     [viewController onPushIntoNavigationController];
     
+}
+
+/**
+ * get main menu view controller also cache it
+ */
+- (UIViewController *)getMainMenuViewController{
+    
+    static NSString *cachedName = @"MainMenuViewController";
+    
+    UIViewController *ret = [[CacheManager sharedManager] objectForKey:cachedName];
+    
+    if(ret != nil)
+        return ret;
+    
+    ret = [self.storyboard instantiateViewControllerWithIdentifier:@"MainMenuView"];
+    
+    [[CacheManager sharedManager] setObject:ret forKey:cachedName];
+    
+    return ret;
 }
 
 #pragma mark - Segue

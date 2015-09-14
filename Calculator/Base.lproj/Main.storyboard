@@ -1370,40 +1370,6 @@
             </objects>
             <point key="canvasLocation" x="1772" y="493"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="3hj-kT-dky">
-            <objects>
-                <viewController storyboardIdentifier="TestView" id="3vP-a4-1zk" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Wdt-3Z-OPk"/>
-                        <viewControllerLayoutGuide type="bottom" id="KjI-Jk-Wn1"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QKk-VA-AfI">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t04-sS-fVt">
-                                <rect key="frame" x="279" y="289" width="32" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="32" id="SnA-8q-nSP"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="KjI-Jk-Wn1" firstAttribute="top" secondItem="t04-sS-fVt" secondAttribute="bottom" constant="290" id="8ji-OY-71m"/>
-                            <constraint firstItem="t04-sS-fVt" firstAttribute="leading" secondItem="QKk-VA-AfI" secondAttribute="leading" constant="279" id="HC1-SB-yfM"/>
-                            <constraint firstItem="t04-sS-fVt" firstAttribute="top" secondItem="Wdt-3Z-OPk" secondAttribute="bottom" constant="269" id="UHX-hc-xPw"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GzL-NK-Ucx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2399" y="735"/>
-        </scene>
         <!--Converter View Controller-->
         <scene sceneID="Cj8-8f-NKv">
             <objects>

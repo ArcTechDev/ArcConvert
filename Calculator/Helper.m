@@ -7,6 +7,7 @@
 //
 
 #import "Helper.h"
+#import "CacheManager.h"
 
 @implementation Helper
 
@@ -44,10 +45,31 @@
 
 + (UIImage *)imageName:(NSString *)imageName withTintColor:(UIColor *)tintColor{
     
-    if([imageName isEqual:@""] || imageName == nil){
+    if([imageName isEqual:@""] || imageName == nil || tintColor==nil){
         
         return nil;
     }
+    
+    CGFloat r,g,b,a;
+    
+    if([tintColor getRed:&r green:&g blue:&b alpha:&a]){
+        
+        NSLog(@"render image, get tint color success");
+    }
+    else{
+        
+        NSLog(@"render image, unable to get tini color");
+    }
+    
+    NSString *cachedImgName = [NSString stringWithFormat:@"%@-%f,%f,%f,%f", imageName, r, g, b, a];
+    
+    UIImage *cachedImage = [[CacheManager sharedManager] objectForKey:cachedImgName];
+    
+    if(cachedImage != nil){
+        
+        return cachedImage;
+    }
+    
     
     UIImage *img = [UIImage imageNamed:imageName];
     
@@ -71,7 +93,10 @@
     CGContextDrawPath(context,kCGPathFill);
     
     // generate a new UIImage from the graphics context we drew onto
-    UIImage *tintColorImg = UIGraphicsGetImageFromCurrentImageContext();
+    cachedImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    //cached this image
+    [[CacheManager sharedManager] setObject:cachedImage forKey:cachedImgName];
     
     CGContextRelease(context);
     
@@ -79,7 +104,7 @@
     
     img = nil;
     
-    return tintColorImg;
+    return cachedImage;
 }
 
 @end

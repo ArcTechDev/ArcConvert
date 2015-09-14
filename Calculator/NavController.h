@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/ADBannerView.h>
 
-@interface NavController : UINavigationController<UINavigationControllerDelegate>
+@interface NavController : UINavigationController<UINavigationControllerDelegate, ADBannerViewDelegate>
 
 - (void)showAdWithFrame:(CGRect)frame;
 

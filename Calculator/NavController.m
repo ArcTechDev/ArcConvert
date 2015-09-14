@@ -43,6 +43,7 @@
     }
 }
 
+#pragma mark - UINavigationController delegate
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
     
     
@@ -50,9 +51,13 @@
 
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
     
-    //DelegateViewController *delegateViewController = (DelegateViewController *)viewController;
+
+}
+
+#pragma mark - ADBannerView delegate
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
     
-    //navigationController.navigationBarHidden = !delegateViewController.showNavigationBar;
+    NSLog(@"Unable to show ad banner");
 }
 
 /*
