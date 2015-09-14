@@ -17,6 +17,9 @@
 
 #define kAnimationDuration 0.2
 
+//the max of digital include decimal user can input
+#define calculatorMaxDigitalInput 12
+
 enum InputType{
     
     Unknow,

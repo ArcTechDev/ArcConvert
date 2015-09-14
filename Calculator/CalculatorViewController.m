@@ -186,7 +186,11 @@
 }
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
+    
+    self.showNavigationBar = YES;
+    
     // Do any additional setup after loading the view, typically from a nib.
     
     //register left edge pan
@@ -210,7 +214,7 @@
     //init main menu view
     //[self initMainMenuView];
     
-    self.showNavigationBar = YES;
+    
     
 }
 
@@ -740,11 +744,73 @@
     [[RecordManager sharedRecordManager] createNewRecordSaveLast:NO];
 }
 
+- (BOOL)isMaxDigitalInputWithString:(NSString *)string{
+    
+    NSDecimalNumber *num = [NSDecimalNumber decimalNumberWithString:string];
+    NSString *str = [num stringValue];
+    
+    NSUInteger characterCounts = str.length;
+    
+    
+    
+    if([Helper findCharacterInStringWithString:str WithCharacter:@"."]){
+        
+        characterCounts = characterCounts;
+    }
+    else if([Helper findCharacterInStringWithString:string WithCharacter:@"."]){
+        
+        characterCounts++;
+    }
+    
+    if([str hasPrefix:@"-"]){
+        
+        characterCounts--;
+        
+        if(characterCounts <= calculatorMaxDigitalInput)
+            return NO;
+        
+        return YES;
+        
+    }
+    else{
+        
+        if(characterCounts >= calculatorMaxDigitalInput){
+            
+            return YES;
+        }
+        
+        return NO;
+        
+    }
+    
+    return NO;
+    
+}
+
 - (NSNumber *)preciseDoubleNumberWithDouble:(double)value{
     
-    NSString *str = [NSString stringWithFormat:@"%.15f", value];
+    NSString *numStr = [NSString stringWithFormat:@"%@", [NSNumber numberWithDouble:value]];
     
-    return [NSNumber decimalNumberFromString:str withMaxDecimal:10];
+    if([self isMaxDigitalInputWithString:numStr]){
+        
+        if([numStr hasPrefix:@"-"]){
+            
+            numStr = [Helper trimeStringWithString:numStr preserveCharacterCount:calculatorMaxDigitalInput+1];
+        }
+        else{
+            
+            numStr = [Helper trimeStringWithString:numStr preserveCharacterCount:calculatorMaxDigitalInput];
+        }
+
+    }
+    
+    
+    NSDecimalNumber *newNum = [NSDecimalNumber decimalNumberWithString:numStr];
+    
+    return newNum;
+   // NSString *str = [NSString stringWithFormat:@"%.15f", value];
+    
+    //return [NSNumber decimalNumberFromString:str withMaxDecimal:10];
 }
 
 #pragma mark - Calculator brain
@@ -769,6 +835,19 @@
     else{
         
         userInput = [userInput stringByAppendingString:digit];
+        
+        if([self isMaxDigitalInputWithString:userInput]){
+            
+            if([userInput hasPrefix:@"-"]){
+                
+                userInput = [Helper trimeStringWithString:userInput preserveCharacterCount:calculatorMaxDigitalInput+1];
+            }
+            else{
+                
+                userInput = [Helper trimeStringWithString:userInput preserveCharacterCount:calculatorMaxDigitalInput];
+            }
+            
+        }
     }
     
     lastInputType = Digital;
@@ -778,7 +857,7 @@
     //store last input number
     lastInputNumber = [self preciseDoubleNumberWithDouble:accumulator];
     
-    NSLog(@"User input:%@, accumulator:%lf",userInput, accumulator);
+    NSLog(@"User input:%@, accumulator:%@",userInput, [self preciseDoubleNumberWithDouble:accumulator]);
     
     [self updateDisplay];
 }
@@ -893,11 +972,15 @@
     //check if it is integer
     if((accumulator - (double)intAcc) == 0){
         
-        self.displayField.text = [NSString stringWithFormat:@"%d", intAcc];
+        //self.displayField.text = [NSString stringWithFormat:@"%d", intAcc];
+        
+        self.displayField.text = [Helper trimeStringWithString:[NSString stringWithFormat:@"%d", intAcc] preserveCharacterCount:calculatorMaxDigitalInput];
     }
     else{
         
-        self .displayField.text = [NSString stringWithFormat:@"%@", [NSNumber decimalStringFromNumber:accumulator withMaxDecimal:15]];
+        //self .displayField.text = [NSString stringWithFormat:@"%@", [NSNumber decimalStringFromNumber:accumulator withMaxDecimal:15]];
+        
+        self.displayField.text = [NSString stringWithFormat:@"%@", [self preciseDoubleNumberWithDouble:accumulator]];
     }
     
     if(drawDecimal == YES){

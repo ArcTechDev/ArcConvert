@@ -59,6 +59,7 @@
 @synthesize btnInformationView = _btnInformationView;
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
@@ -73,11 +74,34 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
+    
+    return YES;
+}
+
 - (void)viewDidAppear:(BOOL)animated{
     
     [super viewDidAppear:animated];
     
+   self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
     
+    [super viewWillDisappear:animated];
+    
+    self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+    
+    [super viewDidDisappear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -207,7 +231,7 @@
 - (void)customizeView{
     
     //Nav bar title
-    self.title = @"MainMenu";
+    //self.title = @"MainMenu";
     
     //Background image
     [_bgView setImage:[UIImage imageNamed:[self requestUIData:@"MainMenu/BgImg"]]];

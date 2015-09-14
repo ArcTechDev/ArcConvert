@@ -120,10 +120,56 @@
 	</dict>
 	<key>8</key>
 	<dict>
-		<key>USD</key>
-		<string>USD</string>
+		<key>AUD</key>
+		<string>AUD</string>
+		<key>CAD</key>
+		<string>CAD</string>
+		<key>CHF</key>
+		<string>CHF</string>
+		<key>CNY</key>
+		<string>CNY</string>
+		<key>DKK</key>
+		<string>DKK</string>
+		<key>NOK</key>
+		<string>NOK</string>
+		<key>EUR</key>
+		<string>EUR</string>
+		<key>GBP</key>
+		<string>GBP</string>
+		<key>HKD</key>
+		<string>HKD</string>
+		<key>IDR</key>
+		<string>IDR</string>
+		<key>INR</key>
+		<string>INR</string>
+		<key>JPY</key>
+		<string>JPY</string>
+		<key>KRW</key>
+		<string>KRW</string>
+		<key>MYR</key>
+		<string>MYR</string>
+		<key>NZD</key>
+		<string>NZD</string>
+		<key>PHP</key>
+		<string>PHP</string>
+		<key>SAR</key>
+		<string>SAR</string>
+		<key>SEK</key>
+		<string>SEK</string>
+		<key>THB</key>
+		<string>THB</string>
 		<key>TWD</key>
 		<string>TWD</string>
+		<key>USD</key>
+		<string>USD</string>
+		<key>ZAR</key>
+		<string>ZAR</string>
+		<key>AED</key>
+		<string>AED</string>
+		<key>VND</key>
+		<string>VND</string>
+		<key>SGD</key>
+		<string>SGD</string>
 	</dict>
 </dict>
 </plist>

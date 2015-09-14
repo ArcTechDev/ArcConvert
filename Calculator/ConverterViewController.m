@@ -153,7 +153,7 @@
     self.title = [[ConverterManager sharedConverterManager] getTitleForConverterType:convertType];
     
     //display back  instead of last view controller title
-    self.navigationController.navigationBar.backItem.title = @"Back";
+    //[self.navigationController.navigationBar.backItem setTitle:@"Back"];
     
     //Nav bar tint color
     [self.navigationController.navigationBar setBarTintColor:[self requestUIData:@"Converter/NavBar/BarColor"]];

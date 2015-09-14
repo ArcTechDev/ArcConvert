@@ -36,8 +36,6 @@
     
     [super viewWillAppear:animated];
     
-    self.navigationController.navigationBarHidden = !_showNavigationBar;
-    
     if(!isCustomize){
         
         [self customizeView];
@@ -54,14 +52,22 @@
     
     [super viewDidAppear:animated];
     
-    self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
+    self.navigationController.navigationBarHidden = !_showNavigationBar;
+    
+    
+    //self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
+    //self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    
     
 }
 
+/*
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
     
     return YES;
 }
+ */
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
