@@ -72,6 +72,7 @@
 		CE6CFE4D1B9583A3006682C7 /* SBJson4Writer.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6CFE461B9583A3006682C7 /* SBJson4Writer.m */; };
 		CE6CFE511B9583F6006682C7 /* YFCurrencyConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6CFE501B9583F6006682C7 /* YFCurrencyConversion.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CE6CFE541B95841F006682C7 /* YFTwoValueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6CFE531B95841F006682C7 /* YFTwoValueObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CE8351B11BA697D300C6BAA3 /* ExtendNSLog.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8351B01BA697D300C6BAA3 /* ExtendNSLog.m */; };
 		CE84A8251B8C3D57001AD1AC /* GridButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE84A8241B8C3D57001AD1AC /* GridButton.m */; };
 		CE87C85B1B8F04CB00EA3305 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE87C8571B8F033C00EA3305 /* Lato-Light.ttf */; };
 		CE87C85C1B8F04CB00EA3305 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE87C8581B8F033C00EA3305 /* Lato-Medium.ttf */; };
@@ -235,6 +236,9 @@
 		CE6CFE501B9583F6006682C7 /* YFCurrencyConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFCurrencyConversion.m; sourceTree = "<group>"; };
 		CE6CFE521B95841F006682C7 /* YFTwoValueObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFTwoValueObject.h; sourceTree = "<group>"; };
 		CE6CFE531B95841F006682C7 /* YFTwoValueObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFTwoValueObject.m; sourceTree = "<group>"; };
+		CE8351AE1BA6960900C6BAA3 /* ExtendNSLog_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtendNSLog_Prefix.pch; sourceTree = "<group>"; };
+		CE8351AF1BA697D300C6BAA3 /* ExtendNSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtendNSLog.h; sourceTree = "<group>"; };
+		CE8351B01BA697D300C6BAA3 /* ExtendNSLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtendNSLog.m; sourceTree = "<group>"; };
 		CE84A8231B8C3D57001AD1AC /* GridButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridButton.h; sourceTree = "<group>"; };
 		CE84A8241B8C3D57001AD1AC /* GridButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridButton.m; sourceTree = "<group>"; };
 		CE87C8571B8F033C00EA3305 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
@@ -695,6 +699,9 @@
 				CECB4B561B81BDC900F4EBCD /* main.m */,
 				CE6A74EC1B9409A60080666B /* UnitConversionSetting.plist */,
 				CEEF77BA1B97EB87005D890A /* ThemeConfig.plist */,
+				CE8351AE1BA6960900C6BAA3 /* ExtendNSLog_Prefix.pch */,
+				CE8351AF1BA697D300C6BAA3 /* ExtendNSLog.h */,
+				CE8351B01BA697D300C6BAA3 /* ExtendNSLog.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -878,6 +885,7 @@
 				CEB79A3C1B858399001C7806 /* Helper.m in Sources */,
 				CE2E28601B9048020079012D /* DDLengthUnitConverter.m in Sources */,
 				CE2E28651B9048020079012D /* DDRadiationUnitConverter.m in Sources */,
+				CE8351B11BA697D300C6BAA3 /* ExtendNSLog.m in Sources */,
 				CE13B9AF1B86C0C8007C58BF /* DelegateViewController.m in Sources */,
 				CE6CFE311B958264006682C7 /* ASIDataDecompressor.m in Sources */,
 				CE6CFE4D1B9583A3006682C7 /* SBJson4Writer.m in Sources */,
@@ -1038,6 +1046,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = Calculator/ExtendNSLog_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = Calculator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1052,6 +1062,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = Calculator/ExtendNSLog_Prefix.pch;
 				INFOPLIST_FILE = Calculator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

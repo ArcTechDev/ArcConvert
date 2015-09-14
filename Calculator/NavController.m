@@ -50,7 +50,7 @@
 
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
     
-    DelegateViewController *delegateViewController = (DelegateViewController *)viewController;
+    //DelegateViewController *delegateViewController = (DelegateViewController *)viewController;
     
     //navigationController.navigationBarHidden = !delegateViewController.showNavigationBar;
 }
