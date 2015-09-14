@@ -80,23 +80,16 @@
 
 }
 
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
-    
-    return YES;
-}
-
 - (void)viewDidAppear:(BOOL)animated{
     
     [super viewDidAppear:animated];
     
-   self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
     
     [super viewWillDisappear:animated];
     
-    self.navigationController.interactivePopGestureRecognizer.delegate = nil;
 }
 
 - (void)viewDidDisappear:(BOOL)animated{

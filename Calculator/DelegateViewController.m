@@ -36,6 +36,8 @@
     
     [super viewWillAppear:animated];
     
+    [self.navigationController setNavigationBarHidden:!_showNavigationBar animated:YES];
+    
     if(!isCustomize){
         
         [self customizeView];
@@ -46,27 +48,28 @@
 - (void)viewWillDisappear:(BOOL)animated{
     
     [super viewWillDisappear:animated];
+    
+    //When use interactive pop gesture and there are some view controller
+    //has hidden navigation bar, we have to unhide the bar when that view controller
+    //is about to disppear so navigation bar will not mess up
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     
     [super viewDidAppear:animated];
     
-    self.navigationController.navigationBarHidden = !_showNavigationBar;
-    
-    
-    //self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
-    //self.navigationController.interactivePopGestureRecognizer.enabled = YES;
-    
+    self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
     
 }
 
-/*
+
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
     
     return YES;
 }
- */
+
 
 
 - (void)didReceiveMemoryWarning {
