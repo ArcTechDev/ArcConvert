@@ -47,6 +47,7 @@
     //Nav bar tint color
     [self.navigationController.navigationBar setBarTintColor:[self requestUIData:@"Themes/NavBar/BarColor"]];
     
+    
     //Nav bar title font, size and color
     NSMutableDictionary *titleBarAttributes = [NSMutableDictionary dictionaryWithDictionary: [[UINavigationBar appearance] titleTextAttributes]];
     
@@ -54,6 +55,7 @@
     [titleBarAttributes setValue:[self requestUIData:@"Themes/NavBar/TitleFontColor"]forKey:NSForegroundColorAttributeName];
     
     [self.navigationController.navigationBar setTitleTextAttributes:titleBarAttributes];
+    
     
     //Nav bar Translucent
     [self.navigationController.navigationBar setTranslucent:[[self requestUIData:@"Themes/NavBar/Translucent"] boolValue]];
