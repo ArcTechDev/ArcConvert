@@ -65,7 +65,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnEqual;
 @property (weak, nonatomic) IBOutlet UIButton *btnDot;
 
-
 @end
 
 @implementation CalculatorViewController{
@@ -149,6 +148,7 @@
 @synthesize btnAdd = _btnAdd;
 @synthesize btnEqual = _btnEqual;
 @synthesize btnDot = _btnDot;
+
 
 
 - (id)initWithCoder:(NSCoder *)aDecoder{
@@ -238,6 +238,12 @@
 }
 
 #pragma mark - override
+
+- (UIViewController *)getTutorialViewController{
+    
+    return [self.storyboard instantiateViewControllerWithIdentifier:@"CalculatorTutorialView"];
+}
+
 - (void)customizeView{
     
     //Nav bar title

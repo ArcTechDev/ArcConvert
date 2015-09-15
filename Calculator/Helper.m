@@ -98,8 +98,6 @@
     //cached this image
     [[CacheManager sharedManager] setObject:cachedImage forKey:cachedImgName];
     
-    CGContextRelease(context);
-    
     UIGraphicsEndImageContext();
     
     img = nil;

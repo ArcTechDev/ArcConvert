@@ -127,11 +127,11 @@
     
     NSArray *allUnits = [[ConverterManager sharedConverterManager] getAllConvertableUnitsWithConvertType:convertType];
     
-    _topUnitDisplayLabel.text = [allUnits objectAtIndex:0];
-    _downUnitDisplayLabel.text = [allUnits objectAtIndex:0];
+    _topUnitDisplayLabel.text = [Helper getUnicodeStringFromString:[allUnits objectAtIndex:0]];
+    _downUnitDisplayLabel.text = [Helper getUnicodeStringFromString:[allUnits objectAtIndex:1]];
     
     topSelectedUnitName = [allUnits objectAtIndex:0];
-    downSelectedUnitName = [allUnits objectAtIndex:0];
+    downSelectedUnitName = [allUnits objectAtIndex:1];
     
     currentConvertableUnits = [allUnits copy];
 }

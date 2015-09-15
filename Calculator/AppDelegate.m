@@ -9,12 +9,37 @@
 #import "AppDelegate.h"
 #import "RecordManager.h"
 #import "ConverterManager.h"
+#import "TutorialManager.h"
 
 @interface AppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation AppDelegate{
+    
+ 
+    NSUInteger applaunchTime;
+}
+
+@synthesize launchTime = launchTime;
+@synthesize firstLaunch = _firstLaunch;
+
+- (NSInteger)getLaunchTime{
+    
+    return applaunchTime;
+}
+
+- (BOOL)isFirstLaunch{
+    
+    if(applaunchTime == 0){
+        
+        return YES;
+    }
+    else{
+        
+        return NO;
+    }
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -22,6 +47,15 @@
     
     [RecordManager sharedRecordManager];
     [ConverterManager sharedConverterManager];
+    
+    NSUserDefaults *uDefault = [NSUserDefaults standardUserDefaults];
+    
+    applaunchTime = [uDefault integerForKey:@"AppLaunchTime"];
+    
+    [TutorialManager sharedManager];
+    
+    [uDefault setInteger:applaunchTime+1 forKey:@"AppLaunchTime"];
+    [uDefault synchronize];
     
     return YES;
 }

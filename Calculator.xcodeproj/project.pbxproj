@@ -91,6 +91,8 @@
 		CECB4B651B81BDC900F4EBCD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECB4B631B81BDC900F4EBCD /* LaunchScreen.xib */; };
 		CECB4B711B81BDC900F4EBCD /* CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB4B701B81BDC900F4EBCD /* CalculatorTests.m */; };
 		CECF87AA1B8DADBF00733B8B /* CategoryEx.m in Sources */ = {isa = PBXBuildFile; fileRef = CECF87A91B8DADBF00733B8B /* CategoryEx.m */; };
+		CEE44C7D1BA7C00900100158 /* Sassy Molassy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE44C7C1BA7BFD800100158 /* Sassy Molassy.ttf */; };
+		CEE44C811BA7C2FF00100158 /* TutorialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE44C801BA7C2FF00100158 /* TutorialManager.m */; };
 		CEEF77B91B97E795005D890A /* ThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF77B81B97E795005D890A /* ThemeManager.m */; };
 		CEEF77BB1B97EB87005D890A /* ThemeConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEEF77BA1B97EB87005D890A /* ThemeConfig.plist */; };
 /* End PBXBuildFile section */
@@ -271,6 +273,9 @@
 		CECB4B701B81BDC900F4EBCD /* CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorTests.m; sourceTree = "<group>"; };
 		CECF87A81B8DADBF00733B8B /* CategoryEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryEx.h; sourceTree = "<group>"; };
 		CECF87A91B8DADBF00733B8B /* CategoryEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryEx.m; sourceTree = "<group>"; };
+		CEE44C7C1BA7BFD800100158 /* Sassy Molassy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sassy Molassy.ttf"; sourceTree = "<group>"; };
+		CEE44C7F1BA7C2FF00100158 /* TutorialManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialManager.h; sourceTree = "<group>"; };
+		CEE44C801BA7C2FF00100158 /* TutorialManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialManager.m; sourceTree = "<group>"; };
 		CEEF77B71B97E795005D890A /* ThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeManager.h; sourceTree = "<group>"; };
 		CEEF77B81B97E795005D890A /* ThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeManager.m; sourceTree = "<group>"; };
 		CEEF77BA1B97EB87005D890A /* ThemeConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ThemeConfig.plist; sourceTree = "<group>"; };
@@ -478,6 +483,7 @@
 		CE6907241B8AB11D00B8852B /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CEE44C7E1BA7C2D000100158 /* TutorialManager */,
 				CE8351B21BA69D8500C6BAA3 /* CacheManager */,
 				CEB79A391B858381001C7806 /* Helper */,
 				CE13B9AC1B86C09F007C58BF /* DelegateViewController */,
@@ -616,6 +622,7 @@
 		CE87C8541B8F014E00EA3305 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CEE44C7C1BA7BFD800100158 /* Sassy Molassy.ttf */,
 				CE87C87E1B8F140400EA3305 /* Neon.ttf */,
 				CE87C85D1B8F06C600EA3305 /* Lato-Regular.ttf */,
 				CE87C8571B8F033C00EA3305 /* Lato-Light.ttf */,
@@ -745,6 +752,15 @@
 			name = Category;
 			sourceTree = "<group>";
 		};
+		CEE44C7E1BA7C2D000100158 /* TutorialManager */ = {
+			isa = PBXGroup;
+			children = (
+				CEE44C7F1BA7C2FF00100158 /* TutorialManager.h */,
+				CEE44C801BA7C2FF00100158 /* TutorialManager.m */,
+			);
+			name = TutorialManager;
+			sourceTree = "<group>";
+		};
 		CEEF77B61B97E76D005D890A /* ThemeModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -835,6 +851,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE44C7D1BA7C00900100158 /* Sassy Molassy.ttf in Resources */,
 				CE87C87F1B8F145800EA3305 /* Neon.ttf in Resources */,
 				CE6A74ED1B9409A60080666B /* UnitConversionSetting.plist in Resources */,
 				CE87C85E1B8F06EB00EA3305 /* Lato-Regular.ttf in Resources */,
@@ -893,6 +910,7 @@
 				CE6907291B8AB18400B8852B /* MainMenuViewController.m in Sources */,
 				CE2E28661B9048020079012D /* DDTemperatureUnitConverter.m in Sources */,
 				CE6A74EB1B93E9870080666B /* ConverterManager.m in Sources */,
+				CEE44C811BA7C2FF00100158 /* TutorialManager.m in Sources */,
 				CEEF77B91B97E795005D890A /* ThemeManager.m in Sources */,
 				CE51EE951BA1366F0027D3FA /* ThemePickerViewController.m in Sources */,
 				CE6CFE331B958264006682C7 /* ASIFormDataRequest.m in Sources */,

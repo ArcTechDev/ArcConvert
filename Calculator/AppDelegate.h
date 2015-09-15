@@ -11,7 +11,8 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (getter=getLaunchTime, nonatomic) NSInteger launchTime;
+@property (getter=isFirstLaunch, nonatomic) BOOL firstLaunch;
 
 @end
 

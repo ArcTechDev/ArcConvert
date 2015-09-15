@@ -56,6 +56,9 @@
     
     [self.navigationController.navigationBar setTitleTextAttributes:titleBarAttributes];
     
+    //back button color
+    [self.navigationController.navigationBar setTintColor:[self requestUIData:@"Themes/NavBar/TitleFontColor"]];
+    
     
     //Nav bar Translucent
     [self.navigationController.navigationBar setTranslucent:[[self requestUIData:@"Themes/NavBar/Translucent"] boolValue]];

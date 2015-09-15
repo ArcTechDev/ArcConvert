@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "ThemeManager.h"
+#import "TutorialManager.h"
 
-@interface DelegateViewController : UIViewController<UIGestureRecognizerDelegate>
+@interface DelegateViewController : UIViewController<UIGestureRecognizerDelegate, TutorialManagerDelegate>
 
 @property(weak, nonatomic) id delegate;
 @property(assign, nonatomic) BOOL showNavigationBar;
+@property (weak, nonatomic) IBOutlet UIView *tutorialView;
 
 /**
  * Add this ViewController to given parent ViewController
@@ -27,5 +29,22 @@
 - (void)customizeView;
 
 - (id)requestUIData:(NSString *)pathString;
+
+- (void)presentTutorial;
+
+/**
+ * override and return tutorial view controller
+ */
+- (UIViewController *)getTutorialViewController;
+
+/**
+ * overrde and return gesture that used to dismiss tutorial view
+ */
+- (UIGestureRecognizer *)dismissTutorialGesture;
+
+/**
+ * override to receive tutorial view dismiss notify
+ */
+- (void)dismissTutorialView;
 
 @end

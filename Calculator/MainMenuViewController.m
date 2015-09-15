@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet MainMenuBtnView *btnThemeView;
 @property (weak, nonatomic) IBOutlet MainMenuBtnView *btnCalculatorView;
 @property (weak, nonatomic) IBOutlet MainMenuBtnView *btnInformationView;
+@property (weak, nonatomic) IBOutlet UILabel *convertTitleLabel;
 
 @end
 
@@ -57,6 +58,7 @@
 @synthesize btnThemeView = _btnThemeView;
 @synthesize btnCalculatorView = _btnCalculatorView;
 @synthesize btnInformationView = _btnInformationView;
+@synthesize convertTitleLabel = _convertTitleLabel;
 
 - (void)viewDidLoad {
     
@@ -231,6 +233,9 @@
     
     //HalfTransparent view
     [_halfTransView setBackgroundColor:[self requestUIData:@"MainMenu/HalfTransColor"]];
+    
+    //title color
+    [_convertTitleLabel setTextColor:[self requestUIData:@"MainMenu/TitleColor"]];
     
     //Button view
     [_btnLengthView setButtonViewType:BLength];

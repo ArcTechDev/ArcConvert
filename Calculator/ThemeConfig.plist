@@ -766,6 +766,8 @@
 				<string>s#Z-G-M-Bg</string>
 				<key>HalfTransColor</key>
 				<string>c#234,234,234,50</string>
+				<key>TitleColor</key>
+				<string>c#64,204,177,100</string>
 				<key>BtnView</key>
 				<dict>
 					<key>IconBg</key>
@@ -1682,6 +1684,8 @@
 				<string>s#Z-T-M-Bg</string>
 				<key>HalfTransColor</key>
 				<string>c#234,234,234,50</string>
+				<key>TitleColor</key>
+				<string>c#28,235,85,100</string>
 				<key>BtnView</key>
 				<dict>
 					<key>IconBg</key>
@@ -2598,6 +2602,8 @@
 				<string>s#Z-Y-M-Bg</string>
 				<key>HalfTransColor</key>
 				<string>c#234,234,234,50</string>
+				<key>TitleColor</key>
+				<string>c#255,222,2,100</string>
 				<key>BtnView</key>
 				<dict>
 					<key>IconBg</key>
@@ -3514,6 +3520,8 @@
 				<string>s#Z-R-M-Bg</string>
 				<key>HalfTransColor</key>
 				<string>c#234,234,234,50</string>
+				<key>TitleColor</key>
+				<string>c#220,38,38,100</string>
 				<key>BtnView</key>
 				<dict>
 					<key>IconBg</key>
@@ -4430,6 +4438,8 @@
 				<string>s#Z-B-M-Bg</string>
 				<key>HalfTransColor</key>
 				<string>c#234,234,234,50</string>
+				<key>TitleColor</key>
+				<string>c#104,232,255,100</string>
 				<key>BtnView</key>
 				<dict>
 					<key>IconBg</key>
@@ -5346,6 +5356,8 @@
 				<string>s#S-G-C-Bg</string>
 				<key>HalfTransColor</key>
 				<string>c#255,255,255,0</string>
+				<key>TitleColor</key>
+				<string>c#120,192,116,100</string>
 				<key>BtnView</key>
 				<dict>
 					<key>IconBg</key>
@@ -6262,6 +6274,8 @@
 				<string>s#S-B-C-Bg</string>
 				<key>HalfTransColor</key>
 				<string>c#255,255,255,0</string>
+				<key>TitleColor</key>
+				<string>c#48,151,151,100</string>
 				<key>BtnView</key>
 				<dict>
 					<key>IconBg</key>
@@ -7178,6 +7192,8 @@
 				<string>s#S-R-C-Bg</string>
 				<key>HalfTransColor</key>
 				<string>c#255,255,255,0</string>
+				<key>TitleColor</key>
+				<string>c#234,111,65,100</string>
 				<key>BtnView</key>
 				<dict>
 					<key>IconBg</key>
@@ -8094,6 +8110,8 @@
 				<string>s#S-P-C-Bg</string>
 				<key>HalfTransColor</key>
 				<string>c#255,255,255,0</string>
+				<key>TitleColor</key>
+				<string>c#165,104,147,100</string>
 				<key>BtnView</key>
 				<dict>
 					<key>IconBg</key>
@@ -9010,6 +9028,8 @@
 				<string>s#S-BW-C-Bg</string>
 				<key>HalfTransColor</key>
 				<string>c#255,255,255,0</string>
+				<key>TitleColor</key>
+				<string>c#143,145,148,100</string>
 				<key>BtnView</key>
 				<dict>
 					<key>IconBg</key>

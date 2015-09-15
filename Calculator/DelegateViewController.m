@@ -7,6 +7,7 @@
 //
 
 #import "DelegateViewController.h"
+#import "AppDelegate.h"
 
 @interface DelegateViewController ()
 
@@ -20,6 +21,7 @@
 
 @synthesize delegate = _delegate;
 @synthesize showNavigationBar = _showNavigationBar;
+@synthesize tutorialView = _tutorialView;
 
 
 - (void)viewDidLoad {
@@ -30,6 +32,12 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onThemeSwitch:) name:ThemChangeNotify object:nil];
     isCustomize = NO;
+    
+    
+    if(_tutorialView != nil){
+        
+        [_tutorialView setHidden:YES];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -61,6 +69,8 @@
     
     self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
     self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    
+    [self presentTutorial];
     
 }
 
@@ -99,6 +109,29 @@
 - (id)requestUIData:(NSString *)pathString{
     
     return [themeMgr requestCustomizedUIDataWithPathString:pathString];
+}
+
+- (void)presentTutorial{
+    
+    [[TutorialManager sharedManager] presentTutorialWithKey:NSStringFromClass([self class]) WithDelegate:self WithViewController:[self getTutorialViewController] WithDismissGesture:[self dismissTutorialGesture]];
+}
+
+- (UIViewController *)getTutorialViewController{
+    
+    return nil;
+}
+
+- (UIGestureRecognizer *)dismissTutorialGesture{
+    
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] init];
+    [tapGesture setNumberOfTouchesRequired:1];
+    
+    return tapGesture;
+}
+
+#pragma mark - TutorialManager delegate
+- (void)onTutorialDismissWithViewController:(UIViewController *)viewController{
+    
 }
 
 #pragma mark - ThemeManager notify
