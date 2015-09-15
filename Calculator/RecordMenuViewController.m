@@ -10,6 +10,7 @@
 #import "RecordMenuCell.h"
 #import "RecordManager.h"
 #import <QuartzCore/QuartzCore.h>
+#import "SelectInnerGlow.h"
 
 @interface RecordMenuViewController ()
 
@@ -116,6 +117,9 @@
         cell = [[RecordMenuCell alloc] init];
     }
     
+    SelectInnerGlow *glow = [[SelectInnerGlow alloc] init];
+    
+    [cell setSelectedBackgroundView:glow];
     
     [self configureCell:cell AtIndexPath:indexPath];
     
@@ -129,9 +133,25 @@
         [self.delegate onRecordSelectedWithIndex:indexPath.row];
     }
     
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    RecordMenuCell *cell = (RecordMenuCell*)[tableView cellForRowAtIndexPath:indexPath];
+    
+    [cell setSelected:YES animated:YES];
     
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    RecordMenuCell *cell = (RecordMenuCell*)[tableView cellForRowAtIndexPath:indexPath];
+    
+    [cell setSelected:YES animated:YES];
+}
+
+- (void)tableView:(UITableView *)tableView didUnhighlightRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    RecordMenuCell *cell = (RecordMenuCell*)[tableView cellForRowAtIndexPath:indexPath];
+    
+    [cell setSelected:NO animated:YES];
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{

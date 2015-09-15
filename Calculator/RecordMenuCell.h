@@ -13,4 +13,7 @@
 @property(weak, nonatomic) IBOutlet UILabel *processLabel;
 @property(weak, nonatomic) IBOutlet UILabel *sumLabel;
 
+- (void)highlight;
+- (void)unhighlight;
+
 @end

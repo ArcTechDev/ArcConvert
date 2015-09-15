@@ -7,6 +7,9 @@
 //
 
 #import "RecordMenuCell.h"
+#import "SelectInnerGlow.h"
+#import "ThemeManager.h"
+
 
 @implementation RecordMenuCell
 
@@ -21,6 +24,27 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+    
+    if(selected){
+        
+        [(SelectInnerGlow*)self.selectedBackgroundView setGlowColor:[[ThemeManager sharedThemeManager] requestCustomizedUIDataWithPathString:@"History/SelectGlowColor"]];
+        [(SelectInnerGlow*)self.selectedBackgroundView select];
+    }
+    else{
+        
+        [(SelectInnerGlow*)self.selectedBackgroundView deSelect];
+    }
+}
+
+- (void)highlight{
+    
+    [(SelectInnerGlow*)self.selectedBackgroundView setGlowColor:[[ThemeManager sharedThemeManager] requestCustomizedUIDataWithPathString:@"History/SelectGlowColor"]];
+    [(SelectInnerGlow*)self.selectedBackgroundView select];
+}
+
+- (void)unhighlight{
+    
+    [(SelectInnerGlow*)self.selectedBackgroundView deSelect];
 }
 
 @end

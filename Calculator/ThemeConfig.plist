@@ -759,6 +759,8 @@
 					<key>BgColor</key>
 					<string>c#64,204,177,100</string>
 				</dict>
+				<key>SelectGlowColor</key>
+				<string>c#64,204,177,100</string>
 			</dict>
 			<key>MainMenu</key>
 			<dict>
@@ -1677,6 +1679,8 @@
 					<key>BgColor</key>
 					<string>c#28,235,85,100</string>
 				</dict>
+				<key>SelectGlowColor</key>
+				<string>c#28,235,85,100</string>
 			</dict>
 			<key>MainMenu</key>
 			<dict>
@@ -2595,6 +2599,8 @@
 					<key>BgColor</key>
 					<string>c#255,222,2,100</string>
 				</dict>
+				<key>SelectGlowColor</key>
+				<string>c#255,222,2,100</string>
 			</dict>
 			<key>MainMenu</key>
 			<dict>
@@ -3513,6 +3519,8 @@
 					<key>BgColor</key>
 					<string>c#220,38,38,100</string>
 				</dict>
+				<key>SelectGlowColor</key>
+				<string>c#220,38,38,100</string>
 			</dict>
 			<key>MainMenu</key>
 			<dict>
@@ -4431,6 +4439,8 @@
 					<key>BgColor</key>
 					<string>c#104,232,255,100</string>
 				</dict>
+				<key>SelectGlowColor</key>
+				<string>c#104,232,255,100</string>
 			</dict>
 			<key>MainMenu</key>
 			<dict>
@@ -5349,6 +5359,8 @@
 					<key>BgColor</key>
 					<string>c#255,255,255,60</string>
 				</dict>
+				<key>SelectGlowColor</key>
+				<string>c#0,150,124,100</string>
 			</dict>
 			<key>MainMenu</key>
 			<dict>
@@ -6267,6 +6279,8 @@
 					<key>BgColor</key>
 					<string>c#50,106,179,100</string>
 				</dict>
+				<key>SelectGlowColor</key>
+				<string>c#255,255,255,100</string>
 			</dict>
 			<key>MainMenu</key>
 			<dict>
@@ -7185,6 +7199,8 @@
 					<key>BgColor</key>
 					<string>c#216,39,56,100</string>
 				</dict>
+				<key>SelectGlowColor</key>
+				<string>c#255,255,255,100</string>
 			</dict>
 			<key>MainMenu</key>
 			<dict>
@@ -8103,6 +8119,8 @@
 					<key>BgColor</key>
 					<string>c#104,85,164,100</string>
 				</dict>
+				<key>SelectGlowColor</key>
+				<string>c#255,255,255,100</string>
 			</dict>
 			<key>MainMenu</key>
 			<dict>
@@ -9021,6 +9039,8 @@
 					<key>BgColor</key>
 					<string>c#122,122,122,100</string>
 				</dict>
+				<key>SelectGlowColor</key>
+				<string>c#255,255,255,100</string>
 			</dict>
 			<key>MainMenu</key>
 			<dict>

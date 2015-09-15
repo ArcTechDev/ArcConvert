@@ -91,6 +91,7 @@
 		CECB4B651B81BDC900F4EBCD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECB4B631B81BDC900F4EBCD /* LaunchScreen.xib */; };
 		CECB4B711B81BDC900F4EBCD /* CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB4B701B81BDC900F4EBCD /* CalculatorTests.m */; };
 		CECF87AA1B8DADBF00733B8B /* CategoryEx.m in Sources */ = {isa = PBXBuildFile; fileRef = CECF87A91B8DADBF00733B8B /* CategoryEx.m */; };
+		CEE37D251BA819D000C58B11 /* SelectInnerGlow.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE37D241BA819D000C58B11 /* SelectInnerGlow.m */; };
 		CEE44C7D1BA7C00900100158 /* Sassy Molassy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE44C7C1BA7BFD800100158 /* Sassy Molassy.ttf */; };
 		CEE44C811BA7C2FF00100158 /* TutorialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE44C801BA7C2FF00100158 /* TutorialManager.m */; };
 		CEEF77B91B97E795005D890A /* ThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF77B81B97E795005D890A /* ThemeManager.m */; };
@@ -273,6 +274,8 @@
 		CECB4B701B81BDC900F4EBCD /* CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorTests.m; sourceTree = "<group>"; };
 		CECF87A81B8DADBF00733B8B /* CategoryEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryEx.h; sourceTree = "<group>"; };
 		CECF87A91B8DADBF00733B8B /* CategoryEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryEx.m; sourceTree = "<group>"; };
+		CEE37D231BA819D000C58B11 /* SelectInnerGlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectInnerGlow.h; sourceTree = "<group>"; };
+		CEE37D241BA819D000C58B11 /* SelectInnerGlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectInnerGlow.m; sourceTree = "<group>"; };
 		CEE44C7C1BA7BFD800100158 /* Sassy Molassy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sassy Molassy.ttf"; sourceTree = "<group>"; };
 		CEE44C7F1BA7C2FF00100158 /* TutorialManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialManager.h; sourceTree = "<group>"; };
 		CEE44C801BA7C2FF00100158 /* TutorialManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialManager.m; sourceTree = "<group>"; };
@@ -312,6 +315,8 @@
 				CE13B9A71B86B8D8007C58BF /* RecordMenuViewController.m */,
 				CE13B9A91B86B8F1007C58BF /* RecordMenuCell.h */,
 				CE13B9AA1B86B8F1007C58BF /* RecordMenuCell.m */,
+				CEE37D231BA819D000C58B11 /* SelectInnerGlow.h */,
+				CEE37D241BA819D000C58B11 /* SelectInnerGlow.m */,
 			);
 			name = RecordMenu;
 			sourceTree = "<group>";
@@ -943,6 +948,7 @@
 				CECF87AA1B8DADBF00733B8B /* CategoryEx.m in Sources */,
 				CE6CFE471B9583A3006682C7 /* SBJson4Parser.m in Sources */,
 				CE6CFE0F1B9580E1006682C7 /* Reachability.m in Sources */,
+				CEE37D251BA819D000C58B11 /* SelectInnerGlow.m in Sources */,
 				CE2E28641B9048020079012D /* DDPressureUnitConverter.m in Sources */,
 				CE6CFE4A1B9583A3006682C7 /* SBJson4StreamTokeniser.m in Sources */,
 				CE6CFE541B95841F006682C7 /* YFTwoValueObject.m in Sources */,
