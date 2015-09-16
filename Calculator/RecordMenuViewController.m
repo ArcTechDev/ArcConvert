@@ -11,6 +11,7 @@
 #import "RecordManager.h"
 #import <QuartzCore/QuartzCore.h>
 #import "SelectInnerGlow.h"
+#import "CacheManager.h"
 
 @interface RecordMenuViewController ()
 
@@ -117,7 +118,14 @@
         cell = [[RecordMenuCell alloc] init];
     }
     
-    SelectInnerGlow *glow = [[SelectInnerGlow alloc] init];
+    SelectInnerGlow *glow = [[CacheManager sharedManager] objectForKey:@"RecordCellGlow"];
+    
+    if(glow == nil){
+        
+        glow = [[SelectInnerGlow alloc] init];
+        
+        [[CacheManager sharedManager] setObject:glow forKey:@"RecordCellGlow"];
+    }
     
     [cell setSelectedBackgroundView:glow];
     

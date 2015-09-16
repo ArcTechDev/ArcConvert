@@ -1106,6 +1106,8 @@
     
     [[CacheManager sharedManager] setObject:ret forKey:cachedName];
     
+    [(MainMenuViewController *)ret customizeView];
+    
     return ret;
 }
 

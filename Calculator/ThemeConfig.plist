@@ -429,6 +429,15 @@
 				<string>s#Z-G-CV-Bg</string>
 				<key>SeparatorImg</key>
 				<string>s#C-CV-Separator</string>
+				<key>UnitPicker</key>
+				<dict>
+					<key>SelectGlowColor</key>
+					<string>c#64,204,177,100</string>
+					<key>BgColor</key>
+					<string>c#64,204,177,100</string>
+					<key>TextColor</key>
+					<string>c#255,255,255,100</string>
+				</dict>
 				<key>TopInput</key>
 				<dict>
 					<key>InputTextFont</key>
@@ -1349,6 +1358,15 @@
 				<string>s#Z-G-CV-Bg</string>
 				<key>SeparatorImg</key>
 				<string>s#C-CV-Separator</string>
+				<key>UnitPicker</key>
+				<dict>
+					<key>SelectGlowColor</key>
+					<string>c#28,235,85,100</string>
+					<key>BgColor</key>
+					<string>c#28,235,85,100</string>
+					<key>TextColor</key>
+					<string>c#255,255,255,100</string>
+				</dict>
 				<key>TopInput</key>
 				<dict>
 					<key>InputTextFont</key>
@@ -2269,6 +2287,15 @@
 				<string>s#Z-G-CV-Bg</string>
 				<key>SeparatorImg</key>
 				<string>s#C-CV-Separator</string>
+				<key>UnitPicker</key>
+				<dict>
+					<key>SelectGlowColor</key>
+					<string>c#255,222,2,100</string>
+					<key>BgColor</key>
+					<string>c#255,222,2,100</string>
+					<key>TextColor</key>
+					<string>c#255,255,255,100</string>
+				</dict>
 				<key>TopInput</key>
 				<dict>
 					<key>InputTextFont</key>
@@ -3189,6 +3216,15 @@
 				<string>s#Z-G-CV-Bg</string>
 				<key>SeparatorImg</key>
 				<string>s#C-CV-Separator</string>
+				<key>UnitPicker</key>
+				<dict>
+					<key>SelectGlowColor</key>
+					<string>c#220,38,38,100</string>
+					<key>BgColor</key>
+					<string>c#220,38,38,100</string>
+					<key>TextColor</key>
+					<string>c#255,255,255,100</string>
+				</dict>
 				<key>TopInput</key>
 				<dict>
 					<key>InputTextFont</key>
@@ -4109,6 +4145,15 @@
 				<string>s#Z-G-CV-Bg</string>
 				<key>SeparatorImg</key>
 				<string>s#C-CV-Separator</string>
+				<key>UnitPicker</key>
+				<dict>
+					<key>SelectGlowColor</key>
+					<string>c#104,232,255,100</string>
+					<key>BgColor</key>
+					<string>c#104,232,255,100</string>
+					<key>TextColor</key>
+					<string>c#255,255,255,100</string>
+				</dict>
 				<key>TopInput</key>
 				<dict>
 					<key>InputTextFont</key>
@@ -5029,6 +5074,15 @@
 				<string>s#S-G-C-Bg</string>
 				<key>SeparatorImg</key>
 				<string>s#C-CV-Separator</string>
+				<key>UnitPicker</key>
+				<dict>
+					<key>SelectGlowColor</key>
+					<string>c#120,192,116,100</string>
+					<key>BgColor</key>
+					<string>c#255,255,255,100</string>
+					<key>TextColor</key>
+					<string>c#120,192,116,100</string>
+				</dict>
 				<key>TopInput</key>
 				<dict>
 					<key>InputTextFont</key>
@@ -5949,6 +6003,15 @@
 				<string>s#S-B-C-Bg</string>
 				<key>SeparatorImg</key>
 				<string>s#C-CV-Separator</string>
+				<key>UnitPicker</key>
+				<dict>
+					<key>SelectGlowColor</key>
+					<string>c#48,151,151,100</string>
+					<key>BgColor</key>
+					<string>c#255,255,255,100</string>
+					<key>TextColor</key>
+					<string>c#48,151,151,100</string>
+				</dict>
 				<key>TopInput</key>
 				<dict>
 					<key>InputTextFont</key>
@@ -6869,6 +6932,15 @@
 				<string>s#S-R-C-Bg</string>
 				<key>SeparatorImg</key>
 				<string>s#C-CV-Separator</string>
+				<key>UnitPicker</key>
+				<dict>
+					<key>SelectGlowColor</key>
+					<string>c#234,111,65,100</string>
+					<key>BgColor</key>
+					<string>c#255,255,255,100</string>
+					<key>TextColor</key>
+					<string>c#234,111,65,100</string>
+				</dict>
 				<key>TopInput</key>
 				<dict>
 					<key>InputTextFont</key>
@@ -7789,6 +7861,15 @@
 				<string>s#S-P-C-Bg</string>
 				<key>SeparatorImg</key>
 				<string>s#C-CV-Separator</string>
+				<key>UnitPicker</key>
+				<dict>
+					<key>SelectGlowColor</key>
+					<string>c#165,104,147,100</string>
+					<key>BgColor</key>
+					<string>c#255,255,255,100</string>
+					<key>TextColor</key>
+					<string>c#165,104,147,100</string>
+				</dict>
 				<key>TopInput</key>
 				<dict>
 					<key>InputTextFont</key>
@@ -8709,6 +8790,15 @@
 				<string>s#S-BW-C-Bg</string>
 				<key>SeparatorImg</key>
 				<string>s#C-CV-Separator</string>
+				<key>UnitPicker</key>
+				<dict>
+					<key>SelectGlowColor</key>
+					<string>c#143,145,148,100</string>
+					<key>BgColor</key>
+					<string>c#255,255,255,100</string>
+					<key>TextColor</key>
+					<string>c#143,145,148,100</string>
+				</dict>
 				<key>TopInput</key>
 				<dict>
 					<key>InputTextFont</key>

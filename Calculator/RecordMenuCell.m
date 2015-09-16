@@ -25,12 +25,20 @@
 
     // Configure the view for the selected state
     
+    
+    
     if(selected){
+        
+        if(![self.selectedBackgroundView respondsToSelector:@selector(select)])
+            return;
         
         [(SelectInnerGlow*)self.selectedBackgroundView setGlowColor:[[ThemeManager sharedThemeManager] requestCustomizedUIDataWithPathString:@"History/SelectGlowColor"]];
         [(SelectInnerGlow*)self.selectedBackgroundView select];
     }
     else{
+        
+        if(![self.selectedBackgroundView respondsToSelector:@selector(deSelect)])
+            return;
         
         [(SelectInnerGlow*)self.selectedBackgroundView deSelect];
     }
@@ -38,11 +46,17 @@
 
 - (void)highlight{
     
+    if(![self.selectedBackgroundView respondsToSelector:@selector(select)])
+        return;
+    
     [(SelectInnerGlow*)self.selectedBackgroundView setGlowColor:[[ThemeManager sharedThemeManager] requestCustomizedUIDataWithPathString:@"History/SelectGlowColor"]];
     [(SelectInnerGlow*)self.selectedBackgroundView select];
 }
 
 - (void)unhighlight{
+    
+    if(![self.selectedBackgroundView respondsToSelector:@selector(deSelect)])
+        return;
     
     [(SelectInnerGlow*)self.selectedBackgroundView deSelect];
 }

@@ -7,6 +7,12 @@
 //
 
 #import "UnitPickCell.h"
+#import "SelectInnerGlow.h"
+#import "ThemeManager.h"
+
+@interface UnitPickCell ()
+
+@end
 
 @implementation UnitPickCell
 
@@ -20,6 +26,22 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+    
+    if(selected){
+        
+        if(![self.selectedBackgroundView respondsToSelector:@selector(select)])
+            return;
+        
+        [(SelectInnerGlow*)self.selectedBackgroundView setGlowColor:[[ThemeManager sharedThemeManager] requestCustomizedUIDataWithPathString:@"Converter/UnitPicker/SelectGlowColor"]];
+        [(SelectInnerGlow*)self.selectedBackgroundView select];
+    }
+    else{
+        
+        if(![self.selectedBackgroundView respondsToSelector:@selector(deSelect)])
+            return;
+        
+        [(SelectInnerGlow*)self.selectedBackgroundView deSelect];
+    }
 }
 
 @end

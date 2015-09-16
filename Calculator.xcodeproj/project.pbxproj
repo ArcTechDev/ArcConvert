@@ -11,11 +11,11 @@
 		CE13B9AB1B86B8F1007C58BF /* RecordMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE13B9AA1B86B8F1007C58BF /* RecordMenuCell.m */; };
 		CE13B9AF1B86C0C8007C58BF /* DelegateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE13B9AE1B86C0C8007C58BF /* DelegateViewController.m */; };
 		CE13B9B11B8732BD007C58BF /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE13B9B01B8732BD007C58BF /* iAd.framework */; };
+		CE179B2C1BA90BA200651D60 /* UnitPickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE179B2B1BA90BA200651D60 /* UnitPickViewController.m */; };
 		CE2E28071B8FF9610079012D /* NavController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28061B8FF9610079012D /* NavController.m */; };
 		CE2E28111B9032850079012D /* FPPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E280C1B9032850079012D /* FPPopoverController.m */; };
 		CE2E28121B9032850079012D /* FPPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E280E1B9032850079012D /* FPPopoverView.m */; };
 		CE2E28131B9032850079012D /* FPTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28101B9032850079012D /* FPTouchView.m */; };
-		CE2E281C1B9034790079012D /* UnitPickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E281B1B9034790079012D /* UnitPickViewController.m */; };
 		CE2E28201B9035FE0079012D /* ConverterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E281F1B9035FE0079012D /* ConverterViewController.m */; };
 		CE2E28231B903D160079012D /* UnitPickCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28221B903D160079012D /* UnitPickCell.m */; };
 		CE2E28561B9048020079012D /* DDAccelerationUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E28281B9048020079012D /* DDAccelerationUnitConverter.m */; };
@@ -116,6 +116,7 @@
 		CE13B9AD1B86C0C8007C58BF /* DelegateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelegateViewController.h; sourceTree = "<group>"; };
 		CE13B9AE1B86C0C8007C58BF /* DelegateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelegateViewController.m; sourceTree = "<group>"; };
 		CE13B9B01B8732BD007C58BF /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		CE179B2B1BA90BA200651D60 /* UnitPickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitPickViewController.m; sourceTree = "<group>"; };
 		CE2E28051B8FF9610079012D /* NavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavController.h; sourceTree = "<group>"; };
 		CE2E28061B8FF9610079012D /* NavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavController.m; sourceTree = "<group>"; };
 		CE2E280A1B9032850079012D /* ARCMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCMacros.h; sourceTree = "<group>"; };
@@ -126,7 +127,6 @@
 		CE2E280F1B9032850079012D /* FPTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTouchView.h; sourceTree = "<group>"; };
 		CE2E28101B9032850079012D /* FPTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTouchView.m; sourceTree = "<group>"; };
 		CE2E281A1B9034790079012D /* UnitPickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitPickViewController.h; sourceTree = "<group>"; };
-		CE2E281B1B9034790079012D /* UnitPickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitPickViewController.m; sourceTree = "<group>"; };
 		CE2E281E1B9035FE0079012D /* ConverterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConverterViewController.h; sourceTree = "<group>"; };
 		CE2E281F1B9035FE0079012D /* ConverterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConverterViewController.m; sourceTree = "<group>"; };
 		CE2E28211B903D160079012D /* UnitPickCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitPickCell.h; sourceTree = "<group>"; };
@@ -368,7 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				CE2E281A1B9034790079012D /* UnitPickViewController.h */,
-				CE2E281B1B9034790079012D /* UnitPickViewController.m */,
+				CE179B2B1BA90BA200651D60 /* UnitPickViewController.m */,
 				CE2E28211B903D160079012D /* UnitPickCell.h */,
 				CE2E28221B903D160079012D /* UnitPickCell.m */,
 			);
@@ -891,7 +891,6 @@
 				CEC991441B998E510071442A /* MainMenuBtnView.m in Sources */,
 				CE13B9A81B86B8D8007C58BF /* RecordMenuViewController.m in Sources */,
 				CE13B9AB1B86B8F1007C58BF /* RecordMenuCell.m in Sources */,
-				CE2E281C1B9034790079012D /* UnitPickViewController.m in Sources */,
 				CE5EBD011B831898001B5FD4 /* LeftMenuViewController.m in Sources */,
 				CE2E286B1B9048020079012D /* DDVolumeUnitConverter.m in Sources */,
 				CE6CFE511B9583F6006682C7 /* YFCurrencyConversion.m in Sources */,
@@ -901,6 +900,7 @@
 				CE2E28131B9032850079012D /* FPTouchView.m in Sources */,
 				CE8351B51BA69E9000C6BAA3 /* CacheManager.m in Sources */,
 				CECB4B5D1B81BDC900F4EBCD /* CalculatorViewController.m in Sources */,
+				CE179B2C1BA90BA200651D60 /* UnitPickViewController.m in Sources */,
 				CE6CFE4B1B9583A3006682C7 /* SBJson4StreamWriter.m in Sources */,
 				CE43B4221B8462F80010B514 /* LeftMenuItemCell.m in Sources */,
 				CE2E285E1B9048020079012D /* DDIlluminationUnitConverter.m in Sources */,

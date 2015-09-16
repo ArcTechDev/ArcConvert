@@ -9,6 +9,8 @@
 #import "UnitPickViewController.h"
 #import "UnitPickCell.h"
 #import "Helper.h"
+#import "SelectInnerGlow.h"
+#import "CacheManager.h"
 
 @interface UnitPickViewController ()
 
@@ -47,6 +49,14 @@
     //when display we need to convert string from plist that might contain unicode to new string
     //so special unicode character can display properly
     cell.titleLabel.text = [Helper getUnicodeStringFromString:[units objectAtIndex:indexPath.row]];
+    [cell.titleLabel setTextColor:[self requestUIData:@"Converter/UnitPicker/TextColor"]];
+}
+
+#pragma mark - override
+- (void)customizeView{
+    
+    //background color
+    self.view.backgroundColor = [self requestUIData:@"Converter/UnitPicker/BgColor"];
 }
 
 #pragma mark - UITableViewDelegate
@@ -71,6 +81,17 @@
         cell = [[UnitPickCell alloc] init];
     }
     
+    SelectInnerGlow *glow = [[CacheManager sharedManager] objectForKey:@"UnitPickerCellGlow"];
+    
+    if(glow == nil){
+        
+        glow = [[SelectInnerGlow alloc] init];
+        
+        [[CacheManager sharedManager] setObject:glow forKey:@"UnitPickerCellGlow"];
+    }
+    
+    [cell setSelectedBackgroundView:glow];
+    
     [self configureCell:cell atIndexPath:indexPath];
     
     return cell;
@@ -78,12 +99,31 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
     if([self.delegate respondsToSelector:@selector(onUnitPickViewSelectUnitAtIndex:withUnitName:)]){
         
         [self.delegate onUnitPickViewSelectUnitAtIndex:indexPath.row withUnitName:[units objectAtIndex:indexPath.row]];
     }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UnitPickCell *cell = (UnitPickCell*)[tableView cellForRowAtIndexPath:indexPath];
+    
+    [cell setSelected:YES animated:YES];
+}
+
+- (void)tableView:(UITableView *)tableView didUnhighlightRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UnitPickCell *cell = (UnitPickCell*)[tableView cellForRowAtIndexPath:indexPath];
+    
+    [cell setSelected:NO animated:YES];
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [cell setBackgroundColor:[UIColor clearColor]];
 }
 
 /*

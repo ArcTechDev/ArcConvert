@@ -370,6 +370,7 @@
     if(_popController == nil){
         
         UnitPickViewController *unitPicker = [self.storyboard instantiateViewControllerWithIdentifier:@"UnitPickView"];
+        [unitPicker customizeView];
         
         ((DelegateViewController *)unitPicker).delegate = self;
         
