@@ -1482,11 +1482,11 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="Converter-Bar" translatesAutoresizingMaskIntoConstraints="NO" id="99H-fy-jBT" userLabel="Indicator-Image View">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="Z-CV-IndicatorBar" translatesAutoresizingMaskIntoConstraints="NO" id="99H-fy-jBT" userLabel="Indicator-Image View">
                                         <rect key="frame" x="0.0" y="0.0" width="42" height="90"/>
                                         <color key="tintColor" red="0.1058823529" green="0.76078431369999999" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Converter-DropDownArrow" translatesAutoresizingMaskIntoConstraints="NO" id="9u4-ee-Xpu" userLabel="DropDownArrow-Image View">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="C-CV-DropDownArrow" translatesAutoresizingMaskIntoConstraints="NO" id="9u4-ee-Xpu" userLabel="DropDownArrow-Image View">
                                         <rect key="frame" x="74" y="62" width="62" height="28"/>
                                         <color key="tintColor" red="0.1058823529" green="0.76078431369999999" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
@@ -1535,7 +1535,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="198.5" height="55"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="S-CV-BtnClear" backgroundImage="BtnBg">
+                                        <state key="normal" image="S-CV-BtnClear" backgroundImage="Z-G-C-BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -1545,7 +1545,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCV-6c-23F" userLabel="Backward-Button">
                                         <rect key="frame" x="200.5" y="0.0" width="399.5" height="55"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="Backward" backgroundImage="BtnBg">
+                                        <state key="normal" image="Z-CV-BtnBackward" backgroundImage="Z-G-C-BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -1556,7 +1556,7 @@
                                         <rect key="frame" x="0.0" y="290" width="399" height="54"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="0" backgroundImage="BtnBg">
+                                        <state key="normal" title="0" backgroundImage="Z-G-C-BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -1567,7 +1567,7 @@
                                         <rect key="frame" x="0.0" y="57" width="198.5" height="75.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="7" backgroundImage="BtnBg">
+                                        <state key="normal" title="7" backgroundImage="Z-G-C-BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -1578,7 +1578,7 @@
                                         <rect key="frame" x="0.0" y="134" width="198.5" height="76"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="4" backgroundImage="BtnBg">
+                                        <state key="normal" title="4" backgroundImage="Z-G-C-BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -1589,7 +1589,7 @@
                                         <rect key="frame" x="200.5" y="134" width="198.5" height="76"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="5" backgroundImage="BtnBg">
+                                        <state key="normal" title="5" backgroundImage="Z-G-C-BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -1600,7 +1600,7 @@
                                         <rect key="frame" x="200.5" y="212" width="198.5" height="75.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="2" backgroundImage="BtnBg">
+                                        <state key="normal" title="2" backgroundImage="Z-G-C-BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -1611,7 +1611,7 @@
                                         <rect key="frame" x="401" y="212" width="198.5" height="75.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="3" backgroundImage="BtnBg">
+                                        <state key="normal" title="3" backgroundImage="Z-G-C-BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -1622,7 +1622,7 @@
                                         <rect key="frame" x="401" y="134" width="198.5" height="76"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="6" backgroundImage="BtnBg">
+                                        <state key="normal" title="6" backgroundImage="Z-G-C-BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -1633,7 +1633,7 @@
                                         <rect key="frame" x="0.0" y="212" width="198.5" height="75.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="1" backgroundImage="BtnBg">
+                                        <state key="normal" title="1" backgroundImage="Z-G-C-BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -1644,7 +1644,7 @@
                                         <rect key="frame" x="200.5" y="57" width="199" height="75.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="8" backgroundImage="BtnBg">
+                                        <state key="normal" title="8" backgroundImage="Z-G-C-BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -1655,7 +1655,7 @@
                                         <rect key="frame" x="402" y="57" width="198.5" height="75.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="9" backgroundImage="BtnBg">
+                                        <state key="normal" title="9" backgroundImage="Z-G-C-BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -1665,7 +1665,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pfn-G4-vv9" userLabel="Dot-Button">
                                         <rect key="frame" x="401" y="290" width="199" height="54"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="Dot" backgroundImage="BtnBg">
+                                        <state key="normal" image="Z-CV-BtnDot" backgroundImage="Z-G-C-BtnBg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -1743,11 +1743,11 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="Converter-Bar" translatesAutoresizingMaskIntoConstraints="NO" id="F1Z-7j-p1s" userLabel="Indicator-Image View">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="Z-CV-IndicatorBar" translatesAutoresizingMaskIntoConstraints="NO" id="F1Z-7j-p1s" userLabel="Indicator-Image View">
                                         <rect key="frame" x="0.0" y="0.0" width="42" height="90"/>
                                         <color key="tintColor" red="0.10588235294117647" green="0.76078431372549016" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Converter-DropDownArrow" translatesAutoresizingMaskIntoConstraints="NO" id="FCG-fw-Ijz" userLabel="DropDownArrow-Image View">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="C-CV-DropDownArrow" translatesAutoresizingMaskIntoConstraints="NO" id="FCG-fw-Ijz" userLabel="DropDownArrow-Image View">
                                         <rect key="frame" x="506" y="62" width="62" height="28"/>
                                         <color key="tintColor" red="0.10588235294117647" green="0.76078431372549016" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
@@ -2181,13 +2181,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Backward" width="36" height="36"/>
         <image name="Bg" width="375" height="375"/>
-        <image name="BtnBg" width="20" height="20"/>
+        <image name="C-CV-DropDownArrow" width="62" height="37"/>
         <image name="C-CV-Separator" width="10" height="10"/>
-        <image name="Converter-Bar" width="10" height="80"/>
-        <image name="Converter-DropDownArrow" width="62" height="37"/>
-        <image name="Dot" width="12" height="12"/>
         <image name="M-Bg" width="750" height="1314"/>
         <image name="S-CV-BtnClear" width="257" height="121"/>
         <image name="S-G-C-BtnDigitalBg" width="191" height="166"/>
@@ -2202,6 +2198,9 @@
         <image name="Z-C-BtnPlusMinus" width="36" height="36"/>
         <image name="Z-C-BtnSubtract" width="24" height="24"/>
         <image name="Z-C-BtnTime" width="24" height="24"/>
+        <image name="Z-CV-BtnBackward" width="518" height="121"/>
+        <image name="Z-CV-BtnDot" width="125" height="62"/>
+        <image name="Z-CV-IndicatorBar" width="10" height="80"/>
         <image name="Z-G-C-BtnBg" width="20" height="20"/>
         <image name="Z-M-BtnBg" width="5" height="5"/>
         <image name="Z-M-Icon-Themes-Bottom" width="175" height="175"/>
