@@ -75,7 +75,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bg" translatesAutoresizingMaskIntoConstraints="NO" id="rd8-36-fEn">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Z-G-C-Bg" translatesAutoresizingMaskIntoConstraints="NO" id="rd8-36-fEn">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="" textAlignment="right" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="31J-fX-mgF" userLabel="Process-Label">
@@ -479,7 +479,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M-Bg" translatesAutoresizingMaskIntoConstraints="NO" id="E6F-Nf-396" userLabel="Bg-Image View">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Z-G-M-Bg" translatesAutoresizingMaskIntoConstraints="NO" id="E6F-Nf-396" userLabel="Bg-Image View">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SYN-7h-7Ys" userLabel="HalfTransparent-View">
@@ -1453,7 +1453,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bg" translatesAutoresizingMaskIntoConstraints="NO" id="Uhs-e2-4mW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Z-G-CV-Bg" translatesAutoresizingMaskIntoConstraints="NO" id="Uhs-e2-4mW">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="C-CV-Separator" translatesAutoresizingMaskIntoConstraints="NO" id="VcY-81-jAb">
@@ -2181,10 +2181,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Bg" width="375" height="375"/>
         <image name="C-CV-DropDownArrow" width="62" height="37"/>
         <image name="C-CV-Separator" width="10" height="10"/>
-        <image name="M-Bg" width="750" height="1314"/>
         <image name="S-CV-BtnClear" width="257" height="121"/>
         <image name="S-G-C-BtnDigitalBg" width="191" height="166"/>
         <image name="SwipeRightArrow" width="130" height="54"/>
@@ -2201,7 +2199,10 @@
         <image name="Z-CV-BtnBackward" width="518" height="121"/>
         <image name="Z-CV-BtnDot" width="125" height="62"/>
         <image name="Z-CV-IndicatorBar" width="10" height="80"/>
+        <image name="Z-G-C-Bg" width="375" height="375"/>
         <image name="Z-G-C-BtnBg" width="20" height="20"/>
+        <image name="Z-G-CV-Bg" width="375" height="375"/>
+        <image name="Z-G-M-Bg" width="750" height="1314"/>
         <image name="Z-M-BtnBg" width="5" height="5"/>
         <image name="Z-M-Icon-Themes-Bottom" width="175" height="175"/>
         <image name="Z-M-Icon-Themes-Top" width="175" height="175"/>
