@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "volume-top-01.png"
+      "filename" : "volume-top-01.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x",
-      "filename" : "volume-top-01-1.png"
+      "filename" : "Volume(Bottom)@2x.png",
+      "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x",
-      "filename" : "volume-top-01-2.png"
+      "filename" : "volume-top-01-2.png",
+      "scale" : "3x"
     }
   ],
   "info" : {

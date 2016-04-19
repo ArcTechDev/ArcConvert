@@ -371,7 +371,7 @@
 
 - (IBAction)goToInformation:(id)sender{
     
-    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://neatconvert.yabi.me"]];
 }
 
 /*
