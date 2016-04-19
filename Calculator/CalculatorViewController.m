@@ -202,10 +202,12 @@
      */
     
     //register right edge pan
+    /*
     UIScreenEdgePanGestureRecognizer *rightEdgeGesture = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleRightEdgePanGesture:)];
     rightEdgeGesture.edges = UIRectEdgeRight;
     [self.view addGestureRecognizer:rightEdgeGesture];
-   
+   */
+    
     //setup mask view
     //[self setupMaskView];
     
@@ -228,7 +230,7 @@
     
     
     //show ad
-    [(NavController *)self.navigationController showAdWithFrame:CGRectMake(0, self.navigationController.view.frame.size.height-50, self.view.frame.size.width, 50)];
+    //[(NavController *)self.navigationController showAdWithFrame:CGRectMake(0, self.navigationController.view.frame.size.height-50, self.view.frame.size.width, 50)];
 
 }
 
@@ -239,10 +241,12 @@
 
 #pragma mark - override
 
+/*
 - (UIViewController *)getTutorialViewController{
     
     return [self.storyboard instantiateViewControllerWithIdentifier:@"CalculatorTutorialView"];
 }
+*/
 
 - (void)customizeView{
     
@@ -713,11 +717,13 @@
 }
  */
 
+/*
 #pragma mark - AdBannerViewDelegate
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
     
     NSLog(@"%@", error);
 }
+ */
 
 #pragma mark - Utility
 

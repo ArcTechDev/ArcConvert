@@ -19,6 +19,7 @@
     BOOL isSelected;
     
     CALayer *subLayer;
+    UIView *maskView;
 }
 
 @synthesize themSelected = _themSelected;
@@ -33,13 +34,30 @@
     
     isSelected = themSelected;
     
+    if(maskView == nil){
+        
+        /*
+        subLayer = [CALayer layer];
+        subLayer.bounds = CGRectMake(0, 0, self.layer.bounds.size.width, self.layer.bounds.size.height);
+        subLayer.backgroundColor = [UIColor whiteColor].CGColor;
+        subLayer.opacity = 0.5f;
+        */
+        
+        maskView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.layer.bounds.size.width, self.layer.bounds.size.height)];
+        maskView.backgroundColor = [UIColor whiteColor];
+        maskView.alpha = 0.7f;
+
+    }
+    
     if(themSelected == YES){
         
-        self.layer.borderColor = [UIColor redColor].CGColor;
+        self.layer.borderColor = [UIColor whiteColor].CGColor;
         self.layer.borderWidth = 5;
+        [self.layer addSublayer:maskView.layer];
     }
     else{
         
+        [maskView.layer removeFromSuperlayer];
         self.layer.borderWidth = 0;
     }
 }

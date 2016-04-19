@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "DelegateViewController.h"
+#import  <iAd/iAd.h>
+#import "NavController.h"
 
 
 
-@interface MainMenuViewController : DelegateViewController
+@interface MainMenuViewController : DelegateViewController<ADBannerViewDelegate>
 
 
 @end

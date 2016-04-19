@@ -74,6 +74,8 @@
     [self.view addGestureRecognizer:leftEdgeGesture];
      */
     
+    //show ad
+    [(NavController *)self.navigationController showAdWithFrame:CGRectMake(0, self.navigationController.view.frame.size.height-50, self.view.frame.size.width, 50)];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -366,7 +368,9 @@
 
 - (IBAction)goToCalculator:(id)sender{
     
-    [self.navigationController popViewControllerAnimated:YES];
+    //[self.navigationController popViewControllerAnimated:YES];
+    UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"CalculatorViewController"];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (IBAction)goToInformation:(id)sender{
