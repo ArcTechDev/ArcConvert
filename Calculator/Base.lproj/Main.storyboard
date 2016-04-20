@@ -103,7 +103,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rV3-3y-oaA" userLabel="Keyboard-View">
                                 <rect key="frame" x="0.0" y="189" width="600" height="361"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHe-O9-awJ" userLabel="AC-Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHe-O9-awJ" userLabel="AC-Button" customClass="RippleButton">
                                         <rect key="frame" x="0.0" y="0.0" width="147" height="70.5"/>
                                         <color key="tintColor" red="0.25098039220000001" green="0.80000000000000004" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="Z-C-BtnClearAll" backgroundImage="Z-G-C-BtnBg">
@@ -114,7 +114,7 @@
                                             <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dpb-Y9-zvc"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNI-rH-HS4" userLabel="PlusMinus-Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNI-rH-HS4" userLabel="PlusMinus-Button" customClass="RippleButton">
                                         <rect key="frame" x="149" y="0.0" width="147" height="70.5"/>
                                         <color key="tintColor" red="0.25098039220000001" green="0.80000000000000004" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="Z-C-BtnPlusMinus" backgroundImage="Z-G-C-BtnBg">
@@ -124,7 +124,7 @@
                                             <action selector="positiveAndNegativeSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zvf-7q-j5U"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vu-d4-4Qt" userLabel="Percent-Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vu-d4-4Qt" userLabel="Percent-Button" customClass="RippleButton">
                                         <rect key="frame" x="298" y="0.0" width="147" height="70.5"/>
                                         <color key="tintColor" red="0.25098039220000001" green="0.80000000000000004" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="Z-C-BtnPercent" backgroundImage="Z-G-C-BtnBg">
@@ -134,7 +134,7 @@
                                             <action selector="percentSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nvi-h5-7TY"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0B-rF-PEO" userLabel="Backward-Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0B-rF-PEO" userLabel="Backward-Button" customClass="RippleButton">
                                         <rect key="frame" x="447" y="0.0" width="147" height="70.5"/>
                                         <color key="tintColor" red="0.25098039220000001" green="0.80000000000000004" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="Z-C-BtnBackward" backgroundImage="Z-G-C-BtnBg">
@@ -144,7 +144,7 @@
                                             <action selector="backwardDelete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i9A-Lc-7v5"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NYA-c5-o61">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NYA-c5-o61" customClass="RippleButton">
                                         <rect key="frame" x="0.0" y="72" width="147" height="71"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -156,7 +156,7 @@
                                             <action selector="digitPress7:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JDy-1r-aPC"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fd-ef-CHg">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fd-ef-CHg" customClass="RippleButton">
                                         <rect key="frame" x="149" y="72" width="147" height="71"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -168,7 +168,7 @@
                                             <action selector="digitPress8:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pl2-0a-vQf"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l09-Hl-Sy0">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l09-Hl-Sy0" customClass="RippleButton">
                                         <rect key="frame" x="298" y="72" width="147" height="71"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -180,7 +180,7 @@
                                             <action selector="digitPress9:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qe7-98-ufv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUe-Da-lRE" userLabel="Divide-Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUe-Da-lRE" userLabel="Divide-Button" customClass="RippleButton">
                                         <rect key="frame" x="447" y="72" width="147" height="71"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="Z-C-BtnDivide" backgroundImage="Z-G-C-BtnBg"/>
@@ -188,7 +188,7 @@
                                             <action selector="divideSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tci-lJ-N14"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdf-Z7-7da">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdf-Z7-7da" customClass="RippleButton">
                                         <rect key="frame" x="0.0" y="145" width="147" height="70.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -200,7 +200,7 @@
                                             <action selector="digitPress4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hMr-qz-o9p"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nsy-Qq-G0R">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nsy-Qq-G0R" customClass="RippleButton">
                                         <rect key="frame" x="149" y="145" width="147" height="70.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -212,7 +212,7 @@
                                             <action selector="digitPress5:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qCE-vG-Rqk"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frH-dF-dLO">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frH-dF-dLO" customClass="RippleButton">
                                         <rect key="frame" x="298" y="145" width="147" height="70.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -224,7 +224,7 @@
                                             <action selector="digitPress6:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G1r-d3-smD"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFb-9F-VIA" userLabel="Time-Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFb-9F-VIA" userLabel="Time-Button" customClass="RippleButton">
                                         <rect key="frame" x="447" y="145" width="147" height="70.5"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="Z-C-BtnTime" backgroundImage="Z-G-C-BtnBg">
@@ -234,7 +234,7 @@
                                             <action selector="mutiplySign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OTV-nE-KTV"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYe-MW-AU7">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYe-MW-AU7" customClass="RippleButton">
                                         <rect key="frame" x="0.0" y="217" width="147" height="71"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -246,7 +246,7 @@
                                             <action selector="digitPress1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BI2-4A-QuO"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FeV-10-awx">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FeV-10-awx" customClass="RippleButton">
                                         <rect key="frame" x="149" y="217" width="147" height="71"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -258,7 +258,7 @@
                                             <action selector="digitPress2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WeX-r7-a6G"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCB-ZP-STN">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCB-ZP-STN" customClass="RippleButton">
                                         <rect key="frame" x="298" y="217" width="147" height="71"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -270,7 +270,7 @@
                                             <action selector="digitPress3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nOo-3X-EJe"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0RD-Mz-x0a" userLabel="Sub-Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0RD-Mz-x0a" userLabel="Sub-Button" customClass="RippleButton">
                                         <rect key="frame" x="447" y="217" width="147" height="71"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="Z-C-BtnSubtract" backgroundImage="Z-G-C-BtnBg">
@@ -280,7 +280,7 @@
                                             <action selector="subSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tZg-cw-1eQ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmB-qL-1Zm">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmB-qL-1Zm" customClass="RippleButton">
                                         <rect key="frame" x="0.0" y="290" width="147" height="70.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -295,7 +295,7 @@
                                             <action selector="digitPress0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9C7-lE-1DU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1n-4s-ypB" userLabel="Dot-Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1n-4s-ypB" userLabel="Dot-Button" customClass="RippleButton">
                                         <rect key="frame" x="149" y="290" width="147" height="70.5"/>
                                         <color key="tintColor" red="0.25098039220000001" green="0.80000000000000004" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="Z-C-BtnDot" backgroundImage="Z-G-C-BtnBg">
@@ -305,7 +305,7 @@
                                             <action selector="decimalSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xxk-nb-57X"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUM-iF-1j0" userLabel="Equal-Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUM-iF-1j0" userLabel="Equal-Button" customClass="RippleButton">
                                         <rect key="frame" x="298" y="290" width="147" height="70.5"/>
                                         <color key="tintColor" red="0.25098039220000001" green="0.80000000000000004" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="Z-C-BtnEqual" backgroundImage="Z-G-C-BtnBg">
@@ -315,7 +315,7 @@
                                             <action selector="equalSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="00v-ca-PFD"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dg-NW-448" userLabel="Add-Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dg-NW-448" userLabel="Add-Button" customClass="RippleButton">
                                         <rect key="frame" x="447" y="290" width="147" height="70.5"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="Z-C-BtnAdd" backgroundImage="Z-G-C-BtnBg">
@@ -1533,7 +1533,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ejK-L6-aQc" userLabel="Keyboard-View">
                                 <rect key="frame" x="0.0" y="206" width="600" height="344"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGJ-Vk-sUk" userLabel="C-Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGJ-Vk-sUk" userLabel="C-Button" customClass="RippleButton">
                                         <rect key="frame" x="0.0" y="0.0" width="198.5" height="55"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1544,7 +1544,7 @@
                                             <action selector="clear:" destination="d0a-7M-0vG" eventType="touchUpInside" id="ieW-SF-DTr"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCV-6c-23F" userLabel="Backward-Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCV-6c-23F" userLabel="Backward-Button" customClass="RippleButton">
                                         <rect key="frame" x="200.5" y="0.0" width="399.5" height="55"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="Z-CV-BtnBackward" backgroundImage="Z-G-C-BtnBg">
@@ -1554,7 +1554,7 @@
                                             <action selector="backwardDelete:" destination="d0a-7M-0vG" eventType="touchUpInside" id="TzF-q5-ZsC"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwo-8V-VSc">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwo-8V-VSc" customClass="RippleButton">
                                         <rect key="frame" x="0.0" y="290" width="399" height="54"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1565,7 +1565,7 @@
                                             <action selector="digitPress0:" destination="d0a-7M-0vG" eventType="touchUpInside" id="1ho-ZR-Hi2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLW-P6-ZUr">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLW-P6-ZUr" customClass="RippleButton">
                                         <rect key="frame" x="0.0" y="57" width="198.5" height="75.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1576,7 +1576,7 @@
                                             <action selector="digitPress7:" destination="d0a-7M-0vG" eventType="touchUpInside" id="oin-hK-lns"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2Q-na-HY8">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2Q-na-HY8" customClass="RippleButton">
                                         <rect key="frame" x="0.0" y="134" width="198.5" height="76"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1587,7 +1587,7 @@
                                             <action selector="digitPress4:" destination="d0a-7M-0vG" eventType="touchUpInside" id="UY0-Qt-BfJ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z55-N3-wYB">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z55-N3-wYB" customClass="RippleButton">
                                         <rect key="frame" x="200.5" y="134" width="198.5" height="76"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1598,7 +1598,7 @@
                                             <action selector="digitPress5:" destination="d0a-7M-0vG" eventType="touchUpInside" id="PAU-EL-hXp"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQ1-jl-r4o">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQ1-jl-r4o" customClass="RippleButton">
                                         <rect key="frame" x="200.5" y="212" width="198.5" height="75.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1609,7 +1609,7 @@
                                             <action selector="digitPress2:" destination="d0a-7M-0vG" eventType="touchUpInside" id="ADo-sS-Sx4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlK-tO-s5V">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlK-tO-s5V" customClass="RippleButton">
                                         <rect key="frame" x="401" y="212" width="198.5" height="75.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1620,7 +1620,7 @@
                                             <action selector="digitPress3:" destination="d0a-7M-0vG" eventType="touchUpInside" id="VfC-C4-kLr"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AH-Zx-VMr">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AH-Zx-VMr" customClass="RippleButton">
                                         <rect key="frame" x="401" y="134" width="198.5" height="76"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1631,7 +1631,7 @@
                                             <action selector="digitPress6:" destination="d0a-7M-0vG" eventType="touchUpInside" id="Nr1-Hh-MgS"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQi-Qy-W1K">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQi-Qy-W1K" customClass="RippleButton">
                                         <rect key="frame" x="0.0" y="212" width="198.5" height="75.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1642,7 +1642,7 @@
                                             <action selector="digitPress1:" destination="d0a-7M-0vG" eventType="touchUpInside" id="RPy-g5-3Q4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IuK-vu-fa6">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IuK-vu-fa6" customClass="RippleButton">
                                         <rect key="frame" x="200.5" y="57" width="199" height="75.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1653,7 +1653,7 @@
                                             <action selector="digitPress8:" destination="d0a-7M-0vG" eventType="touchUpInside" id="dDh-RU-uCz"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOM-EB-va3">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOM-EB-va3" customClass="RippleButton">
                                         <rect key="frame" x="402" y="57" width="198.5" height="75.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1664,7 +1664,7 @@
                                             <action selector="digitPress9:" destination="d0a-7M-0vG" eventType="touchUpInside" id="883-h2-1xt"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pfn-G4-vv9" userLabel="Dot-Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pfn-G4-vv9" userLabel="Dot-Button" customClass="RippleButton">
                                         <rect key="frame" x="401" y="290" width="199" height="54"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="Z-CV-BtnDot" backgroundImage="Z-G-C-BtnBg">
@@ -2041,11 +2041,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3J-u2-rYx">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="Lth-cx-63a"/>
+                                </items>
+                            </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pwE-dC-ipA">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="z53-k2-5ch">
-                                <rect key="frame" x="0.0" y="20" width="600" height="530"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="486"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="tBD-5h-eIE">
                                     <size key="itemSize" width="184" height="336"/>
@@ -2094,16 +2100,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="z53-k2-5ch" firstAttribute="leading" secondItem="y4Y-2q-KSx" secondAttribute="leading" id="ApQ-Hs-CS6"/>
+                            <constraint firstItem="h3J-u2-rYx" firstAttribute="top" secondItem="GZH-aQ-4Tw" secondAttribute="bottom" id="4lf-lT-Nrv"/>
+                            <constraint firstItem="z53-k2-5ch" firstAttribute="top" secondItem="h3J-u2-rYx" secondAttribute="bottom" id="8cH-QV-R4g"/>
+                            <constraint firstAttribute="trailing" secondItem="z53-k2-5ch" secondAttribute="trailing" id="DDN-2m-XuC"/>
                             <constraint firstAttribute="trailing" secondItem="pwE-dC-ipA" secondAttribute="trailing" id="Gnn-wM-fjB"/>
+                            <constraint firstItem="h3J-u2-rYx" firstAttribute="leading" secondItem="y4Y-2q-KSx" secondAttribute="leading" id="KB0-cF-OQ5"/>
                             <constraint firstItem="omR-VO-3Ng" firstAttribute="top" secondItem="pwE-dC-ipA" secondAttribute="bottom" id="KXC-4T-gV3"/>
+                            <constraint firstAttribute="trailing" secondItem="h3J-u2-rYx" secondAttribute="trailing" id="MIg-v1-Q35"/>
                             <constraint firstAttribute="trailing" secondItem="H5K-rZ-qxm" secondAttribute="trailing" id="NyN-VG-gpu"/>
-                            <constraint firstItem="z53-k2-5ch" firstAttribute="bottom" secondItem="H5K-rZ-qxm" secondAttribute="top" id="T35-tS-dGI"/>
                             <constraint firstItem="H5K-rZ-qxm" firstAttribute="leading" secondItem="y4Y-2q-KSx" secondAttribute="leading" id="TlS-bK-1Tg"/>
+                            <constraint firstItem="z53-k2-5ch" firstAttribute="leading" secondItem="y4Y-2q-KSx" secondAttribute="leading" id="Wtu-79-Dhs"/>
                             <constraint firstItem="omR-VO-3Ng" firstAttribute="top" secondItem="H5K-rZ-qxm" secondAttribute="bottom" id="Xsq-dQ-t2Y"/>
                             <constraint firstItem="pwE-dC-ipA" firstAttribute="leading" secondItem="y4Y-2q-KSx" secondAttribute="leading" id="g9x-Gr-6U7"/>
-                            <constraint firstItem="z53-k2-5ch" firstAttribute="top" secondItem="GZH-aQ-4Tw" secondAttribute="bottom" id="n72-02-Q8g"/>
-                            <constraint firstAttribute="trailing" secondItem="z53-k2-5ch" secondAttribute="trailing" id="udc-oz-Mzb"/>
+                            <constraint firstItem="H5K-rZ-qxm" firstAttribute="top" secondItem="z53-k2-5ch" secondAttribute="bottom" id="z3S-bI-1Yf"/>
                             <constraint firstItem="pwE-dC-ipA" firstAttribute="top" secondItem="y4Y-2q-KSx" secondAttribute="top" id="zLR-8y-uWy"/>
                         </constraints>
                     </view>

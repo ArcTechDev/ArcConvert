@@ -10,6 +10,7 @@
 #import "ConverterViewController.h"
 #import "MainMenuBtnView.h"
 
+
 @interface MainMenuViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *bgView;
@@ -42,6 +43,8 @@
     //so we can use this view as bottom layer when panning
     //this view
     UIView *previousView;
+    
+    __weak UIButton *tappedButton;
 }
 
 @synthesize bgView = _bgView;
@@ -76,6 +79,9 @@
     
     //show ad
     [(NavController *)self.navigationController showAdWithFrame:CGRectMake(0, self.navigationController.view.frame.size.height-50, self.view.frame.size.width, 50)];
+    
+    //add transition animaitoin
+    [(NavController *)self.navigationController addTransitionAnimation:[[CircleTransition alloc] initWithDelegate:self] forViewController:self];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -280,6 +286,8 @@
 #pragma mark - IBActions
 - (IBAction)goToLengthConverter:(id)sender{
     
+    tappedButton = sender;
+    
     ConverterViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ConverterViewController"];
     
     [controller setConversionType:CLength];
@@ -288,6 +296,8 @@
 }
 
 - (IBAction)goToTemperatureConverter:(id)sender{
+    
+    tappedButton = sender;
     
     ConverterViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ConverterViewController"];
     
@@ -298,6 +308,8 @@
 
 - (IBAction)goToSpeedConverter:(id)sender{
     
+    tappedButton = sender;
+    
     ConverterViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ConverterViewController"];
     
     [controller setConversionType:CSpeed];
@@ -306,6 +318,8 @@
 }
 
 - (IBAction)goToAreaConverter:(id)sender{
+    
+    tappedButton = sender;
     
     ConverterViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ConverterViewController"];
     
@@ -325,6 +339,8 @@
 
 - (IBAction)goToWeightConverter:(id)sender{
     
+    tappedButton = sender;
+    
     ConverterViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ConverterViewController"];
     
     [controller setConversionType:CWeight];
@@ -333,6 +349,8 @@
 }
 
 - (IBAction)goToTimeConverter:(id)sender{
+    
+    tappedButton = sender;
     
     ConverterViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ConverterViewController"];
     
@@ -343,6 +361,8 @@
 
 - (IBAction)goToDataConverter:(id)sender{
     
+    tappedButton = sender;
+    
     ConverterViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ConverterViewController"];
     
     [controller setConversionType:CData];
@@ -351,6 +371,8 @@
 }
 
 - (IBAction)goToCurrencyConverter:(id)sender{
+    
+    tappedButton = sender;
     
     ConverterViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ConverterViewController"];
     
@@ -361,12 +383,18 @@
 
 - (IBAction)goToThemes:(id)sender{
     
+    tappedButton = sender;
+    
     UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ThemePickerView"];
     
     [self.navigationController pushViewController:controller animated:YES];
+
+
 }
 
 - (IBAction)goToCalculator:(id)sender{
+    
+    tappedButton = sender;
     
     //[self.navigationController popViewControllerAnimated:YES];
     UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"CalculatorViewController"];
@@ -376,6 +404,20 @@
 - (IBAction)goToInformation:(id)sender{
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://neatconvert.yabi.me"]];
+}
+
+#pragma mark - CircleTransitionDelegate
+- (NSTimeInterval)transitionDuration{
+    
+    return 0.5f;
+}
+
+- (UIView *)transitionBeginView{
+    
+    if(tappedButton != nil)
+        return tappedButton;
+    
+    return self.view;
 }
 
 /*

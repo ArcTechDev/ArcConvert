@@ -79,6 +79,8 @@
 		CE87C85C1B8F04CB00EA3305 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE87C8581B8F033C00EA3305 /* Lato-Medium.ttf */; };
 		CE87C85E1B8F06EB00EA3305 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE87C85D1B8F06C600EA3305 /* Lato-Regular.ttf */; };
 		CE87C87F1B8F145800EA3305 /* Neon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE87C87E1B8F140400EA3305 /* Neon.ttf */; };
+		CEAF1BF91CC7325300997D20 /* RippleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAF1BF81CC7325300997D20 /* RippleButton.m */; };
+		CEAF1BFD1CC7625D00997D20 /* CircleTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAF1BFC1CC7625D00997D20 /* CircleTransition.m */; };
 		CEB79A361B857082001C7806 /* RecordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB79A351B857082001C7806 /* RecordManager.m */; };
 		CEB79A3C1B858399001C7806 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB79A3B1B858399001C7806 /* Helper.m */; };
 		CEC991441B998E510071442A /* MainMenuBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC991431B998E510071442A /* MainMenuBtnView.m */; };
@@ -251,6 +253,10 @@
 		CE87C8581B8F033C00EA3305 /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Medium.ttf"; sourceTree = "<group>"; };
 		CE87C85D1B8F06C600EA3305 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		CE87C87E1B8F140400EA3305 /* Neon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Neon.ttf; sourceTree = "<group>"; };
+		CEAF1BF71CC7325300997D20 /* RippleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RippleButton.h; sourceTree = "<group>"; };
+		CEAF1BF81CC7325300997D20 /* RippleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RippleButton.m; sourceTree = "<group>"; };
+		CEAF1BFB1CC7625D00997D20 /* CircleTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleTransition.h; sourceTree = "<group>"; };
+		CEAF1BFC1CC7625D00997D20 /* CircleTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleTransition.m; sourceTree = "<group>"; };
 		CEB79A341B857082001C7806 /* RecordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordManager.h; sourceTree = "<group>"; };
 		CEB79A351B857082001C7806 /* RecordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordManager.m; sourceTree = "<group>"; };
 		CEB79A3A1B858399001C7806 /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
@@ -636,6 +642,33 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		CEAF1BF51CC7322700997D20 /* Customization */ = {
+			isa = PBXGroup;
+			children = (
+				CEAF1BFA1CC7621800997D20 /* NavViewTransition */,
+				CEAF1BF61CC7323C00997D20 /* Button */,
+			);
+			name = Customization;
+			sourceTree = "<group>";
+		};
+		CEAF1BF61CC7323C00997D20 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				CEAF1BF71CC7325300997D20 /* RippleButton.h */,
+				CEAF1BF81CC7325300997D20 /* RippleButton.m */,
+			);
+			name = Button;
+			sourceTree = "<group>";
+		};
+		CEAF1BFA1CC7621800997D20 /* NavViewTransition */ = {
+			isa = PBXGroup;
+			children = (
+				CEAF1BFB1CC7625D00997D20 /* CircleTransition.h */,
+				CEAF1BFC1CC7625D00997D20 /* CircleTransition.m */,
+			);
+			name = NavViewTransition;
+			sourceTree = "<group>";
+		};
 		CEB79A2D1B856F5E001C7806 /* LeftMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -697,6 +730,7 @@
 			children = (
 				CE6CFE1A1B958154006682C7 /* Frameworks */,
 				CE2E28091B9032510079012D /* ThirdParty */,
+				CEAF1BF51CC7322700997D20 /* Customization */,
 				CE2E28081B8FFEA30079012D /* NavController */,
 				CE87C8541B8F014E00EA3305 /* Resources */,
 				CECF87A71B8DAC7C00733B8B /* Category */,
@@ -905,6 +939,7 @@
 				CE43B4221B8462F80010B514 /* LeftMenuItemCell.m in Sources */,
 				CE2E285E1B9048020079012D /* DDIlluminationUnitConverter.m in Sources */,
 				CE2E28231B903D160079012D /* UnitPickCell.m in Sources */,
+				CEAF1BF91CC7325300997D20 /* RippleButton.m in Sources */,
 				CE2E28611B9048020079012D /* DDMagnitudeUnitConverter.m in Sources */,
 				CE2E28121B9032850079012D /* FPPopoverView.m in Sources */,
 				CE2E285D1B9048020079012D /* DDForceUnitConverter.m in Sources */,
@@ -944,6 +979,7 @@
 				CE6CFE341B958264006682C7 /* ASIHTTPRequest.m in Sources */,
 				CE2E286C1B9048020079012D /* NSDecimalNumber+DDConstants.m in Sources */,
 				CE2E28111B9032850079012D /* FPPopoverController.m in Sources */,
+				CEAF1BFD1CC7625D00997D20 /* CircleTransition.m in Sources */,
 				CECB4B571B81BDC900F4EBCD /* main.m in Sources */,
 				CECF87AA1B8DADBF00733B8B /* CategoryEx.m in Sources */,
 				CE6CFE471B9583A3006682C7 /* SBJson4Parser.m in Sources */,

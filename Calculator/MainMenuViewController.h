@@ -10,10 +10,11 @@
 #import "DelegateViewController.h"
 #import  <iAd/iAd.h>
 #import "NavController.h"
+#import "CircleTransition.h"
 
 
 
-@interface MainMenuViewController : DelegateViewController<ADBannerViewDelegate>
+@interface MainMenuViewController : DelegateViewController<ADBannerViewDelegate, CircleTransitionDelegate>
 
 
 @end

@@ -44,7 +44,6 @@
     
     [super viewWillAppear:animated];
     
-    [self.navigationController setNavigationBarHidden:!_showNavigationBar animated:YES];
     
     if(!isCustomize){
         
@@ -66,6 +65,8 @@
 - (void)viewDidAppear:(BOOL)animated{
     
     [super viewDidAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:!_showNavigationBar animated:YES];
     
     self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
     self.navigationController.interactivePopGestureRecognizer.enabled = YES;

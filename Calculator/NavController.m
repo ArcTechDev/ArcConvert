@@ -18,6 +18,7 @@
 @implementation NavController{
     
     ADBannerView *adView;
+    NSMutableDictionary *animationDic;
 }
 
 - (void)viewDidLoad {
@@ -43,6 +44,21 @@
     }
 }
 
+- (void)addTransitionAnimation:(id<UIViewControllerAnimatedTransitioning>)anim forViewController:(UIViewController *)viewController{
+    
+    if(animationDic == nil){
+        
+        animationDic = [[NSMutableDictionary alloc] init];
+    }
+    
+    NSString *className = NSStringFromClass([viewController class]);
+    
+    if([animationDic valueForKey:className] == nil){
+        
+        [animationDic setValue:anim forKey:className];
+    }
+}
+
 #pragma mark - UINavigationController delegate
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
     
@@ -52,6 +68,18 @@
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
     
 
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC{
+ 
+    NSString *className = NSStringFromClass([fromVC class]);
+    
+    if(animationDic != nil && [animationDic valueForKey:className] != nil){
+        
+        return [animationDic valueForKey:className];
+    }
+    
+    return nil;
 }
 
 #pragma mark - ADBannerView delegate
