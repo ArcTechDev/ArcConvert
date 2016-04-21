@@ -12,6 +12,10 @@
 #import "DDUnitConversion.h"
 #import "ConverterManager.h"
 #import "DelegateViewController.h"
+#import "CurrencyManager.h"
+#import "UIView+RNActivityView.h"
+#import "UIView+Toast.h"
+
 
 //the max of digital include decimal user can input 
 #define conversionMaxDigitalInput 12

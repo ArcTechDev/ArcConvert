@@ -2,6 +2,9 @@
 # platform :ios, '6.0'
 
 target 'Calculator' do
+    
+    pod 'AFNetworking'
+    pod 'Toast'
 
 end
 
