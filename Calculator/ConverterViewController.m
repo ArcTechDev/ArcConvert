@@ -166,6 +166,10 @@
     
     [self.navigationController.navigationBar setTitleTextAttributes:titleBarAttributes];
     
+    //Nav bar items tint color
+    self.navigationController.navigationBar.tintColor = [self requestUIData:@"Converter/NavBar/TitleFontColor"];
+
+    
     //Nav bar Translucent
     [self.navigationController.navigationBar setTranslucent:[[self requestUIData:@"Converter/NavBar/Translucent"] boolValue]];
     

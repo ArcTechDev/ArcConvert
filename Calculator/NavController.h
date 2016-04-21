@@ -12,5 +12,6 @@
 @interface NavController : UINavigationController<UINavigationControllerDelegate, ADBannerViewDelegate>
 
 - (void)showAdWithFrame:(CGRect)frame;
+- (void)addTransitionAnimation:(id<UIViewControllerAnimatedTransitioning>)anim forViewController:(UIViewController *)viewController;
 
 @end
