@@ -330,6 +330,8 @@
 
 - (IBAction)goToVolumeConverter:(id)sender{
     
+    tappedButton = sender;
+    
     ConverterViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ConverterViewController"];
     
     [controller setConversionType:CVolume];

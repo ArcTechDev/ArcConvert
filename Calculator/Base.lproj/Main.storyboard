@@ -67,7 +67,7 @@
         <!--Calculator View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="CalculatorViewController" id="BYZ-38-t0r" customClass="CalculatorViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalculatorViewController" extendedLayoutIncludesOpaqueBars="YES" id="BYZ-38-t0r" customClass="CalculatorViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -1446,7 +1446,7 @@
         <!--Converter View Controller-->
         <scene sceneID="Cj8-8f-NKv">
             <objects>
-                <viewController storyboardIdentifier="ConverterViewController" id="d0a-7M-0vG" customClass="ConverterViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConverterViewController" extendedLayoutIncludesOpaqueBars="YES" id="d0a-7M-0vG" customClass="ConverterViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UX9-Xn-MHY"/>
                         <viewControllerLayoutGuide type="bottom" id="cCw-eo-fjq"/>
@@ -1798,6 +1798,7 @@
                             <constraint firstItem="VcY-81-jAb" firstAttribute="width" secondItem="fKZ-Fh-c4w" secondAttribute="width" id="3iX-G2-pvf"/>
                             <constraint firstItem="fKZ-Fh-c4w" firstAttribute="leading" secondItem="Aom-kg-N8P" secondAttribute="leading" id="4Mp-tQ-08s"/>
                             <constraint firstAttribute="centerX" secondItem="fKZ-Fh-c4w" secondAttribute="centerX" id="4p2-tY-yDN"/>
+                            <constraint firstItem="fKZ-Fh-c4w" firstAttribute="top" secondItem="UX9-Xn-MHY" secondAttribute="bottom" id="8Dk-rc-WpJ"/>
                             <constraint firstItem="ejK-L6-aQc" firstAttribute="leading" secondItem="Aom-kg-N8P" secondAttribute="leading" id="9kM-Zb-gpl"/>
                             <constraint firstItem="cCw-eo-fjq" firstAttribute="top" secondItem="fA1-t0-nUw" secondAttribute="bottom" id="B93-TR-CjX"/>
                             <constraint firstAttribute="trailing" secondItem="jVb-gA-LkR" secondAttribute="trailing" id="BdX-dx-SQw"/>
@@ -1820,7 +1821,6 @@
                             <constraint firstItem="ejK-L6-aQc" firstAttribute="top" secondItem="jVb-gA-LkR" secondAttribute="bottom" id="qrx-4v-pug"/>
                             <constraint firstAttribute="trailing" secondItem="fKZ-Fh-c4w" secondAttribute="trailing" id="tvG-qw-4ma"/>
                             <constraint firstAttribute="centerX" secondItem="ejK-L6-aQc" secondAttribute="centerX" id="uCE-TB-g5O"/>
-                            <constraint firstItem="fKZ-Fh-c4w" firstAttribute="top" secondItem="UX9-Xn-MHY" secondAttribute="bottom" id="y4b-om-2fQ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -2032,7 +2032,7 @@
         <!--Theme Picker View Controller-->
         <scene sceneID="Xx5-Uy-2xE">
             <objects>
-                <viewController storyboardIdentifier="ThemePickerView" id="asf-km-QzP" customClass="ThemePickerViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ThemePickerView" extendedLayoutIncludesOpaqueBars="YES" id="asf-km-QzP" customClass="ThemePickerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GZH-aQ-4Tw"/>
                         <viewControllerLayoutGuide type="bottom" id="omR-VO-3Ng"/>
@@ -2041,17 +2041,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3J-u2-rYx">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="Lth-cx-63a"/>
-                                </items>
-                            </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pwE-dC-ipA">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H5K-rZ-qxm" userLabel="Banner-View">
+                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gpT-LD-CEV"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="lXo-By-gRB"/>
+                                </constraints>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="z53-k2-5ch">
-                                <rect key="frame" x="0.0" y="64" width="600" height="486"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="530"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="tBD-5h-eIE">
                                     <size key="itemSize" width="184" height="336"/>
@@ -2089,30 +2091,19 @@
                                     <outlet property="delegate" destination="asf-km-QzP" id="iKE-jO-nM4"/>
                                 </connections>
                             </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H5K-rZ-qxm" userLabel="Banner-View">
-                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="gpT-LD-CEV"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="lXo-By-gRB"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="h3J-u2-rYx" firstAttribute="top" secondItem="GZH-aQ-4Tw" secondAttribute="bottom" id="4lf-lT-Nrv"/>
-                            <constraint firstItem="z53-k2-5ch" firstAttribute="top" secondItem="h3J-u2-rYx" secondAttribute="bottom" id="8cH-QV-R4g"/>
-                            <constraint firstAttribute="trailing" secondItem="z53-k2-5ch" secondAttribute="trailing" id="DDN-2m-XuC"/>
+                            <constraint firstItem="H5K-rZ-qxm" firstAttribute="top" secondItem="z53-k2-5ch" secondAttribute="bottom" id="87I-Ef-1fC"/>
+                            <constraint firstItem="z53-k2-5ch" firstAttribute="top" secondItem="GZH-aQ-4Tw" secondAttribute="bottom" id="9aa-Zk-W1P"/>
+                            <constraint firstItem="z53-k2-5ch" firstAttribute="leading" secondItem="y4Y-2q-KSx" secondAttribute="leading" id="D96-ST-sCQ"/>
                             <constraint firstAttribute="trailing" secondItem="pwE-dC-ipA" secondAttribute="trailing" id="Gnn-wM-fjB"/>
-                            <constraint firstItem="h3J-u2-rYx" firstAttribute="leading" secondItem="y4Y-2q-KSx" secondAttribute="leading" id="KB0-cF-OQ5"/>
+                            <constraint firstAttribute="trailing" secondItem="z53-k2-5ch" secondAttribute="trailing" id="JFH-lF-xFc"/>
                             <constraint firstItem="omR-VO-3Ng" firstAttribute="top" secondItem="pwE-dC-ipA" secondAttribute="bottom" id="KXC-4T-gV3"/>
-                            <constraint firstAttribute="trailing" secondItem="h3J-u2-rYx" secondAttribute="trailing" id="MIg-v1-Q35"/>
                             <constraint firstAttribute="trailing" secondItem="H5K-rZ-qxm" secondAttribute="trailing" id="NyN-VG-gpu"/>
                             <constraint firstItem="H5K-rZ-qxm" firstAttribute="leading" secondItem="y4Y-2q-KSx" secondAttribute="leading" id="TlS-bK-1Tg"/>
-                            <constraint firstItem="z53-k2-5ch" firstAttribute="leading" secondItem="y4Y-2q-KSx" secondAttribute="leading" id="Wtu-79-Dhs"/>
                             <constraint firstItem="omR-VO-3Ng" firstAttribute="top" secondItem="H5K-rZ-qxm" secondAttribute="bottom" id="Xsq-dQ-t2Y"/>
                             <constraint firstItem="pwE-dC-ipA" firstAttribute="leading" secondItem="y4Y-2q-KSx" secondAttribute="leading" id="g9x-Gr-6U7"/>
-                            <constraint firstItem="H5K-rZ-qxm" firstAttribute="top" secondItem="z53-k2-5ch" secondAttribute="bottom" id="z3S-bI-1Yf"/>
                             <constraint firstItem="pwE-dC-ipA" firstAttribute="top" secondItem="y4Y-2q-KSx" secondAttribute="top" id="zLR-8y-uWy"/>
                         </constraints>
                     </view>

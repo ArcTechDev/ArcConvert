@@ -44,6 +44,7 @@
     
     [super viewWillAppear:animated];
     
+    [self.navigationController setNavigationBarHidden:!_showNavigationBar animated:NO];
     
     if(!isCustomize){
         
@@ -66,7 +67,6 @@
     
     [super viewDidAppear:animated];
     
-    [self.navigationController setNavigationBarHidden:!_showNavigationBar animated:YES];
     
     self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
     self.navigationController.interactivePopGestureRecognizer.enabled = YES;
@@ -128,6 +128,10 @@
     [tapGesture setNumberOfTouchesRequired:1];
     
     return tapGesture;
+}
+
+- (void)dismissTutorialView{
+    
 }
 
 #pragma mark - TutorialManager delegate
