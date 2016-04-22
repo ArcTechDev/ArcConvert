@@ -439,6 +439,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="tky-8Q-bcu"/>
                     <connections>
+                        <outlet property="adbannerConstraint" destination="I7x-3B-vPc" id="ecK-Tj-eKU"/>
                         <outlet property="bg" destination="rd8-36-fEn" id="bmh-jk-wdQ"/>
                         <outlet property="btn0" destination="fmB-qL-1Zm" id="Sf7-aJ-ysS"/>
                         <outlet property="btn1" destination="pYe-MW-AU7" id="sbs-9m-LDT"/>
@@ -1386,6 +1387,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="7ca-uY-V6l"/>
                     <connections>
+                        <outlet property="adbannerConstraint" destination="hTs-wR-eWN" id="7gd-ss-sGe"/>
                         <outlet property="bgView" destination="E6F-Nf-396" id="xtp-3b-t6R"/>
                         <outlet property="btnAreaView" destination="g0f-UG-YzL" id="Juc-5y-g6S"/>
                         <outlet property="btnCalculatorView" destination="HcW-wm-p3N" id="agE-Yg-Sh3"/>
@@ -1824,6 +1826,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="adbannerConstraint" destination="AKQ-Cv-JSa" id="uri-r2-yZg"/>
                         <outlet property="bgImageView" destination="Uhs-e2-4mW" id="60J-Sh-1bM"/>
                         <outlet property="btn0" destination="Wwo-8V-VSc" id="3a7-Rw-XNg"/>
                         <outlet property="btn1" destination="UQi-Qy-W1K" id="3RH-QB-l1e"/>
@@ -2049,7 +2052,6 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="gpT-LD-CEV"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="lXo-By-gRB"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="z53-k2-5ch">
@@ -2108,6 +2110,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="adbannerConstraint" destination="gpT-LD-CEV" id="BkI-2t-jEJ"/>
                         <outlet property="bgImageView" destination="pwE-dC-ipA" id="r9W-Jh-myB"/>
                     </connections>
                 </viewController>

@@ -54,7 +54,9 @@
         
         adRect = CGRectMake(0, self.view.frame.size.height-adbannerHeight, [UIScreen mainScreen].bounds.size.width, adbannerHeight);
         
-        adView = [[ADBannerView alloc] initWithFrame:CGRectMake(adRect.origin.x, self.view.frame.size.height, adRect.size.width, adRect.size.height)];
+        //adView = [[ADBannerView alloc] initWithFrame:CGRectMake(adRect.origin.x, self.view.frame.size.height, adRect.size.width, adRect.size.height)];
+        adView = [[ADBannerView alloc] initWithAdType:ADAdTypeBanner];
+        adView.frame = CGRectMake(adRect.origin.x, self.view.frame.size.height, adRect.size.width, adRect.size.height);
         adView.delegate = self;
         
         [self.view addSubview: adView];
@@ -112,13 +114,19 @@
 #pragma mark - UINavigationController delegate
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
     
-    /*
+    
+    
+    
+}
+
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    
     if([viewController isKindOfClass:[DelegateViewController class]]){
         
         DelegateViewController *controller = (DelegateViewController *)viewController;
         
         if(adLoaded){
-
+            
             if(adView.frame.origin.y == adRect.origin.y)
                 [controller updateAdBannerConstraintWithValue:adbannerHeight];
             else
@@ -126,16 +134,11 @@
         }
         else{
             
-            [controller updateAdBannerConstraintWithValue:0.0f];
+            //[controller updateAdBannerConstraintWithValue:0.0f];
+            [controller showAdBannerConstraintWithValue:0.0f withAnimDuration:0.3f];
         }
         
     }
-     */
-}
-
-- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
-    
-
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC{
@@ -163,7 +166,7 @@
     
     adLoaded = YES;
     
-    //[self moveAdOnScreen];
+    [self moveAdOnScreen];
 }
 
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
@@ -172,7 +175,7 @@
     
     adLoaded = NO;
     
-    //[self moveAdOffScreen];
+    [self moveAdOffScreen];
 }
 
 /*

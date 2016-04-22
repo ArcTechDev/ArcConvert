@@ -166,7 +166,7 @@
             [self.view hideActivityView];
             
             NSString *toast = [NSString stringWithFormat:@"Currency data updated %@", lastUpdate];
-            [self.view makeToast:toast duration:4.0f position:[NSValue valueWithCGPoint:CGPointMake([UIScreen mainScreen].bounds.size.width/2.0f, [UIScreen mainScreen].bounds.size.height/2.0f)]];
+            [self.view makeToast:toast duration:3.0f position:[NSValue valueWithCGPoint:CGPointMake([UIScreen mainScreen].bounds.size.width/2.0f, [UIScreen mainScreen].bounds.size.height/2.0f)]];
             
             
         } fail:^(NSError *error) {

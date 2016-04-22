@@ -10,7 +10,7 @@
 #import <iAd/ADBannerView.h>
 
 #define adbannerHeight 50.0f
-#define adbannerAnimDuration 2.0f
+#define adbannerAnimDuration 1.0f
 
 @interface NavController : UINavigationController<UINavigationControllerDelegate, ADBannerViewDelegate>
 
