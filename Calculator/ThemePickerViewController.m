@@ -13,6 +13,7 @@
 @interface ThemePickerViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *bgImageView;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
@@ -28,6 +29,7 @@
     // Do any additional setup after loading the view.
     
     self.showNavigationBar = YES;
+    
 }
 
 - (void)didReceiveMemoryWarning {

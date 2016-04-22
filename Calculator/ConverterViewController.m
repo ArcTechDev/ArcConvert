@@ -8,7 +8,7 @@
 
 #import "ConverterViewController.h"
 #import "Helper.h"
-#import "Reachability.h"
+#import "AFNetworking.h"
 #import "ConverterInputView.h"
 
 @interface ConverterViewController ()
@@ -117,8 +117,21 @@
     
     [super viewDidAppear:animated];
     
-    [self showCurrencyNote];
+    //[self showCurrencyNote];
     
+    if(convertType == CCurrency){
+        
+        //[self updateCurrency];
+        
+        [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+        
+        [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+            
+            [self updateCurrency];
+        }];
+        
+        
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -139,6 +152,56 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Currency update
+- (void)updateCurrency{
+    
+    if(convertType == CCurrency){
+        
+        [self.view showActivityViewWithLabel:@"Updating currency data..."];
+        
+        [[CurrencyManager sharedManager] refreshCurrencyDataWith:^(CurrencyManager *manager, NSString *lastUpdate) {
+            
+            [self.view hideActivityView];
+            
+            NSString *toast = [NSString stringWithFormat:@"Currency data updated %@", lastUpdate];
+            [self.view makeToast:toast duration:3.0f position:[NSValue valueWithCGPoint:CGPointMake([UIScreen mainScreen].bounds.size.width/2.0f, [UIScreen mainScreen].bounds.size.height/2.0f)]];
+            
+            
+        } fail:^(NSError *error) {
+            
+            [self.view hideActivityView];
+            
+            if(error.code == -1009){
+                
+                if([[CurrencyManager sharedManager] islocalDataVaild]){
+                    
+                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Warning" message:@"Currency data not up to date, but you still can convert offline!" preferredStyle:UIAlertControllerStyleAlert];
+                    
+                    UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+                    [alert addAction:action];
+                    
+                    [self presentViewController:alert animated:YES completion:nil];
+                }
+                else{//local data not vaild
+                    
+                    UIAlertController *alert = [[CurrencyManager sharedManager] alertControllerByErrorCode:Error_Local_Data_Not_Avaliable];
+                    
+                    [self presentViewController:alert animated:YES completion:nil];
+                }
+            }
+            else{
+                
+                UIAlertController *alert = [[CurrencyManager sharedManager] alertControllerByErrorCode:error.code];
+                
+                [self presentViewController:alert animated:YES completion:nil];
+            }
+            
+        } updateProgress:nil];
+        
+    }
+
 }
 
 #pragma mark - public interface
@@ -456,6 +519,7 @@
         
         NSDecimalNumber *value = [NSDecimalNumber decimalNumberWithString:topUserInput];
         
+        /*
         [[ConverterManager sharedConverterManager] convertCurrencyWithValue:value WithCurrencyName:topCurrency ToCurrencyName:downCurrency OnComplete:^(BOOL success, NSDecimalNumber *convertResult){
         
             if(success){
@@ -476,6 +540,29 @@
             
             
         }];
+         */
+        
+        [[CurrencyManager sharedManager] convertCurrencyWithValue:value fromCurrencyName:topCurrency toCurrencyName:downCurrency successful:^(NSDecimalNumber *convertResult) {
+            
+            result = convertResult;
+            
+            [self updateDisplay];
+            
+        } fail:^(NSError *error) {
+            
+            if(error.code == Error_Local_Data_Not_Avaliable){
+             
+                UIAlertController *alert = [[CurrencyManager sharedManager] alertControllerByErrorCode:error.code];
+                
+                [self presentViewController:alert animated:YES completion:nil];
+            }
+            else if(error.code == Error_Currency_Name_Not_Found){
+                
+                UIAlertController *alert = [[CurrencyManager sharedManager] alertControllerByErrorCode:error.code];
+                
+                [self presentViewController:alert animated:YES completion:nil];
+            }
+        }];
         
         
     }
@@ -483,6 +570,7 @@
         
         NSDecimalNumber *value = [NSDecimalNumber decimalNumberWithString:downUserInput];
         
+        /*
         [[ConverterManager sharedConverterManager] convertCurrencyWithValue:value WithCurrencyName:downCurrency ToCurrencyName:topCurrency OnComplete:^(BOOL success, NSDecimalNumber *convertResult){
             
             if(success){
@@ -501,7 +589,29 @@
             }
             
         }];
+        */
         
+        [[CurrencyManager sharedManager] convertCurrencyWithValue:value fromCurrencyName:downCurrency toCurrencyName:topCurrency successful:^(NSDecimalNumber *convertResult) {
+            
+            result = convertResult;
+            
+            [self updateDisplay];
+            
+        } fail:^(NSError *error) {
+            
+            if(error.code == Error_Local_Data_Not_Avaliable){
+                
+                UIAlertController *alert = [[CurrencyManager sharedManager] alertControllerByErrorCode:error.code];
+                
+                [self presentViewController:alert animated:YES completion:nil];
+            }
+            else if(error.code == Error_Currency_Name_Not_Found){
+                
+                UIAlertController *alert = [[CurrencyManager sharedManager] alertControllerByErrorCode:error.code];
+                
+                [self presentViewController:alert animated:YES completion:nil];
+            }
+        }];
     }
 }
 
