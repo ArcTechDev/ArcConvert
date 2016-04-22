@@ -19,6 +19,8 @@
     
     ADBannerView *adView;
     NSMutableDictionary *animationDic;
+    CGRect adRect;
+    BOOL adLoaded;
 }
 
 - (void)viewDidLoad {
@@ -38,7 +40,22 @@
     
     if(adView == nil){
         
+        adLoaded = NO;
         adView = [[ADBannerView alloc] initWithFrame:frame];
+        adView.delegate = self;
+        
+        [self.view addSubview: adView];
+    }
+}
+
+- (void)showAd{
+    
+    if(adView == nil){
+        
+        adRect = CGRectMake(0, self.view.frame.size.height-adbannerHeight, [UIScreen mainScreen].bounds.size.width, adbannerHeight);
+        
+        adView = [[ADBannerView alloc] initWithFrame:CGRectMake(adRect.origin.x, self.view.frame.size.height, adRect.size.width, adRect.size.height)];
+        adView.delegate = self;
         
         [self.view addSubview: adView];
     }
@@ -59,10 +76,61 @@
     }
 }
 
+- (void)moveAdOnScreen{
+    
+    [self.view.layer removeAllAnimations];
+    
+    DelegateViewController *controller = (DelegateViewController *)[self topViewController];
+    
+    [controller.view.layer removeAllAnimations];
+    
+    [controller showAdBannerConstraintWithValue:adbannerHeight withAnimDuration:adbannerAnimDuration];
+    
+    [UIView animateWithDuration:adbannerAnimDuration animations:^{
+    
+    
+        adView.frame = adRect;
+    }];
+}
+
+- (void)moveAdOffScreen{
+    
+    [self.view.layer removeAllAnimations];
+    
+    DelegateViewController *controller = (DelegateViewController *)[self topViewController];
+    
+    [controller.view.layer removeAllAnimations];
+    
+    [controller showAdBannerConstraintWithValue:0 withAnimDuration:adbannerAnimDuration];
+    
+    [UIView animateWithDuration:adbannerAnimDuration animations:^{
+        
+        adView.frame = CGRectMake(adRect.origin.x, self.view.frame.size.height, adRect.size.width, adRect.size.height);
+    }];
+}
+
 #pragma mark - UINavigationController delegate
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
     
-    
+    /*
+    if([viewController isKindOfClass:[DelegateViewController class]]){
+        
+        DelegateViewController *controller = (DelegateViewController *)viewController;
+        
+        if(adLoaded){
+
+            if(adView.frame.origin.y == adRect.origin.y)
+                [controller updateAdBannerConstraintWithValue:adbannerHeight];
+            else
+                [controller showAdBannerConstraintWithValue:adbannerHeight withAnimDuration:adbannerAnimDuration];
+        }
+        else{
+            
+            [controller updateAdBannerConstraintWithValue:0.0f];
+        }
+        
+    }
+     */
 }
 
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
@@ -83,9 +151,28 @@
 }
 
 #pragma mark - ADBannerView delegate
+- (void)bannerViewWillLoadAd:(ADBannerView *)banner{
+
+    NSLog(@"Will load ad banner");
+    
+}
+
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner{
+    
+    NSLog(@"Ad banner loaded");
+    
+    adLoaded = YES;
+    
+    //[self moveAdOnScreen];
+}
+
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
     
-    NSLog(@"Unable to show ad banner");
+    NSLog(@"Unable to show ad banner %@", error);
+    
+    adLoaded = NO;
+    
+    //[self moveAdOffScreen];
 }
 
 /*

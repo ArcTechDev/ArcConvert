@@ -78,10 +78,12 @@
      */
     
     //show ad
-    [(NavController *)self.navigationController showAdWithFrame:CGRectMake(0, self.navigationController.view.frame.size.height-50, self.view.frame.size.width, 50)];
+    //[(NavController *)self.navigationController showAdWithFrame:CGRectMake(0, self.navigationController.view.frame.size.height-50, self.view.frame.size.width, 50)];
+    [(NavController *)self.navigationController showAd];
     
     //add transition animaitoin
     [(NavController *)self.navigationController addTransitionAnimation:[[CircleTransition alloc] initWithDelegate:self] forViewController:self];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{

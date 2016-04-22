@@ -13,6 +13,7 @@
 @interface ThemePickerViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *bgImageView;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
@@ -28,6 +29,7 @@
     // Do any additional setup after loading the view.
     
     self.showNavigationBar = YES;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,6 +71,22 @@
     //Background image
     [_bgImageView setImage:[UIImage imageNamed:[self requestUIData:@"Themes/BgImg"]]];
 }
+
+/*
+- (void)showAdBannerConstraintWithValue:(CGFloat)value withAnimDuration:(CGFloat)duration{
+    
+    [super showAdBannerConstraintWithValue:value withAnimDuration:duration];
+    
+    [_collectionView reloadData];
+}
+
+- (void)updateAdBannerConstraintWithValue:(CGFloat)value{
+    
+    [super updateAdBannerConstraintWithValue:value];
+    
+    [_collectionView reloadData];
+}
+ */
 
 #pragma mark - UICollectionDelegate
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{

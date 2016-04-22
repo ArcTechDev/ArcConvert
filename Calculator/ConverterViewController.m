@@ -8,7 +8,7 @@
 
 #import "ConverterViewController.h"
 #import "Helper.h"
-#import "Reachability.h"
+#import "AFNetworking.h"
 #import "ConverterInputView.h"
 
 @interface ConverterViewController ()
@@ -111,15 +111,6 @@
     
     self.showNavigationBar = YES;
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internetChanged:) name:kReachabilityChangedNotification object:nil];
-    
-}
-
-- (void)viewWillDisappear:(BOOL)animated{
-    
-    [super viewWillDisappear:animated];
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:kReachabilityChangedNotification object:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -130,6 +121,44 @@
     
     if(convertType == CCurrency){
         
+        //[self updateCurrency];
+        
+        [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+        
+        [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+            
+            [self updateCurrency];
+        }];
+        
+        
+    }
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+    
+    NSArray *allUnits = [[ConverterManager sharedConverterManager] getAllConvertableUnitsWithConvertType:convertType];
+    
+    _topUnitDisplayLabel.text = [Helper getUnicodeStringFromString:[allUnits objectAtIndex:0]];
+    _downUnitDisplayLabel.text = [Helper getUnicodeStringFromString:[allUnits objectAtIndex:1]];
+    
+    topSelectedUnitName = [allUnits objectAtIndex:0];
+    downSelectedUnitName = [allUnits objectAtIndex:1];
+    
+    currentConvertableUnits = [allUnits copy];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Currency update
+- (void)updateCurrency{
+    
+    if(convertType == CCurrency){
+        
         [self.view showActivityViewWithLabel:@"Updating currency data..."];
         
         [[CurrencyManager sharedManager] refreshCurrencyDataWith:^(CurrencyManager *manager, NSString *lastUpdate) {
@@ -137,8 +166,7 @@
             [self.view hideActivityView];
             
             NSString *toast = [NSString stringWithFormat:@"Currency data updated %@", lastUpdate];
-            [self.view makeToast:toast duration:3.0f position:[NSValue valueWithCGPoint:CGPointMake([UIScreen mainScreen].bounds.size.width/2.0f, [UIScreen mainScreen].bounds.size.height/2.0f)]];
-            
+            [self.view makeToast:toast duration:4.0f position:[NSValue valueWithCGPoint:CGPointMake([UIScreen mainScreen].bounds.size.width/2.0f, [UIScreen mainScreen].bounds.size.height/2.0f)]];
             
             
         } fail:^(NSError *error) {
@@ -173,33 +201,7 @@
         } updateProgress:nil];
         
     }
-   
-}
 
-- (void)viewWillAppear:(BOOL)animated{
-    
-    [super viewWillAppear:animated];
-    
-    NSArray *allUnits = [[ConverterManager sharedConverterManager] getAllConvertableUnitsWithConvertType:convertType];
-    
-    _topUnitDisplayLabel.text = [Helper getUnicodeStringFromString:[allUnits objectAtIndex:0]];
-    _downUnitDisplayLabel.text = [Helper getUnicodeStringFromString:[allUnits objectAtIndex:1]];
-    
-    topSelectedUnitName = [allUnits objectAtIndex:0];
-    downSelectedUnitName = [allUnits objectAtIndex:1];
-    
-    currentConvertableUnits = [allUnits copy];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Internet change notification
-- (void)internetChanged:(NSNotification *)notification{
-    
-    
 }
 
 #pragma mark - public interface

@@ -15,6 +15,7 @@
 @property(weak, nonatomic) id delegate;
 @property(assign, nonatomic) BOOL showNavigationBar;
 @property (weak, nonatomic) IBOutlet UIView *tutorialView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *adbannerConstraint;
 
 /**
  * Add this ViewController to given parent ViewController
@@ -46,5 +47,20 @@
  * override to receive tutorial view dismiss notify
  */
 - (void)dismissTutorialView;
+
+/**
+ * override
+ */
+- (void)animationFinished;
+
+/**
+ * update ADBanner constraint value with animation
+ */
+- (void)showAdBannerConstraintWithValue:(CGFloat)value withAnimDuration:(CGFloat)duration;
+
+/**
+ * update ADBanner constraint value without animation
+ */
+- (void)updateAdBannerConstraintWithValue:(CGFloat)value;
 
 @end

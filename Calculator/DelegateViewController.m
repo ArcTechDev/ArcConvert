@@ -134,6 +134,42 @@
     
 }
 
+- (void)animationFinished{
+    
+}
+
+- (void)showAdBannerConstraintWithValue:(CGFloat)value withAnimDuration:(CGFloat)duration{
+    
+    if(_adbannerConstraint){
+        
+        _adbannerConstraint.constant = value;
+        
+        [UIView animateWithDuration:duration animations:^{
+        
+            [self.view layoutIfNeeded];
+        }];
+        
+        [UIView animateWithDuration:duration animations:^{
+            
+            [self.view layoutIfNeeded];
+            
+        } completion:^(BOOL finished) {
+            
+            if(finished){
+                
+                [self animationFinished];
+            }
+        }];
+    }
+}
+
+- (void)updateAdBannerConstraintWithValue:(CGFloat)value{
+    
+    _adbannerConstraint.constant = value;
+    
+    [self.view layoutIfNeeded];
+}
+
 #pragma mark - TutorialManager delegate
 - (void)onTutorialDismissWithViewController:(UIViewController *)viewController{
     
