@@ -2023,6 +2023,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="adbannerConstraint" destination="nu2-Dk-lqK" id="Dbl-56-9jw"/>
                         <outlet property="bgImageView" destination="6Sh-q6-oDy" id="Gfa-F9-s1i"/>
                         <outlet property="clearBtn" destination="ElW-yu-MRn" id="PrJ-TK-fm7"/>
                         <outlet property="tableView" destination="aGZ-c7-eWT" id="FCu-1K-RtZ"/>
