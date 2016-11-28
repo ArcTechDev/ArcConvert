@@ -168,7 +168,7 @@ static CurrencyManager *_instance;
     
     if(errorCode == Error_Local_Data_Not_Avaliable){
         
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"There is no currency data in device, please turn on internet!" preferredStyle:UIAlertControllerStyleAlert];;
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"There is no currency data in device, please turn on internet to update!" preferredStyle:UIAlertControllerStyleAlert];;
         
         UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
         [alert addAction:action];
