@@ -76,6 +76,8 @@
     NSNumber *result;
     
     BOOL drawDecimal;
+    
+    AFNetworkReachabilityStatus previousNetworkStatus;
 }
 
 @synthesize popController = _popController;
@@ -111,6 +113,7 @@
     
     self.showNavigationBar = YES;
     
+    previousNetworkStatus = AFNetworkReachabilityStatusUnknown;
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -127,7 +130,12 @@
         
         [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
             
-            [self updateCurrency];
+            if(previousNetworkStatus == AFNetworkReachabilityStatusNotReachable || previousNetworkStatus == AFNetworkReachabilityStatusUnknown){
+                
+                [self updateCurrencySuccess:nil fail:nil];
+            }
+            
+            previousNetworkStatus = status;
         }];
         
         
@@ -155,7 +163,7 @@
 }
 
 #pragma mark - Currency update
-- (void)updateCurrency{
+- (void)updateCurrencySuccess:(void(^)(void))success fail:(void(^)(void))fail{
     
     if(convertType == CCurrency){
         
@@ -165,9 +173,19 @@
             
             [self.view hideActivityView];
             
-            NSString *toast = [NSString stringWithFormat:@"Currency data updated %@", lastUpdate];
-            [self.view makeToast:toast duration:3.0f position:[NSValue valueWithCGPoint:CGPointMake([UIScreen mainScreen].bounds.size.width/2.0f, [UIScreen mainScreen].bounds.size.height/2.0f)]];
+            CSToastStyle *toastStyle = [[CSToastStyle alloc] initWithDefaultStyle];
+            toastStyle.titleFont = [UIFont boldSystemFontOfSize:24.0f];
+            toastStyle.titleAlignment = NSTextAlignmentCenter;
+            toastStyle.messageFont = [UIFont boldSystemFontOfSize:24.0f];
+            toastStyle.messageAlignment = NSTextAlignmentCenter;
             
+            NSString *toast = [NSString stringWithFormat:@"Currency updated %@", lastUpdate];
+            [self.view makeToast:toast duration:3.0f position:[NSValue valueWithCGPoint:CGPointMake([UIScreen mainScreen].bounds.size.width/2.0f, [UIScreen mainScreen].bounds.size.height/2.0f)] style:toastStyle];
+            
+            //[self.view makeToast:toast duration:3.0f position:[NSValue valueWithCGPoint:CGPointMake([UIScreen mainScreen].bounds.size.width/2.0f, [UIScreen mainScreen].bounds.size.height/2.0f)] title:@"Currency data updated" image:nil style:toastStyle completion:nil];
+            
+            if(success != nil)
+                success();
             
         } fail:^(NSError *error) {
             
@@ -197,6 +215,9 @@
                 
                 [self presentViewController:alert animated:YES completion:nil];
             }
+            
+            if(fail != nil)
+                fail();
             
         } updateProgress:nil];
         
